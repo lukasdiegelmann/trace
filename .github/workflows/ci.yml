@@ -1,0 +1,110 @@
+name: CI
+
+# Never pull_request_target: it would hand the secrets to a fork's code.
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  # "ci" is the required status check of main's branch protection.
+  ci:
+    name: ci
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    # On the job, not the workflow: a newer push must not cancel a deploy.
+    concurrency:
+      group: ci-${{ github.ref }}
+      cancel-in-progress: true
+    steps:
+      - name: Check access to the private npm registry
+        env:
+          HAS_SECRETS: ${{ secrets.MONOCIRCUIT_NPM_TOKEN != '' && secrets.MONOCIRCUIT_NPM_REGISTRY != '' }}
+        run: |
+          if [ "$HAS_SECRETS" != true ]; then
+            message="This run has no access to the repository secrets, so dependencies from the private npm registry cannot be installed. That is expected for pull requests from forks (and from Dependabot): a maintainer has to run the checks from a branch in this repository."
+            echo "::error title=CI cannot run without repository secrets::$message"
+            echo "### CI cannot run without repository secrets"$'\n\n'"$message" >>"$GITHUB_STEP_SUMMARY"
+            exit 1
+          fi
+
+      # The backends (submodules) are not needed for the checks.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: ./.github/actions/setup
+        with:
+          npm-registry: ${{ secrets.MONOCIRCUIT_NPM_REGISTRY }}
+          npm-token: ${{ secrets.MONOCIRCUIT_NPM_TOKEN }}
+
+      # Cheapest first.
+      - run: pnpm --filter web lint
+      - run: pnpm --filter web typecheck
+      - run: pnpm --filter web test
+      - run: pnpm --filter web build
+
+  deploy:
+    name: deploy
+    needs: ci
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment:
+      name: production
+      url: https://trace.lukasdiegelmann.net/
+    # One after the other, and never cancel one halfway.
+    concurrency:
+      group: deploy
+      cancel-in-progress: false
+    steps:
+      # With submodules: the server builds the backends from them.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          submodules: true
+          persist-credentials: false
+
+      - uses: ./.github/actions/setup
+        with:
+          npm-registry: ${{ secrets.MONOCIRCUIT_NPM_REGISTRY }}
+          npm-token: ${{ secrets.MONOCIRCUIT_NPM_TOKEN }}
+
+      - name: Build apps/web
+        run: |
+          pnpm --filter web build
+          ls apps/web/dist/assets/index-*.js
+
+      # The same tree push.sh syncs: keep the excludes in step with it and
+      # with deploy/trace-deploy.
+      - name: Pack the tree
+        run: |
+          tree=$RUNNER_TEMP/tree
+          rsync -a \
+            --exclude .git --exclude node_modules --exclude android --exclude dist \
+            --exclude '.env*' --exclude local.env --exclude '*.db' --exclude '*.db-*' \
+            ./ "$tree/"
+          rsync -a apps/web/dist/ "$tree/apps/web/dist/"
+          git rev-parse HEAD >"$tree/DEPLOYED_COMMIT"
+          tar -C "$tree" -czf "$RUNNER_TEMP/tree.tar.gz" .
+
+      # The key is pinned on the server to the forced command trace-deploy
+      # (deploy/trace-deploy), which reads the tar from stdin.
+      - name: Deploy over SSH
+        env:
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          DEPLOY_KNOWN_HOSTS: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
+        run: |
+          umask 077
+          dir=$(mktemp -d "$RUNNER_TEMP/ssh.XXXXXX")
+          trap 'rm -rf "$dir"' EXIT
+          printf '%s\n' "$DEPLOY_SSH_KEY" >"$dir/key"
+          printf '%s\n' "$DEPLOY_KNOWN_HOSTS" >"$dir/known_hosts"
+          ssh -F none -i "$dir/key" -l root \
+            -o IdentitiesOnly=yes -o BatchMode=yes \
+            -o StrictHostKeyChecking=yes -o UserKnownHostsFile="$dir/known_hosts" \
+            -o ConnectTimeout=20 -o ServerAliveInterval=30 \
+            "$DEPLOY_HOST" <"$RUNNER_TEMP/tree.tar.gz"

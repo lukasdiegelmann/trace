@@ -1,0 +1,69 @@
+#!/usr/bin/env bash
+# Runs ON the server as the forced command of the CI deploy key:
+#   command="/usr/local/bin/trace-deploy",restrict ssh-ed25519 AAAA...
+# Reads a gzipped tar on stdin (the checkout with submodules, apps/web/dist and
+# DEPLOYED_COMMIT), mirrors it into <root>/src the way push.sh does and runs
+# deploy.sh. <root>/data and <root>/secrets lie outside <root>/src and are not
+# touched. The client's command line is ignored.
+#
+# The key still deploys code that runs with this user's rights (deploy.sh and
+# compose.yaml come from the tar): guard it like a login to that user.
+#
+# Install by hand; a deploy does not update the installed copy:
+#   install -m 755 deploy/trace-deploy /usr/local/bin/trace-deploy
+#   echo 'DEPLOY_ROOT=<root>' > /etc/trace-deploy.conf
+#
+# The caller's logs may be public, so only short status lines go back. The full
+# output of deploy.sh stays in /var/log/trace-deploy.log.
+set -euo pipefail
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+umask 022
+
+fail() {
+  echo "trace-deploy: $*" >&2
+  exit 1
+}
+
+. /etc/trace-deploy.conf
+: "${DEPLOY_ROOT:?DEPLOY_ROOT is missing in /etc/trace-deploy.conf}"
+SRC=$DEPLOY_ROOT/src
+LOG=/var/log/trace-deploy.log
+
+exec 9>/run/lock/trace-deploy.lock
+flock -w 900 9 || fail "another deploy is still running"
+
+# Unpack next to src first: a broken or cut-off stream must not reach the
+# --delete below. The time limit keeps a client that never finishes sending
+# from holding the lock.
+stage=$(mktemp -d "$DEPLOY_ROOT/.stage.XXXXXX")
+trap 'rm -rf "$stage"' EXIT
+timeout 600 tar -xzf - -C "$stage" --no-same-owner --no-same-permissions 2>/dev/null ||
+  fail "could not unpack the stream"
+chmod 755 "$stage"
+
+for f in deploy/compose.yaml deploy/deploy.sh apps/web/dist/index.html \
+  backends/{nutritrace,cooktrace,lifttrace}/Dockerfile DEPLOYED_COMMIT; do
+  [ -f "$stage/$f" ] || fail "incomplete tree, missing $f"
+done
+[ -x "$stage/deploy/deploy.sh" ] || fail "deploy/deploy.sh is not executable"
+commit=$(cat "$stage/DEPLOYED_COMMIT")
+[[ "$commit" =~ ^[0-9a-f]{40}$ ]] || fail "DEPLOYED_COMMIT is not a commit hash"
+
+# Same excludes and --delete semantics as push.sh.
+mkdir -p "$SRC"
+rsync -a --delete \
+  --exclude .git --exclude node_modules --exclude android --exclude dist \
+  --exclude '.env*' --exclude local.env --exclude '*.db' --exclude '*.db-*' \
+  --exclude /DEPLOYED_COMMIT \
+  "$stage/" "$SRC/"
+# Sync into the directory, never replace it: the web container mounts it.
+mkdir -p "$SRC/apps/web/dist"
+rsync -a --delete "$stage/apps/web/dist/" "$SRC/apps/web/dist/"
+echo "$commit" >"$SRC/DEPLOYED_COMMIT"
+echo "trace-deploy: synced $commit"
+
+install -m 600 /dev/null "$LOG"
+if ! "$SRC/deploy/deploy.sh" </dev/null >"$LOG" 2>&1 9>&-; then
+  fail "deploy.sh failed, the log is on the server: $LOG"
+fi
+echo "trace-deploy: deployed $commit"

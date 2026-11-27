@@ -48,6 +48,19 @@ reverse proxy in front serves them on one origin (paths:
 [SSO.md](deploy/SSO.md)). The domain and the OIDC issuer are set in
 `compose.yaml`; change them for your own installation.
 
+There are two ways to deploy:
+
+- **CI** ([ci.yml](.github/workflows/ci.yml)): every pull request is linted,
+  type-checked, tested and built. A push to `main` that passes is deployed by
+  the job `deploy` (environment `production`, secrets `DEPLOY_HOST`,
+  `DEPLOY_SSH_KEY`, `DEPLOY_KNOWN_HOSTS`): it builds `apps/web` and pipes the
+  tree over SSH into [trace-deploy](deploy/trace-deploy), the forced command
+  of a key used for nothing else (installation: see the head of the script).
+  Pull requests from forks get no secrets, so their CI stops with a message.
+  CI keeps no pnpm cache: a fork's pull request could read it, private
+  packages included.
+- **By hand**, with `push.sh`:
+
 ```bash
 export DEPLOY_HOST=...   # ssh host
 export DEPLOY_ROOT=...   # directory on that host

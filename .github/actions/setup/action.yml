@@ -1,0 +1,41 @@
+name: Set up and install
+description: Node, pnpm (version from package.json) and a frozen install.
+
+inputs:
+  npm-registry:
+    description: MONOCIRCUIT_NPM_REGISTRY, see .npmrc
+    required: true
+  npm-token:
+    description: MONOCIRCUIT_NPM_TOKEN, see .npmrc
+    required: true
+
+runs:
+  using: composite
+  steps:
+    # The secret is "host/path/": pnpm can name the bare host on its own.
+    - name: Mask the registry host
+      shell: bash
+      env:
+        MONOCIRCUIT_NPM_REGISTRY: ${{ inputs.npm-registry }}
+      run: echo "::add-mask::${MONOCIRCUIT_NPM_REGISTRY%%/*}"
+
+    # No pnpm store cache, on purpose: in a public repo a pull request from a
+    # fork can restore main's caches, and the store would hold the packages
+    # from the private registry. Keep both cache switches off.
+    - uses: pnpm/action-setup@73e46992e05b19abd31f2f3c20e0e7370d762115 # v6.1.1
+      with:
+        cache: false
+
+    # Within "engines" in package.json.
+    - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+      with:
+        node-version: 24
+        package-manager-cache: false
+
+    # Only this step sees the token.
+    - name: Install
+      shell: bash
+      env:
+        MONOCIRCUIT_NPM_REGISTRY: ${{ inputs.npm-registry }}
+        MONOCIRCUIT_NPM_TOKEN: ${{ inputs.npm-token }}
+      run: pnpm install --frozen-lockfile
