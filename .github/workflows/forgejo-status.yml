@@ -1,0 +1,57 @@
+# Reports a result as a commit status to the primary repository on Forgejo.
+# A job of its own on a fresh runner, without a checkout: no code from the
+# repository or its dependencies runs where the token is.
+name: Forgejo status
+
+on:
+  workflow_call:
+    inputs:
+      context:
+        required: true
+        type: string
+      # "pending", or the result of the job that is reported.
+      result:
+        required: true
+        type: string
+    secrets:
+      token:
+        required: false
+
+permissions: {}
+
+jobs:
+  report:
+    name: report
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Report to Forgejo
+        # A missing "pending" must not hold up the checks. A missing result
+        # shows as a failed job.
+        continue-on-error: ${{ inputs.result == 'pending' }}
+        env:
+          FORGEJO_STATUS_TOKEN: ${{ secrets.token }}
+          CONTEXT: ${{ inputs.context }}
+          RESULT: ${{ inputs.result }}
+          SHA: ${{ github.sha }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set +x
+          if [ -z "$FORGEJO_STATUS_TOKEN" ]; then
+            echo "No Forgejo token (expected in a fork), nothing to report."
+            exit 0
+          fi
+          case $RESULT in
+            pending | success) state=$RESULT ;;
+            cancelled) state=error ;;
+            *) state=failure ;;
+          esac
+          body=$(jq -n --arg state "$state" --arg context "$CONTEXT" --arg url "$RUN_URL" \
+            '{state: $state, context: $context, target_url: $url, description: "GitHub Actions: \($state)"}')
+          # The header comes from stdin: the token stays out of the arguments.
+          printf 'Authorization: token %s\n' "$FORGEJO_STATUS_TOKEN" |
+            curl --silent --show-error --fail --output /dev/null \
+              --max-time 20 --retry 3 --retry-all-errors \
+              --header @- --header 'Content-Type: application/json' --data "$body" \
+              "https://git.monocircuit.net/api/v1/repos/monocircuit/trace/statuses/$SHA"
+          echo "Reported $CONTEXT: $state"

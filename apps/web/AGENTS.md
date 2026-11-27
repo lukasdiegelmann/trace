@@ -16,10 +16,10 @@ pnpm --filter web build      # dist/, incl. service worker and manifest
 
 All four (lint, typecheck, test, build) pass before every push.
 
-`pnpm dev` proxies `/nt`, `/ct`, `/lt` to `TRACE_BACKEND_ORIGIN` (default the
-deployed `https://trace.lukasdiegelmann.net`). The backends' cookies are
-`Secure`, so a sign-in only sticks on the deployed origin; locally, run the
-backends yourself (`backends/*`, `BASE_URL=/nt` etc.) and point
+`pnpm dev` proxies `/nt`, `/ct`, `/lt` to `TRACE_BACKEND_ORIGIN`, which has
+no default and must be set (e.g. `https://trace.example.com`). The backends'
+cookies are `Secure`, so a sign-in only sticks on a deployed origin; locally,
+run the backends yourself (`backends/*`, `BASE_URL=/nt` etc.) and point
 `TRACE_BACKEND_ORIGIN` at them, or test against mocks.
 
 ## Layout
@@ -82,7 +82,7 @@ are taken. Large screens may load lazily (`lazy` in the route object).
   only for what CSS can't decide.
 
 **A missing component or prop** is not built here. Write it down as a need:
-a comment on the feature's GitHub issue (what, which screen, the closest
+a comment on the feature's Forgejo issue (what, which screen, the closest
 monolithium component), and, if the user agrees, the change goes into
 monolithium through its own workflow (in a separate thread, see the
 maintainer notes). Until it lands, use the closest existing component and

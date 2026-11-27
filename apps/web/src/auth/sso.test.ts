@@ -37,7 +37,7 @@ function setup(
     fetch,
     storage,
     navigate,
-    origin: "https://trace.lukasdiegelmann.net",
+    origin: "https://trace.example.com",
   };
   return { deps, storage, navigate, calls };
 }
@@ -237,7 +237,7 @@ describe("continueSignIn", () => {
 
 describe("signOut", () => {
   const logoutUrl =
-    "https://id.example.com/api/oidc/end-session?post_logout_redirect_uri=https%3A%2F%2Ftrace.lukasdiegelmann.net%2Fnt%2F&id_token_hint=abc";
+    "https://id.example.com/api/oidc/end-session?post_logout_redirect_uri=https%3A%2F%2Ftrace.example.com%2Fnt%2F&id_token_hint=abc";
 
   it("logs out of every backend, then ends the provider's session back to /", async () => {
     const { deps, navigate, calls } = setup((url) =>
@@ -258,7 +258,7 @@ describe("signOut", () => {
       "https://id.example.com/api/oidc/end-session",
     );
     expect(target.searchParams.get("post_logout_redirect_uri")).toBe(
-      "https://trace.lukasdiegelmann.net/",
+      "https://trace.example.com/",
     );
     expect(target.searchParams.get("id_token_hint")).toBe("abc");
   });
@@ -322,11 +322,9 @@ describe("signOut", () => {
   });
 
   it("rewrites only post_logout_redirect_uri", () => {
-    const url = new URL(
-      endSessionUrl(logoutUrl, "https://trace.lukasdiegelmann.net"),
-    );
+    const url = new URL(endSessionUrl(logoutUrl, "https://trace.example.com"));
     expect(url.searchParams.get("post_logout_redirect_uri")).toBe(
-      "https://trace.lukasdiegelmann.net/",
+      "https://trace.example.com/",
     );
     expect(url.searchParams.get("id_token_hint")).toBe("abc");
   });

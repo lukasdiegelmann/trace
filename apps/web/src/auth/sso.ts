@@ -23,7 +23,7 @@ export interface SsoDeps {
   storage: Pick<Storage, "getItem" | "setItem" | "removeItem">;
   /** A full page navigation (`window.location.assign`) */
   navigate: (url: string) => void;
-  /** `https://trace.lukasdiegelmann.net` */
+  /** `https://trace.example.com` */
   origin: string;
 }
 

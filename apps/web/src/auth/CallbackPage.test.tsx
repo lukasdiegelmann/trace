@@ -45,7 +45,7 @@ function makeDeps() {
     fetch,
     storage: window.sessionStorage,
     navigate: vi.fn<(url: string) => void>(),
-    origin: "https://trace.lukasdiegelmann.net",
+    origin: "https://trace.example.com",
   } satisfies SsoDeps;
   return deps;
 }

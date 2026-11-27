@@ -16,7 +16,7 @@ a submodule bump.
 | `/lt/` | LiftTrace (`BASE_URL=/lt`) | `lt_token` (+ `lt_oidc_logout`) | no |
 | everything else | `web` (the frontend, SPA fallback to `index.html`) | | |
 
-- Origin: `https://trace.lukasdiegelmann.net`, called `<origin>` below. IdP: the OIDC issuer set in compose.yaml (`OIDC_ISSUER`), called `<issuer>` below; clients `nt`, `ct`, `lt`, consent off, PKCE S256.
+- Origin: where your instance is served (`TRACE_ORIGIN`, e.g. `https://trace.example.com`), called `<origin>` below. IdP: your OIDC issuer (`OIDC_ISSUER`, see [.env.example](.env.example)), called `<issuer>` below; clients `nt`, `ct`, `lt`, consent off, PKCE S256.
 - Each backend mounts its whole router under its prefix (`app.use(BASE_URL || '/', router)`: nutritrace/server/index.js:407, cooktrace/server/index.js:302, lifttrace/server/index.js:292), so API = `/<p>/api/...`, uploads = `/<p>/uploads/...`, and the original UI stays at `/<p>/`.
 - Cookies are set without `path`, so they have `Path=/`, `HttpOnly`, `Secure`, `SameSite=Lax` (`COOKIE_OPTS`: nutritrace/server/routes/oidc.js:23, cooktrace/server/routes/oidc.js:23, lifttrace/server/routes/oidc.js:21). The names differ per backend, so all three can be set at once. The frontend cannot read them; it sends them by calling with `credentials: 'same-origin'` (the `fetch` default).
 - CORS: same host only. Keep every call relative (`/nt/api/...`).
@@ -85,8 +85,8 @@ it**: on responses under `/<p>/*` it replaces the `Location` header matching
 so with `return=/__trace/auth/callback/<p>` the browser lands on
 
 ```
-https://trace.lukasdiegelmann.net/auth/callback/<p>?oidc=ok
-https://trace.lukasdiegelmann.net/auth/callback/<p>?oidc_error=callback_failed
+<origin>/auth/callback/<p>?oidc=ok
+<origin>/auth/callback/<p>?oidc_error=callback_failed
 ```
 
 A `return` without
@@ -153,12 +153,12 @@ POST /<p>/api/auth/oidc/logout      (no body, no CSRF header needed)
 (nutritrace/server/routes/oidc.js:266-317, cooktrace :270-321, lifttrace
 :248-297). It clears `<p>_token` and `<p>_oidc_logout`; `logoutUrl` is
 present when that backend's sign-in came from OIDC. Its
-`post_logout_redirect_uri` is `https://trace.lukasdiegelmann.net/<p>/`
+`post_logout_redirect_uri` is `<origin>/<p>/`
 (nt :305, ct :307, lt :285).
 
 Then end the provider's session (otherwise the next sign-in goes through
 without asking): take one `logoutUrl`, set its `post_logout_redirect_uri`
-to `https://trace.lukasdiegelmann.net/` (both values are registered as
+to `<origin>/` (both values are registered as
 logout callback URLs on every client) and navigate the window there. The
 provider checks the `id_token_hint`, clears its own cookie and redirects back. One
 end-session call is enough for the browser session; the other two

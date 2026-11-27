@@ -8,11 +8,25 @@ import { VitePWA } from "vite-plugin-pwa";
 /** Paths the backends own; the SPA (and its service worker) never answers them */
 export const BACKEND_PREFIXES = ["/nt/", "/ct/", "/lt/"];
 
-/** Where `pnpm dev` sends /nt, /ct, /lt (the deployed origin by default) */
-const backendOrigin =
-  process.env.TRACE_BACKEND_ORIGIN ?? "https://trace.lukasdiegelmann.net";
+/** Where `pnpm dev` and `vite preview` send /nt, /ct, /lt */
+function devProxy() {
+  const target = process.env.TRACE_BACKEND_ORIGIN;
+  if (!target) {
+    throw new Error(
+      "TRACE_BACKEND_ORIGIN is not set. The dev server proxies /nt, /ct and " +
+        "/lt to your own Trace backends: set it to their origin, e.g. " +
+        "TRACE_BACKEND_ORIGIN=https://trace.example.com pnpm --filter web dev",
+    );
+  }
+  return Object.fromEntries(
+    BACKEND_PREFIXES.map((prefix) => [
+      prefix.slice(0, -1),
+      { target, changeOrigin: true, secure: true },
+    ]),
+  );
+}
 
-export default defineConfig({
+export default defineConfig(({ command, mode }) => ({
   plugins: [
     // One React for the linked/installed package, its files served in dev
     monolithium(),
@@ -97,12 +111,8 @@ export default defineConfig({
   },
   server: {
     port: 5173,
-    proxy: Object.fromEntries(
-      BACKEND_PREFIXES.map((prefix) => [
-        prefix.slice(0, -1),
-        { target: backendOrigin, changeOrigin: true, secure: true },
-      ]),
-    ),
+    // Only a server needs the backends: not a build, not the tests.
+    proxy: command === "serve" && mode !== "test" ? devProxy() : undefined,
   },
   test: {
     environment: "jsdom",
@@ -116,4 +126,4 @@ export default defineConfig({
       deps: { inline: [/@monocircuit\//] },
     },
   },
-});
+}));

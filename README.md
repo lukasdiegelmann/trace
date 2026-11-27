@@ -11,6 +11,19 @@ One web app for nutrition, recipes and lifting, built on
 [LiftTrace](https://github.com/TraceApps/lifttrace) (AGPL-3.0), with a
 single React UI.
 
+The primary repository is
+**[git.monocircuit.net/monocircuit/trace](https://git.monocircuit.net/monocircuit/trace)**.
+[github.com/monocircuit/trace](https://github.com/monocircuit/trace) is a
+read-only mirror of it, used for CI and deploys: issues and pull requests go to
+Forgejo.
+
+## Self-hosting
+
+There is no public instance and no hosted service: everyone hosts their own.
+You need a server with Docker, a reverse proxy with HTTPS, an OIDC provider
+and, to build the frontend, access to the npm registry of its component
+library (see [Frontend](#frontend)). [Deploy](#deploy) has the steps.
+
 ## Layout
 
 | Path | What |
@@ -34,7 +47,8 @@ registry; installing it needs `MONOCIRCUIT_NPM_TOKEN` (a read token) and
 export MONOCIRCUIT_NPM_REGISTRY=...  # registry URL without https://, ending in /
 export MONOCIRCUIT_NPM_TOKEN=...
 pnpm install
-pnpm --filter web dev                # /nt /ct /lt proxied to TRACE_BACKEND_ORIGIN
+# /nt /ct /lt are proxied to your own backends:
+TRACE_BACKEND_ORIGIN=https://trace.example.com pnpm --filter web dev
 pnpm check                           # lint, typecheck, test, build
 ```
 
@@ -45,20 +59,22 @@ submodules, and `web` (nginx serving `apps/web/dist`, which `push.sh` builds
 locally, so the server needs no registry access). All bind 127.0.0.1; a
 reverse proxy in front serves them on one origin (paths:
 [compose.yaml](deploy/compose.yaml), one redirect rewrite:
-[SSO.md](deploy/SSO.md)). The domain and the OIDC issuer are set in
-`compose.yaml`; change them for your own installation.
+[SSO.md](deploy/SSO.md)). Your origin and OIDC issuer are not in the repo:
+copy [.env.example](deploy/.env.example) to
+`$DEPLOY_ROOT/secrets/trace.env` on the server and put in your own values.
 
 There are two ways to deploy:
 
-- **CI** ([ci.yml](.github/workflows/ci.yml)): every pull request is linted,
-  type-checked, tested and built. A push to `main` that passes is deployed by
+- **CI** ([ci.yml](.github/workflows/ci.yml), GitHub Actions on the mirror):
+  every branch push is linted, type-checked, tested and built, and the result
+  is reported to Forgejo as the commit status `ci` (secret
+  `FORGEJO_STATUS_TOKEN`). A push to `main` that passes is deployed by
   the job `deploy` (environment `production`, secrets `DEPLOY_HOST`,
   `DEPLOY_SSH_KEY`, `DEPLOY_KNOWN_HOSTS`): it builds `apps/web` and pipes the
   tree over SSH into [trace-deploy](deploy/trace-deploy), the forced command
   of a key used for nothing else (installation: see the head of the script).
-  Pull requests from forks get no secrets, so their CI stops with a message.
-  CI keeps no pnpm cache: a fork's pull request could read it, private
-  packages included.
+  Forks get no secrets, so their CI stops with a message. CI keeps no pnpm
+  cache: a fork's pull request could read it, private packages included.
 - **By hand**, with `push.sh`:
 
 ```bash
