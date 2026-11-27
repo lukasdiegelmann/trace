@@ -30,8 +30,10 @@ dc() { docker compose -f "$SRC/deploy/compose.yaml" "$@"; }
 dc build nt ct lt
 dc up -d --remove-orphans
 for svc in nt:3101 lt:3102 ct:3103; do
+  url="http://127.0.0.1:${svc#*:}/${svc%:*}/api/auth/status"
   for i in $(seq 1 60); do
-    curl -sf -o /dev/null "http://127.0.0.1:${svc#*:}/${svc%:*}/api/auth/status" && break
+    curl -sf -o /dev/null "$url" && break
+    [ "$i" -lt 60 ] || { echo "${svc%:*} does not answer: $url" >&2; exit 1; }
     sleep 2
   done
 done
