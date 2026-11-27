@@ -222,7 +222,7 @@
     "about": {
       "title": "Über und unterstützen",
       "description": "Lizenzen, Quellcode, Unterstützung",
-      "keywords": "lizenz agpl unterstützen spenden github version"
+      "keywords": "lizenz agpl unterstützen spenden github version deploy commit build update"
     }
   },
   "adminOnly": "Für diese Einstellungen braucht es ein Admin-Konto."

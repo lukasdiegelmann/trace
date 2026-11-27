@@ -10,6 +10,7 @@ import { useTranslation } from "react-i18next";
 
 import { Section, SettingsScreen } from "../common/SettingsScreen";
 import { APP_VERSIONS } from "../lib/versions";
+import { DeployInfoSection } from "./DeployInfoSection";
 
 const APPS = [
   { id: "nutritrace", name: "NutriTrace", backend: "nt" },
@@ -56,6 +57,7 @@ export function AboutPage() {
           text="GNU AGPL 3.0"
         />
       </Section>
+      <DeployInfoSection />
       <Section title={t("about.builtOn")} hint={t("about.builtOnHint")}>
         {APPS.map((app) => (
           <Stack key={app.id} gap={1}>

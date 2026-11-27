@@ -107,6 +107,15 @@ jobs:
           pnpm --filter web build
           ls apps/web/dist/assets/index-*.js
 
+      # What Settings > About Trace shows.
+      - name: Write version.json
+        env:
+          TRACE_DEPLOY_SOURCE: ci
+          TRACE_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          # Optional repository variable; empty means the project repository.
+          TRACE_SOURCE_URL: ${{ vars.TRACE_SOURCE_URL }}
+        run: node deploy/write-version.mjs
+
       # The same tree push.sh syncs: keep the excludes in step with it and
       # with deploy/trace-deploy.
       - name: Pack the tree

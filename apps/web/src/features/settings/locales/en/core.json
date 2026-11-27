@@ -222,7 +222,7 @@
     "about": {
       "title": "About and support",
       "description": "Licences, sources, how to support",
-      "keywords": "license agpl support donate github version"
+      "keywords": "license agpl support donate github version deploy commit build update"
     }
   },
   "adminOnly": "These settings need an admin account."

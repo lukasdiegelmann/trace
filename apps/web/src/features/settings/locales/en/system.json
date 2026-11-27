@@ -61,5 +61,21 @@
       "privacy": "No tracking, no ads, no third-party analytics"
     },
     "federation": "CookTrace reads foods from NutriTrace, and LiftTrace sends it your workouts, once connected."
+  },
+  "deploy": {
+    "title": "About Trace",
+    "version": "Version",
+    "commit": "Commit",
+    "branch": "Branch",
+    "deployedAt": "Deployed",
+    "builtAt": "Built",
+    "source": "Source",
+    "ci": "CI",
+    "ciRun": "CI run",
+    "manual": "By hand",
+    "repository": "Repository",
+    "none": "No deploy info",
+    "updateAvailable": "New version available",
+    "reload": "Reload"
   }
 }

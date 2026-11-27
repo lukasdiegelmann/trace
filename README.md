@@ -63,6 +63,12 @@ reverse proxy in front serves them on one origin (paths:
 copy [.env.example](deploy/.env.example) to
 `$DEPLOY_ROOT/secrets/trace.env` on the server and put in your own values.
 
+Both ways to deploy write `version.json` next to the app
+([write-version.mjs](deploy/write-version.mjs)): commit, branch, times and
+where the deploy came from, shown under Settings > About. Its links go to the
+project repository; set `TRACE_SOURCE_URL` (for CI: a repository variable) to
+point them at yours.
+
 There are two ways to deploy:
 
 - **CI** ([ci.yml](.github/workflows/ci.yml), GitHub Actions on the mirror):
