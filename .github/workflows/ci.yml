@@ -1,18 +1,30 @@
 name: CI
 
-# Never pull_request_target: it would hand the secrets to a fork's code.
+# This runs on the GitHub mirror of git.monocircuit.net/monocircuit/trace. Pull
+# requests live on Forgejo and arrive here as mirrored branches, so every branch
+# push is checked (not tags). Never pull_request_target: it would hand the
+# secrets to a fork's code.
 on:
-  pull_request:
   push:
-    branches: [main]
+    branches: ["**"]
 
 permissions:
   contents: read
 
 jobs:
-  # "ci" is the required status check of main's branch protection.
+  ci-pending:
+    uses: ./.github/workflows/forgejo-status.yml
+    with:
+      context: ci
+      result: pending
+    secrets:
+      token: ${{ secrets.FORGEJO_STATUS_TOKEN }}
+
+  # Reported to Forgejo as "ci", the required status check of main's branch
+  # protection there.
   ci:
     name: ci
+    needs: ci-pending
     runs-on: ubuntu-latest
     timeout-minutes: 15
     # On the job, not the workflow: a newer push must not cancel a deploy.
@@ -25,7 +37,7 @@ jobs:
           HAS_SECRETS: ${{ secrets.MONOCIRCUIT_NPM_TOKEN != '' && secrets.MONOCIRCUIT_NPM_REGISTRY != '' }}
         run: |
           if [ "$HAS_SECRETS" != true ]; then
-            message="This run has no access to the repository secrets, so dependencies from the private npm registry cannot be installed. That is expected for pull requests from forks (and from Dependabot): a maintainer has to run the checks from a branch in this repository."
+            message="This run has no access to the repository secrets, so dependencies from the private npm registry cannot be installed. That is expected in forks: a maintainer has to run the checks from a branch of the primary repository (git.monocircuit.net/monocircuit/trace)."
             echo "::error title=CI cannot run without repository secrets::$message"
             echo "### CI cannot run without repository secrets"$'\n\n'"$message" >>"$GITHUB_STEP_SUMMARY"
             exit 1
@@ -47,15 +59,33 @@ jobs:
       - run: pnpm --filter web test
       - run: pnpm --filter web build
 
+  ci-status:
+    needs: ci
+    if: always()
+    uses: ./.github/workflows/forgejo-status.yml
+    with:
+      context: ci
+      result: ${{ needs.ci.result }}
+    secrets:
+      token: ${{ secrets.FORGEJO_STATUS_TOKEN }}
+
+  deploy-pending:
+    needs: ci
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    uses: ./.github/workflows/forgejo-status.yml
+    with:
+      context: deploy
+      result: pending
+    secrets:
+      token: ${{ secrets.FORGEJO_STATUS_TOKEN }}
+
   deploy:
     name: deploy
-    needs: ci
+    needs: [ci, deploy-pending]
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    environment:
-      name: production
-      url: https://trace.lukasdiegelmann.net/
+    environment: production
     # One after the other, and never cancel one halfway.
     concurrency:
       group: deploy
@@ -108,3 +138,13 @@ jobs:
             -o StrictHostKeyChecking=yes -o UserKnownHostsFile="$dir/known_hosts" \
             -o ConnectTimeout=20 -o ServerAliveInterval=30 \
             "$DEPLOY_HOST" <"$RUNNER_TEMP/tree.tar.gz"
+
+  deploy-status:
+    needs: deploy
+    if: always() && github.ref == 'refs/heads/main' && needs.deploy.result != 'skipped'
+    uses: ./.github/workflows/forgejo-status.yml
+    with:
+      context: deploy
+      result: ${{ needs.deploy.result }}
+    secrets:
+      token: ${{ secrets.FORGEJO_STATUS_TOKEN }}

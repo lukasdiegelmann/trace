@@ -47,11 +47,17 @@ Maintainer notes (private): `~/code/lukasdiegelmann/trace-notes/`, read them if 
 
 - One T3 Code thread per task, in its own git worktree
   (`git worktree add ../trace-<n>-<feature> -b <n>-<feature>`), tied to a
-  GitHub issue in `lukasdiegelmann/trace` (`gh issue`).
+  Forgejo issue in `monocircuit/trace` on git.monocircuit.net (`fj issue`).
+- The primary repository is
+  [git.monocircuit.net/monocircuit/trace](https://git.monocircuit.net/monocircuit/trace).
+  [github.com/monocircuit/trace](https://github.com/monocircuit/trace) is a
+  read-only push mirror that only runs CI and the deploy (GitHub Actions,
+  which reports the commit statuses `ci` and `deploy` back to Forgejo).
+  **Never push to GitHub:** the mirror overwrites it.
 - Before every push: lint, typecheck, tests, build of `apps/web`. Never
   `--no-verify`, never force-push `main`.
-- PRs on GitHub (`gh pr create`); with every box of the issue ticked and checks
-  green, the agent may merge its own PR.
+- PRs on Forgejo (`fj pr create`); with every box of the issue ticked and the
+  required check `ci` green, the agent may merge its own PR.
 - Work on monolithium happens in its own repository under its rules, in a
   separate thread (see the maintainer notes).
 - **Agents never tag, never create releases, never publish packages**

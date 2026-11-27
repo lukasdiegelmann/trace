@@ -3,6 +3,10 @@
 # synced tree in <root>/{data,secrets}, hence the ../../ paths. Run through
 # deploy.sh.
 #
+# TRACE_ORIGIN and OIDC_ISSUER, the settings of your installation, come from
+# <root>/secrets/trace.env (see .env.example). deploy.sh passes that file on;
+# by hand: docker compose --env-file <root>/secrets/trace.env -f ... <command>
+#
 # Everything binds 127.0.0.1; a reverse proxy serves it on one origin:
 #   /nt/*  -> nt   127.0.0.1:3101
 #   /lt/*  -> lt   127.0.0.1:3102
@@ -26,17 +30,17 @@ services:
     environment: &nt_env
       TZ: Europe/Berlin
       BASE_URL: /nt
-      PUBLIC_URL: https://trace.lukasdiegelmann.net/nt
+      PUBLIC_URL: ${TRACE_ORIGIN:?see .env.example}/nt
       DB_PATH: /data/db/nutritrace.db
       UPLOADS_PATH: /data/uploads
       LOG_LEVEL: info
       # The clients nt/ct/lt are set up at the OIDC provider; each one's
       # secret is OIDC_CLIENT_SECRET in the env_file.
-      OIDC_ISSUER: https://auth.lukasdiegelmann.net/realms/diegelhome
+      OIDC_ISSUER: ${OIDC_ISSUER:?see .env.example}
       OIDC_CLIENT_ID: nt
       OIDC_DISPLAY_NAME: Keycloak
       OIDC_SCOPE: openid profile email groups
-      OIDC_REDIRECT_URIS: https://trace.lukasdiegelmann.net/nt/api/auth/oidc/callback
+      OIDC_REDIRECT_URIS: ${TRACE_ORIGIN:?see .env.example}/nt/api/auth/oidc/callback
       OIDC_TOKEN_AUTH_METHOD: client_secret_post
       OIDC_AUTO_REGISTER: "1"
       OIDC_AUTO_LINK: "1"
@@ -59,10 +63,10 @@ services:
     environment:
       <<: *nt_env
       BASE_URL: /lt
-      PUBLIC_URL: https://trace.lukasdiegelmann.net/lt
+      PUBLIC_URL: ${TRACE_ORIGIN:?see .env.example}/lt
       DB_PATH: /data/db/lifttrace.db
       OIDC_CLIENT_ID: lt
-      OIDC_REDIRECT_URIS: https://trace.lukasdiegelmann.net/lt/api/auth/oidc/callback
+      OIDC_REDIRECT_URIS: ${TRACE_ORIGIN:?see .env.example}/lt/api/auth/oidc/callback
     volumes:
       - ../../data/lt/db:/data/db
       - ../../data/lt/uploads:/data/uploads
@@ -77,10 +81,10 @@ services:
     environment:
       <<: *nt_env
       BASE_URL: /ct
-      PUBLIC_URL: https://trace.lukasdiegelmann.net/ct
+      PUBLIC_URL: ${TRACE_ORIGIN:?see .env.example}/ct
       DB_PATH: /data/db/cooktrace.db
       OIDC_CLIENT_ID: ct
-      OIDC_REDIRECT_URIS: https://trace.lukasdiegelmann.net/ct/api/auth/oidc/callback
+      OIDC_REDIRECT_URIS: ${TRACE_ORIGIN:?see .env.example}/ct/api/auth/oidc/callback
     volumes:
       - ../../data/ct/db:/data/db
       - ../../data/ct/uploads:/data/uploads

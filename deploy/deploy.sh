@@ -5,9 +5,10 @@
 #   <root>/secrets  env files, mode 600, never in git
 #   <root>/data     SQLite DBs + uploads of nt/ct/lt
 # Set up the clients nt, ct, lt at the OIDC provider first and put each one's
-# secret into <root>/secrets/<app>.env as OIDC_CLIENT_SECRET.
-# Steps: generate JWT secrets once -> check the client secrets -> build +
-# start backends and web.
+# secret into <root>/secrets/<app>.env as OIDC_CLIENT_SECRET. Put the origin
+# and the issuer into <root>/secrets/trace.env (see .env.example).
+# Steps: check trace.env -> generate JWT secrets once -> check the client
+# secrets -> build + start backends and web.
 set -euo pipefail
 SRC=$(cd "$(dirname "$0")/.." && pwd)
 [ "$(basename "$SRC")" = src ] || { echo "run the copy in <root>/src on the server (see push.sh)" >&2; exit 1; }
@@ -15,6 +16,13 @@ ROOT=$(dirname "$SRC")
 cd "$ROOT"
 umask 077
 mkdir -p secrets data/{nt,ct,lt}/{db,uploads}
+
+for var in TRACE_ORIGIN OIDC_ISSUER; do
+  grep -q "^$var=." secrets/trace.env 2>/dev/null || {
+    echo "$ROOT/secrets/trace.env has no $var: see deploy/.env.example" >&2
+    exit 1
+  }
+done
 
 rand() { openssl rand -base64 "$1" | tr -d '\n/+=' ; }
 for app in nt ct lt; do
@@ -25,7 +33,10 @@ for app in nt ct lt; do
   }
 done
 
-dc() { docker compose -f "$SRC/deploy/compose.yaml" "$@"; }
+dc() {
+  docker compose --env-file "$ROOT/secrets/trace.env" \
+    -f "$SRC/deploy/compose.yaml" "$@"
+}
 
 dc build nt ct lt
 dc up -d --remove-orphans
