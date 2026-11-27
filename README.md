@@ -1,4 +1,9 @@
-# Trace
+<h1>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/brand/wordmark-dark.svg">
+    <img src="docs/brand/wordmark-light.svg" alt="Trace" width="280">
+  </picture>
+</h1>
 
 One web app for nutrition, recipes and lifting, built on
 [NutriTrace](https://github.com/TraceApps/nutritrace),
@@ -69,4 +74,5 @@ cd ../.. && git add backends/nutritrace && git commit -m "Bump nutritrace"
 
 ## License
 
-AGPL-3.0, like the three upstream apps.
+AGPL-3.0, like the three upstream apps. The logo and wordmark are not covered
+by it (all rights reserved, see [docs/brand/README.md](docs/brand/README.md)).

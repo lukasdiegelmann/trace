@@ -29,7 +29,7 @@ export async function notifyDevice(
     typeof Notification !== "undefined" &&
     Notification.permission === "granted"
   ) {
-    const options = { body, icon: "/icons/icon-192.png" };
+    const options = { body, icon: "/icons/pwa-192x192.png" };
     try {
       // Android Chrome only shows notifications through the service worker
       const registration =

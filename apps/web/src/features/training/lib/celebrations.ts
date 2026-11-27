@@ -58,7 +58,7 @@ export async function notify(
   ) {
     const options = {
       body,
-      icon: "/icons/icon-192.png",
+      icon: "/icons/pwa-192x192.png",
       tag: `lt-${Date.now()}`,
     };
     try {
