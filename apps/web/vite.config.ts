@@ -1,9 +1,12 @@
 import { monolithium } from "@monocircuit/monolithium/vite";
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
+import { execFileSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import { defineConfig } from "vite";
 import { VitePWA } from "vite-plugin-pwa";
+
+import { version } from "./package.json";
 
 /** Paths the backends own; the SPA (and its service worker) never answers them */
 export const BACKEND_PREFIXES = ["/nt/", "/ct/", "/lt/"];
@@ -26,7 +29,25 @@ function devProxy() {
   );
 }
 
+/** The commit the bundle is built from, "" outside a git checkout */
+function buildCommit() {
+  try {
+    return execFileSync("git", ["rev-parse", "HEAD"], {
+      cwd: fileURLToPath(new URL(".", import.meta.url)),
+      encoding: "utf8",
+      stdio: ["ignore", "pipe", "ignore"],
+    }).trim();
+  } catch {
+    return "";
+  }
+}
+
 export default defineConfig(({ command, mode }) => ({
+  // Settings > About Trace compares this with the deployed /version.json.
+  define: {
+    __TRACE_BUILD_COMMIT__: JSON.stringify(buildCommit()),
+    __TRACE_VERSION__: JSON.stringify(version),
+  },
   plugins: [
     // One React for the linked/installed package, its files served in dev
     monolithium(),
@@ -69,12 +90,15 @@ export default defineConfig(({ command, mode }) => ({
         // The app shell, plus exercise media once seen or pre-cached from
         // Settings > Exercise library. No API responses.
         globPatterns: ["**/*.{js,css,html,svg,png,woff2,webmanifest}"],
+        // version.json tells what is deployed now: never from a cache.
+        globIgnores: ["**/node_modules/**/*", "version.json"],
         navigateFallback: "/index.html",
         // /r/ comes from the server, which sends its privacy headers.
         navigateFallbackDenylist: [
           /^\/(nt|ct|lt)(\/|$)/,
           /^\/__trace\//,
           /^\/r\//,
+          /^\/version\.json$/,
         ],
         runtimeCaching: [
           {

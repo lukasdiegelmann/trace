@@ -8,7 +8,7 @@
 # secret into <root>/secrets/<app>.env as OIDC_CLIENT_SECRET. Put the origin
 # and the issuer into <root>/secrets/trace.env (see .env.example).
 # Steps: check trace.env -> generate JWT secrets once -> check the client
-# secrets -> build + start backends and web.
+# secrets -> build + start backends and web -> set deployedAt in version.json.
 set -euo pipefail
 SRC=$(cd "$(dirname "$0")/.." && pwd)
 [ "$(basename "$SRC")" = src ] || { echo "run the copy in <root>/src on the server (see push.sh)" >&2; exit 1; }
@@ -40,6 +40,9 @@ dc() {
 
 dc build nt ct lt
 dc up -d --remove-orphans
+# web-nginx.conf is mounted as a single file: a sync replaces the file, and
+# only a new container sees the new one.
+dc up -d --no-deps --force-recreate web
 for svc in nt:3101 lt:3102 ct:3103; do
   url="http://127.0.0.1:${svc#*:}/${svc%:*}/api/auth/status"
   for i in $(seq 1 60); do
@@ -48,4 +51,9 @@ for svc in nt:3101 lt:3102 ct:3103; do
     sleep 2
   done
 done
+# The install is done: that is when this version was deployed.
+VERSION_JSON=$SRC/apps/web/dist/version.json
+if [ -f "$VERSION_JSON" ]; then
+  sed -i "s/\"deployedAt\": \"[^\"]*\"/\"deployedAt\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"/" "$VERSION_JSON"
+fi
 dc ps --format '{{.Service}}: {{.State}} {{.Status}} {{.Image}}'

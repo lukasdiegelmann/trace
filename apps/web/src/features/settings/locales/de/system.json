@@ -61,5 +61,21 @@
       "privacy": "Kein Tracking, keine Werbung, keine Analyse durch Dritte"
     },
     "federation": "Verbunden liest CookTrace Lebensmittel aus NutriTrace, und LiftTrace schickt ihm deine Trainings."
+  },
+  "deploy": {
+    "title": "Über Trace",
+    "version": "Version",
+    "commit": "Commit",
+    "branch": "Branch",
+    "deployedAt": "Deployt",
+    "builtAt": "Gebaut",
+    "source": "Quelle",
+    "ci": "CI",
+    "ciRun": "CI-Lauf",
+    "manual": "Von Hand",
+    "repository": "Repository",
+    "none": "Keine Deploy-Info",
+    "updateAvailable": "Neue Version verfügbar",
+    "reload": "Neu laden"
   }
 }

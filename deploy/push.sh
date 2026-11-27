@@ -7,12 +7,15 @@
 # registry, see .npmrc); the server only serves apps/web/dist.
 # Needs DEPLOY_HOST (ssh host) and DEPLOY_ROOT (absolute directory there),
 # from the environment or from the untracked deploy/local.env.
+# Writes version.json (Settings > About Trace); TRACE_SOURCE_URL sets the
+# repository it links to.
 #   deploy/push.sh            build + sync + deploy
 #   SKIP_BUILD=1 deploy/push.sh   use the apps/web/dist that is there
 #   SYNC_ONLY=1 deploy/push.sh
 set -euo pipefail
 cd "$(dirname "$0")/.."
 [ ! -f deploy/local.env ] || . deploy/local.env
+export TRACE_SOURCE_URL=${TRACE_SOURCE_URL:-}
 : "${DEPLOY_HOST:?set DEPLOY_HOST (env or deploy/local.env)}"
 : "${DEPLOY_ROOT:?set DEPLOY_ROOT (env or deploy/local.env)}"
 [[ "$DEPLOY_ROOT" =~ ^/[A-Za-z0-9._/-]*[A-Za-z0-9._-]$ ]] || { echo "DEPLOY_ROOT must be an absolute path without spaces or a trailing slash" >&2; exit 1; }
@@ -22,6 +25,7 @@ if [ -z "${SKIP_BUILD:-}" ]; then
   pnpm --filter web build
 fi
 [ -f apps/web/dist/index.html ] || { echo "apps/web/dist is missing: build apps/web first" >&2; exit 1; }
+TRACE_DEPLOY_SOURCE=manual node deploy/write-version.mjs
 ssh "$DEPLOY_HOST" "mkdir -p $DEPLOY_ROOT/src && chmod 700 $DEPLOY_ROOT"
 rsync -az --delete \
   --exclude .git --exclude node_modules --exclude android --exclude dist \
