@@ -1,0 +1,1367 @@
+{
+  "title": "Kochen",
+  "placeholder": "Hier entstehen Rezepte, Vorrat, Einkauf und Kochbücher aus CookTrace.",
+  "cookingCommon": {
+    "cancel": "Abbrechen",
+    "save": "Speichern",
+    "delete": "Löschen",
+    "remove": "Entfernen",
+    "done": "Fertig",
+    "add": "Hinzufügen",
+    "edit": "Bearbeiten",
+    "clear": "Leeren",
+    "close": "Schließen",
+    "retry": "Erneut versuchen",
+    "loading": "Lädt…",
+    "search": "Suchen…",
+    "nothingFound": "Nichts gefunden",
+    "filter": "Filtern…",
+    "moveUp": "{{name}} nach oben",
+    "moveDown": "{{name}} nach unten",
+    "actionsFor": "Aktionen für {{name}}",
+    "nav": {
+      "label": "Bereiche in Kochen",
+      "recipes": "Rezepte",
+      "pantry": "Vorrat",
+      "shopping": "Einkauf",
+      "diary": "Tagebuch",
+      "manage": "Verwalten"
+    },
+    "nutritionFacts": {
+      "title": "Nährwerte",
+      "servingSize": "Portionsgröße",
+      "amountPerServing": "Menge pro Portion",
+      "dailyValue": "% Tagesbedarf*",
+      "footnote": "* Der % Tagesbedarf zeigt, wie viel ein Nährstoff einer Portion zur täglichen Ernährung beiträgt. Grundlage sind 2.000 Kalorien am Tag.",
+      "perServing": "Pro Portion",
+      "oneOf": "1 von {{total}}",
+      "perContainer": "{{total}} Portionen pro Packung",
+      "perRecipe": "Portionen pro Rezept: {{total}}",
+      "includes": "davon {{amount}} {{label}}"
+    },
+    "derivedFromSalt": "Aus Salz berechnet",
+    "derivedFromSodium": "Aus Natrium berechnet",
+    "units": {
+      "pick": "Einheit wählen"
+    },
+    "unitGroups": {
+      "custom": "Eigene",
+      "volumeUs": "Volumen (US)",
+      "volumeMetric": "Volumen (metrisch)",
+      "weightUs": "Gewicht (US)",
+      "weightMetric": "Gewicht (metrisch)",
+      "count": "Stück / beschreibend"
+    },
+    "photo": {
+      "preview": "Fotovorschau",
+      "remove": "Foto entfernen",
+      "uploading": "Lädt hoch…",
+      "choose": "Foto wählen",
+      "noFile": "Keine Datei gewählt",
+      "camera": "Foto aufnehmen",
+      "capture": "Auslösen",
+      "cameraDenied": "Die Kamera ist nicht verfügbar. Erlaube den Zugriff oder lade eine Datei hoch.",
+      "url": "Bild-URL",
+      "useUrl": "URL verwenden",
+      "uploadFailed": "Hochladen fehlgeschlagen"
+    },
+    "barcode": {
+      "title": "Barcode scannen",
+      "hint": "Halte die Kamera auf den Barcode.",
+      "noCamera": "Die Kamera ist nicht verfügbar. Gib die Nummer ein.",
+      "manual": "Barcode-Nummer",
+      "use": "Übernehmen",
+      "camera": "Kamera",
+      "restart": "Kamera neu starten",
+      "torchOn": "Licht an",
+      "torchOff": "Licht aus"
+    },
+    "recipes": {
+      "search": "Rezepte suchen",
+      "none": "Keine passenden Rezepte.",
+      "inPantry": "{{have}}/{{need}} im Vorrat"
+    },
+    "nutriments": {
+      "calories": "Kalorien",
+      "energy": "Energie",
+      "kilojoules": "Kilojoule",
+      "fat": "Fett",
+      "saturatedFat": "Gesättigte Fettsäuren",
+      "transFat": "Transfette",
+      "polyunsaturatedFat": "Mehrfach ungesättigte Fettsäuren",
+      "monounsaturatedFat": "Einfach ungesättigte Fettsäuren",
+      "cholesterol": "Cholesterin",
+      "sodium": "Natrium",
+      "salt": "Salz",
+      "carbohydrates": "Kohlenhydrate",
+      "fiber": "Ballaststoffe",
+      "sugars": "Zucker",
+      "addedSugars": "Zugesetzter Zucker",
+      "proteins": "Eiweiß",
+      "vitaminD": "Vitamin D",
+      "calcium": "Calcium",
+      "iron": "Eisen",
+      "potassium": "Kalium",
+      "vitaminA": "Vitamin A",
+      "vitaminC": "Vitamin C",
+      "vitaminE": "Vitamin E",
+      "vitaminK": "Vitamin K",
+      "b1": "Vitamin B1 (Thiamin)",
+      "b2": "Vitamin B2 (Riboflavin)",
+      "b3": "Vitamin B3 (Niacin)",
+      "b6": "Vitamin B6",
+      "b9": "Folat (B9)",
+      "b12": "Vitamin B12",
+      "magnesium": "Magnesium",
+      "zinc": "Zink",
+      "phosphorus": "Phosphor",
+      "caffeine": "Koffein",
+      "alcohol": "Alkohol"
+    },
+    "icon": "Symbol"
+  },
+  "pantry": {
+    "title": "Vorrat",
+    "add": "Artikel hinzufügen",
+    "search": "Vorrat durchsuchen",
+    "allCategories": "Alle",
+    "uncategorized": "Ohne Kategorie",
+    "categoryFilter": "Nach Kategorie filtern",
+    "noMatch": "Keine Treffer für „{{query}}“",
+    "empty": {
+      "title": "Dein Vorrat ist leer",
+      "text": "Füge die Zutaten hinzu, die du zu Hause hast. Rezepte zeigen damit, was du schon hast.",
+      "action": "Artikel hinzufügen"
+    },
+    "variantBanner": {
+      "title": "Neu: Varianten",
+      "text": "Fasse verschiedene Marken derselben Zutat in einem Eintrag zusammen. Öffne einen Artikel und füge unter Varianten eine Marke oder einen Laden hinzu. Rezepte, die auf den Oberbegriff verweisen, passen zu jeder davon.",
+      "dismiss": "Ausblenden"
+    },
+    "stock": {
+      "label": "Nach Bestand filtern",
+      "all": "Alle",
+      "in": "Vorrätig",
+      "out": "Leer",
+      "expiring": "Läuft bald ab"
+    },
+    "sort": {
+      "label": "Sortierung",
+      "name": "A → Z",
+      "updated": "Zuletzt geändert",
+      "usage": "Am häufigsten verwendet"
+    },
+    "view": {
+      "label": "Ansicht",
+      "grid": "Kachelansicht",
+      "list": "Listenansicht"
+    },
+    "select": {
+      "deselect": "{{name}} abwählen",
+      "select": "{{name}} auswählen",
+      "delete": "Ausgewählte löschen",
+      "cancel": "Auswahl beenden",
+      "count_one": "{{count}} ausgewählt",
+      "count_other": "{{count}} ausgewählt"
+    },
+    "actions": {
+      "markOut": "Als leer markieren",
+      "markIn": "Als vorrätig markieren",
+      "select": "Mehrere auswählen"
+    },
+    "confirmRemove": {
+      "title": "Aus dem Vorrat entfernen?",
+      "message": "„{{name}}“ wird entfernt. Rezepte, die darauf verweisen, bleiben erhalten."
+    },
+    "confirmBulk": {
+      "message": "Rezepte, die darauf verweisen, bleiben erhalten.",
+      "title_one": "{{count}} Artikel löschen?",
+      "title_other": "{{count}} Artikel löschen?",
+      "confirm_one": "{{count}} löschen",
+      "confirm_other": "{{count}} löschen"
+    },
+    "toast": {
+      "removed": "Entfernt",
+      "updateFailed": "Aktualisieren fehlgeschlagen",
+      "deleteFailed": "Löschen fehlgeschlagen",
+      "lookupFailed": "Barcode-Suche fehlgeschlagen",
+      "removedPartly": "{{done}} von {{total}} entfernt, {{failed}} fehlgeschlagen",
+      "removedMany_one": "{{count}} Artikel entfernt",
+      "removedMany_other": "{{count}} Artikel entfernt"
+    },
+    "card": {
+      "variantOf": "Variante von {{name}}",
+      "variantsInStock": "{{stocked}} von {{total}} Varianten vorrätig",
+      "markOut": "{{name}} als leer markieren",
+      "markIn": "{{name}} als vorrätig markieren",
+      "collapse": "Varianten von {{name}} einklappen",
+      "expand": "Varianten von {{name}} ausklappen",
+      "usedIn_one": "In {{count}} Rezept verwendet",
+      "usedIn_other": "In {{count}} Rezepten verwendet"
+    },
+    "expiry": {
+      "expired": "Abgelaufen",
+      "today": "Läuft heute ab",
+      "tomorrow": "Läuft morgen ab",
+      "on": "Haltbar bis {{date}}",
+      "inDays_one": "Läuft in {{count}} Tag ab",
+      "inDays_other": "Läuft in {{count}} Tagen ab"
+    },
+    "spotlight": {
+      "title": "Läuft ab & abgelaufen",
+      "seeAll": "Alle ansehen",
+      "today": "heute",
+      "daysLeft_one": "noch {{count}} Tag",
+      "daysLeft_other": "noch {{count}} Tage"
+    },
+    "sources": {
+      "label": "Suchquellen",
+      "all": "Alle",
+      "local": "Vorrat",
+      "off": "OFF",
+      "usda": "USDA",
+      "nt": "NutriTrace",
+      "combine": "Quellen kombinieren"
+    },
+    "tiers": {
+      "offTitle": "OFF-Qualität",
+      "usdaTitle": "USDA-Datentyp",
+      "active": "Filter aktiv",
+      "complete": "Vollständig (ab 70 %)",
+      "partial": "Teilweise (40–70 %)",
+      "sparse": "Lückenhaft (unter 40 %)",
+      "unknown": "Unbekannt",
+      "reset": "Filter zurücksetzen"
+    },
+    "external": {
+      "searching": "Suche in {{source}}…",
+      "searchingAll": "Suche in allen Quellen…",
+      "allHidden": "Der Qualitätsfilter blendet alle Treffer von {{source}} aus",
+      "noneIn": "Keine Treffer in {{source}}",
+      "noneAll": "Keine Treffer",
+      "completeness": "OFF-Vollständigkeit: {{percent}} %",
+      "origin": "Herkunft: {{country}}"
+    }
+  },
+  "pantryItem": {
+    "title": "Vorratsartikel",
+    "titleAdd": "Artikel hinzufügen",
+    "titleEdit": "Artikel bearbeiten",
+    "invalid": "Diesen Artikel gibt es nicht.",
+    "back": "Zurück zum Vorrat",
+    "inStock": "Vorrätig",
+    "outOfStock": "Leer",
+    "onHand": "Bestand",
+    "decrease": "Menge verringern",
+    "increase": "Menge erhöhen",
+    "notSet": "Nicht angegeben",
+    "alreadyExpired": "bereits abgelaufen",
+    "earliestVariant": "Früheste Variante: {{name}} am {{date}}",
+    "usedIn": {
+      "title": "Verwendet in",
+      "titleCount": "Verwendet in ({{count}})",
+      "none": "Noch kein Rezept verwendet diesen Artikel."
+    },
+    "fields": {
+      "photo": "Foto",
+      "name": "Name *",
+      "brand": "Marke",
+      "category": "Kategorie",
+      "barcode": "Barcode",
+      "onHand": "Bestand",
+      "unit": "Einheit",
+      "servingSize": "Portionsgröße",
+      "servingUnit": "Portionseinheit",
+      "density": "Dichte (g pro Cup, optional)",
+      "expiresOn": "Haltbar bis",
+      "notes": "Notizen"
+    },
+    "placeholders": {
+      "name": "Weizenmehl",
+      "brand": "z. B. Aurora",
+      "density": "z. B. 120 für Mehl",
+      "expiresOn": "Kein Datum",
+      "notes": "Wo gekauft, wo gelagert, …"
+    },
+    "categoryPlaceholder": "Kategorie wählen",
+    "clearCategory": "Kategorie entfernen",
+    "newCategory": {
+      "open": "Neue Kategorie",
+      "title": "Neue Vorratskategorie",
+      "name": "Name der Kategorie",
+      "create": "Anlegen"
+    },
+    "stockHint": "0 heißt leer; kein Wert oder mehr heißt vorrätig.",
+    "linked": "Verknüpft: Die Portionsgröße skaliert alle Nährwerte",
+    "unlinked": "Getrennt: Nährwerte bleiben bei neuer Portionsgröße",
+    "density": {
+      "lookUp": "Nachschlagen",
+      "set": "{{value}} g pro Cup für {{name}} eingetragen",
+      "none": "Keine hinterlegte Dichte für „{{name}}“"
+    },
+    "expiryPerVariant": "Das Haltbarkeitsdatum gilt pro Variante. Öffne eine Variante, um es zu setzen.",
+    "nutrition": {
+      "title": "Nährwerte",
+      "perServing": "Pro Portion",
+      "editAll": "Alle Nährwerte bearbeiten",
+      "allTitle": "Alle Nährwerte",
+      "allHint": "Werte nur für diesen Artikel. Deine Einstellung der sichtbaren Nährwerte bleibt. Leere Felder werden ausgelassen."
+    },
+    "label": {
+      "scan": "Etikett scannen",
+      "photo": "Etikett fotografieren",
+      "scanning": "Wird gelesen…",
+      "unreadable": "Das Etikett ließ sich nicht lesen",
+      "done": "Nährwerte vom Etikett übernommen",
+      "failed": "Scan fehlgeschlagen: {{reason}}",
+      "noKey": "kein API-Schlüssel hinterlegt (Einstellungen, Trace-Assistent)",
+      "noBaseUrl": "der kompatible Anbieter braucht eine Basis-URL und ein Modell"
+    },
+    "off": {
+      "view": "Bei Open Food Facts ansehen",
+      "share": "An OFF senden",
+      "refresh": "Von OFF aktualisieren",
+      "notFound": "Bei Open Food Facts nicht gefunden",
+      "updated": "Von Open Food Facts aktualisiert",
+      "nameRequired": "Gib zuerst einen Namen ein",
+      "submitted": "An Open Food Facts gesendet",
+      "shareFailed": "Senden an OFF fehlgeschlagen",
+      "verify": {
+        "checking": "Prüfe bei Open Food Facts…",
+        "confirmed": "Bei Open Food Facts bestätigt",
+        "pending": "Gesendet, erscheint vielleicht erst in einigen Minuten"
+      }
+    },
+    "variants": {
+      "title": "Varianten",
+      "genericItem": "einem übergeordneten Artikel",
+      "detach": "Lösen",
+      "detachFrom": "Von {{name}} lösen",
+      "detachTitle": "Von {{name}} lösen?",
+      "detachMessage": "Die Variante wird ein eigener Artikel. Rezepte mit Verweis auf {{name}} sehen sie nicht mehr als Variante.",
+      "isVariant": "Dieser Artikel ist eine Variante von {{name}}. Rezepte mit Verweis auf den Oberbegriff sehen ihn als Variante.",
+      "isFlat": "Ein eigenständiger Artikel. Füge Varianten hinzu (verschiedene Milchmarken zählen im Rezept als eine) oder ordne ihn einem anderen unter.",
+      "add": "Variante hinzufügen",
+      "addTitle": "Variante hinzufügen",
+      "addHint": "Gib eine Marke oder einen Laden ein. Ein passender Artikel lässt sich direkt zuordnen, sonst entsteht eine neue Variante.",
+      "brand": "Marke oder Laden",
+      "brandPlaceholder": "z. B. Alnatura",
+      "attach": "Als Variante zuordnen",
+      "noSuggestion": "Kein passender Artikel; es entsteht eine neue Variante.",
+      "nameOverride": "Abweichender Name",
+      "nameOverridePlaceholder": "z. B. fettarme Milch",
+      "useOtherName": "Anderen Namen verwenden",
+      "create": "Variante anlegen",
+      "createNamed": "„{{name}}“ anlegen",
+      "out": "Leer",
+      "sourceTitle": "Nährwertquelle für Rezepte",
+      "sourceHint": "Welche Werte Rezepte nutzen, wenn eine Zutat auf diesen Artikel verweist. Varianten behalten ihre eigenen.",
+      "sourceManual": "Manuell (eigene Werte dieses Artikels)",
+      "sourcePull": "Von {{name}} übernehmen",
+      "promoteHint": "Das Haltbarkeitsdatum ({{date}}) wandert zur neuen Variante, dem eigentlichen Produkt.",
+      "makeVariantOf": "Zur Variante von…",
+      "pickerHint": "Wähle den Artikel, dessen Variante dies werden soll. Varianten stehen nicht zur Wahl.",
+      "pickerSearch": "Vorrat durchsuchen",
+      "pickerNone": "Keine passenden Artikel.",
+      "isGeneric_one": "Ein Oberbegriff mit {{count}} Variante. Jede Variante hat eigenen Barcode, Foto und Bestand; Rezepte können auf diesen Artikel verweisen.",
+      "isGeneric_other": "Ein Oberbegriff mit {{count}} Varianten. Jede Variante hat eigenen Barcode, Foto und Bestand; Rezepte können auf diesen Artikel verweisen."
+    },
+    "deleteVariants": {
+      "title": "„{{name}}“ entfernen?",
+      "label": "Was mit den Varianten passiert",
+      "keep": "Behalten",
+      "cascade": "Auch entfernen",
+      "keepHint": "Die Varianten bleiben als eigene Artikel im Vorrat. Empfohlen.",
+      "cascadeHint": "Die Varianten werden mit diesem Artikel entfernt.",
+      "message_one": "Dieser Artikel hat {{count}} Variante. Was soll mit ihr passieren?",
+      "message_other": "Dieser Artikel hat {{count}} Varianten. Was soll mit ihnen passieren?"
+    },
+    "toast": {
+      "nameRequired": "Ein Name ist erforderlich",
+      "added": "Zum Vorrat hinzugefügt",
+      "saved": "Gespeichert",
+      "saveFailed": "Speichern fehlgeschlagen",
+      "removedWithVariants": "Mit Varianten entfernt",
+      "categoryFailed": "Kategorie konnte nicht angelegt werden",
+      "addedAsVariant": "Als Variante hinzugefügt",
+      "detached": "Gelöst",
+      "linked": "Als Variante verknüpft",
+      "brandOrName": "Gib eine Marke oder einen anderen Namen ein",
+      "addedVariant": "{{name}} hinzugefügt",
+      "variantFailed": "Variante konnte nicht geändert werden",
+      "sourceManual": "Nährwerte auf manuell gesetzt",
+      "sourceVariant": "Nährwerte kommen von der Variante",
+      "alreadyThere": "„{{name}}“ ist schon im Vorrat; nichts Neues angelegt"
+    }
+  },
+  "shopping": {
+    "title": "Einkaufsliste",
+    "listTitle": "Einkaufsliste",
+    "groupBy": {
+      "label": "Gruppieren nach",
+      "aisle": "Nach Regal",
+      "recipe": "Nach Rezept",
+      "flat": "Eine Liste"
+    },
+    "quickAdd": {
+      "name": "Artikel hinzufügen",
+      "quantity": "Menge",
+      "suggestions": "Vorschläge aus dem Vorrat"
+    },
+    "hideChecked": "Erledigte ausblenden",
+    "clearChecked": "Erledigte entfernen",
+    "progress": "Einkaufsfortschritt",
+    "empty": {
+      "title": "Nichts einzukaufen",
+      "text": "Füge oben Artikel hinzu oder übernimm die Zutaten eines Rezepts."
+    },
+    "other": "Sonstiges",
+    "recipe": "Rezept",
+    "uncategorized": "Ohne Regal",
+    "undo": "Rückgängig",
+    "onlyMissing": "Nur hinzufügen, was nicht im Vorrat ist",
+    "row": {
+      "check": "{{name}} abhaken",
+      "uncheck": "Haken bei {{name}} entfernen",
+      "aisle": "Regal von {{name}} ändern",
+      "remove": "{{name}} entfernen"
+    },
+    "group": {
+      "openRecipe": "Rezept öffnen",
+      "checkAll": "Alle in dieser Gruppe abhaken",
+      "uncheckAll": "Alle Haken dieser Gruppe entfernen",
+      "remove": "Alle Artikel dieser Gruppe entfernen"
+    },
+    "confirmGroup": {
+      "message": "Sie werden von der Einkaufsliste entfernt.",
+      "title_one": "{{count}} Artikel aus {{group}} entfernen?",
+      "title_other": "{{count}} Artikel aus {{group}} entfernen?"
+    },
+    "edit": {
+      "title": "Artikel bearbeiten",
+      "name": "Name",
+      "quantity": "Menge",
+      "unit": "Einheit"
+    },
+    "aisle": {
+      "title": "Regal ändern",
+      "help": "Ordne den Artikel einem Regal zu. Wähle eines oder gib einen neuen Namen ein.",
+      "input": "Regal",
+      "set": "Übernehmen",
+      "known": "Bekannte Regale",
+      "none": "Kein Regal"
+    },
+    "clear": {
+      "description": "Abgehakte Artikel werden von der Liste entfernt.",
+      "confirm": "Entfernen",
+      "restockLabel": "Als vorrätig markieren",
+      "restockHint": "Diese Artikel sind leer und passen zu dem, was du abgehakt hast.",
+      "variant": "Variante von {{name}}",
+      "title_one": "{{count}} erledigten Artikel entfernen?",
+      "title_other": "{{count}} erledigte Artikel entfernen?"
+    },
+    "fromRecipe": {
+      "title": "Aus Rezept hinzufügen"
+    },
+    "fromPlan": {
+      "title": "Aus geplanten Gerichten",
+      "help": "Übernimmt die Zutaten aller geplanten Gerichte in diesem Zeitraum.",
+      "from": "Von",
+      "to": "Bis",
+      "confirm": "Zur Liste hinzufügen"
+    },
+    "addSource": {
+      "title": "Zur Einkaufsliste hinzufügen",
+      "recipe": "Aus Rezept hinzufügen",
+      "plan": "Aus geplanten Gerichten"
+    },
+    "share": {
+      "title": "Liste teilen",
+      "image": "Als Bild teilen",
+      "text": "Als Text teilen",
+      "listTitle": "Einkaufsliste",
+      "itemCount_one": "{{count}} Artikel",
+      "itemCount_other": "{{count}} Artikel",
+      "more_one": "+{{count}} weitere…",
+      "more_other": "+{{count}} weitere…"
+    },
+    "toast": {
+      "updateFailed": "Aktualisieren fehlgeschlagen",
+      "deleteFailed": "Löschen fehlgeschlagen",
+      "addFailed": "Hinzufügen fehlgeschlagen",
+      "saveFailed": "Speichern fehlgeschlagen",
+      "orderFailed": "Reihenfolge konnte nicht gespeichert werden",
+      "clearFailed": "Entfernen fehlgeschlagen",
+      "cleared": "Erledigte entfernt",
+      "restockUndone": "Bestand zurückgesetzt",
+      "undoFailed": "Rückgängig fehlgeschlagen",
+      "nothingToShare": "Füge zuerst Artikel hinzu",
+      "savedImage": "Bild gespeichert",
+      "copied": "In die Zwischenablage kopiert",
+      "shareFailed": "Teilen fehlgeschlagen",
+      "nothingPlanned": "In diesem Zeitraum ist nichts geplant",
+      "alreadyInPantry": "Alles ist schon im Vorrat",
+      "removed_one": "{{count}} Artikel entfernt",
+      "removed_other": "{{count}} Artikel entfernt",
+      "restockFailed_one": "{{count}} Artikel konnte nicht aufgefüllt werden",
+      "restockFailed_other": "{{count}} Artikel konnten nicht aufgefüllt werden",
+      "clearedRestocked_one": "Entfernt; {{count}} Artikel wieder vorrätig",
+      "clearedRestocked_other": "Entfernt; {{count}} Artikel wieder vorrätig",
+      "addedFromRecipe_one": "{{count}} Artikel aus „{{name}}“ hinzugefügt",
+      "addedFromRecipe_other": "{{count}} Artikel aus „{{name}}“ hinzugefügt",
+      "addedFromPlan_one": "{{count}} Artikel hinzugefügt (geplante Gerichte: {{cooks}})",
+      "addedFromPlan_other": "{{count}} Artikel hinzugefügt (geplante Gerichte: {{cooks}})"
+    },
+    "remaining_one": "{{count}} offen",
+    "remaining_other": "{{count}} offen",
+    "checked_one": "{{count}} erledigt",
+    "checked_other": "{{count}} erledigt",
+    "showChecked_one": "{{count}} erledigten anzeigen",
+    "showChecked_other": "{{count}} erledigte anzeigen"
+  },
+  "diary": {
+    "title": "Kochtagebuch",
+    "recipeFallback": "Rezept",
+    "planned": "Geplant",
+    "cookedBy": "von {{name}}",
+    "stars": "{{rating}} von 5 Sternen",
+    "meals": {
+      "breakfast": "Frühstück",
+      "lunch": "Mittagessen",
+      "dinner": "Abendessen",
+      "snack": "Snack"
+    },
+    "heatmap": {
+      "title": "Das letzte Jahr",
+      "none": "Nichts gekocht · {{date}}",
+      "less": "Weniger",
+      "more": "Mehr",
+      "cooks_one": "{{count}} Gericht",
+      "cooks_other": "{{count}} Gerichte",
+      "activeDays_one": "{{count}} aktiver Tag",
+      "activeDays_other": "{{count}} aktive Tage",
+      "day_one": "{{count}} Gericht · {{date}}",
+      "day_other": "{{count}} Gerichte · {{date}}"
+    },
+    "stats": {
+      "thisWeek": "Diese Woche",
+      "currentStreak": "Aktuelle Serie",
+      "longestStreak": "Längste Serie",
+      "thisMonth": "Dieser Monat",
+      "topRecipe_one": "Diesen Monat am häufigsten · {{count}}×",
+      "topRecipe_other": "Diesen Monat am häufigsten · {{count}}×"
+    },
+    "views": {
+      "label": "Ansicht",
+      "list": "Liste",
+      "month": "Monat",
+      "photos": "Fotos"
+    },
+    "month": {
+      "previous": "Voriger Monat",
+      "next": "Nächster Monat"
+    },
+    "search": "Rezepte, Notizen, Köche suchen",
+    "clearSearch": "Suche leeren",
+    "filterByRecipe": "Nach Rezept filtern",
+    "clearRecipeFilter": "Rezeptfilter entfernen",
+    "mealFilter": "Nach Mahlzeit filtern",
+    "empty": {
+      "title": "Noch nichts gekocht",
+      "text": "Plane ein Gericht oder trage eines vom Rezept aus ein."
+    },
+    "noMatches": {
+      "title": "Keine Treffer",
+      "text": "Entferne Suche, Mahlzeit- oder Rezeptfilter.",
+      "clear": "Filter entfernen"
+    },
+    "noPhotos": {
+      "title": "Noch keine Fotos",
+      "text": "Füge beim Eintragen ein Foto hinzu, dann erscheint es hier."
+    },
+    "lightbox": {
+      "previous": "Voriges Foto",
+      "next": "Nächstes Foto"
+    },
+    "openRecipe": "Rezept öffnen",
+    "markCooked": "Als gekocht markieren",
+    "plan": {
+      "open": "Gericht planen",
+      "title": "Gericht planen",
+      "date": "Datum",
+      "meal": "Mahlzeit (optional)",
+      "confirm": "Einplanen"
+    },
+    "confirm": {
+      "cancelPlanned": "Geplantes Gericht absagen?",
+      "delete": "Eintrag löschen?",
+      "message": "{{name}} am {{date}}"
+    },
+    "toast": {
+      "markedCooked": "Als gekocht markiert",
+      "updateFailed": "Aktualisieren fehlgeschlagen",
+      "removed": "Entfernt",
+      "deleteFailed": "Löschen fehlgeschlagen",
+      "planned": "Eingeplant",
+      "planFailed": "Einplanen fehlgeschlagen"
+    },
+    "cookCount_one": "{{count}} Gericht",
+    "cookCount_other": "{{count}} Gerichte"
+  },
+  "manage": {
+    "title": "Verwalten",
+    "sectionsLabel": "Verwaltungsbereiche",
+    "sections": {
+      "recipe-categories": {
+        "label": "Rezeptkategorien",
+        "description": "Ein Schild über jedem Rezepttitel."
+      },
+      "tags": {
+        "label": "Tags",
+        "description": "Freie Schlagworte, mehrere pro Rezept."
+      },
+      "kitchen-gear": {
+        "label": "Küchengeräte",
+        "description": "Werkzeug in Rezepten: Töpfe, Pfannen, Spatel."
+      },
+      "pantry-categories": {
+        "label": "Vorratskategorien",
+        "description": "Bereiche, die den Vorrat gliedern."
+      },
+      "units": {
+        "label": "Einheiten",
+        "description": "Eingebaute ausblenden oder eigene ergänzen."
+      },
+      "cookbooks": {
+        "label": "Kochbücher",
+        "description": "Deine Rezeptsammlungen."
+      }
+    },
+    "name": "Name",
+    "newCategory": "Name der neuen Kategorie",
+    "addCategory": "Kategorie hinzufügen",
+    "noCategories": "Noch keine Kategorien. Lege unten eine an.",
+    "noMatch": "Keine Treffer für „{{query}}“.",
+    "confirmDelete": "„{{name}}“ löschen?",
+    "editNamed": "{{name}} bearbeiten",
+    "renameNamed": "{{name}} umbenennen",
+    "deleteNamed": "{{name}} löschen",
+    "toast": {
+      "saved": "Gespeichert",
+      "saveFailed": "Speichern fehlgeschlagen",
+      "addFailed": "Hinzufügen fehlgeschlagen",
+      "deleteFailed": "Löschen fehlgeschlagen",
+      "renameFailed": "Umbenennen fehlgeschlagen",
+      "orderFailed": "Reihenfolge konnte nicht gespeichert werden",
+      "categoryAdded": "Kategorie hinzugefügt"
+    },
+    "recipeCategories": {
+      "description": "Eine Kategorie pro Rezept: das Schild über dem Titel und ein Filter in der Rezeptliste.",
+      "color": "Farbe",
+      "colorN": "Farbe {{number}}",
+      "noColor": "Keine Farbe",
+      "deleteMessage": "Rezepte bleiben; sie verlieren nur die Kategorie."
+    },
+    "pantryCategories": {
+      "description": "Gliedert und filtert den Vorrat. Das Standardregal gilt für Einkaufsartikel dieser Kategorie; ohne Angabe zählt der Kategoriename.",
+      "aisle": "Standardregal (optional)",
+      "deleteMessage": "Artikel verlieren die Kategorie, bleiben aber im Vorrat."
+    },
+    "taxonomy": {
+      "tagsDescription": "Schlagworte an Rezepten (vegan, italienisch, schnell). Umbenennen oder Löschen wirkt in allen Rezepten.",
+      "toolsDescription": "Geräte an Rezepten: Pfannen, Mixer, Bleche. Umbenennen oder Löschen wirkt in allen Rezepten.",
+      "empty": "Noch nichts. Werte erscheinen, sobald ein Rezept sie nutzt.",
+      "sort": "Sortierung",
+      "sortBy": {
+        "name": "A–Z",
+        "most": "Am häufigsten",
+        "least": "Am seltensten"
+      },
+      "merge": "Zusammenführen",
+      "mergeTitle": "„{{name}}“ mit „{{target}}“ zusammenführen?",
+      "mergeMessage": "Alle Rezepte mit „{{name}}“ nutzen dann „{{target}}“.",
+      "usesAcross_one": "{{count}}× in Rezepten verwendet",
+      "usesAcross_other": "{{count}}× in Rezepten verwendet",
+      "unused_one": "{{count}} unbenutzt",
+      "unused_other": "{{count}} unbenutzt",
+      "updated_one": "{{count}} Rezept geändert",
+      "updated_other": "{{count}} Rezepte geändert",
+      "removedFrom_one": "Aus {{count}} Rezept entfernt",
+      "removedFrom_other": "Aus {{count}} Rezepten entfernt",
+      "deleteMessage_one": "Der Wert verschwindet aus {{count}} Rezept. Das Rezept bleibt.",
+      "deleteMessage_other": "Der Wert verschwindet aus {{count}} Rezepten. Die Rezepte bleiben."
+    },
+    "units": {
+      "description": "Die Einheiten in Rezept- und Vorratseditor. Ausgeblendete bleiben in Rezepten als Text erhalten.",
+      "restoreAll": "Alle wiederherstellen",
+      "restoreTitle": "Alle eingebauten Einheiten wieder anzeigen?",
+      "restoreMessage": "Ausgeblendete kehren zurück. Eigene Einheiten bleiben.",
+      "restoreConfirm": "Wieder anzeigen",
+      "restored": "Eingebaute Einheiten wiederhergestellt",
+      "filter": "Nach Kürzel oder Name filtern",
+      "visible": "{{abbr}} in der Auswahl anzeigen",
+      "builtin": "Eingebaut",
+      "customTitle": "Eigene Einheiten",
+      "noCustom": "Noch keine eigenen Einheiten.",
+      "abbr": "Kürzel",
+      "abbrPlaceholder": "z. B. EL",
+      "fullName": "Voller Name (optional)",
+      "category": "Gruppe",
+      "add": "Einheit hinzufügen",
+      "added": "Einheit hinzugefügt",
+      "deleteMessage": "Rezepte behalten das Kürzel als Text.",
+      "problem": {
+        "builtin": "„{{abbr}}“ ist schon eine eingebaute Einheit.",
+        "duplicate": "Die eigene Einheit „{{abbr}}“ gibt es schon."
+      },
+      "builtins_one": "{{count}} eingebaut · {{hidden}} ausgeblendet",
+      "builtins_other": "{{count}} eingebaut · {{hidden}} ausgeblendet",
+      "customCount_one": "{{count}} eigene",
+      "customCount_other": "{{count}} eigene"
+    },
+    "cookbooks": {
+      "description": "Rezeptsammlungen; ein Rezept kann in mehreren stehen. Den Inhalt bearbeitest du im Kochbuch.",
+      "empty": "Noch keine Kochbücher. Lege unten eines an.",
+      "open": "{{name}} öffnen",
+      "smart": "Smart",
+      "makeSmart": "Smartes Kochbuch (durch Filter gefüllt)",
+      "smartHelp": "Der Filter läuft bei jedem Öffnen und bleibt so aktuell.",
+      "category": "Kategorie",
+      "anyCategory": "Beliebig",
+      "tags": "Tags (alle nötig)",
+      "tagsPlaceholder": "vegan, schnell…",
+      "addTag": "Tag hinzufügen",
+      "favoritesOnly": "Nur Favoriten",
+      "uploadCover": "Titelbild hochladen",
+      "removeCover": "Titelbild entfernen",
+      "newName": "Name des neuen Kochbuchs",
+      "descriptionField": "Beschreibung (optional)",
+      "add": "Kochbuch anlegen",
+      "created": "Kochbuch angelegt",
+      "deleteMessage_one": "Entfernt das Kochbuch. {{count}} Rezept bleibt in deiner Sammlung.",
+      "deleteMessage_other": "Entfernt das Kochbuch. {{count}} Rezepte bleiben in deiner Sammlung."
+    },
+    "recipeCount_one": "{{count}} Rezept",
+    "recipeCount_other": "{{count}} Rezepte",
+    "itemCount_one": "{{count}} Eintrag",
+    "itemCount_other": "{{count}} Einträge",
+    "uses_one": "{{count}}× verwendet",
+    "uses_other": "{{count}}× verwendet"
+  },
+  "recipeCommon": {
+    "loadFailed": "Das konnte nicht geladen werden",
+    "failed": "Das hat nicht geklappt",
+    "preparingShare": "Teilen wird vorbereitet …",
+    "savedCard_one": "Karte gespeichert",
+    "savedCard_other": "{{count}} Seiten gespeichert",
+    "rating": "Bewertung",
+    "rate_one": "{{count}} Stern",
+    "rate_other": "{{count}} Sterne",
+    "rated_one": "{{count}} von 5 Sternen",
+    "rated_other": "{{count}} von 5 Sternen",
+    "card": {
+      "untitled": "Rezept",
+      "ingredients": "Zutaten",
+      "steps": "Schritte",
+      "continued": "Fortsetzung",
+      "serves": "{{count}} Portionen",
+      "page": "SEITE {{page}} VON {{total}}",
+      "more": "+{{count}} weitere …"
+    },
+    "markupHint": "Formatierung: **fett**, *kursiv*, __unterstrichen__, Listen mit „- “ oder „1. “"
+  },
+  "recipes": {
+    "title": "Rezepte",
+    "search": "Rezepte suchen …",
+    "noMatch": "Keine Rezepte zu „{{query}}“.",
+    "noFilterMatch": "Keine Rezepte zu diesen Filtern.",
+    "clearFilters": "Filter zurücksetzen",
+    "empty": {
+      "title": "Noch keine Rezepte",
+      "text": "Lege ein Rezept an oder importiere eines aus einem Link oder einer Datei.",
+      "action": "Rezept hinzufügen"
+    },
+    "add": {
+      "title": "Rezept hinzufügen",
+      "manual": "Selbst anlegen",
+      "url": "Aus URL importieren",
+      "file": "Aus Datei importieren",
+      "cookbook": "Kochbuch importieren (PDF)",
+      "paste": "Aus JSON/HTML importieren"
+    },
+    "tabs": {
+      "label": "Ansicht",
+      "recipes": "Rezepte",
+      "shared": "Geteilt",
+      "cookbooks": "Kochbücher"
+    },
+    "filters": {
+      "favorites": "Favoriten",
+      "all": "Alle"
+    },
+    "sort": {
+      "label": "Sortierung",
+      "fav-alpha": "★ + A→Z",
+      "alpha": "A → Z",
+      "recent": "Zuletzt gekocht",
+      "most": "Am häufigsten gekocht",
+      "newest": "Neueste"
+    },
+    "card": {
+      "servings_one": "{{count}} Portion",
+      "servings_other": "{{count}} Portionen",
+      "pantry": "Zutaten im Vorrat",
+      "favorite": "Favorit",
+      "actions": "Aktionen für {{name}}"
+    },
+    "menu": {
+      "open": "Rezept öffnen",
+      "favorite": "Zu Favoriten hinzufügen",
+      "unfavorite": "Aus Favoriten entfernen",
+      "cookbook": "Zum Kochbuch hinzufügen",
+      "createLink": "Freigabelink erstellen",
+      "manageLink": "Freigabelink verwalten",
+      "plan": "Kochen planen",
+      "shop": "Auf die Einkaufsliste",
+      "shopped_one": "{{count}} Eintrag auf die Einkaufsliste gesetzt",
+      "shopped_other": "{{count}} Einträge auf die Einkaufsliste gesetzt",
+      "duplicate": "Duplizieren",
+      "duplicated": "Rezept dupliziert",
+      "copySuffix": "(Kopie)",
+      "card": "Als Karte teilen",
+      "select": "Mehrere auswählen"
+    },
+    "select": {
+      "count_one": "{{count}} ausgewählt",
+      "count_other": "{{count}} ausgewählt",
+      "exit": "Auswahl beenden"
+    },
+    "delete": {
+      "title": "Rezept löschen?",
+      "message": "„{{name}}“ wird entfernt.",
+      "done": "Rezept gelöscht",
+      "manyTitle_one": "{{count}} Rezept löschen?",
+      "manyTitle_other": "{{count}} Rezepte löschen?",
+      "manyMessage": "Das lässt sich nicht rückgängig machen.",
+      "manyDone_one": "{{count}} Rezept gelöscht",
+      "manyDone_other": "{{count}} Rezepte gelöscht",
+      "partly_one": "{{count}} gelöscht, {{failed}} fehlgeschlagen",
+      "partly_other": "{{count}} gelöscht, {{failed}} fehlgeschlagen"
+    },
+    "shared": {
+      "badge": "Geteilt",
+      "by": "Geteilt von {{name}}",
+      "withYou": "Mit dir geteilt",
+      "search": "Geteilte Rezepte suchen …",
+      "emptyTitle": "Noch nichts geteilt",
+      "emptyText": "Wenn jemand ein Rezept mit dir teilt, erscheint es hier."
+    },
+    "cookbooks": {
+      "count_one": "{{count}} Rezept",
+      "count_other": "{{count}} Rezepte",
+      "manage": "Kochbücher verwalten",
+      "create": "Kochbuch anlegen",
+      "emptyTitle": "Noch keine Kochbücher",
+      "emptyText": "Fasse deine Lieblingsrezepte in Kochbüchern zusammen."
+    },
+    "cookbookPicker": {
+      "title": "Zum Kochbuch hinzufügen",
+      "none": "Noch keine Kochbücher.",
+      "onlySmart": "Alle deine Kochbücher sind intelligente Kochbücher. Sie füllen sich selbst.",
+      "updated_one": "{{count}} Kochbuch aktualisiert",
+      "updated_other": "{{count}} Kochbücher aktualisiert",
+      "failed": "Die Kochbücher konnten nicht aktualisiert werden"
+    },
+    "share": {
+      "title": "Rezept teilen",
+      "cookbookTitle": "Kochbuch teilen",
+      "users": "Mit Nutzern teilen",
+      "noUsers": "Noch keine weiteren Nutzer.",
+      "recipeHint": "Das Rezept erscheint nur lesbar in deren Tab „Geteilt“.",
+      "cookbookHint": "Sie können das Kochbuch ansehen und daraus kochen, aber nicht bearbeiten.",
+      "kitchens": "Mit einer Küche teilen",
+      "members_one": "{{count}} Mitglied",
+      "members_other": "{{count}} Mitglieder",
+      "share": "Teilen",
+      "kitchenShared_one": "Mit {{count}} Mitglied von {{kitchen}} geteilt",
+      "kitchenShared_other": "Mit {{count}} Mitgliedern von {{kitchen}} geteilt",
+      "kitchenAlready": "Schon mit allen in {{kitchen}} geteilt",
+      "publicLink": "Öffentlicher Link",
+      "publicHint": "Wer den Link hat, sieht das Rezept ohne Konto, sofern er diesen Server erreicht.",
+      "createLink": "Öffentlichen Link erstellen",
+      "linkCreated": "Link erstellt",
+      "copy": "Kopieren",
+      "copied": "Link kopiert",
+      "copyFailed": "Der Link konnte nicht kopiert werden",
+      "rotate": "Neuer Link",
+      "rotated": "Neuer Link erstellt, der alte funktioniert nicht mehr",
+      "revoke": "Widerrufen",
+      "revokeTitle": "Freigabelink widerrufen?",
+      "revokeMessage": "Der Link funktioniert sofort nicht mehr. Du kannst später einen neuen erstellen.",
+      "revoked": "Link widerrufen",
+      "failed": "Die Freigabe konnte nicht geändert werden"
+    }
+  },
+  "timers": {
+    "title_one": "{{count}} Timer",
+    "title_other": "{{count}} Timer",
+    "step": "Schritt {{number}}",
+    "done": "Fertig",
+    "doneTitle": "Timer abgelaufen",
+    "addMinute": "1 Minute länger",
+    "snooze": "1 Minute nachlegen",
+    "dismiss": "Timer entfernen",
+    "aRecipe": "Ein Rezept",
+    "justStarted": "gerade begonnen",
+    "minutes": "{{minutes}} Min.",
+    "hours": "{{hours}} Std. {{minutes}} Min.",
+    "cookingCount": "{{count}} Gerichte: {{name}}",
+    "cookingList": "Wird gerade gekocht"
+  },
+  "recipeView": {
+    "cookMode": "Kochmodus",
+    "startCooking": "Jetzt kochen",
+    "endCooking": "Kochmodus beenden",
+    "cooked": "Habe ich gekocht",
+    "copyLink": "Freigabelink kopieren",
+    "filterByCategory": "Rezepte in {{name}} zeigen",
+    "addedBy": "Hinzugefügt von {{name}}",
+    "from": "Von {{domain}}",
+    "lastEditedBy": "Zuletzt bearbeitet von {{name}}",
+    "lastCooked": "Zuletzt gekocht {{date}}",
+    "cookCount_one": "{{count}}-mal gekocht",
+    "cookCount_other": "{{count}}-mal gekocht",
+    "lastUpdated": "Zuletzt geändert {{date}}",
+    "prep": "Vorbereitung",
+    "cook": "Kochen",
+    "rest": "Ruhen",
+    "total": "Gesamt",
+    "serves": "Portionen",
+    "yield": "Ergibt",
+    "tags": "Tags",
+    "ingredients": "Zutaten",
+    "servingsCount_one": "{{count}} Portion",
+    "servingsCount_other": "{{count}} Portionen",
+    "servings": "Portionen",
+    "scale": "Menge",
+    "noIngredients": "Keine Zutaten eingetragen.",
+    "convert": "Einheit umrechnen",
+    "originalUnit": "Original ({{unit}})",
+    "gear": "Küchengeräte",
+    "instructions": "Zubereitung",
+    "noSteps": "Noch keine Schritte.",
+    "step": "Schritt {{number}}",
+    "startTimer": "Timer über {{time}} starten ({{text}})",
+    "video": "Video-Anleitung",
+    "watchVideo": "Video ansehen",
+    "notes": "Notizen",
+    "history": "Kochverlauf",
+    "cookedBy": "von {{name}}",
+    "photo": "Foto",
+    "openPhoto": "Foto {{number}} öffnen",
+    "removePhoto": "Foto {{number}} entfernen",
+    "previousPhoto": "Vorheriges Foto",
+    "nextPhoto": "Nächstes Foto",
+    "cookLog": {
+      "title": "Ins Kochtagebuch",
+      "editTitle": "Eintrag bearbeiten",
+      "saveChanges": "Änderungen speichern",
+      "date": "Datum",
+      "meal": "Mahlzeit (optional)",
+      "meals": {
+        "breakfast": "Frühstück",
+        "lunch": "Mittagessen",
+        "dinner": "Abendessen",
+        "snack": "Snack"
+      },
+      "rating": "Wie war es? (nur dieses Mal)",
+      "notes": "Notizen",
+      "notesPlaceholder": "Doppelt Knoblauch. War 5 Minuten früher fertig.",
+      "photos": "Fotos",
+      "logged": "Eingetragen",
+      "updated": "Eintrag aktualisiert",
+      "failed": "Der Eintrag konnte nicht gespeichert werden",
+      "deleteTitle": "Eintrag löschen?",
+      "deleteMessage": "Der Eintrag wird aus dem Kochverlauf entfernt. Das Rezept bleibt."
+    },
+    "comments": {
+      "title": "Kommentare",
+      "none": "Noch keine Kommentare. Schreib den ersten.",
+      "showAll_one": "Alle {{count}} Unterhaltungen zeigen",
+      "showAll_other": "Alle {{count}} Unterhaltungen zeigen",
+      "anonymous": "Anonym",
+      "edited": "(bearbeitet)",
+      "reply": "Antworten",
+      "edit": "Kommentar bearbeiten",
+      "updated": "Kommentar aktualisiert",
+      "replyPlaceholder": "Antwort schreiben …",
+      "postReply": "Antwort senden",
+      "placeholder": "Kommentar schreiben …",
+      "post": "Kommentar senden",
+      "deleteTitle": "Kommentar löschen?",
+      "deleteMessage": "Das lässt sich nicht rückgängig machen.",
+      "failed": "Der Kommentar konnte nicht gespeichert werden"
+    },
+    "versions": {
+      "title": "Frühere Versionen",
+      "intro": "Wenn ein Speichern ein anderes ersetzt, bleibt der frühere Stand hier erhalten.",
+      "notice_one": "Eine Änderung wurde durch eine neuere ersetzt. Der frühere Stand ist gespeichert.",
+      "notice_other": "{{count}} Änderungen wurden durch neuere ersetzt. Die früheren Stände sind gespeichert.",
+      "view": "Ansehen",
+      "reason": {
+        "conflict": "Durch eine neuere Änderung ersetzt",
+        "restore": "Vor einer Wiederherstellung gespeichert",
+        "replaced": "Durch Speichern ersetzt"
+      },
+      "reasonBy": {
+        "conflict": "Änderung von {{name}}, durch eine neuere ersetzt",
+        "restore": "Stand von {{name}}, vor einer Wiederherstellung gespeichert",
+        "replaced": "Stand von {{name}}, durch Speichern ersetzt"
+      },
+      "differs": "Unterschiede",
+      "parts": {
+        "title": "Titel",
+        "ingredients": "Zutaten",
+        "steps": "Schritte",
+        "notes": "Notizen",
+        "category": "Kategorie",
+        "photo": "Foto",
+        "nutrition": "Nährwerte",
+        "details": "Details"
+      },
+      "preview": "Vorschau",
+      "hidePreview": "Vorschau ausblenden",
+      "restore": "Wiederherstellen",
+      "confirmTitle": "Diese Version wiederherstellen?",
+      "confirmMessage": "Der aktuelle Stand bleibt als frühere Version erhalten.",
+      "restored": "Rezept wiederhergestellt"
+    },
+    "recompute": {
+      "action": "Aus dem Vorrat berechnen",
+      "hint": "Gleicht jede Zutat mit den Nährwerten im Vorrat ab.",
+      "computed_one": "Aus {{used}} von {{count}} Zutat berechnet",
+      "computed_other": "Aus {{used}} von {{total}} Zutaten berechnet",
+      "setDensity": "{{density}} g je Cup eintragen",
+      "densitySet": "{{name}} auf {{density}} g je Cup gesetzt",
+      "save": "Berechnung speichern",
+      "saved": "Gespeichert: {{used}} von {{total}} Zutaten",
+      "failed": "Die Nährwerte konnten nicht berechnet werden",
+      "reasons": {
+        "noNutrition": "keine Nährwerte",
+        "noQuantity": "keine Menge",
+        "needsDensity": "Einheit passt nicht; trage für „{{name}}“ eine Dichte ein",
+        "unitMismatch": "Einheit passt nicht ({{unit}} statt {{servingUnit}})",
+        "servingInvalid": "ungültige Portionsgröße"
+      }
+    }
+  },
+  "importers": {
+    "import": "Importieren",
+    "failed": "Import fehlgeschlagen",
+    "working": "Wird verarbeitet …",
+    "untitled": "Ohne Titel",
+    "tryAi": "Mit KI versuchen",
+    "removeFile": "{{name}} entfernen",
+    "options": {
+      "addToPantry": "Zutaten mit dem Vorrat verknüpfen",
+      "addToPantryHint": "Ordnet Zutaten nach Namen zu und legt fehlende im Vorrat an.",
+      "applyTags": "Tags der Quelle übernehmen",
+      "applyTagsHint": "Behält die Tags, die das Rezept in der Quelle hat.",
+      "importCategories": "Kategorie der Quelle übernehmen",
+      "importCategoriesHint": "Legt die Kategorie an, falls es sie noch nicht gibt."
+    },
+    "outcome": {
+      "one": "Rezept importiert",
+      "noSteps": "Importiert, aber ohne Schritte. Bitte ergänze sie.",
+      "duplicate": "Dieses Rezept gibt es schon",
+      "imported_one": "{{count}} Rezept importiert",
+      "imported_other": "{{count}} Rezepte importiert",
+      "importedSkipped": "{{count}} importiert, {{skipped}} schon vorhandene übersprungen",
+      "allDuplicates": "Nichts Neues: alle {{count}} Rezepte gibt es schon"
+    },
+    "confidence": {
+      "clean": "Sauber gelesen",
+      "partial": "Teilweise gelesen",
+      "bestEffort": "Notdürftig gelesen"
+    },
+    "paste": {
+      "title": "JSON oder HTML importieren",
+      "text": "Eingefügter Inhalt",
+      "placeholder": "JSON oder HTML hier einfügen …",
+      "or": "oder",
+      "fileHint": "JSON-, HTML- oder Paprika-Datei"
+    },
+    "url": {
+      "title": "Aus URL importieren",
+      "label": "Rezept-Links, einer pro Zeile",
+      "none": "Keine URL erkannt",
+      "detected_one": "{{count}} URL: wird direkt gespeichert",
+      "detected_other": "{{count}} URLs: du wählst aus, was gespeichert wird",
+      "scrapeMany": "{{count}} URLs einlesen",
+      "limit": "Höchstens {{max}} URLs auf einmal"
+    },
+    "source": {
+      "title": "Aus Datei importieren",
+      "hint": "Foto, PDF, RTF, TXT, Markdown oder ein ZIP davon. Mehrere Dateien werden zusammen importiert.",
+      "drop": "Dateien oder einen Ordner hierher ziehen oder auswählen",
+      "next": "Weiter",
+      "unsupported": "Dieser Dateityp wird nicht unterstützt"
+    },
+    "file": {
+      "title": "Rezept importieren",
+      "reading": "Datei wird gelesen …",
+      "saving": "Wird gespeichert …",
+      "photoHint": "Das Foto wird zum Lesen an deinen KI-Anbieter gesendet.",
+      "noText": "Aus dieser Datei ließ sich kein Text lesen.",
+      "lowHint": "Der Parser ist unsicher. Prüfe das Ergebnis nach dem Speichern.",
+      "pages_one": "{{count}} Seite",
+      "pages_other": "{{count}} Seiten",
+      "save": "Rezept speichern",
+      "saveAnyway": "Trotzdem speichern",
+      "imported": "„{{name}}“ importiert",
+      "open": "Rezept öffnen"
+    },
+    "ai": {
+      "reading": "Die KI liest …",
+      "nothing": "Die KI hat kein Rezept geliefert.",
+      "notConfigured": "Die KI ist nicht eingerichtet: Trage in den Einstellungen Schlüssel und Modell ein.",
+      "tooLarge": "Das PDF ist größer als 20 MB.",
+      "envLocked": "Der KI-Import ist nicht verfügbar, solange der KI-Anbieter über Umgebungsvariablen des Servers eingerichtet ist.",
+      "disabled": "Schalte Trace AI in den Einstellungen ein, um das mit KI zu lesen.",
+      "readDocument": "Mit KI-Texterkennung lesen",
+      "saved": "„{{name}}“ mit KI gespeichert"
+    },
+    "bulk": {
+      "title": "Mehrere Dateien importieren"
+    },
+    "batch": {
+      "summary": "{{clean}} sauber · {{partial}} teilweise · {{skipped}} übersprungen · {{selected}} ausgewählt",
+      "scrapedSummary": "{{ok}} gelesen · {{failed}} fehlgeschlagen · {{selected}} ausgewählt",
+      "selectAll": "Alle auswählen",
+      "selectClean": "Nur saubere auswählen",
+      "counts": "{{ingredients}} Zutaten · {{steps}} Schritte",
+      "savedByAi": "Mit KI gespeichert",
+      "failed": "Fehlgeschlagen",
+      "noText": "Kein Text",
+      "scraped": "Gelesen ({{tier}})",
+      "save_one": "{{count}} Rezept speichern",
+      "save_other": "{{count}} Rezepte speichern",
+      "notSaved_one": "{{count}} Eintrag konnte nicht gespeichert werden.",
+      "notSaved_other": "{{count}} Einträge konnten nicht gespeichert werden.",
+      "allSaved": "In deinen Rezepten gespeichert."
+    },
+    "cookbook": {
+      "title": "Kochbuch importieren (PDF)",
+      "needsAi": "Für den Kochbuch-Import braucht es Trace AI.",
+      "settings": "Einstellungen öffnen",
+      "pick": "Ein PDF-Kochbuch mit mehreren Rezepten",
+      "pdfOnly": "Bitte wähle eine PDF-Datei.",
+      "extract": "Rezepte auslesen",
+      "keepOpen": "Lass diesen Dialog geöffnet.",
+      "found_one": "{{count}} Rezept gespeichert …",
+      "found_other": "{{count}} Rezepte gespeichert …",
+      "scanned_one": "Dieses PDF ist ein Scan ({{count}} Seite). Die KI-Texterkennung verbraucht mehr Tokens.",
+      "scanned_other": "Dieses PDF ist ein Scan ({{count}} Seiten). Die KI-Texterkennung verbraucht mehr Tokens.",
+      "extracted_one": "{{size}} KB Text aus {{count}} Seite gelesen.",
+      "extracted_other": "{{size}} KB Text aus {{count}} Seiten gelesen.",
+      "none": "Die KI hat kein Rezept gefunden.",
+      "cutOff_one": "Die Antwort brach nach {{count}} Rezept ab. Teile das PDF, um den Rest zu bekommen.",
+      "cutOff_other": "Die Antwort brach nach {{count}} Rezepten ab. Teile das PDF, um den Rest zu bekommen."
+    }
+  },
+  "recipeEditor": {
+    "newTitle": "Neues Rezept",
+    "editTitle": "Rezept bearbeiten",
+    "uploading": "Wird hochgeladen …",
+    "nameRequired": "Ein Name ist erforderlich",
+    "saveFailed": "Das Rezept konnte nicht gespeichert werden",
+    "hero": "Titelfoto",
+    "name": "Name",
+    "namePlaceholder": "Bananenbrot",
+    "description": "Beschreibung",
+    "descriptionPlaceholder": "Schnell in einer Schüssel, lässt sich einfrieren",
+    "prep": "Vorbereitung (Min.)",
+    "cook": "Kochen (Min.)",
+    "rest": "Ruhen (Min.)",
+    "total": "Gesamt (Min.)",
+    "restHint": "Zeit ohne Zutun: Gehen, Ruhen, Marinieren, Kühlen. Sie zählt zur Gesamtzeit.",
+    "totalHint": "Vorbereitung + Kochen + Ruhen, wenn kein Wert eingetragen ist",
+    "auto": "automatisch",
+    "autoValue": "automatisch: {{value}}",
+    "yield": "Ergibt (z. B. „12 Kekse“, „1 Laib“)",
+    "yieldPlaceholder": "1 Laib",
+    "tagsPlaceholder": "Dessert, Backen, einfrierbar …",
+    "createTag": "Tag anlegen",
+    "gearPlaceholder": "Teigschaber, Backblech, Bräter …",
+    "createGear": "Gerät hinzufügen",
+    "source": "Quellen-URL",
+    "notesPlaceholder": "Abwandlungen, Beobachtungen, wem es geschmeckt hat …",
+    "draft": {
+      "found": "Es gibt einen ungespeicherten Entwurf von früher.",
+      "restore": "Wiederherstellen",
+      "discard": "Verwerfen",
+      "restored": "Entwurf wiederhergestellt"
+    },
+    "rows": {
+      "sectionName": "Name des Abschnitts",
+      "sectionPlaceholder": "Abschnitt (z. B. Soße, Teig)",
+      "removeSection": "Abschnitt entfernen (Zutaten bleiben)",
+      "newSection": "Neuer Abschnitt",
+      "ingredient": "Zutat",
+      "qty": "Menge",
+      "unit": "Einheit",
+      "name": "Name der Zutat",
+      "namePlaceholder": "Mehl",
+      "note": "Hinweis",
+      "notePlaceholder": "gesiebt",
+      "linkedTo": "Verknüpft mit {{name}} im Vorrat",
+      "link": "Mit Vorrat verknüpfen",
+      "unlink": "Verknüpfung lösen",
+      "startSection": "Hier Abschnitt beginnen",
+      "moveUp": "Nach oben",
+      "moveDown": "Nach unten",
+      "add": "Zutat hinzufügen"
+    },
+    "pantry": {
+      "item": "einem Vorratsartikel",
+      "addTitle": "Aus dem Vorrat hinzufügen",
+      "linkTitle": "Mit Vorratsartikel verknüpfen",
+      "link": "Verknüpfen",
+      "add_one": "{{count}} hinzufügen",
+      "add_other": "{{count}} hinzufügen",
+      "search": "Vorrat durchsuchen …",
+      "empty": "Dein Vorrat ist leer.",
+      "out": "Leer"
+    },
+    "steps": {
+      "title": "Kurztitel von Schritt {{number}}",
+      "titlePlaceholder": "Optionaler Kurztitel (z. B. Ofen vorheizen)",
+      "text": "Text von Schritt {{number}}",
+      "textPlaceholder": "Ofen auf 180 °C vorheizen …",
+      "hint": "Zeitangaben wie „15 minutes“ oder „15 min“ werden zu Timern.",
+      "moveUp": "Schritt {{number}} nach oben",
+      "moveDown": "Schritt {{number}} nach unten",
+      "photo": "Foto zu Schritt {{number}}",
+      "remove": "Schritt {{number}} löschen",
+      "add": "Schritt hinzufügen",
+      "link": "Zutaten dieses Schritts verknüpfen",
+      "linked_one": "{{count}} Zutat verknüpft",
+      "linked_other": "{{count}} Zutaten verknüpft"
+    },
+    "category": {
+      "label": "Kategorie",
+      "placeholder": "Kategorie wählen oder anlegen …",
+      "create": "Kategorie anlegen",
+      "newTitle": "Neue Kategorie",
+      "name": "Name",
+      "colour": "Farbe",
+      "colourNumber": "Farbe {{number}}",
+      "noColour": "Keine Farbe",
+      "failed": "Die Kategorie konnte nicht angelegt werden",
+      "manage": "Kategorien verwalten"
+    },
+    "nutrition": {
+      "title": "Nährwerte (pro Portion, optional)",
+      "hint": "Welche Werte hier erscheinen, legst du in den Nährwert-Einstellungen fest.",
+      "calculate": "Aus dem Vorrat berechnen",
+      "loading": "Vorrat wird geladen …",
+      "noData": "Kein Vorratsartikel hat Nährwerte. Trage dort zuerst Portionsgröße und Nährwerte ein.",
+      "replaceTitle": "Vorhandene Nährwerte ersetzen?",
+      "replaceMessage": "Du hast Werte von Hand eingetragen. Die Berechnung überschreibt sie.",
+      "replace": "Ersetzen",
+      "computedAll_one": "Aus {{count}} Zutat berechnet.",
+      "computedAll_other": "Aus allen {{count}} Zutaten berechnet.",
+      "computedSome": "Aus {{used}} von {{total}} Zutaten berechnet; {{skipped}} übersprungen (keine Vorratsdaten oder unpassende Einheit).",
+      "failed": "Berechnung nicht möglich: {{message}}"
+    },
+    "video": {
+      "label": "Video-Anleitung (optional)",
+      "upload": "Video hochladen",
+      "record": "Aufnehmen",
+      "uploading": "Video wird hochgeladen …",
+      "url": "YouTube-, Vimeo- oder Video-URL einfügen",
+      "notVideo": "Bitte wähle eine Videodatei.",
+      "uploaded": "Video hochgeladen",
+      "local": "Hochgeladenes Video",
+      "external": "Externe URL",
+      "remove": "Video entfernen"
+    },
+    "format": {
+      "bold": "Fett",
+      "italic": "Kursiv",
+      "underline": "Unterstrichen",
+      "strike": "Durchgestrichen",
+      "colour": "Textfarbe",
+      "bullets": "Aufzählung",
+      "numbers": "Nummerierte Liste"
+    },
+    "colours": {
+      "red": "Rot",
+      "orange": "Orange",
+      "yellow": "Gelb",
+      "green": "Grün",
+      "blue": "Blau",
+      "purple": "Lila",
+      "pink": "Pink"
+    }
+  },
+  "cookbook": {
+    "title": "Kochbuch",
+    "back": "Zurück zu den Kochbüchern",
+    "addRecipes": "Rezepte hinzufügen",
+    "delete": "Kochbuch löschen",
+    "deleteTitle": "„{{name}}“ löschen?",
+    "deleteMessage_one": "Entfernt das Kochbuch; sein {{count}} Rezept bleibt erhalten.",
+    "deleteMessage_other": "Entfernt das Kochbuch; seine {{count}} Rezepte bleiben erhalten.",
+    "deleted": "Kochbuch gelöscht",
+    "setCover": "Titelbild festlegen",
+    "coverTitle": "Titelbild",
+    "coverUpdated": "Titelbild aktualisiert",
+    "coverFailed": "Das Titelbild konnte nicht geändert werden",
+    "smart": "Intelligent",
+    "smartHint": "Füllt sich automatisch aus einem gespeicherten Filter",
+    "emptyTitle": "Noch keine Rezepte",
+    "emptyText": "Füge Rezepte aus deiner Sammlung hinzu.",
+    "emptySmartTitle": "Kein Rezept passt zum Filter",
+    "emptySmartText": "Gib deinen Rezepten passende Tags oder Kategorien, oder lege ein Kochbuch mit anderem Filter an.",
+    "search": "In diesem Kochbuch suchen …",
+    "sort": {
+      "manual": "Eigene Reihenfolge",
+      "alpha": "A → Z",
+      "fav": "Favoriten zuerst"
+    },
+    "locked": "Nicht mit dir geteilt. Bitte den Besitzer des Kochbuchs, es zu teilen.",
+    "lockedHint": "Dieses Rezept ist nicht mit dir geteilt. Bitte den Besitzer, es zu teilen oder in eine gemeinsame Küche zu geben.",
+    "remove": "Aus dem Kochbuch entfernen",
+    "removeTitle": "„{{name}}“ aus dem Kochbuch entfernen?",
+    "removeMessage": "Das Rezept bleibt in deiner Sammlung.",
+    "removeFailed": "Das Rezept konnte nicht entfernt werden",
+    "orderFailed": "Die Reihenfolge konnte nicht gespeichert werden",
+    "moveTitle": "Verschieben oder kopieren",
+    "copy": "Kopieren",
+    "move": "Verschieben",
+    "noTargets": "Es gibt kein anderes passendes Kochbuch. Intelligente Kochbücher füllen sich selbst.",
+    "copied": "Nach „{{name}}“ kopiert",
+    "moved": "Nach „{{name}}“ verschoben",
+    "searchLibrary": "Deine Rezepte durchsuchen …",
+    "libraryEmpty": "Du hast noch keine Rezepte.",
+    "nothingToAdd": "Keine weiteren Rezepte zum Hinzufügen.",
+    "added_one": "{{count}} Rezept hinzugefügt",
+    "added_other": "{{count}} Rezepte hinzugefügt"
+  },
+  "publicRecipe": {
+    "brand": "Trace · geteiltes Rezept",
+    "gone": "Dieser Freigabelink funktioniert nicht mehr.",
+    "goneHint": "Bitte die Person, die ihn geteilt hat, um einen neuen.",
+    "failed": "Das Rezept konnte nicht geladen werden. Prüfe deine Verbindung und versuche es erneut.",
+    "footer": "Bereitgestellt mit Trace"
+  },
+  "assistant": {
+    "suggestions": {
+      "pantry": "Was kann ich mit meinen Vorräten kochen?",
+      "suggestion": "Schlag mir ein Rezept für heute Abend vor.",
+      "recent": "Welche Rezepte habe ich zuletzt gekocht?",
+      "shopping": "Erstelle eine Einkaufsliste für diese Woche."
+    }
+  }
+}

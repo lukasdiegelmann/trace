@@ -1,0 +1,29 @@
+{
+  "picker": {
+    "title": "Add exercise",
+    "searchPlaceholder": "Search exercises...",
+    "searchLabel": "Search exercises",
+    "categoryFilter": "Filter by category",
+    "equipmentFilter": "Filter by equipment",
+    "all": "All",
+    "allEquipment": "All equipment",
+    "equipmentCount": "{{name}} ({{count}})",
+    "loading": "Loading exercises...",
+    "loadError": "Couldn't load exercises.",
+    "retry": "Try again",
+    "noMatches": "No exercises matched.",
+    "noMatchesFor": "No exercises matched “{{search}}”.",
+    "create": "Create “{{name}}”",
+    "createHint": "Not finding it? Add as a custom exercise.",
+    "uncategorized": "Uncategorized",
+    "addExercise": "Add {{name}}",
+    "added": "✓ Added",
+    "alreadyAdded": "Already added this session",
+    "viewDetails": "View details of {{name}}",
+    "closePreview": "Close preview",
+    "preview": "Exercise preview",
+    "addToWorkout": "Add to workout",
+    "previewEmptyTitle": "Preview any exercise",
+    "previewEmptyText": "Tap the info icon on any row to see its details, history, and PRs here without closing the picker."
+  }
+}

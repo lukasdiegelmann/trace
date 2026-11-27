@@ -1,0 +1,225 @@
+{
+  "connection": {
+    "testing": "Wird getestet …",
+    "connected": "Verbunden",
+    "failed": "Verbindung fehlgeschlagen",
+    "configured": "Eingerichtet",
+    "missing": "Nicht eingerichtet"
+  },
+  "diary": {
+    "rows": "Lebensmittelzeilen",
+    "cards": "Mahlzeitenkarten",
+    "units": "Nährwerteinheiten",
+    "sidebar": "Seitenspalte",
+    "sidebarHint": "Die Widgets neben dem Tagebuch auf breiten Bildschirmen; gilt für dieses Gerät.",
+    "quickAndActivity": "Schnellkalorien und Aktivität",
+    "toggles": {
+      "diaryShowBrands": "Marken anzeigen",
+      "diaryShowTimestamps": "Uhrzeit jedes Eintrags anzeigen",
+      "diaryShowThumbnails": "Bilder anzeigen",
+      "diaryShowAllNutrients": "Alle Nährstoffe anzeigen",
+      "diaryShowNutritionUnits": "Einheiten hinter den Werten",
+      "diaryShowPortionSize": "Portionsgrößen anzeigen",
+      "diaryShowMacroSummary": "Makro-Übersicht je Mahlzeit",
+      "diaryPromptQuantity": "Beim Hinzufügen nach der Menge fragen",
+      "diaryShowNutritionBar": "Nährwertleiste",
+      "diaryShowNotes": "Notizen",
+      "diaryShowCompletion": "Tage und Mahlzeiten als fertig markieren",
+      "showUnitMetadata": "Anzeigen, wofür die Einheiten eines Lebensmittels stehen",
+      "warnUnitMismatch": "Vor nicht umrechenbaren Einheiten warnen",
+      "diaryRailShowSummary": "Zusammenfassung",
+      "diaryRailShowWater": "Wasser",
+      "diaryRailShowBodyStats": "Körperwerte",
+      "diaryRailShowActivity": "Aktivität (mit Wearable)",
+      "diaryRailShowNotes": "Notizen in der Seitenspalte",
+      "showQuickCalories": "Schnellkalorien",
+      "diaryShowActivity": "Aktivität",
+      "calorieAdjustFromActivity": "Aktivität zum Kalorienziel addieren"
+    },
+    "defaultField": "Zuerst bearbeitetes Feld",
+    "fields": {
+      "servings": "Anzahl Portionen",
+      "portion": "Portionsgröße"
+    },
+    "quickDisplay": "Schnellkalorien anzeigen",
+    "quick": {
+      "summed": "Als eine Summe",
+      "separate": "Einzeln"
+    },
+    "policy": "Eigene Aktivität und Wearable-Daten",
+    "policies": {
+      "wearable_wins": {
+        "label": "Wearable zählt",
+        "description": "An Tagen mit Wearable-Daten zählen nur diese. Eigene Einträge zählen immer an Tagen ohne sie."
+      },
+      "manual_wins": {
+        "label": "Eigene zählen",
+        "description": "An Tagen mit eigenen Einträgen zählen nur diese. Eigene Einträge zählen immer an Tagen ohne Wearable-Daten."
+      },
+      "additive": {
+        "label": "Beides",
+        "description": "Wearable-Daten und eigene Einträge werden addiert. Eigene Einträge zählen immer an Tagen ohne Wearable-Daten."
+      }
+    },
+    "fasting": "Fasten",
+    "fastingEnabled": "Fasten erfassen",
+    "fastingDefault": "Standard-Fastendauer",
+    "fastingNotify": "Bescheid geben, wenn das Ziel erreicht ist",
+    "fastingSchedule": "Nach Zeitplan starten",
+    "fastingStart": "Startzeit",
+    "fastingDays": "Tage",
+    "fastingScheduleGoal": "Fastenstunden",
+    "mealNames": "Mahlzeitennamen",
+    "mealNamesHint": "Tagebucheinträge merken sich die Position der Mahlzeit: Umsortieren oder Entfernen benennt frühere Einträge um.",
+    "mealName": "Mahlzeit {{number}}",
+    "newMeal": "Neue Mahlzeit",
+    "addMeal": "Mahlzeit hinzufügen"
+  },
+  "goals": {
+    "calories": "Kalorienziel",
+    "mode": "Art des Ziels",
+    "modes": {
+      "fixed": {
+        "label": "Fest",
+        "description": "Dein festgelegtes Ziel, jeden Tag."
+      },
+      "dynamic": {
+        "label": "Dynamisch",
+        "description": "Der Verbrauch laut Wearable, mal dein Vorhaben."
+      },
+      "adaptive": {
+        "label": "Adaptiv",
+        "description": "Dein Verbrauch, geschätzt aus Gewichtsverlauf und Aufnahme, mal dein Vorhaben."
+      }
+    },
+    "dynamicNeedsWearable": "Ein dynamisches Ziel braucht Fitbit, Google Health oder Garmin.",
+    "adaptiveDocs": "So funktioniert das adaptive Ziel",
+    "factor": "Vorhaben",
+    "factors": {
+      "lose": "Abnehmen −20 %",
+      "maintain": "Halten",
+      "gain": "Zunehmen +20 %"
+    },
+    "editGoals": "Ziele und Vorlagen bearbeiten",
+    "water": "Wasser",
+    "waterUnit": "Einheit",
+    "waterInDiary": "Im Tagebuch anzeigen",
+    "waterInStats": "In der Statistik anzeigen",
+    "containers": "Flaschen und Gläser",
+    "noContainers": "Noch keine Gefäße.",
+    "containerName": "Name",
+    "containerVolume": "Volumen",
+    "containerUnit": "Volumeneinheit",
+    "containerInvalid": "Gib einen Namen und ein Volumen über null ein.",
+    "addContainer": "Gefäß hinzufügen"
+  },
+  "foods": {
+    "display": "Listen",
+    "toggles": {
+      "foodsShowThumbnails": "Bilder anzeigen",
+      "foodsShowCategories": "Kategorien anzeigen",
+      "foodsShowLabels": "Kategorie-Emojis anzeigen",
+      "foodsShowNotes": "Notizen anzeigen",
+      "foodsShowYesterdayMeals": "Mahlzeiten von gestern anbieten"
+    },
+    "sorting": "Sortierung",
+    "sortingHint": "Favoriten stehen immer oben.",
+    "sortOf": {
+      "foodsSort": "Lebensmittel",
+      "mealsSort": "Mahlzeiten",
+      "recipesSort": "Rezepte"
+    },
+    "sorts": {
+      "recent": "Zuletzt verwendet",
+      "most": "Am häufigsten",
+      "alpha": "Alphabetisch"
+    },
+    "scanning": "Scannen und Fotos",
+    "beepNutrition": "Piepton beim Barcode-Scan (Ernährung)",
+    "beepCooking": "Piepton beim Barcode-Scan (Kochen)",
+    "cropPhotos": "Fotos vor dem Speichern zuschneiden",
+    "categories": "Lebensmittelkategorien",
+    "noCategories": "Noch keine Kategorien.",
+    "categoryName": "Name der Kategorie",
+    "categoryEmoji": "Emoji",
+    "categoryEmojiHint": "Optional; nutze die Emoji-Auswahl deines Systems.",
+    "addCategory": "Kategorie hinzufügen",
+    "customUnits": "Eigene Einheiten",
+    "customUnitsHint": "Eigene Einheiten lassen sich nicht in Gramm umrechnen.",
+    "noUnits": "Noch keine eigenen Einheiten.",
+    "unitAbbr": "Abkürzung",
+    "unitFull": "Ausgeschrieben",
+    "addUnit": "Einheit hinzufügen",
+    "flashlight": "Beim Scannen die Taschenlampe einschalten"
+  },
+  "nutrients": {
+    "diary": "Ernährungstagebuch",
+    "diaryHint": "Welche Nährstoffe in Tagebuch und Lebensmitteln erscheinen, und in welcher Reihenfolge.",
+    "custom": "Eigene Nährstoffe",
+    "noCustom": "Noch keine eigenen Nährstoffe.",
+    "name": "Name des Nährstoffs",
+    "unit": "Einheit des Nährstoffs",
+    "addCustom": "Nährstoff hinzufügen",
+    "recipes": "Rezepte",
+    "defaults": "Standard",
+    "showAll": "Alle anzeigen",
+    "categories": {
+      "energy": "Energie",
+      "macro": "Makronährstoffe",
+      "mineral": "Mineralstoffe",
+      "vitamin": "Vitamine",
+      "other": "Sonstiges"
+    }
+  },
+  "sources": {
+    "description": "Wo Lebensmittel und Vorräte nachgeschlagen werden; für Ernährung und Kochen.",
+    "defaults": "Zuerst suchen in",
+    "defaultNutrition": "Lebensmittelsuche",
+    "defaultPantry": "Vorratssuche",
+    "all": "Alle Quellen",
+    "local": "Eigene Sammlung",
+    "offHint": "Die offene Lebensmitteldatenbank, Suche nach Name und Barcode.",
+    "offEnabled": "Open Food Facts verwenden",
+    "searchLanguage": "Suchsprache",
+    "searchCountry": "Suchland",
+    "uploadCountry": "Land für Uploads",
+    "auto": "Automatisch",
+    "importPortion": "Werte importieren",
+    "per100g": "Je 100 g",
+    "perServing": "Je Portion",
+    "offUsername": "Open-Food-Facts-Benutzername",
+    "offPassword": "Open-Food-Facts-Passwort",
+    "offAccountHint": "Nur nötig, um Produkte hochzuladen.",
+    "offSignup": "Open-Food-Facts-Konto anlegen",
+    "usdaEnabled": "USDA verwenden",
+    "usdaKey": "USDA-API-Schlüssel",
+    "usdaSignup": "Kostenlosen USDA-Schlüssel holen",
+    "mealieEnabled": "Mealie verwenden",
+    "mealieUrl": "Mealie-Adresse",
+    "mealieToken": "Mealie-API-Token",
+    "mirror": {
+      "title": "Lokale Open-Food-Facts-Kopie",
+      "states": {
+        "downloading": "Wird heruntergeladen",
+        "failedEmpty": "Download fehlgeschlagen",
+        "failedStale": "Aktualisierung fehlgeschlagen, alte Daten aktiv",
+        "stale": "Veraltet",
+        "ready": "Bereit",
+        "notReady": "Noch nicht heruntergeladen"
+      },
+      "airGap": "Ohne Internet",
+      "updated": "aktualisiert {{when}}",
+      "refresh": "Jetzt aktualisieren",
+      "auto": "Automatisch aktualisieren",
+      "intervals": {
+        "off": "Aus",
+        "daily": "Täglich",
+        "weekly": "Wöchentlich",
+        "monthly": "Monatlich"
+      },
+      "odbl": "Daten unter der Open Database License (ODbL 1.0)",
+      "shareAlike": "Die Daten von Open Food Facts stehen unter der ODbL: Wer eine daraus erstellte Datenbank veröffentlicht, muss sie unter derselben Lizenz weitergeben.",
+      "licenses": "Lizenzen in NutriTrace"
+    }
+  }
+}

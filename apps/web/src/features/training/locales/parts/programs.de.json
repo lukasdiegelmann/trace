@@ -1,0 +1,98 @@
+{
+  "programs": {
+    "title": "Programme",
+    "new": "Neu",
+    "create": "Programm anlegen",
+    "empty": "Noch keine Programme. Lege ein Trainingsprogramm an, um deine Workouts zu ordnen.",
+    "newTitle": "Neues Programm",
+    "name": "Name",
+    "namePlaceholder": "z. B. Definition 2026",
+    "goal": "Ziel",
+    "duration": "Dauer (Wochen)",
+    "durationHint": "Wochen dieses Trainingsblocks. Bei mehr als 1 kannst du je Woche andere Sätze, Wiederholungen, Tempo und Pausen planen.",
+    "active": "Aktiv",
+    "coach": "Coach: {{name}}",
+    "workouts_one": "{{count}} Workout",
+    "workouts_other": "{{count}} Workouts",
+    "week": "Woche {{week}}",
+    "weekOf": "Woche {{week}} von {{weeks}}",
+    "weeks_one": "{{count}} Woche",
+    "weeks_other": "{{count}} Wochen",
+    "sessions_one": "{{count}} Einheit",
+    "sessions_other": "{{count}} Einheiten",
+    "exercises_one": "{{count}} Übung",
+    "exercises_other": "{{count}} Übungen",
+    "day": "Tag {{day}}",
+    "actions": "Programmaktionen",
+    "rename": "Umbenennen",
+    "renameTitle": "Programm umbenennen",
+    "renamed": "Programm umbenannt",
+    "duplicate": "Duplizieren",
+    "duplicated": "Programm dupliziert",
+    "activate": "Aktivieren",
+    "activated": "Programm aktiviert",
+    "deactivate": "Deaktivieren",
+    "deactivated": "Programm deaktiviert",
+    "deleted": "Programm gelöscht",
+    "deleteTitle": "Programm löschen?",
+    "deleteText": "Löscht das Programm mit allen Workouts. Das lässt sich nicht rückgängig machen.",
+    "preview": {
+      "label": "Programmvorschau",
+      "empty": "Wähle ein Programm, um hier seine Workouts zu sehen.",
+      "close": "Vorschau schließen",
+      "workouts": "Workouts",
+      "noWorkouts": "Dieses Programm hat noch keine Workouts.",
+      "full": "Alle Details"
+    }
+  },
+  "programDetail": {
+    "title": "Programm",
+    "add": "Hinzufügen",
+    "addWorkout": "Workout hinzufügen",
+    "newWorkout": "Neues Workout",
+    "workoutPlaceholder": "z. B. Oberkörper A, Beintag, Push",
+    "workoutAdded": "Workout hinzugefügt",
+    "workoutDeleted": "Workout gelöscht",
+    "deleteProgram": "Programm löschen",
+    "deactivateActive": "Aktiv – zum Deaktivieren tippen",
+    "deleteWorkout": "{{name}} löschen",
+    "deleteWorkoutTitle": "Workout löschen?",
+    "deleteWorkoutText": "Entfernt das Workout aus diesem Programm.",
+    "moveUp": "{{name}} nach oben",
+    "moveDown": "{{name}} nach unten",
+    "noExercises": "Dieses Workout hat noch keine Übungen.",
+    "exercise": "Übung",
+    "editWorkout": "Workout bearbeiten",
+    "settings": {
+      "title": "Dauer und Progression",
+      "durationHint": "Bei mehr als 1 kannst du im Workout-Editor je Woche planen.",
+      "advanceBy": "Woche weiterschalten nach",
+      "pastEnd": "Nach der letzten Woche",
+      "advance": {
+        "sessions": "Absolvierten Einheiten",
+        "calendar": "Kalender (7 Tage)"
+      },
+      "onComplete": {
+        "hold": "In der letzten Woche bleiben",
+        "repeat": "Von vorn beginnen"
+      },
+      "saved": "Programmeinstellungen gespeichert"
+    },
+    "assign": {
+      "title": "Kunden zuweisen",
+      "hint": "Wähle, wem du „{{name}}“ zuweisen willst.",
+      "noClients": "Du hast noch keine Kunden. Lade unter Coaching jemanden ein.",
+      "current": "Aktuell: {{name}}",
+      "noProgram": "Kein aktives Programm",
+      "done": "{{name}} zugewiesen"
+    }
+  },
+  "goals": {
+    "cutting": "Definition",
+    "bulking": "Masseaufbau",
+    "maintenance": "Halten",
+    "strength": "Kraft",
+    "endurance": "Ausdauer",
+    "general": "Allgemeine Fitness"
+  }
+}

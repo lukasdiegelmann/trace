@@ -1,0 +1,140 @@
+{
+  "workoutEditor": {
+    "back": "Zurück zum Programm",
+    "loading": "Vorlage wird geladen…",
+    "loadError": "Die Vorlage konnte nicht geladen werden.",
+    "namePlaceholder": "Name des Workouts",
+    "save": "Speichern",
+    "readOnly": "Nur lesen",
+    "readOnlyHint": "Dieses Workout gehört zum Programm einer anderen Person. Nur wer es erstellt hat, kann es ändern.",
+    "emptyHint": "Füge dieser Workout-Vorlage Übungen hinzu",
+    "addExercise": "Übung hinzufügen",
+    "unsaved": {
+      "title": "Änderungen verwerfen?",
+      "description": "Dieses Workout hat Änderungen, die nicht gespeichert sind.",
+      "discard": "Verwerfen",
+      "keep": "Weiter bearbeiten"
+    },
+    "toast": {
+      "removedFromSuperset": "Aus dem Supersatz entfernt",
+      "addedToSuperset": "Zum Supersatz hinzugefügt",
+      "supersetCreated": "Supersatz erstellt",
+      "supersetDissolved": "Supersatz aufgelöst",
+      "supersetsMerged": "Supersätze zusammengeführt",
+      "replacedWith": "Ersetzt durch {{name}}",
+      "saved": "Workout gespeichert"
+    },
+    "week": {
+      "label": "Planwoche",
+      "tab": "Woche {{number}}",
+      "copy": "Woche {{from}} in Woche {{to}} kopieren",
+      "matches": "Woche {{to}} entspricht schon Woche {{from}}",
+      "copyExercise": "Woche {{from}} dieser Übung in Woche {{to}} kopieren",
+      "copyExerciseShort": "→ {{to}}"
+    },
+    "superset": {
+      "title": "Supersatz",
+      "count_one": "{{count}} Übung",
+      "count_other": "{{count}} Übungen",
+      "options": "Supersatz-Optionen",
+      "addExercise": "Übung zum Supersatz hinzufügen",
+      "merge": "Mit anderem Supersatz zusammenführen",
+      "dissolve": "Supersatz auflösen",
+      "joinTitle": "Zum Supersatz hinzufügen",
+      "joinHint": "Welchem Supersatz soll die Übung beitreten?",
+      "createTitle": "Supersatz erstellen",
+      "createHint": "Wähle Übungen, die du mit {{name}} gruppieren willst:",
+      "createNone": "Es gibt keine weitere Übung außerhalb eines Supersatzes.",
+      "createConfirm_one": "Supersatz erstellen ({{count}} Übung)",
+      "createConfirm_other": "Supersatz erstellen ({{count}} Übungen)",
+      "mergeTitle": "In Supersatz zusammenführen",
+      "mergeHint": "Alle Übungen beider Supersätze werden zusammengelegt:",
+      "memberSeparator": " + "
+    },
+    "exercise": {
+      "options": "Optionen für {{name}}",
+      "details": "Details zu {{name}} ansehen",
+      "moveUp": "{{name}} nach oben",
+      "moveDown": "{{name}} nach unten",
+      "loadType": "Belastungsart von {{name}}",
+      "setsBadge": "{{count}}×"
+    },
+    "actions": {
+      "moveUp": "Nach oben",
+      "moveDown": "Nach unten",
+      "replace": "Übung ersetzen",
+      "leaveSuperset": "Aus Supersatz entfernen",
+      "joinSuperset": "Zu bestehendem Supersatz hinzufügen",
+      "newSuperset": "Neuen Supersatz beginnen…",
+      "delete": "Übung löschen"
+    },
+    "fields": {
+      "sets": "Sätze",
+      "reps": "Wdh.",
+      "repsPlaceholder": "z. B. 8-12",
+      "duration": "Zeit",
+      "durationPlaceholder": "0:00",
+      "weight": "Gewicht",
+      "weightPlaceholderKg": "z. B. 60",
+      "weightPlaceholderLb": "z. B. 135",
+      "tempo": "Tempo",
+      "tempoPlaceholder": "z. B. 3.1.1",
+      "rest": "Pause (s)",
+      "restPlaceholder": "z. B. 90",
+      "notes": "Notizen",
+      "notesPlaceholder": "Notizen…",
+      "perSet": "Anderes Gewicht oder andere Wdh. pro Satz…",
+      "useUniform": "Einheitliche Vorgaben verwenden",
+      "addSet": "Satz hinzufügen"
+    },
+    "spec": {
+      "number": "Satz {{set}}",
+      "warmupBadge": "W",
+      "warmupSet": "Aufwärmsatz {{set}}",
+      "roundNumber": "Rundennummer von Satz {{set}}",
+      "roundHint": "Runde für asymmetrische Supersätze neu zuordnen",
+      "round": "Runde {{number}}",
+      "auto": "Automatisch",
+      "weight": "Gewicht von Satz {{set}}",
+      "weightPlaceholder": "Gewicht",
+      "reps": "Wiederholungen von Satz {{set}}",
+      "repsPlaceholder": "Wdh.",
+      "repsLeft": "Wiederholungen links von Satz {{set}}",
+      "repsRight": "Wiederholungen rechts von Satz {{set}}",
+      "left": "L",
+      "right": "R",
+      "duration": "Zeit von Satz {{set}}",
+      "split": "Wdh. von Satz {{set}} nach L/R trennen",
+      "merge": "L/R-Wdh. von Satz {{set}} zusammenführen",
+      "rpe": "RPE",
+      "rpeValue": "@{{value}}",
+      "rpeLabel": "Ziel-RPE von Satz {{set}}",
+      "rpeClear": "Zurücksetzen",
+      "warmupOn": "Satz {{set}} als Aufwärmsatz markieren",
+      "warmupOff": "Aufwärm-Markierung von Satz {{set}} entfernen",
+      "remove": "Satz {{set}} entfernen"
+    },
+    "loadMenu": {
+      "title": "Belastungsart und Erfassung",
+      "load": {
+        "bilateral": "Beidseitig",
+        "paired": "Pro Seite",
+        "unilateral": "Abwechselnd"
+      },
+      "loadHint": {
+        "bilateral": "eine Last: Langhantel, Maschine, beide Arme bewegen eine Sache",
+        "paired": "beide Arme arbeiten gleichzeitig mit getrennten, gleichen Lasten: Kurzhanteln, doppelter Kabelzug",
+        "unilateral": "eine Seite nach der anderen: einarmiges Kabelrudern, einarmiges Kurzhantelrudern"
+      },
+      "setType": {
+        "reps": "Wiederholungen",
+        "time": "Zeit"
+      },
+      "setTypeHint": {
+        "reps": "Gewicht und Wiederholungen: Bankdrücken, Kniebeuge, Curls",
+        "time": "eine Dauer, die du hältst oder trägst: Plank, Wandsitzen, Dead Hang"
+      },
+      "remember": "Für diese Übung merken"
+    }
+  }
+}

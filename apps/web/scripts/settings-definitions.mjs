@@ -1,0 +1,191 @@
+// Writes src/features/shared/settings/definitions/{nt,ct,lt}.ts from the old
+// UIs' settings stores (backends/*/src/stores/settings.js): every key, its
+// default and whether it syncs to the backend. Run
+// `pnpm --filter web settings:definitions` after a submodule bump, then
+// `pnpm --filter web lint:fix`; the output is committed.
+import { readFileSync, writeFileSync } from "node:fs";
+import { fileURLToPath } from "node:url";
+
+const repo = fileURLToPath(new URL("../../../", import.meta.url));
+const out = fileURLToPath(
+  new URL("../src/features/shared/settings/definitions/", import.meta.url),
+);
+
+/** Defaults that are calls in the original, as they resolve for a new user */
+const CALLED_DEFAULTS = {
+  // _migrateBannerStyle(): a saved value, else 'off' for pageBanners=false, else 'animated'
+  "_migrateBannerStyle()": "animated",
+  // pickInitialLocale(): the browser's language; the new UI has its own i18n
+  "pickInitialLocale()": "en",
+};
+
+/**
+ * Keys the server reads that the old UI's store never syncs (an old-UI bug:
+ * CookTrace writes these with DB.setSetting only, while
+ * server/lib/scheduler.js and push-notify.js read them from user_settings).
+ */
+const SERVER_READ_KEYS = {
+  ct: {
+    notifCookDayReminder: false,
+    notifThawAlert: false,
+    notifShoppingNudge: false,
+    notifRecipeComments: true,
+    notifWeeklySummary: false,
+  },
+};
+
+const BACKENDS = [
+  {
+    id: "nt",
+    name: "Nt",
+    app: "nutritrace",
+    synced: ["USER_PREFS"],
+    device: "DEVICE_PREFS",
+  },
+  {
+    id: "ct",
+    name: "Ct",
+    app: "cooktrace",
+    synced: ["USER_PREFS"],
+    device: "DEVICE_PREFS",
+  },
+  { id: "lt", name: "Lt", app: "lifttrace", synced: ["SERVER_SETTINGS"] },
+];
+
+/** The expression after `createSettingStore('key',` up to its closing paren */
+function readExpression(src, start) {
+  let depth = 0;
+  let quote = null;
+  let i = start;
+  for (; i < src.length; i++) {
+    const c = src[i];
+    if (quote) {
+      if (c === "\\") i++;
+      else if (c === quote) quote = null;
+      continue;
+    }
+    if (c === "'" || c === '"' || c === "`") quote = c;
+    else if (c === "/" && src[i + 1] === "/") i = src.indexOf("\n", i);
+    else if ("([{".includes(c)) depth++;
+    else if (")]}".includes(c)) {
+      if (depth === 0) break;
+      depth--;
+    }
+  }
+  return { expr: src.slice(start, i).trim(), end: i };
+}
+
+/** The `// ...` comment on the rest of the line after `index` */
+function trailingComment(src, index) {
+  const line = src.slice(index, src.indexOf("\n", index));
+  const match = line.match(/\/\/\s*(.+)$/);
+  return match ? match[1].trim() : null;
+}
+
+function readSet(src, name) {
+  const match = src.match(
+    new RegExp(`const ${name} = new Set\\(\\[([\\s\\S]*?)\\]\\);`),
+  );
+  if (!match) throw new Error(`${name} not found`);
+  const body = match[1].replace(/\/\/.*$/gm, "");
+  return [...body.matchAll(/'(\w+)'/g)].map((m) => m[1]);
+}
+
+function evaluate(expr) {
+  if (expr in CALLED_DEFAULTS) return CALLED_DEFAULTS[expr];
+  return Function(`"use strict"; return (${expr});`)();
+}
+
+function typeOf(value) {
+  if (value === null || value === undefined) return "unknown";
+  if (Array.isArray(value)) {
+    if (value.length === 0) return "unknown[]";
+    const items = [...new Set(value.map(typeOf))];
+    return items.length === 1 ? `${items[0]}[]` : `(${items.join(" | ")})[]`;
+  }
+  if (typeof value === "object") {
+    const entries = Object.entries(value);
+    if (entries.length === 0) return "Record<string, unknown>";
+    return `{ ${entries.map(([k, v]) => `${JSON.stringify(k)}: ${typeOf(v)}`).join("; ")} }`;
+  }
+  return typeof value;
+}
+
+function readVersion(app) {
+  return JSON.parse(readFileSync(`${repo}backends/${app}/package.json`, "utf8"))
+    .version;
+}
+
+function definitions({ id, name, app, synced, device }) {
+  const path = `backends/${app}/src/stores/settings.js`;
+  const src = readFileSync(`${repo}${path}`, "utf8");
+  const extra = SERVER_READ_KEYS[id] ?? {};
+  const syncedKeys = [
+    ...synced.flatMap((set) => readSet(src, set)),
+    ...Object.keys(extra),
+  ];
+  const deviceKeys = device ? readSet(src, device) : [];
+
+  const settings = new Map();
+  for (const match of src.matchAll(/createSettingStore\(\s*'(\w+)'\s*,/g)) {
+    const { expr, end } = readExpression(src, match.index + match[0].length);
+    const value = evaluate(expr);
+    settings.set(match[1], {
+      value,
+      type: typeOf(value),
+      comment: trailingComment(src, end),
+    });
+  }
+  for (const [key, value] of Object.entries(extra)) {
+    settings.set(key, {
+      value,
+      type: typeOf(value),
+      comment: "read by the server's scheduler",
+    });
+  }
+  // Keys that sync but have no store (read with DB.getSetting elsewhere)
+  for (const key of [...syncedKeys, ...deviceKeys]) {
+    if (!settings.has(key)) {
+      settings.set(key, { value: undefined, type: "unknown", comment: null });
+    }
+  }
+
+  const lines = [
+    `// Generated by scripts/settings-definitions.mjs from ${path}.`,
+    "// Don't edit by hand; run `pnpm --filter web settings:definitions`.",
+    "/* eslint-disable @typescript-eslint/naming-convention -- the backend's keys */",
+    "",
+    `/** The version of ${app} this was generated from, as its server reports it */`,
+    `export const ${id}Version = ${JSON.stringify(`v${readVersion(app)}`)};`,
+    "",
+    `/** Every setting of ${app}, by its key in \`/${id}/api/settings\` */`,
+    `export interface ${name}Settings {`,
+  ];
+  for (const [key, { type, comment }] of settings) {
+    if (comment) lines.push(`  /** ${comment.replace(/\*\//g, "* /")} */`);
+    lines.push(`  ${key}: ${type};`);
+  }
+  lines.push("}", "");
+  lines.push(
+    `/** The defaults of the old UI's stores (undefined: read without one) */`,
+    `export const ${id}Defaults: ${name}Settings = {`,
+  );
+  for (const [key, { value }] of settings) {
+    lines.push(
+      `  ${key}: ${value === undefined ? "undefined" : JSON.stringify(value)},`,
+    );
+  }
+  lines.push("};", "");
+  lines.push(
+    `/** Keys the old UI sends to \`PUT /${id}/api/settings\`; the rest stay on the device */`,
+    `export const ${id}SyncedKeys: ReadonlySet<keyof ${name}Settings> = new Set<keyof ${name}Settings>([`,
+    ...syncedKeys.map((key) => `  ${JSON.stringify(key)},`),
+    "]);",
+    "",
+  );
+  return lines.join("\n");
+}
+
+for (const backend of BACKENDS) {
+  writeFileSync(`${out}${backend.id}.ts`, definitions(backend));
+}

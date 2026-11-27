@@ -1,0 +1,229 @@
+{
+  "title": "Einstellungen",
+  "loading": "Lädt …",
+  "appSwitch": "App",
+  "actions": {
+    "back": "Alle Einstellungen",
+    "cancel": "Abbrechen",
+    "save": "Speichern",
+    "saved": "Gespeichert",
+    "delete": "Löschen",
+    "remove": "Entfernen",
+    "add": "Hinzufügen",
+    "edit": "Bearbeiten",
+    "create": "Anlegen",
+    "test": "Testen",
+    "retry": "Erneut versuchen",
+    "show": "Anzeigen",
+    "hide": "Verbergen",
+    "copy": "Kopieren",
+    "copied": "Kopiert",
+    "download": "Herunterladen",
+    "import": "Importieren",
+    "export": "Exportieren",
+    "preview": "Vorschau",
+    "refresh": "Aktualisieren",
+    "connect": "Verbinden",
+    "disconnect": "Trennen",
+    "done": "Fertig",
+    "close": "Schließen",
+    "reset": "Zurücksetzen",
+    "next": "Weiter",
+    "selectAll": "Alle auswählen",
+    "selectNone": "Keine auswählen",
+    "moveUp": "{{name}} nach oben",
+    "moveDown": "{{name}} nach unten",
+    "removeNamed": "{{name}} entfernen"
+  },
+  "errors": {
+    "settings": "Einstellungen konnten nicht geladen oder gespeichert werden ({{backends}}): {{message}}"
+  },
+  "home": {
+    "searchLabel": "Einstellungen durchsuchen",
+    "searchPlaceholder": "z. B. Einheiten, Backup, Mahlzeiten",
+    "noMatches": "Keine Einstellung passt zu „{{query}}“.",
+    "clearSearch": "Suche leeren",
+    "profile": "Profil",
+    "admin": "Admin",
+    "cards": {
+      "dismiss": "Ausblenden",
+      "goals": "Du hast noch kein Kalorienziel.",
+      "goalsAction": "Ziele festlegen",
+      "wellness": "Verbinde ein Wearable, um Schlaf, Schritte und Erholung zu sehen.",
+      "wellnessAction": "Wellness-Einstellungen",
+      "program": "Kein Trainingsplan ist aktiv.",
+      "programAction": "Plan wählen",
+      "assistant": "Trace, der KI-Assistent, ist aus.",
+      "assistantAction": "Einrichten",
+      "appearance": "Trace folgt dem hellen oder dunklen Design deines Geräts.",
+      "appearanceAction": "Design wählen"
+    }
+  },
+  "groups": {
+    "you": "Du",
+    "nutrition": "Ernährung",
+    "cooking": "Kochen",
+    "training": "Training",
+    "data": "Daten und Verbindungen",
+    "server": "Server und Nutzer",
+    "system": "System"
+  },
+  "topics": {
+    "profile": {
+      "title": "Profil und Konto",
+      "description": "Name, Bild, Körperdaten, verknüpfte Anmeldung, Abmelden",
+      "keywords": "avatar name geburtstag geschlecht größe gewicht konto abmelden löschen"
+    },
+    "appearance": {
+      "title": "Darstellung und Sprache",
+      "description": "Design, Sprache, Startseite",
+      "keywords": "dunkel hell design sprache startseite feiern"
+    },
+    "regional": {
+      "title": "Einheiten und Formate",
+      "description": "Gewicht, Energie, Länge, Datum und Uhrzeit",
+      "keywords": "kg lb kcal kj cm ft datum uhrzeit zeitzone metrisch imperial"
+    },
+    "notifications": {
+      "title": "Benachrichtigungen",
+      "description": "Kanäle, Erinnerungen und Hinweise",
+      "keywords": "push gotify ntfy apprise erinnerung wasser mahlzeit wiegen schlaf wochenbericht training coaching ablaufdatum"
+    },
+    "assistant": {
+      "title": "KI-Assistent Trace",
+      "description": "Anbieter, Modell, Schlüssel, Smart Log",
+      "keywords": "ki ai claude openai gemini modell api schlüssel sprache smart log"
+    },
+    "diary": {
+      "title": "Tagebuch und Mahlzeiten",
+      "description": "Anzeige, Mahlzeitennamen, Aktivität, Fasten",
+      "keywords": "mahlzeiten frühstück fasten aktivität schnellkalorien marken bilder notizen"
+    },
+    "goals": {
+      "title": "Ziele und Wasser",
+      "description": "Art des Kalorienziels, Trinkflaschen",
+      "keywords": "kalorien adaptiv tdee dynamisch wasser flaschen"
+    },
+    "foods": {
+      "title": "Lebensmittellisten",
+      "description": "Anzeige, Sortierung, Kategorien, Einheiten",
+      "keywords": "kategorien einheiten sortierung barcode favoriten scan ton taschenlampe zuschneiden"
+    },
+    "nutrients": {
+      "title": "Nährstoffe",
+      "description": "Welche Nährstoffe erscheinen, in welcher Reihenfolge, eigene",
+      "keywords": "protein eiweiß fett kohlenhydrate vitamine mineralstoffe eigene"
+    },
+    "foodSources": {
+      "title": "Lebensmittelquellen",
+      "description": "Open Food Facts, USDA, Mealie",
+      "keywords": "off open food facts usda mealie barcode spiegel"
+    },
+    "wellness": {
+      "title": "Wellness-Geräte",
+      "description": "Fitbit, Garmin, Withings",
+      "keywords": "fitbit garmin withings wearable schlaf schritte sync"
+    },
+    "statistics": {
+      "title": "Ernährungsstatistik",
+      "description": "Diagrammoptionen und Kategorien",
+      "keywords": "diagramme trend durchschnitt"
+    },
+    "bodyStats": {
+      "title": "Körperwerte",
+      "description": "Reihenfolge und Sichtbarkeit",
+      "keywords": "gewicht taille körperfett maße"
+    },
+    "cooking": {
+      "title": "Kochen und Einkaufen",
+      "description": "Portionen, URL-Import, Einkaufsliste",
+      "keywords": "portionen vorrat import einkauf gang"
+    },
+    "kitchens": {
+      "title": "Küchen",
+      "description": "Rezepte im Haushalt teilen",
+      "keywords": "haushalt mitglieder teilen küchenchef"
+    },
+    "manage": {
+      "title": "Kategorien, Tags und Einheiten",
+      "description": "Rezept- und Vorratskategorien, Tags, Küchengeräte, Kochbücher",
+      "keywords": "verwalten kategorien tags geräte kochbücher"
+    },
+    "training": {
+      "title": "Workouts",
+      "description": "Ziele, Erfassung, Pausentimer, Körpermaße",
+      "keywords": "pause timer ton rpe aufwärmsätze wochenziel cardio videos diagramme"
+    },
+    "catalog": {
+      "title": "Übungsbibliothek",
+      "description": "Quellen, eigene Übungen, JSON-Kataloge",
+      "keywords": "übungen wger free-db exercisedb import katalog medien"
+    },
+    "radio": {
+      "title": "Radio und Musik",
+      "description": "Eigener Musikserver und Sender",
+      "keywords": "jellyfin plex emby subsonic navidrome sender crossfade"
+    },
+    "connections": {
+      "title": "Verbindungen zwischen den Apps",
+      "description": "Datenaustausch zwischen NutriTrace, CookTrace und LiftTrace",
+      "keywords": "verbindung token cooktrace nutritrace import rezepte vorrat kalorien"
+    },
+    "import": {
+      "title": "Import und Export",
+      "description": "Dateien, CSV, andere Apps",
+      "keywords": "csv json zip mealie paprika cronometer myfitnesspal strong hevy fitnotes"
+    },
+    "backup": {
+      "title": "Backups und Daten",
+      "description": "Server-Backups, Wiederherstellen, Daten löschen",
+      "keywords": "backup sicherung wiederherstellen zeitplan daten löschen"
+    },
+    "sharing": {
+      "title": "Teilen",
+      "description": "Lebensmittel und Mahlzeiten mit anderen Nutzern teilen",
+      "keywords": "gruppe sichtbarkeit massenfreigabe"
+    },
+    "users": {
+      "title": "Nutzer",
+      "description": "Rollen, Trainer, Dauer der Anmeldung",
+      "keywords": "admin rollen trainer löschen sitzung"
+    },
+    "authentication": {
+      "title": "Anmeldeanbieter",
+      "description": "OpenID-Connect-Anbieter",
+      "keywords": "oidc sso keycloak anbieter"
+    },
+    "email": {
+      "title": "E-Mail",
+      "description": "SMTP-Server für Benachrichtigungen",
+      "keywords": "smtp mail test"
+    },
+    "apiTokens": {
+      "title": "API-Tokens",
+      "description": "Zugang für Skripte und MCP",
+      "keywords": "token berechtigungen mcp api"
+    },
+    "webhooks": {
+      "title": "Webhooks",
+      "description": "Ereignisse an andere Dienste senden",
+      "keywords": "webhook ereignisse secret"
+    },
+    "updates": {
+      "title": "Updates",
+      "description": "Versionen der Backends und Versionshinweise",
+      "keywords": "version release hinweise kanal"
+    },
+    "diagnostics": {
+      "title": "Diagnose",
+      "description": "Protokolle und Daten für Fehlerberichte",
+      "keywords": "logs protokoll ausführlich kalibrierung mithelfen"
+    },
+    "about": {
+      "title": "Über und unterstützen",
+      "description": "Lizenzen, Quellcode, Unterstützung",
+      "keywords": "lizenz agpl unterstützen spenden github version"
+    }
+  },
+  "adminOnly": "Für diese Einstellungen braucht es ein Admin-Konto."
+}

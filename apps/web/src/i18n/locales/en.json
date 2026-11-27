@@ -1,0 +1,33 @@
+{
+  "app": {
+    "name": "Trace",
+    "loading": "Loading…"
+  },
+  "nav": {
+    "label": "Sections",
+    "nutrition": "Nutrition",
+    "nutritionDescription": "Diary, foods and goals",
+    "cooking": "Cooking",
+    "cookingDescription": "Recipes, pantry and shopping",
+    "training": "Training",
+    "trainingDescription": "Workouts, exercises and programs",
+    "settings": "Settings",
+    "settingsDescription": "Appearance, language and account"
+  },
+  "backends": {
+    "nt": "NutriTrace",
+    "ct": "CookTrace",
+    "lt": "LiftTrace"
+  },
+  "notFound": {
+    "text": "This page doesn't exist.",
+    "action": "Go to the start"
+  },
+  "offline": {
+    "unavailable": "{{backend}} can't be reached right now. Its sections may not work."
+  },
+  "update": {
+    "ready": "A new version of Trace is ready.",
+    "reload": "Reload"
+  }
+}

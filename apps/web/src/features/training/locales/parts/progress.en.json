@@ -1,0 +1,41 @@
+{
+  "progress": {
+    "title": "Progress",
+    "add": "Add photo",
+    "take": "Take photo",
+    "noFile": "JPG, PNG or HEIC",
+    "adding": "Adding photo…",
+    "dateForNext": "Date for the next photo",
+    "today": "Today",
+    "compareEnds": "Compare first and latest",
+    "compareTwo": "Compare two",
+    "pickHint": "Pick two photos to compare ({{count}}/2 selected)",
+    "empty": "No progress photos yet. Add a photo every few weeks and compare any two dates side by side to see how far you have come.",
+    "photo": "Photo of {{date}}",
+    "delete": "Delete photo of {{date}}",
+    "deleteTitle": "Delete this photo?",
+    "deleteText": "This removes the photo from your timeline and deletes the file. This cannot be undone.",
+    "added": "Photo added",
+    "deleted": "Photo deleted",
+    "compare": {
+      "title": "Before and after",
+      "before": "Earlier photo",
+      "after": "Later photo",
+      "handle": "Drag to compare"
+    },
+    "scrub": {
+      "title": "Photo timeline",
+      "handle": "Drag to move through time",
+      "play": "Play",
+      "pause": "Pause",
+      "day": "Day {{day}}",
+      "since": "{{delta}} {{unit}} since {{date}}"
+    },
+    "weight": {
+      "label": "Weight",
+      "add": "Add weight",
+      "saved": "Weight saved",
+      "prompt": "No weight logged for {{date}}. Add it?"
+    }
+  }
+}

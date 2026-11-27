@@ -1,0 +1,1367 @@
+{
+  "title": "Cooking",
+  "placeholder": "Recipes, pantry, shopping and cookbooks of CookTrace come here.",
+  "cookingCommon": {
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "remove": "Remove",
+    "done": "Done",
+    "add": "Add",
+    "edit": "Edit",
+    "clear": "Clear",
+    "close": "Close",
+    "retry": "Retry",
+    "loading": "Loading…",
+    "search": "Search…",
+    "nothingFound": "Nothing found",
+    "filter": "Filter…",
+    "moveUp": "Move {{name}} up",
+    "moveDown": "Move {{name}} down",
+    "actionsFor": "Actions for {{name}}",
+    "nav": {
+      "label": "Cooking sections",
+      "recipes": "Recipes",
+      "pantry": "Pantry",
+      "shopping": "Shopping",
+      "diary": "Diary",
+      "manage": "Manage"
+    },
+    "nutritionFacts": {
+      "title": "Nutrition Facts",
+      "servingSize": "Serving size",
+      "amountPerServing": "Amount per serving",
+      "dailyValue": "% Daily Value*",
+      "footnote": "* The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily diet. 2,000 calories a day is used for general nutrition advice.",
+      "perServing": "Per serving",
+      "oneOf": "1 of {{total}}",
+      "perContainer": "{{total}} servings per container",
+      "perRecipe": "Servings per recipe: {{total}}",
+      "includes": "Includes {{amount}} {{label}}"
+    },
+    "derivedFromSalt": "Calculated from salt",
+    "derivedFromSodium": "Calculated from sodium",
+    "units": {
+      "pick": "Choose a unit"
+    },
+    "unitGroups": {
+      "custom": "Custom",
+      "volumeUs": "Volume (US)",
+      "volumeMetric": "Volume (metric)",
+      "weightUs": "Weight (US)",
+      "weightMetric": "Weight (metric)",
+      "count": "Count / descriptive"
+    },
+    "photo": {
+      "preview": "Photo preview",
+      "remove": "Remove photo",
+      "uploading": "Uploading…",
+      "choose": "Choose photo",
+      "noFile": "No file selected",
+      "camera": "Take photo",
+      "capture": "Capture",
+      "cameraDenied": "The camera isn't available. Allow access or upload a file.",
+      "url": "Image URL",
+      "useUrl": "Use URL",
+      "uploadFailed": "The upload failed"
+    },
+    "barcode": {
+      "title": "Scan barcode",
+      "hint": "Point the camera at the barcode.",
+      "noCamera": "The camera isn't available. Type the number instead.",
+      "manual": "Barcode number",
+      "use": "Use",
+      "camera": "Camera",
+      "restart": "Restart camera",
+      "torchOn": "Torch on",
+      "torchOff": "Torch off"
+    },
+    "recipes": {
+      "search": "Search recipes",
+      "none": "No recipes match.",
+      "inPantry": "{{have}}/{{need}} in pantry"
+    },
+    "nutriments": {
+      "calories": "Calories",
+      "energy": "Energy",
+      "kilojoules": "Kilojoules",
+      "fat": "Total Fat",
+      "saturatedFat": "Saturated Fat",
+      "transFat": "Trans Fat",
+      "polyunsaturatedFat": "Polyunsaturated Fat",
+      "monounsaturatedFat": "Monounsaturated Fat",
+      "cholesterol": "Cholesterol",
+      "sodium": "Sodium",
+      "salt": "Salt",
+      "carbohydrates": "Total Carbohydrate",
+      "fiber": "Dietary Fiber",
+      "sugars": "Total Sugars",
+      "addedSugars": "Added Sugars",
+      "proteins": "Protein",
+      "vitaminD": "Vitamin D",
+      "calcium": "Calcium",
+      "iron": "Iron",
+      "potassium": "Potassium",
+      "vitaminA": "Vitamin A",
+      "vitaminC": "Vitamin C",
+      "vitaminE": "Vitamin E",
+      "vitaminK": "Vitamin K",
+      "b1": "Vitamin B1 (Thiamin)",
+      "b2": "Vitamin B2 (Riboflavin)",
+      "b3": "Vitamin B3 (Niacin)",
+      "b6": "Vitamin B6",
+      "b9": "Folate (B9)",
+      "b12": "Vitamin B12",
+      "magnesium": "Magnesium",
+      "zinc": "Zinc",
+      "phosphorus": "Phosphorus",
+      "caffeine": "Caffeine",
+      "alcohol": "Alcohol"
+    },
+    "icon": "Icon"
+  },
+  "pantry": {
+    "title": "Pantry",
+    "add": "Add item",
+    "search": "Search pantry",
+    "allCategories": "All",
+    "uncategorized": "Uncategorized",
+    "categoryFilter": "Filter by category",
+    "noMatch": "Nothing matches “{{query}}”",
+    "empty": {
+      "title": "Your pantry is empty",
+      "text": "Add the ingredients you keep at home. Recipes use them to show what you already have.",
+      "action": "Add item"
+    },
+    "variantBanner": {
+      "title": "New: variants",
+      "text": "Group different brands of the same ingredient under one pantry entry. Open any item and add a brand or store under Variants. Recipes that link to the generic match any of them.",
+      "dismiss": "Dismiss"
+    },
+    "stock": {
+      "label": "Filter by stock",
+      "all": "All",
+      "in": "In stock",
+      "out": "Out",
+      "expiring": "Expiring soon"
+    },
+    "sort": {
+      "label": "Sort",
+      "name": "A → Z",
+      "updated": "Recently updated",
+      "usage": "Most used"
+    },
+    "view": {
+      "label": "View",
+      "grid": "Grid view",
+      "list": "List view"
+    },
+    "select": {
+      "deselect": "Deselect {{name}}",
+      "select": "Select {{name}}",
+      "delete": "Delete selected",
+      "cancel": "Cancel selection",
+      "count_one": "{{count}} selected",
+      "count_other": "{{count}} selected"
+    },
+    "actions": {
+      "markOut": "Mark as out of stock",
+      "markIn": "Mark as in stock",
+      "select": "Select multiple"
+    },
+    "confirmRemove": {
+      "title": "Remove from pantry?",
+      "message": "“{{name}}” will be removed. Recipes referencing it stay; this just drops it from your library."
+    },
+    "confirmBulk": {
+      "message": "Recipes referencing them stay; this just drops them from your pantry.",
+      "title_one": "Delete {{count}} pantry item?",
+      "title_other": "Delete {{count}} pantry items?",
+      "confirm_one": "Delete {{count}}",
+      "confirm_other": "Delete {{count}}"
+    },
+    "toast": {
+      "removed": "Removed",
+      "updateFailed": "Could not update",
+      "deleteFailed": "Delete failed",
+      "lookupFailed": "The barcode lookup failed",
+      "removedPartly": "Removed {{done}} of {{total}}, {{failed}} failed",
+      "removedMany_one": "Removed {{count}} item",
+      "removedMany_other": "Removed {{count}} items"
+    },
+    "card": {
+      "variantOf": "Variant of {{name}}",
+      "variantsInStock": "{{stocked}} of {{total}} variants in stock",
+      "markOut": "Mark {{name}} as out of stock",
+      "markIn": "Mark {{name}} as in stock",
+      "collapse": "Collapse variants of {{name}}",
+      "expand": "Expand variants of {{name}}",
+      "usedIn_one": "Used in {{count}} recipe",
+      "usedIn_other": "Used in {{count}} recipes"
+    },
+    "expiry": {
+      "expired": "Expired",
+      "today": "Expires today",
+      "tomorrow": "Expires tomorrow",
+      "on": "Expires {{date}}",
+      "inDays_one": "Expires in {{count}} day",
+      "inDays_other": "Expires in {{count}} days"
+    },
+    "spotlight": {
+      "title": "Expiring & expired",
+      "seeAll": "See all",
+      "today": "today",
+      "daysLeft_one": "{{count}} day left",
+      "daysLeft_other": "{{count}} days left"
+    },
+    "sources": {
+      "label": "Search sources",
+      "all": "All",
+      "local": "Pantry",
+      "off": "OFF",
+      "usda": "USDA",
+      "nt": "NutriTrace",
+      "combine": "Combine sources"
+    },
+    "tiers": {
+      "offTitle": "OFF quality",
+      "usdaTitle": "USDA data type",
+      "active": "filter active",
+      "complete": "Complete (70 %+)",
+      "partial": "Partial (40–70 %)",
+      "sparse": "Sparse (under 40 %)",
+      "unknown": "Unknown",
+      "reset": "Reset filter"
+    },
+    "external": {
+      "searching": "Searching {{source}}…",
+      "searchingAll": "Searching all sources…",
+      "allHidden": "The quality filter hides all {{source}} results",
+      "noneIn": "No results in {{source}}",
+      "noneAll": "No results",
+      "completeness": "OFF completeness: {{percent}} %",
+      "origin": "Origin: {{country}}"
+    }
+  },
+  "pantryItem": {
+    "title": "Pantry item",
+    "titleAdd": "Add pantry item",
+    "titleEdit": "Edit pantry item",
+    "invalid": "This pantry item doesn't exist.",
+    "back": "Back to the pantry",
+    "inStock": "In stock",
+    "outOfStock": "Out of stock",
+    "onHand": "On hand",
+    "decrease": "Decrease quantity",
+    "increase": "Increase quantity",
+    "notSet": "Not set",
+    "alreadyExpired": "already expired",
+    "earliestVariant": "Earliest variant: {{name}} on {{date}}",
+    "usedIn": {
+      "title": "Used in",
+      "titleCount": "Used in ({{count}})",
+      "none": "No recipes use this item yet."
+    },
+    "fields": {
+      "photo": "Photo",
+      "name": "Name *",
+      "brand": "Brand",
+      "category": "Category",
+      "barcode": "Barcode",
+      "onHand": "On hand",
+      "unit": "Unit",
+      "servingSize": "Serving size",
+      "servingUnit": "Serving unit",
+      "density": "Density (g per cup, optional)",
+      "expiresOn": "Expires on",
+      "notes": "Notes"
+    },
+    "placeholders": {
+      "name": "All-purpose flour",
+      "brand": "e.g. King Arthur",
+      "density": "e.g. 120 for flour",
+      "expiresOn": "No date",
+      "notes": "Where you bought it, where you keep it, …"
+    },
+    "categoryPlaceholder": "Pick a category",
+    "clearCategory": "Clear category",
+    "newCategory": {
+      "open": "New category",
+      "title": "New pantry category",
+      "name": "Category name",
+      "create": "Create"
+    },
+    "stockHint": "0 means out of stock; blank or more means in stock.",
+    "linked": "Linked: changing the serving size scales every nutrient",
+    "unlinked": "Unlinked: nutrients stay when the serving size changes",
+    "density": {
+      "lookUp": "Look it up",
+      "set": "Set {{value}} g per cup for {{name}}",
+      "none": "No built-in density for “{{name}}”"
+    },
+    "expiryPerVariant": "Expiry is tracked per variant. Open a variant to set its date.",
+    "nutrition": {
+      "title": "Nutrition",
+      "perServing": "Per serving",
+      "editAll": "Edit all nutrients",
+      "allTitle": "All nutrients",
+      "allHint": "Values for this item only. Your visible nutrients setting stays as it is. Leave a field blank to skip it."
+    },
+    "label": {
+      "scan": "Scan label",
+      "photo": "Photograph label",
+      "scanning": "Scanning…",
+      "unreadable": "Couldn't read the label",
+      "done": "Nutrition read from the label",
+      "failed": "The scan failed: {{reason}}",
+      "noKey": "no API key configured (Settings, Trace assistant)",
+      "noBaseUrl": "the compatible provider needs a base URL and a model"
+    },
+    "off": {
+      "view": "View on Open Food Facts",
+      "share": "Share to OFF",
+      "refresh": "Refresh from OFF",
+      "notFound": "Not found on Open Food Facts",
+      "updated": "Updated from Open Food Facts",
+      "nameRequired": "Add a name first",
+      "submitted": "Submitted to Open Food Facts",
+      "shareFailed": "Sharing to OFF failed",
+      "verify": {
+        "checking": "Verifying on Open Food Facts…",
+        "confirmed": "Confirmed live on Open Food Facts",
+        "pending": "Submitted, may take a few minutes to appear"
+      }
+    },
+    "variants": {
+      "title": "Variants",
+      "genericItem": "a generic pantry item",
+      "detach": "Detach",
+      "detachFrom": "Detach from {{name}}",
+      "detachTitle": "Detach from {{name}}?",
+      "detachMessage": "This variant becomes a standalone pantry item. Recipes that link to {{name}} will no longer see it as a variant.",
+      "isVariant": "This item is a variant of {{name}}. Recipes that link to the generic see it as one of its variants.",
+      "isFlat": "A standalone item. Add variants under it (different brands of milk share the recipe match), or move it under another item.",
+      "add": "Add variant",
+      "addTitle": "Add a variant",
+      "addHint": "Type a brand or store. A matching pantry item can be attached directly; otherwise a new variant is created.",
+      "brand": "Brand or store",
+      "brandPlaceholder": "e.g. Greenwise",
+      "attach": "Attach as variant",
+      "noSuggestion": "No matching pantry items; this creates a new variant.",
+      "nameOverride": "Different name",
+      "nameOverridePlaceholder": "e.g. 2% milk",
+      "useOtherName": "Use a different name",
+      "create": "Create variant",
+      "createNamed": "Create “{{name}}”",
+      "out": "Out",
+      "sourceTitle": "Recipe nutrition source",
+      "sourceHint": "Which values recipes use when an ingredient links to this item. Variants keep their own.",
+      "sourceManual": "Manual (this item's own values)",
+      "sourcePull": "Pull from {{name}}",
+      "promoteHint": "The expiry date ({{date}}) moves to the new variant, the actual product.",
+      "makeVariantOf": "Make a variant of…",
+      "pickerHint": "Pick the item this should become a variant of. Only items that aren't variants are listed.",
+      "pickerSearch": "Search pantry",
+      "pickerNone": "No matching pantry items.",
+      "isGeneric_one": "A generic item with {{count}} variant. Each variant has its own barcode, photo and stock; recipes can link to this item to match any of them.",
+      "isGeneric_other": "A generic item with {{count}} variants. Each variant has its own barcode, photo and stock; recipes can link to this item to match any of them."
+    },
+    "deleteVariants": {
+      "title": "Remove “{{name}}”?",
+      "label": "What happens to the variants",
+      "keep": "Keep them",
+      "cascade": "Remove them too",
+      "keepHint": "The variants stay in your pantry as their own items. Recommended.",
+      "cascadeHint": "The variants are removed along with this item.",
+      "message_one": "This item has {{count}} variant. What should happen to it?",
+      "message_other": "This item has {{count}} variants. What should happen to them?"
+    },
+    "toast": {
+      "nameRequired": "A name is required",
+      "added": "Added to pantry",
+      "saved": "Saved",
+      "saveFailed": "Save failed",
+      "removedWithVariants": "Removed with its variants",
+      "categoryFailed": "Could not create the category",
+      "addedAsVariant": "Added as a variant",
+      "detached": "Detached",
+      "linked": "Linked as variant",
+      "brandOrName": "Enter a brand or a different name",
+      "addedVariant": "Added {{name}}",
+      "variantFailed": "Could not update the variant",
+      "sourceManual": "Nutrition set to manual",
+      "sourceVariant": "Pulling nutrition from the variant",
+      "alreadyThere": "“{{name}}” is already in your pantry; nothing new was added"
+    }
+  },
+  "shopping": {
+    "title": "Shopping list",
+    "listTitle": "Shopping list",
+    "groupBy": {
+      "label": "Group by",
+      "aisle": "By aisle",
+      "recipe": "By recipe",
+      "flat": "One list"
+    },
+    "quickAdd": {
+      "name": "Add an item",
+      "quantity": "Qty",
+      "suggestions": "Pantry suggestions"
+    },
+    "hideChecked": "Hide checked",
+    "clearChecked": "Clear checked",
+    "progress": "Shopping progress",
+    "empty": {
+      "title": "Nothing to buy",
+      "text": "Add items above, or pull the ingredients from a recipe."
+    },
+    "other": "Other",
+    "recipe": "Recipe",
+    "uncategorized": "No aisle",
+    "undo": "Undo",
+    "onlyMissing": "Only add what isn't in the pantry",
+    "row": {
+      "check": "Check off {{name}}",
+      "uncheck": "Uncheck {{name}}",
+      "aisle": "Change aisle of {{name}}",
+      "remove": "Remove {{name}}"
+    },
+    "group": {
+      "openRecipe": "Open recipe",
+      "checkAll": "Check all in this group",
+      "uncheckAll": "Uncheck all in this group",
+      "remove": "Remove all items in this group"
+    },
+    "confirmGroup": {
+      "message": "They'll be removed from your shopping list.",
+      "title_one": "Remove {{count}} item from {{group}}?",
+      "title_other": "Remove {{count}} items from {{group}}?"
+    },
+    "edit": {
+      "title": "Edit item",
+      "name": "Name",
+      "quantity": "Quantity",
+      "unit": "Unit"
+    },
+    "aisle": {
+      "title": "Change aisle",
+      "help": "Group this item under an aisle. Pick one or type a new name.",
+      "input": "Aisle",
+      "set": "Set",
+      "known": "Known aisles",
+      "none": "No aisle"
+    },
+    "clear": {
+      "description": "Checked items are removed from the list.",
+      "confirm": "Clear",
+      "restockLabel": "Mark as in stock",
+      "restockHint": "These pantry items are out of stock and match what you checked off.",
+      "variant": "Variant of {{name}}",
+      "title_one": "Clear {{count}} checked item?",
+      "title_other": "Clear {{count}} checked items?"
+    },
+    "fromRecipe": {
+      "title": "Add from recipe"
+    },
+    "fromPlan": {
+      "title": "Add from planned cooks",
+      "help": "Takes the ingredients of every planned cook in this window and merges them into one list.",
+      "from": "From",
+      "to": "To",
+      "confirm": "Add to list"
+    },
+    "addSource": {
+      "title": "Add to shopping list",
+      "recipe": "Add from recipe",
+      "plan": "Add from planned cooks"
+    },
+    "share": {
+      "title": "Share list",
+      "image": "Share as image",
+      "text": "Share as text",
+      "listTitle": "Shopping list",
+      "itemCount_one": "{{count}} item",
+      "itemCount_other": "{{count}} items",
+      "more_one": "+{{count}} more…",
+      "more_other": "+{{count}} more…"
+    },
+    "toast": {
+      "updateFailed": "Could not update",
+      "deleteFailed": "Delete failed",
+      "addFailed": "Could not add",
+      "saveFailed": "Could not save",
+      "orderFailed": "Could not save the order",
+      "clearFailed": "Could not clear",
+      "cleared": "Checked items cleared",
+      "restockUndone": "Restock undone",
+      "undoFailed": "Could not undo",
+      "nothingToShare": "Add some items first",
+      "savedImage": "Image saved",
+      "copied": "Copied to the clipboard",
+      "shareFailed": "Could not share",
+      "nothingPlanned": "Nothing is planned in this window",
+      "alreadyInPantry": "Everything is already in your pantry",
+      "removed_one": "Removed {{count}} item",
+      "removed_other": "Removed {{count}} items",
+      "restockFailed_one": "{{count}} item couldn't be restocked",
+      "restockFailed_other": "{{count}} items couldn't be restocked",
+      "clearedRestocked_one": "Cleared; {{count}} pantry item restocked",
+      "clearedRestocked_other": "Cleared; {{count}} pantry items restocked",
+      "addedFromRecipe_one": "Added {{count}} item from “{{name}}”",
+      "addedFromRecipe_other": "Added {{count}} items from “{{name}}”",
+      "addedFromPlan_one": "Added {{count}} item (planned cooks: {{cooks}})",
+      "addedFromPlan_other": "Added {{count}} items (planned cooks: {{cooks}})"
+    },
+    "remaining_one": "{{count}} remaining",
+    "remaining_other": "{{count}} remaining",
+    "checked_one": "{{count}} checked",
+    "checked_other": "{{count}} checked",
+    "showChecked_one": "Show {{count}} checked",
+    "showChecked_other": "Show {{count}} checked"
+  },
+  "diary": {
+    "title": "Cook diary",
+    "recipeFallback": "Recipe",
+    "planned": "Planned",
+    "cookedBy": "by {{name}}",
+    "stars": "{{rating}} of 5 stars",
+    "meals": {
+      "breakfast": "Breakfast",
+      "lunch": "Lunch",
+      "dinner": "Dinner",
+      "snack": "Snack"
+    },
+    "heatmap": {
+      "title": "The last year",
+      "none": "No cooks · {{date}}",
+      "less": "Less",
+      "more": "More",
+      "cooks_one": "{{count}} cook",
+      "cooks_other": "{{count}} cooks",
+      "activeDays_one": "{{count}} active day",
+      "activeDays_other": "{{count}} active days",
+      "day_one": "{{count}} cook · {{date}}",
+      "day_other": "{{count}} cooks · {{date}}"
+    },
+    "stats": {
+      "thisWeek": "This week",
+      "currentStreak": "Current streak",
+      "longestStreak": "Longest streak",
+      "thisMonth": "This month",
+      "topRecipe_one": "Most cooked this month · {{count}}×",
+      "topRecipe_other": "Most cooked this month · {{count}}×"
+    },
+    "views": {
+      "label": "View",
+      "list": "List",
+      "month": "Month",
+      "photos": "Photos"
+    },
+    "month": {
+      "previous": "Previous month",
+      "next": "Next month"
+    },
+    "search": "Search recipes, notes, cooks",
+    "clearSearch": "Clear search",
+    "filterByRecipe": "Filter by recipe",
+    "clearRecipeFilter": "Clear recipe filter",
+    "mealFilter": "Filter by meal",
+    "empty": {
+      "title": "No cooks yet",
+      "text": "Plan a cook, or log one from a recipe."
+    },
+    "noMatches": {
+      "title": "No matches",
+      "text": "Try clearing the search, meal or recipe filter.",
+      "clear": "Clear filters"
+    },
+    "noPhotos": {
+      "title": "No photos yet",
+      "text": "Add a photo when you log a cook and it shows up here."
+    },
+    "lightbox": {
+      "previous": "Previous photo",
+      "next": "Next photo"
+    },
+    "openRecipe": "Open recipe",
+    "markCooked": "Mark as cooked",
+    "plan": {
+      "open": "Plan a cook",
+      "title": "Plan a cook",
+      "date": "Date",
+      "meal": "Meal (optional)",
+      "confirm": "Plan it"
+    },
+    "confirm": {
+      "cancelPlanned": "Cancel the planned cook?",
+      "delete": "Delete this cook?",
+      "message": "{{name}} on {{date}}"
+    },
+    "toast": {
+      "markedCooked": "Marked as cooked",
+      "updateFailed": "Could not update",
+      "removed": "Removed",
+      "deleteFailed": "Delete failed",
+      "planned": "Planned",
+      "planFailed": "Could not plan"
+    },
+    "cookCount_one": "{{count}} cook",
+    "cookCount_other": "{{count}} cooks"
+  },
+  "manage": {
+    "title": "Manage",
+    "sectionsLabel": "Manage sections",
+    "sections": {
+      "recipe-categories": {
+        "label": "Recipe categories",
+        "description": "One badge above each recipe title."
+      },
+      "tags": {
+        "label": "Tags",
+        "description": "Free-form descriptors, many per recipe."
+      },
+      "kitchen-gear": {
+        "label": "Kitchen gear",
+        "description": "Tools used in recipes: pots, pans, spatulas."
+      },
+      "pantry-categories": {
+        "label": "Pantry categories",
+        "description": "Sections that group the pantry."
+      },
+      "units": {
+        "label": "Units",
+        "description": "Hide built-in units or add your own."
+      },
+      "cookbooks": {
+        "label": "Cookbooks",
+        "description": "Your collections of recipes."
+      }
+    },
+    "name": "Name",
+    "newCategory": "New category name",
+    "addCategory": "Add category",
+    "noCategories": "No categories yet. Add one below.",
+    "noMatch": "Nothing matches “{{query}}”.",
+    "confirmDelete": "Delete “{{name}}”?",
+    "editNamed": "Edit {{name}}",
+    "renameNamed": "Rename {{name}}",
+    "deleteNamed": "Delete {{name}}",
+    "toast": {
+      "saved": "Saved",
+      "saveFailed": "Could not save",
+      "addFailed": "Could not add",
+      "deleteFailed": "Could not delete",
+      "renameFailed": "Could not rename",
+      "orderFailed": "Could not save the order",
+      "categoryAdded": "Category added"
+    },
+    "recipeCategories": {
+      "description": "One category per recipe. It's the badge above the title and a filter on the recipe list.",
+      "color": "Colour",
+      "colorN": "Colour {{number}}",
+      "noColor": "No colour",
+      "deleteMessage": "Recipes in this category stay; they only lose the label."
+    },
+    "pantryCategories": {
+      "description": "Groups and filters the pantry. The default aisle labels shopping items from this category; without one, the category name is used.",
+      "aisle": "Default aisle (optional)",
+      "deleteMessage": "Pantry items lose this label but stay in your pantry."
+    },
+    "taxonomy": {
+      "tagsDescription": "Descriptors on recipes (vegan, italian, weeknight). Renaming or deleting applies to every recipe that uses one.",
+      "toolsDescription": "Tools listed on recipes: pans, mixers, sheet trays. Renaming or deleting applies to every recipe.",
+      "empty": "Nothing yet. Values appear once you add them to a recipe.",
+      "sort": "Sort",
+      "sortBy": {
+        "name": "A–Z",
+        "most": "Most used",
+        "least": "Least used"
+      },
+      "merge": "Merge",
+      "mergeTitle": "Merge “{{name}}” into “{{target}}”?",
+      "mergeMessage": "Every recipe using “{{name}}” will use “{{target}}” instead.",
+      "usesAcross_one": "{{count}} use across recipes",
+      "usesAcross_other": "{{count}} uses across recipes",
+      "unused_one": "{{count}} unused",
+      "unused_other": "{{count}} unused",
+      "updated_one": "Updated {{count}} recipe",
+      "updated_other": "Updated {{count}} recipes",
+      "removedFrom_one": "Removed from {{count}} recipe",
+      "removedFrom_other": "Removed from {{count}} recipes",
+      "deleteMessage_one": "This removes it from {{count}} recipe. The recipe stays.",
+      "deleteMessage_other": "This removes it from {{count}} recipes. The recipes stay."
+    },
+    "units": {
+      "description": "The units offered in recipe and pantry editors. Hiding a built-in keeps it as free text in recipes that use it.",
+      "restoreAll": "Restore all",
+      "restoreTitle": "Show all built-in units again?",
+      "restoreMessage": "Hidden built-ins come back. Your custom units stay.",
+      "restoreConfirm": "Show again",
+      "restored": "Built-in units restored",
+      "filter": "Filter by abbreviation or name",
+      "visible": "{{abbr}} is offered in pickers",
+      "builtin": "Built-in",
+      "customTitle": "Custom units",
+      "noCustom": "No custom units yet.",
+      "abbr": "Abbreviation",
+      "abbrPlaceholder": "e.g. head",
+      "fullName": "Full name (optional)",
+      "category": "Group",
+      "add": "Add unit",
+      "added": "Unit added",
+      "deleteMessage": "Recipes using it keep the abbreviation as text.",
+      "problem": {
+        "builtin": "“{{abbr}}” is already a built-in unit.",
+        "duplicate": "The custom unit “{{abbr}}” already exists."
+      },
+      "builtins_one": "{{count}} built-in · {{hidden}} hidden",
+      "builtins_other": "{{count}} built-ins · {{hidden}} hidden",
+      "customCount_one": "{{count}} custom",
+      "customCount_other": "{{count}} custom"
+    },
+    "cookbooks": {
+      "description": "Collections of recipes; a recipe can be in several. Open a cookbook to edit its contents.",
+      "empty": "No cookbooks yet. Create one below.",
+      "open": "Open {{name}}",
+      "smart": "Smart",
+      "makeSmart": "Smart cookbook (filled by a filter)",
+      "smartHelp": "The filter runs each time the cookbook is opened, so it follows your library.",
+      "category": "Category",
+      "anyCategory": "Any",
+      "tags": "Tags (all required)",
+      "tagsPlaceholder": "vegan, weeknight…",
+      "addTag": "Add tag",
+      "favoritesOnly": "Favourites only",
+      "uploadCover": "Upload cover",
+      "removeCover": "Remove cover",
+      "newName": "New cookbook name",
+      "descriptionField": "Description (optional)",
+      "add": "Create cookbook",
+      "created": "Cookbook created",
+      "deleteMessage_one": "Removes the cookbook. {{count}} recipe stays in your library.",
+      "deleteMessage_other": "Removes the cookbook. {{count}} recipes stay in your library."
+    },
+    "recipeCount_one": "{{count}} recipe",
+    "recipeCount_other": "{{count}} recipes",
+    "itemCount_one": "{{count}} item",
+    "itemCount_other": "{{count}} items",
+    "uses_one": "{{count}} use",
+    "uses_other": "{{count}} uses"
+  },
+  "recipeCommon": {
+    "loadFailed": "Couldn't load this",
+    "failed": "That didn't work",
+    "preparingShare": "Preparing share…",
+    "savedCard_one": "Card saved",
+    "savedCard_other": "{{count}} pages saved",
+    "rating": "Rating",
+    "rate_one": "{{count}} star",
+    "rate_other": "{{count}} stars",
+    "rated_one": "Rated {{count}} of 5",
+    "rated_other": "Rated {{count}} of 5",
+    "card": {
+      "untitled": "Recipe",
+      "ingredients": "Ingredients",
+      "steps": "Steps",
+      "continued": "continued",
+      "serves": "Serves {{count}}",
+      "page": "PAGE {{page}} OF {{total}}",
+      "more": "+{{count}} more…"
+    },
+    "markupHint": "Formatting: **bold**, *italic*, __underline__, lists with “- ” or “1. ”"
+  },
+  "recipes": {
+    "title": "Recipes",
+    "search": "Search recipes…",
+    "noMatch": "No recipes match “{{query}}”.",
+    "noFilterMatch": "No recipes match these filters.",
+    "clearFilters": "Clear filters",
+    "empty": {
+      "title": "No recipes yet",
+      "text": "Create a recipe or import one from a link or file.",
+      "action": "Add a recipe"
+    },
+    "add": {
+      "title": "Add a recipe",
+      "manual": "Create manually",
+      "url": "Import from URL",
+      "file": "Import from file",
+      "cookbook": "Import cookbook (PDF)",
+      "paste": "Import from JSON/HTML"
+    },
+    "tabs": {
+      "label": "What to show",
+      "recipes": "Recipes",
+      "shared": "Shared",
+      "cookbooks": "Cookbooks"
+    },
+    "filters": {
+      "favorites": "Favorites",
+      "all": "All"
+    },
+    "sort": {
+      "label": "Sort",
+      "fav-alpha": "★ + A→Z",
+      "alpha": "A → Z",
+      "recent": "Recently cooked",
+      "most": "Most cooked",
+      "newest": "Newest"
+    },
+    "card": {
+      "servings_one": "{{count}} serving",
+      "servings_other": "{{count}} servings",
+      "pantry": "Ingredients in your pantry",
+      "favorite": "Favorite",
+      "actions": "Actions for {{name}}"
+    },
+    "menu": {
+      "open": "Open recipe",
+      "favorite": "Add to favorites",
+      "unfavorite": "Remove from favorites",
+      "cookbook": "Add to cookbook",
+      "createLink": "Create share link",
+      "manageLink": "Manage share link",
+      "plan": "Plan a cook",
+      "shop": "Add to shopping list",
+      "shopped_one": "Added {{count}} item to the shopping list",
+      "shopped_other": "Added {{count}} items to the shopping list",
+      "duplicate": "Duplicate",
+      "duplicated": "Recipe duplicated",
+      "copySuffix": "(copy)",
+      "card": "Share card",
+      "select": "Select multiple"
+    },
+    "select": {
+      "count_one": "{{count}} selected",
+      "count_other": "{{count}} selected",
+      "exit": "Stop selecting"
+    },
+    "delete": {
+      "title": "Delete recipe?",
+      "message": "“{{name}}” will be removed.",
+      "done": "Recipe deleted",
+      "manyTitle_one": "Delete {{count}} recipe?",
+      "manyTitle_other": "Delete {{count}} recipes?",
+      "manyMessage": "This cannot be undone.",
+      "manyDone_one": "{{count}} recipe deleted",
+      "manyDone_other": "{{count}} recipes deleted",
+      "partly_one": "Deleted {{count}}, {{failed}} failed",
+      "partly_other": "Deleted {{count}}, {{failed}} failed"
+    },
+    "shared": {
+      "badge": "Shared",
+      "by": "Shared by {{name}}",
+      "withYou": "Shared with you",
+      "search": "Search shared recipes…",
+      "emptyTitle": "Nothing shared yet",
+      "emptyText": "When another user shares a recipe with you it appears here."
+    },
+    "cookbooks": {
+      "count_one": "{{count}} recipe",
+      "count_other": "{{count}} recipes",
+      "manage": "Manage cookbooks",
+      "create": "Create cookbook",
+      "emptyTitle": "No cookbooks yet",
+      "emptyText": "Group your favourite recipes into cookbooks."
+    },
+    "cookbookPicker": {
+      "title": "Add to cookbook",
+      "none": "No cookbooks yet.",
+      "onlySmart": "All your cookbooks are smart cookbooks. They fill themselves.",
+      "updated_one": "Updated {{count}} cookbook",
+      "updated_other": "Updated {{count}} cookbooks",
+      "failed": "Couldn't update the cookbooks"
+    },
+    "share": {
+      "title": "Share recipe",
+      "cookbookTitle": "Share cookbook",
+      "users": "Share with users",
+      "noUsers": "No other users yet.",
+      "recipeHint": "The recipe appears in their “Shared” tab, read-only.",
+      "cookbookHint": "They can view and cook from the cookbook but not edit it.",
+      "kitchens": "Share with a kitchen",
+      "members_one": "{{count}} member",
+      "members_other": "{{count}} members",
+      "share": "Share",
+      "kitchenShared_one": "Shared with {{count}} member of {{kitchen}}",
+      "kitchenShared_other": "Shared with {{count}} members of {{kitchen}}",
+      "kitchenAlready": "Already shared with everyone in {{kitchen}}",
+      "publicLink": "Public link",
+      "publicHint": "Anyone with the link can view the recipe without an account, if they can reach this server.",
+      "createLink": "Create public link",
+      "linkCreated": "Link created",
+      "copy": "Copy",
+      "copied": "Link copied",
+      "copyFailed": "Couldn't copy the link",
+      "rotate": "New link",
+      "rotated": "New link created; the old one no longer works",
+      "revoke": "Revoke",
+      "revokeTitle": "Revoke share link?",
+      "revokeMessage": "The link stops working immediately. You can create a new one later.",
+      "revoked": "Link revoked",
+      "failed": "Couldn't update sharing"
+    }
+  },
+  "timers": {
+    "title_one": "{{count}} timer",
+    "title_other": "{{count}} timers",
+    "step": "Step {{number}}",
+    "done": "Done",
+    "doneTitle": "Timer done",
+    "addMinute": "Add 1 minute",
+    "snooze": "Snooze 1 minute",
+    "dismiss": "Dismiss timer",
+    "aRecipe": "A recipe",
+    "justStarted": "just started",
+    "minutes": "{{minutes}} min",
+    "hours": "{{hours}}h {{minutes}}m",
+    "cookingCount": "Cooking {{count}}: {{name}}",
+    "cookingList": "Cooking now"
+  },
+  "recipeView": {
+    "cookMode": "Cook mode",
+    "startCooking": "Start cooking",
+    "endCooking": "End cook mode",
+    "cooked": "I cooked this",
+    "copyLink": "Copy share link",
+    "filterByCategory": "Show recipes in {{name}}",
+    "addedBy": "Added by {{name}}",
+    "from": "From {{domain}}",
+    "lastEditedBy": "Last edited by {{name}}",
+    "lastCooked": "Last cooked {{date}}",
+    "cookCount_one": "Cooked {{count}} time",
+    "cookCount_other": "Cooked {{count}} times",
+    "lastUpdated": "Last updated {{date}}",
+    "prep": "Prep",
+    "cook": "Cook",
+    "rest": "Rest",
+    "total": "Total",
+    "serves": "Serves",
+    "yield": "Yield",
+    "tags": "Tags",
+    "ingredients": "Ingredients",
+    "servingsCount_one": "{{count}} serving",
+    "servingsCount_other": "{{count}} servings",
+    "servings": "Servings",
+    "scale": "Scale",
+    "noIngredients": "No ingredients listed.",
+    "convert": "Convert unit",
+    "originalUnit": "Original ({{unit}})",
+    "gear": "Kitchen gear",
+    "instructions": "Instructions",
+    "noSteps": "No steps yet.",
+    "step": "Step {{number}}",
+    "startTimer": "Start {{time}} timer ({{text}})",
+    "video": "Video instructions",
+    "watchVideo": "Watch the video",
+    "notes": "Notes",
+    "history": "Cook history",
+    "cookedBy": "by {{name}}",
+    "photo": "Photo",
+    "openPhoto": "Open photo {{number}}",
+    "removePhoto": "Remove photo {{number}}",
+    "previousPhoto": "Previous photo",
+    "nextPhoto": "Next photo",
+    "cookLog": {
+      "title": "Add to diary",
+      "editTitle": "Edit diary entry",
+      "saveChanges": "Save changes",
+      "date": "Date",
+      "meal": "Meal (optional)",
+      "meals": {
+        "breakfast": "Breakfast",
+        "lunch": "Lunch",
+        "dinner": "Dinner",
+        "snack": "Snack"
+      },
+      "rating": "How was it? (this cook only)",
+      "notes": "Notes",
+      "notesPlaceholder": "Doubled the garlic. Took 5 minutes less than expected.",
+      "photos": "Photos",
+      "logged": "Logged",
+      "updated": "Diary entry updated",
+      "failed": "Couldn't log the cook",
+      "deleteTitle": "Delete cook entry?",
+      "deleteMessage": "This removes the entry from your cook history. The recipe stays."
+    },
+    "comments": {
+      "title": "Comments",
+      "none": "No comments yet. Be the first.",
+      "showAll_one": "Show all {{count}} thread",
+      "showAll_other": "Show all {{count}} threads",
+      "anonymous": "Anonymous",
+      "edited": "(edited)",
+      "reply": "Reply",
+      "edit": "Edit comment",
+      "updated": "Comment updated",
+      "replyPlaceholder": "Write a reply…",
+      "postReply": "Post reply",
+      "placeholder": "Add a comment…",
+      "post": "Post comment",
+      "deleteTitle": "Delete comment?",
+      "deleteMessage": "This cannot be undone.",
+      "failed": "Couldn't save the comment"
+    },
+    "versions": {
+      "title": "Earlier versions",
+      "intro": "When a save replaces another, the earlier recipe is kept here.",
+      "notice_one": "An edit was replaced by a newer one. The earlier version is kept.",
+      "notice_other": "{{count}} edits were replaced by newer ones. The earlier versions are kept.",
+      "view": "View",
+      "reason": {
+        "conflict": "Replaced by a newer edit",
+        "restore": "Saved before a restore",
+        "replaced": "Replaced by a save"
+      },
+      "reasonBy": {
+        "conflict": "{{name}}’s edit, replaced by a newer one",
+        "restore": "{{name}}’s version, saved before a restore",
+        "replaced": "{{name}}’s version, replaced by a save"
+      },
+      "differs": "Differs in",
+      "parts": {
+        "title": "Title",
+        "ingredients": "Ingredients",
+        "steps": "Steps",
+        "notes": "Notes",
+        "category": "Category",
+        "photo": "Photo",
+        "nutrition": "Nutrition",
+        "details": "Details"
+      },
+      "preview": "Preview",
+      "hidePreview": "Hide preview",
+      "restore": "Restore",
+      "confirmTitle": "Restore this version?",
+      "confirmMessage": "The current recipe is kept as an earlier version.",
+      "restored": "Recipe restored"
+    },
+    "recompute": {
+      "action": "Recompute from pantry",
+      "hint": "Checks each ingredient against your pantry’s nutrition data.",
+      "computed_one": "Computed from {{used}} of {{count}} ingredient",
+      "computed_other": "Computed from {{used}} of {{total}} ingredients",
+      "setDensity": "Set {{density}} g/cup",
+      "densitySet": "Set {{name}} to {{density}} g/cup",
+      "save": "Save this calculation",
+      "saved": "Saved: {{used}} of {{total}} ingredients",
+      "failed": "Couldn't compute the nutrition",
+      "reasons": {
+        "noNutrition": "no nutrition data",
+        "noQuantity": "no quantity",
+        "needsDensity": "unit mismatch; set a density on “{{name}}” to convert",
+        "unitMismatch": "unit mismatch ({{unit}} vs {{servingUnit}})",
+        "servingInvalid": "invalid serving size"
+      }
+    }
+  },
+  "importers": {
+    "import": "Import",
+    "failed": "Import failed",
+    "working": "Working…",
+    "untitled": "Untitled",
+    "tryAi": "Try with AI",
+    "removeFile": "Remove {{name}}",
+    "options": {
+      "addToPantry": "Link ingredients to the pantry",
+      "addToPantryHint": "Matches ingredients by name and adds missing ones to the pantry.",
+      "applyTags": "Apply the source’s tags",
+      "applyTagsHint": "Keeps the tags the source gives the recipe.",
+      "importCategories": "Import the source’s category",
+      "importCategoriesHint": "Creates the category if you don’t have it yet."
+    },
+    "outcome": {
+      "one": "Recipe imported",
+      "noSteps": "Imported, but no steps were found. Please add them.",
+      "duplicate": "This recipe already exists",
+      "imported_one": "Imported {{count}} recipe",
+      "imported_other": "Imported {{count}} recipes",
+      "importedSkipped": "Imported {{count}}, skipped {{skipped}} that already exist",
+      "allDuplicates": "Nothing new: all {{count}} recipes already exist"
+    },
+    "confidence": {
+      "clean": "Clean parse",
+      "partial": "Partial parse",
+      "bestEffort": "Best effort"
+    },
+    "paste": {
+      "title": "Import JSON or HTML",
+      "text": "Pasted content",
+      "placeholder": "Paste JSON or HTML here…",
+      "or": "or",
+      "fileHint": "JSON, HTML or a Paprika file"
+    },
+    "url": {
+      "title": "Import from URL",
+      "label": "Recipe links, one per line",
+      "none": "No URLs found",
+      "detected_one": "{{count}} URL: it is saved directly",
+      "detected_other": "{{count}} URLs: you pick which to save",
+      "scrapeMany": "Read {{count}} URLs",
+      "limit": "At most {{max}} URLs at once"
+    },
+    "source": {
+      "title": "Import from file",
+      "hint": "A photo, PDF, RTF, TXT, Markdown or a ZIP of these. Several files are imported together.",
+      "drop": "Drop files or a folder here, or choose one",
+      "next": "Continue",
+      "unsupported": "This file type isn’t supported"
+    },
+    "file": {
+      "title": "Import a recipe",
+      "reading": "Reading the file…",
+      "saving": "Saving…",
+      "photoHint": "The photo is sent to your AI provider to be read.",
+      "noText": "No text could be read from this file.",
+      "lowHint": "The parser is unsure. Check the result after saving.",
+      "pages_one": "{{count}} page",
+      "pages_other": "{{count}} pages",
+      "save": "Save recipe",
+      "saveAnyway": "Save anyway",
+      "imported": "Imported “{{name}}”",
+      "open": "Open recipe"
+    },
+    "ai": {
+      "reading": "The AI is reading…",
+      "nothing": "The AI didn’t return a recipe.",
+      "notConfigured": "The AI isn’t set up: add a key and model in the settings.",
+      "tooLarge": "The PDF is larger than 20 MB.",
+      "envLocked": "AI import isn’t available while the AI provider is set up through server environment variables.",
+      "disabled": "Turn on Trace AI in the settings to read this with AI.",
+      "readDocument": "Read with AI vision",
+      "saved": "Saved “{{name}}” with AI"
+    },
+    "bulk": {
+      "title": "Import several files"
+    },
+    "batch": {
+      "summary": "{{clean}} clean · {{partial}} partial · {{skipped}} skipped · {{selected}} selected",
+      "scrapedSummary": "{{ok}} read · {{failed}} failed · {{selected}} selected",
+      "selectAll": "Select all",
+      "selectClean": "Select clean only",
+      "counts": "{{ingredients}} ingredients · {{steps}} steps",
+      "savedByAi": "Saved via AI",
+      "failed": "Failed",
+      "noText": "No text",
+      "scraped": "Read ({{tier}})",
+      "save_one": "Save {{count}} recipe",
+      "save_other": "Save {{count}} recipes",
+      "notSaved_one": "{{count}} entry could not be saved.",
+      "notSaved_other": "{{count}} entries could not be saved.",
+      "allSaved": "Saved to your recipes."
+    },
+    "cookbook": {
+      "title": "Import a cookbook (PDF)",
+      "needsAi": "Importing a cookbook needs Trace AI.",
+      "settings": "Open settings",
+      "pick": "A PDF cookbook with several recipes",
+      "pdfOnly": "Please choose a PDF file.",
+      "extract": "Extract recipes",
+      "keepOpen": "Don’t close this dialog.",
+      "found_one": "Saved {{count}} recipe…",
+      "found_other": "Saved {{count}} recipes…",
+      "scanned_one": "This PDF is a scan ({{count}} page). Reading it with AI vision costs more tokens.",
+      "scanned_other": "This PDF is a scan ({{count}} pages). Reading it with AI vision costs more tokens.",
+      "extracted_one": "Extracted {{size}} KB of text from {{count}} page.",
+      "extracted_other": "Extracted {{size}} KB of text from {{count}} pages.",
+      "none": "The AI found no recipe.",
+      "cutOff_one": "The answer was cut off after {{count}} recipe. Split the PDF to get the rest.",
+      "cutOff_other": "The answer was cut off after {{count}} recipes. Split the PDF to get the rest."
+    }
+  },
+  "recipeEditor": {
+    "newTitle": "New recipe",
+    "editTitle": "Edit recipe",
+    "uploading": "Uploading…",
+    "nameRequired": "A name is required",
+    "saveFailed": "Couldn't save the recipe",
+    "hero": "Cover photo",
+    "name": "Name",
+    "namePlaceholder": "Banana bread",
+    "description": "Description",
+    "descriptionPlaceholder": "Quick one-bowl loaf, freezes well",
+    "prep": "Prep (min)",
+    "cook": "Cook (min)",
+    "rest": "Rest (min)",
+    "total": "Total (min)",
+    "restHint": "Any hands-off time: rising, resting, marinating, chilling. It counts into the total.",
+    "totalHint": "Prep + cook + rest unless you enter a value",
+    "auto": "auto",
+    "autoValue": "auto: {{value}}",
+    "yield": "Yield (e.g. “12 cookies”, “1 loaf”)",
+    "yieldPlaceholder": "1 loaf",
+    "tagsPlaceholder": "dessert, baking, freezer-friendly…",
+    "createTag": "Create tag",
+    "gearPlaceholder": "spatula, sheet tray, dutch oven…",
+    "createGear": "Add gear",
+    "source": "Source URL",
+    "notesPlaceholder": "Tweaks, observations, who liked it…",
+    "draft": {
+      "found": "There is an unsaved draft from earlier.",
+      "restore": "Restore",
+      "discard": "Discard",
+      "restored": "Draft restored"
+    },
+    "rows": {
+      "sectionName": "Section name",
+      "sectionPlaceholder": "Section name (e.g. Sauce, Dough)",
+      "removeSection": "Remove section (keeps its ingredients)",
+      "newSection": "New section",
+      "ingredient": "Ingredient",
+      "qty": "Quantity",
+      "unit": "Unit",
+      "name": "Ingredient name",
+      "namePlaceholder": "flour",
+      "note": "Note",
+      "notePlaceholder": "sifted",
+      "linkedTo": "Linked to {{name}} in the pantry",
+      "link": "Link to pantry",
+      "unlink": "Unlink from pantry",
+      "startSection": "Start section here",
+      "moveUp": "Move up",
+      "moveDown": "Move down",
+      "add": "Add ingredient"
+    },
+    "pantry": {
+      "item": "a pantry item",
+      "addTitle": "Add from pantry",
+      "linkTitle": "Link to a pantry item",
+      "link": "Link",
+      "add_one": "Add {{count}}",
+      "add_other": "Add {{count}}",
+      "search": "Search pantry…",
+      "empty": "Your pantry is empty.",
+      "out": "Out"
+    },
+    "steps": {
+      "title": "Summary of step {{number}}",
+      "titlePlaceholder": "Optional summary (e.g. Preheat oven)",
+      "text": "Text of step {{number}}",
+      "textPlaceholder": "Preheat the oven to 180 °C…",
+      "hint": "Durations like “15 minutes” become timers.",
+      "moveUp": "Move step {{number}} up",
+      "moveDown": "Move step {{number}} down",
+      "photo": "Photo for step {{number}}",
+      "remove": "Delete step {{number}}",
+      "add": "Add step",
+      "link": "Link ingredients used in this step",
+      "linked_one": "{{count}} ingredient linked",
+      "linked_other": "{{count}} ingredients linked"
+    },
+    "category": {
+      "label": "Category",
+      "placeholder": "Pick or create a category…",
+      "create": "Create category",
+      "newTitle": "New category",
+      "name": "Name",
+      "colour": "Colour",
+      "colourNumber": "Colour {{number}}",
+      "noColour": "No colour",
+      "failed": "Couldn't create the category",
+      "manage": "Manage categories"
+    },
+    "nutrition": {
+      "title": "Nutrition (per serving, optional)",
+      "hint": "Which values appear here is set in the nutrition settings.",
+      "calculate": "Calculate from pantry",
+      "loading": "Loading pantry…",
+      "noData": "No pantry item had nutrition data. Add serving size and nutrition to pantry items first.",
+      "replaceTitle": "Replace existing nutrition?",
+      "replaceMessage": "You entered values by hand. The calculation overwrites them.",
+      "replace": "Replace",
+      "computedAll_one": "Calculated from {{count}} ingredient.",
+      "computedAll_other": "Calculated from all {{count}} ingredients.",
+      "computedSome": "Calculated from {{used}} of {{total}} ingredients; {{skipped}} skipped (no pantry data or unit mismatch).",
+      "failed": "Couldn't calculate: {{message}}"
+    },
+    "video": {
+      "label": "Video instructions (optional)",
+      "upload": "Upload video",
+      "record": "Record",
+      "uploading": "Uploading video…",
+      "url": "Paste a YouTube, Vimeo or video URL",
+      "notVideo": "Please choose a video file.",
+      "uploaded": "Video uploaded",
+      "local": "Uploaded video",
+      "external": "External URL",
+      "remove": "Remove video"
+    },
+    "format": {
+      "bold": "Bold",
+      "italic": "Italic",
+      "underline": "Underline",
+      "strike": "Strike through",
+      "colour": "Text colour",
+      "bullets": "Bulleted list",
+      "numbers": "Numbered list"
+    },
+    "colours": {
+      "red": "Red",
+      "orange": "Orange",
+      "yellow": "Yellow",
+      "green": "Green",
+      "blue": "Blue",
+      "purple": "Purple",
+      "pink": "Pink"
+    }
+  },
+  "cookbook": {
+    "title": "Cookbook",
+    "back": "Back to cookbooks",
+    "addRecipes": "Add recipes",
+    "delete": "Delete cookbook",
+    "deleteTitle": "Delete “{{name}}”?",
+    "deleteMessage_one": "Removes the cookbook; its {{count}} recipe stays in your library.",
+    "deleteMessage_other": "Removes the cookbook; its {{count}} recipes stay in your library.",
+    "deleted": "Cookbook deleted",
+    "setCover": "Set cookbook cover",
+    "coverTitle": "Cover",
+    "coverUpdated": "Cover updated",
+    "coverFailed": "Couldn't update the cover",
+    "smart": "Smart",
+    "smartHint": "Filled automatically from a saved filter",
+    "emptyTitle": "No recipes yet",
+    "emptyText": "Add recipes from your library to build this cookbook.",
+    "emptySmartTitle": "No recipes match the filter",
+    "emptySmartText": "Give your recipes the matching tags or category, or create a cookbook with another filter.",
+    "search": "Search this cookbook…",
+    "sort": {
+      "manual": "Manual order",
+      "alpha": "A → Z",
+      "fav": "Favorites first"
+    },
+    "locked": "Not shared with you. Ask the cookbook owner to share it.",
+    "lockedHint": "This recipe isn’t shared with you. Ask the owner to share it or add it to a kitchen you’re both in.",
+    "remove": "Remove from cookbook",
+    "removeTitle": "Remove “{{name}}” from the cookbook?",
+    "removeMessage": "The recipe stays in your library.",
+    "removeFailed": "Couldn't remove the recipe",
+    "orderFailed": "Couldn't save the order",
+    "moveTitle": "Move or copy",
+    "copy": "Copy",
+    "move": "Move",
+    "noTargets": "No other cookbook to put it in. Smart cookbooks fill themselves.",
+    "copied": "Copied to “{{name}}”",
+    "moved": "Moved to “{{name}}”",
+    "searchLibrary": "Search your library…",
+    "libraryEmpty": "No recipes in your library yet.",
+    "nothingToAdd": "No more recipes to add.",
+    "added_one": "Added {{count}} recipe",
+    "added_other": "Added {{count}} recipes"
+  },
+  "publicRecipe": {
+    "brand": "Trace · shared recipe",
+    "gone": "This share link no longer works.",
+    "goneHint": "Ask the person who shared it for a new link.",
+    "failed": "Couldn't load the recipe. Check your connection and try again.",
+    "footer": "Powered by Trace"
+  },
+  "assistant": {
+    "suggestions": {
+      "pantry": "What can I make with what's in my pantry?",
+      "suggestion": "Suggest a recipe for tonight.",
+      "recent": "What recipes have I cooked recently?",
+      "shopping": "Build a shopping list for this week."
+    }
+  }
+}

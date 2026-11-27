@@ -1,0 +1,44 @@
+{
+  "bodyStats": {
+    "title": "Körperwerte",
+    "close": "Schließen",
+    "fieldLabel": "{{label}} ({{unit}})",
+    "valuePlaceholder": "—",
+    "stats": {
+      "weight": "Gewicht",
+      "bodyFat": "Körperfett",
+      "neck": "Hals",
+      "chest": "Brust",
+      "waist": "Taille",
+      "hips": "Hüfte",
+      "biceps": "Bizeps",
+      "thighs": "Oberschenkel",
+      "calves": "Waden"
+    },
+    "noneEnabled": "Keine Messwerte aktiviert. Unter Einstellungen → Training wählst du, welche Werte du erfasst.",
+    "save": "Speichern",
+    "saving": "Speichert…",
+    "saved": "Körperwerte gespeichert",
+    "saveFailed": "Speichern fehlgeschlagen",
+    "photo": {
+      "add": "Foto hinzufügen",
+      "adding": "Wird hinzugefügt…",
+      "hint": "Fortschrittsfoto für diesen Tag",
+      "viewTimeline": "Zeitleiste ansehen",
+      "added": "Foto hinzugefügt",
+      "addFailed": "Foto konnte nicht hinzugefügt werden"
+    },
+    "widget": {
+      "openSheet": "Körperwerte öffnen",
+      "weightNotLogged": "Gewicht nicht eingetragen",
+      "log": "Eintragen",
+      "editWeight": "Heutiges Gewicht bearbeiten",
+      "weightInput": "Gewicht ({{unit}})",
+      "save": "Speichern",
+      "savingShort": "…",
+      "cancel": "Abbrechen",
+      "noMeasurements": "Heute keine Messwerte eingetragen",
+      "logStats": "Werte eintragen"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+[submodule "backends/nutritrace"]
+	path = backends/nutritrace
+	url = git@github.com:lukasdiegelmann/nutritrace.git
+[submodule "backends/cooktrace"]
+	path = backends/cooktrace
+	url = git@github.com:lukasdiegelmann/cooktrace.git
+[submodule "backends/lifttrace"]
+	path = backends/lifttrace
+	url = git@github.com:lukasdiegelmann/lifttrace.git

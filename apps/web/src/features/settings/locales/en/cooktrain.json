@@ -1,0 +1,235 @@
+{
+  "cooking": {
+    "recipes": "Recipes and pantry",
+    "defaultServings": "Default servings",
+    "autoPantry": "Add recipe ingredients to the pantry",
+    "mixShared": "Show shared recipes among mine",
+    "urlImport": "Import from a web address",
+    "engine": "Import engine",
+    "engineHint": "Standard reads the recipe data a page publishes; Enhanced also handles harder pages; Smart asks your AI provider (needs a tested assistant).",
+    "engines": {
+      "standard": "Standard",
+      "enhanced": "Enhanced",
+      "smart": "Smart (AI)"
+    },
+    "smartCost": "Each import asks your AI provider and may cost money.",
+    "fallback": "If Enhanced fails",
+    "shopping": "Shopping list",
+    "groupBy": "Group by",
+    "groups": {
+      "aisle": "Aisle",
+      "recipe": "Recipe",
+      "flat": "No groups"
+    },
+    "checked": "Checked items",
+    "checkedOptions": {
+      "bottom": "Move to the bottom",
+      "hide": "Hide"
+    }
+  },
+  "kitchens": {
+    "description": "A kitchen shares recipes with the people in it.",
+    "yours": "Your kitchens",
+    "empty": "You aren't in a kitchen yet.",
+    "new": "New kitchen",
+    "name": "Kitchen name",
+    "create": "Create kitchen",
+    "roles": {
+      "owner": "Head Chef",
+      "sous": "Sous Chef",
+      "member": "Line Cook"
+    },
+    "roleHelp": "The Head Chef manages the kitchen, Sous Chefs can edit shared recipes, Line Cooks can read them.",
+    "roleOf": "Role of {{name}}",
+    "autoShare": "Share my recipes automatically",
+    "autoShareCount_one": "{{count}} recipe shared this way",
+    "autoShareCount_other": "{{count}} recipes shared this way",
+    "autoShareConfirm": "All your recipes, also new ones, are shared with everyone in this kitchen.",
+    "autoShareAlone": "You're the only member so far. All your recipes are shared with whoever joins.",
+    "autoShareAction": "Share",
+    "autoShareOn": "Your recipes are shared now.",
+    "autoShareOff": "Automatic sharing is off. What's shared stays shared.",
+    "everyoneEdits": "Everyone edits",
+    "nobodyEdits": "Nobody edits",
+    "makeOwnerTitle": "Make {{name}} the Head Chef?",
+    "makeOwnerText": "You hand over the kitchen. Only the new Head Chef can give it back.",
+    "makeOwner": "Hand over",
+    "invite": "Invite a user",
+    "inviteHint": "Users here: {{names}}",
+    "inviteRole": "Role for the invited user",
+    "inviteAction": "Invite",
+    "leave": "Leave kitchen",
+    "leaveTitle": "Leave {{name}}?",
+    "leaveText": "Recipes shared in this kitchen are no longer available to you.",
+    "removeTitle": "Remove {{name}}?",
+    "removeText": "They lose access to the recipes shared in this kitchen.",
+    "delete": "Delete kitchen",
+    "deleteTitle": "Delete {{name}}?",
+    "deleteText": "All members lose the shared access. Recipes stay with their owners."
+  },
+  "training": {
+    "goals": "Goals and workouts",
+    "weeklyGoal": "Weekly goal",
+    "workoutsPerWeek_one": "{{count}} workout a week",
+    "workoutsPerWeek_other": "{{count}} workouts a week",
+    "cardioGoal": "Weekly cardio minutes",
+    "cardioGoalHint": "0 hides the target.",
+    "logging": "Logging",
+    "toggles": {
+      "cardioEnabled": "Track cardio",
+      "screenKeepAwake": "Keep the screen on during workouts",
+      "caloriesBurnedEnabled": "Estimate calories burned",
+      "autoFillLastWeights": "Fill in last time's weights",
+      "showCompletionSummary": "Show a summary after the workout",
+      "autoCollapseCompleted": "Collapse finished exercises",
+      "autoNameWorkouts": "Name workouts automatically",
+      "confirmExerciseRemoval": "Ask before removing an exercise",
+      "autoGenerateWarmups": "Add warm-up sets automatically",
+      "trackRpe": "Track effort (RPE)"
+    },
+    "reorder": "Reorder exercises by",
+    "reorderOptions": {
+      "both": "Dragging and buttons",
+      "drag": "Dragging",
+      "buttons": "Buttons"
+    },
+    "restTimer": "Rest timer",
+    "restEnabled": "Rest timer between sets",
+    "restDuration": "Rest",
+    "restAutoStart": "Start after each set",
+    "restAlert": "Alert when the rest ends",
+    "restVibrate": "Vibrate",
+    "restSound": "Play a tone",
+    "tone": "Tone",
+    "playTone": "Play the tone",
+    "tones": {
+      "classic": {
+        "name": "Classic",
+        "description": "880 Hz beeps, a higher chirp at 0"
+      },
+      "bells": {
+        "name": "Bells",
+        "description": "A soft chime with a major-third finale"
+      },
+      "beeper": {
+        "name": "Beeper",
+        "description": "Sharp, short square-wave beeps"
+      },
+      "gym": {
+        "name": "Gym",
+        "description": "Low thuds, a rising horn at 0"
+      },
+      "minimal": {
+        "name": "Minimal",
+        "description": "One soft click at 0"
+      }
+    },
+    "measurements": "Body measurements",
+    "measurement": {
+      "weight": "Weight",
+      "bodyFat": "Body fat",
+      "neck": "Neck",
+      "chest": "Chest",
+      "waist": "Waist",
+      "hips": "Hips",
+      "biceps": "Biceps",
+      "thighs": "Thighs",
+      "calves": "Calves"
+    },
+    "videos": {
+      "title": "Set videos",
+      "usage_one": "{{count}} video, {{size}}, the oldest from {{oldest}}",
+      "usage_other": "{{count}} videos, {{size}}, the oldest from {{oldest}}",
+      "none": "No set videos stored.",
+      "olderThan_one": "Delete older than {{count}} month",
+      "olderThan_other": "Delete older than {{count}} months",
+      "cleanTitle": "Delete old set videos?",
+      "cleanText": "Videos from before {{date}} are deleted for good."
+    }
+  },
+  "catalog": {
+    "sources": "Library sources",
+    "adminOnly": "Only an admin can import into or clear the shared library.",
+    "count_one": "{{count}} exercise",
+    "count_other": "{{count}} exercises",
+    "show": "Show exercises from {{name}}",
+    "rapidApiKey": "RapidAPI key",
+    "byokNote": "Your own key, used for this import only and not stored. You're responsible for the provider's terms.",
+    "needsKey": "{{name}} needs an API key.",
+    "reimport": "Import again",
+    "imported_one": "{{name}}: {{count}} exercise imported",
+    "imported_other": "{{name}}: {{count}} exercises imported",
+    "clear": "Clear",
+    "clearTitle": "Clear imported exercises?",
+    "clearText_one": "{{count}} exercise from {{name}} is removed from the library.",
+    "clearText_other": "{{count}} exercises from {{name}} are removed from the library.",
+    "offline": "Offline media",
+    "offlineHint": "Downloads the pictures and videos of the library, so they show without a connection. Pictures that your own JSON catalogs load from other sites aren't kept.",
+    "precache": "Download media",
+    "precached": "{{done}} of {{total}} files",
+    "own": "My exercises",
+    "ownHint": "Create and edit exercises in the training section.",
+    "noOwn": "You haven't created an exercise yet.",
+    "createInTraining": "Create an exercise",
+    "deleteTitle": "Delete {{name}}?",
+    "deleteText": "The exercise is removed from your library.",
+    "deleteAll": "Delete all my exercises",
+    "deleteAllText_one": "{{count}} exercise is removed.",
+    "deleteAllText_other": "{{count}} exercises are removed.",
+    "json": {
+      "title": "Your own JSON catalog",
+      "template": "Download the template",
+      "format": "File format",
+      "pick": "Choose a .json file",
+      "noFile": "No file chosen",
+      "name": "Catalog name",
+      "content": "Catalog as JSON",
+      "clear": "Clear input",
+      "result": "{{count}} exercises imported into “{{name}}” ({{duplicates}} duplicates, {{skipped}} skipped).",
+      "errors": {
+        "name": "Enter a catalog name.",
+        "invalid": "This isn't valid JSON.",
+        "notAList": "The JSON must be a list of exercises, or { \"exercises\": [...] }.",
+        "empty": "The JSON contains no exercises."
+      },
+      "deleteTitle": "Delete the catalog {{name}}?",
+      "deleteText_one": "{{count}} exercise is removed.",
+      "deleteText_other": "{{count}} exercises are removed."
+    },
+    "licenseNotes": {
+      "shareAlike": "credit and share-alike",
+      "free": "no restrictions",
+      "rapidApi": "needs a RapidAPI key",
+      "community": "personal use, community-hosted"
+    },
+    "ownCount_one": "{{count}} exercise",
+    "ownCount_other": "{{count}} exercises",
+    "precacheDone_one": "Went through {{count}} media file",
+    "precacheDone_other": "Went through {{count}} media files"
+  },
+  "radio": {
+    "selfHosted": "Your own music server",
+    "enabled": "Self-hosted music",
+    "provider": "Server type",
+    "providers": {
+      "emby": "Emby",
+      "jellyfin": "Jellyfin",
+      "plex": "Plex",
+      "subsonic": "Subsonic / Navidrome"
+    },
+    "url": "Server address",
+    "user": "User name",
+    "plexToken": "Plex token",
+    "password": "Password",
+    "apiKey": "API key",
+    "crossfade": "Crossfade",
+    "off": "Off",
+    "seconds_one": "{{count}} second",
+    "seconds_other": "{{count}} seconds",
+    "originalFormat": "Stream the original format",
+    "stations": "Streaming stations",
+    "stationsHint": "Stations are added and sorted on the radio screen.",
+    "stationsEnabled": "Internet radio stations",
+    "openRadio": "Open the radio"
+  }
+}

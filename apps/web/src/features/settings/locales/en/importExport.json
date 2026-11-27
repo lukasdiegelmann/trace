@@ -1,0 +1,137 @@
+{
+  "importExport": {
+    "description": "Move data in and out as files.",
+    "export": "Export",
+    "chooseFile": "Choose a file",
+    "noFile": "No file chosen",
+    "andMore_one": "and {{count}} more",
+    "andMore_other": "and {{count}} more",
+    "uploadErrors": {
+      "tooLarge": "The file is too large for the server.",
+      "gateway": "The server took too long. It may still be working; check before trying again.",
+      "offline": "The connection broke during the upload."
+    },
+    "exports": {
+      "json": "JSON backup",
+      "diaryCsv": "Diary as CSV",
+      "fullCsv": "All nutrients as CSV",
+      "activityCsv": "Activity as CSV"
+    },
+    "json": {
+      "exportHint": "The JSON backup holds foods, meals, recipes, diary, activity, fasts and your nutrition settings, including any API keys stored in them. Keep the file private. Pictures aren't included.",
+      "pick": "Restore a JSON backup",
+      "restoreTitle": "Restore this backup?",
+      "restoreText": "{{name}}: its foods, meals, recipes and entries are added, diary days in the file replace yours, and its settings are applied.",
+      "restored": "Backup restored."
+    },
+    "bulk": {
+      "open": "Import many foods",
+      "format": "File format",
+      "template": "Download a template",
+      "paste": "Or paste JSON",
+      "preview": "{{ready}} ready, {{duplicates}} with a known barcode, {{errors}} errors",
+      "errors": "Errors",
+      "duplicates": "Skipped for their barcode",
+      "row": "Row {{row}}",
+      "rowErrors": {
+        "invalidJson": "Not valid JSON",
+        "notAList": "Expected a list of foods or { \"foods\": [...] }",
+        "notAnObject": "Not an object",
+        "missingName": "The name is missing",
+        "missingCalories": "Calories are missing or not a number",
+        "csvTooShort": "A CSV needs a header row and at least one row",
+        "csvHeader": "The header must contain “name” and “calories”"
+      },
+      "confirm_one": "Import {{count}} food",
+      "confirm_other": "Import {{count}} foods",
+      "done_one": "{{count}} food imported, {{skipped}} skipped",
+      "done_other": "{{count}} foods imported, {{skipped}} skipped",
+      "more": "and {{count}} more"
+    },
+    "apps": {
+      "title": "From another app",
+      "source": "Source",
+      "sources": {
+        "spreadsheet": "Spreadsheet (CSV)",
+        "cronometer": "Cronometer",
+        "loseit": "Lose It!",
+        "mfp": "MyFitnessPal"
+      },
+      "hints": {
+        "spreadsheet": "Fill in the template and upload it as CSV.",
+        "cronometer": "In Cronometer: Account, Export data, Servings.",
+        "loseit": "Export your food logs from Lose It! as CSV.",
+        "mfp": "Upload the CSV or the whole ZIP of a MyFitnessPal export."
+      },
+      "template": "Download the spreadsheet template",
+      "stats": "{{items}} entries on {{days}} days ({{from}} to {{to}}), {{existing}} days already have entries",
+      "unmapped": "Meals without a match: {{labels}}",
+      "duplicates": "Days that already have entries",
+      "duplicate": {
+        "skip": "Skip",
+        "merge": "Merge",
+        "replace": "Replace"
+      },
+      "done": "Days imported: {{imported}}, merged: {{merged}}, replaced: {{replaced}}, skipped: {{skipped}}"
+    },
+    "recipes": {
+      "title": "Recipe archive",
+      "description": "A .zip or .paprikarecipes file from Mealie, Tandoor, Paprika, CookTrace or in schema.org format.",
+      "phases": {
+        "scanning": "Uploading and reading the file…",
+        "importing": "Importing…"
+      },
+      "found_one": "{{count}} recipe found, {{picked}} selected",
+      "found_other": "{{count}} recipes found, {{picked}} selected",
+      "counts": "Ingredients: {{ingredients}}, steps: {{steps}}",
+      "options": {
+        "import_images": "Import pictures",
+        "addToPantry": "Add ingredients to the pantry",
+        "applyTags": "Keep tags",
+        "importCategories": "Import categories",
+        "import_timeline": "Import the cook history ({{count}} entries)"
+      },
+      "duplicates": "Recipes you already have",
+      "skipHistoryHint": "Skipped recipes don't get their cook history either.",
+      "dedup": {
+        "skip": "Skip",
+        "replace": "Replace",
+        "force": "Import again"
+      },
+      "import_one": "Import {{count}} recipe",
+      "import_other": "Import {{count}} recipes",
+      "done_one": "{{count}} recipe imported",
+      "done_other": "{{count}} recipes imported",
+      "duplicate": "Already there: {{name}}",
+      "open": "Open"
+    },
+    "workouts": {
+      "title": "Workouts from another app",
+      "source": "Source",
+      "sources": {
+        "strong": "Strong (.csv)",
+        "hevy": "Hevy (.csv)",
+        "fitnotes": "FitNotes (.csv)",
+        "jefit": "JEFIT (.csv)",
+        "garmin-fit": "Garmin (.fit)"
+      },
+      "instructions": {
+        "strong": "In Strong: Settings, Export Strong data. Upload the CSV.",
+        "hevy": "In Hevy: Settings, Export & Import Data, Export Workouts. Upload the CSV.",
+        "fitnotes": "In FitNotes: Settings, Spreadsheet Export, all workout data. Upload the CSV.",
+        "jefit": "On jefit.com: My account, Export data. Upload the CSV.",
+        "garmin-fit": "In Garmin Connect: open an activity, Export original, and unzip it. Upload the .fit file."
+      },
+      "stats": "{{file}}: workouts: {{workouts}}, sets: {{sets}}, from {{from}} to {{to}}; exercises matched: {{matched}} of {{exercises}}",
+      "duplicates_one": "{{count}} workout with the same date and name exists already.",
+      "duplicates_other": "{{count}} workouts with the same date and name exist already.",
+      "unmatched": "Exercises without a match",
+      "askTitle": "Some workouts exist already",
+      "askText_one": "{{count}} workout has the same date and name as one you have.",
+      "askText_other": "{{count}} workouts have the same date and name as ones you have.",
+      "skip": "Skip duplicates",
+      "replace": "Replace existing",
+      "done": "{{imported}} imported, {{skipped}} skipped, {{replaced}} replaced"
+    }
+  }
+}

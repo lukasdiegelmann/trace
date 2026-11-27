@@ -1,0 +1,72 @@
+{
+  "title": "Training",
+  "placeholder": "Workouts, exercises, programs and statistics of LiftTrace come here.",
+  "trainingNav": {
+    "label": "Training sections",
+    "diary": "Diary",
+    "exercises": "Exercises",
+    "programs": "Programs",
+    "statistics": "Statistics",
+    "progress": "Progress",
+    "coach": "Coach",
+    "coaching": "Coaching",
+    "radio": "Radio",
+    "unread_one": "{{count}} unread",
+    "unread_other": "{{count}} unread"
+  },
+  "common": {
+    "loading": "Loading…",
+    "loadFailed": "Could not load: {{message}}",
+    "retry": "Try again",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "back": "Back",
+    "confirm": "Confirm",
+    "search": "Search",
+    "more": "More",
+    "saved": "Saved",
+    "deleted": "Deleted",
+    "error": "Something went wrong: {{message}}"
+  },
+  "assistant": {
+    "suggestions": {
+      "generate": "Generate today's workout",
+      "warmup": "How should I warm up for squats?",
+      "overload": "Tips for progressive overload",
+      "plateau": "Help me break a bench plateau"
+    },
+    "usePlan": "Use this workout",
+    "smartLog": {
+      "title": "Smart Log",
+      "inputHint": "Describe your workout, for example: bench 3x5 @ 225, squat 5x5 @ 315, curls 3x12 @ 30",
+      "inputLabel": "Your workout",
+      "inputPlaceholder": "bench 3x5 at 225, squat 5x5 at 315…",
+      "parse": "Read workout",
+      "reading": "Reading your workout…",
+      "reviewHint": "Check the exercises and sets. They are added to the diary on {{date}}.",
+      "back": "Change the text",
+      "add": "Add to workout",
+      "unreadable": "Could not understand that. Try rephrasing, for example: bench 3x5 at 225, squat 5x5 at 315",
+      "noneFound": "No exercises found in that. Try something like: bench 3x5 at 225",
+      "notInLibrary": "Not in library",
+      "superset": "Superset {{group}}",
+      "match": "Match for {{name}}",
+      "asSaid": "Keep “{{name}}”",
+      "weight": "{{name}}, set {{number}}: weight",
+      "reps": "{{name}}, set {{number}}: reps",
+      "duration": "{{name}}, set {{number}}: time",
+      "repsUnit": "reps",
+      "amrap": "AMRAP",
+      "bodyweight": "BW",
+      "rpe": "RPE {{value}}",
+      "removeSet": "{{name}}: remove set {{number}}",
+      "addSet": "Add set",
+      "added_one": "Added {{count}} exercise",
+      "added_other": "Added {{count}} exercises",
+      "saveFailed": "Could not save: {{message}}"
+    }
+  }
+}

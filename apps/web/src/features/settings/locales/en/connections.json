@@ -1,0 +1,63 @@
+{
+  "connections": {
+    "description": "The three apps exchange data over their APIs with personal access tokens.",
+    "nutritionFromCooking": "CookTrace in nutrition",
+    "nutritionFromCookingHint": "Use CookTrace recipes as meals and its pantry as foods.",
+    "cooktraceEnabled": "Use CookTrace",
+    "ctUrl": "CookTrace address",
+    "ctToken": "CookTrace token",
+    "ntUrl": "NutriTrace address",
+    "ntToken": "NutriTrace token",
+    "ntUrlHint": "In Trace: {{url}}",
+    "scopes": {
+      "nt": "A CookTrace API token (ct_pat_…) with read:recipes, and read:pantry for the pantry.",
+      "ct": "A NutriTrace API token (nt_pat_…) with read:foods.",
+      "lt": "A NutriTrace API token (nt_pat_…) with write:workouts."
+    },
+    "missingRecipeScope": "The token works but lacks the read:recipes scope.",
+    "connectedAs": "Connected as {{name}}",
+    "unverified": "NutriTrace didn't accept the token.",
+    "saveAndTest": "Save and test",
+    "importRecipes": "Import all recipes",
+    "importRecipesText": "Every CookTrace recipe is imported into your NutriTrace recipes. Running it again overwrites earlier imports, also ones you edited in NutriTrace.",
+    "importPantry": "Import pantry items",
+    "importPantryText": "Pantry items and variants become foods. Generic items that have variants are left out. Safe to run again.",
+    "progress": "{{done}} of {{total}}",
+    "result": "{{imported}} imported, {{updated}} updated, {{skipped}} skipped",
+    "collided_one": "{{count}} was already in the library (same barcode) and stayed as it was.",
+    "collided_other": "{{count}} were already in the library (same barcode) and stayed as they were.",
+    "firstError": "First error: {{message}}",
+    "cookingFromNutrition": "NutriTrace in cooking",
+    "cookingFromNutritionHint": "Look up NutriTrace foods from CookTrace.",
+    "importFromNt": "Import foods into the pantry",
+    "connectFirst": "Connect NutriTrace above first.",
+    "searchNt": "Search NutriTrace foods",
+    "search": "Search",
+    "noFoods": "No foods found.",
+    "selected_one": "{{count}} selected",
+    "selected_other": "{{count}} selected",
+    "variantMode": "Add as",
+    "variants": {
+      "flat": "Separate items",
+      "variant-of-existing": "Variants of an item",
+      "variant-of-new": "Variants of a new item"
+    },
+    "parent": "Item they are variants of",
+    "generic": "generic",
+    "genericName": "Name of the new generic item",
+    "inStock": "Mark as in stock",
+    "importSelected": "Import selected",
+    "importedFoods_one": "{{count}} food imported",
+    "importedFoods_other": "{{count}} foods imported",
+    "trainingToNutrition": "Workouts to nutrition",
+    "trainingToNutritionHint": "Finished workouts count as calories burned in NutriTrace.",
+    "needsCalories": "Turn on “Estimate calories burned” in the workout settings; without it there is nothing to send.",
+    "sendWorkouts": "Send finished workouts to NutriTrace",
+    "wearableWins": "On days with wearable data, NutriTrace prefers the wearable.",
+    "pantryRefused": {
+      "scope": "The CookTrace token lacks the read:pantry scope. Create one on CookTrace with read:pantry and paste it here.",
+      "oldServer": "This CookTrace server is too old to share its pantry. Update CookTrace and try again.",
+      "token": "CookTrace rejected the token. Create a new one and paste it here."
+    }
+  }
+}

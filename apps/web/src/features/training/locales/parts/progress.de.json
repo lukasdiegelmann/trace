@@ -1,0 +1,41 @@
+{
+  "progress": {
+    "title": "Fortschritt",
+    "add": "Foto hinzufügen",
+    "take": "Foto aufnehmen",
+    "noFile": "JPG, PNG oder HEIC",
+    "adding": "Foto wird hinzugefügt …",
+    "dateForNext": "Datum für das nächste Foto",
+    "today": "Heute",
+    "compareEnds": "Erstes und neuestes vergleichen",
+    "compareTwo": "Zwei vergleichen",
+    "pickHint": "Wähle zwei Fotos zum Vergleichen ({{count}}/2 gewählt)",
+    "empty": "Noch keine Fortschrittsfotos. Füge alle paar Wochen eines hinzu und vergleiche zwei beliebige Tage, um zu sehen, wie weit du gekommen bist.",
+    "photo": "Foto vom {{date}}",
+    "delete": "Foto vom {{date}} löschen",
+    "deleteTitle": "Dieses Foto löschen?",
+    "deleteText": "Das entfernt das Foto aus der Zeitleiste und löscht die Datei. Das lässt sich nicht rückgängig machen.",
+    "added": "Foto hinzugefügt",
+    "deleted": "Foto gelöscht",
+    "compare": {
+      "title": "Vorher und nachher",
+      "before": "Früheres Foto",
+      "after": "Späteres Foto",
+      "handle": "Zum Vergleichen ziehen"
+    },
+    "scrub": {
+      "title": "Foto-Zeitleiste",
+      "handle": "Zum Durchlaufen ziehen",
+      "play": "Abspielen",
+      "pause": "Anhalten",
+      "day": "Tag {{day}}",
+      "since": "{{delta}} {{unit}} seit {{date}}"
+    },
+    "weight": {
+      "label": "Gewicht",
+      "add": "Gewicht eintragen",
+      "saved": "Gewicht gespeichert",
+      "prompt": "Für den {{date}} ist kein Gewicht eingetragen. Nachtragen?"
+    }
+  }
+}

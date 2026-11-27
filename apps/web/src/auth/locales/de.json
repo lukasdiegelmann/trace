@@ -1,0 +1,31 @@
+{
+  "signIn": {
+    "title": "Bei Trace anmelden",
+    "text": "Eine Anmeldung mit deinem Passkey öffnet Ernährung, Kochen und Training.",
+    "action": "Anmelden",
+    "expired": "Deine Sitzung ist abgelaufen. Bitte melde dich erneut an.",
+    "partial": "Noch anzumelden: {{backends}}"
+  },
+  "callback": {
+    "working": "Anmeldung läuft…",
+    "failed": "Anmeldung bei {{backend}} fehlgeschlagen: {{message}}",
+    "retry": "Erneut versuchen",
+    "home": "Zurück zum Anfang"
+  },
+  "signOut": {
+    "action": "Abmelden",
+    "working": "Abmeldung läuft…",
+    "incomplete": "Abmeldung bei {{backends}} nicht abgeschlossen: Dort bist du noch angemeldet.",
+    "retry": "Erneut versuchen"
+  },
+  "errors": {
+    "noProvider": "Es ist kein Anmeldedienst eingerichtet.",
+    "providersUnavailable": "Der Anmeldedienst ist nicht erreichbar.",
+    "missingResult": "Die Anmeldung kam ohne Ergebnis zurück.",
+    "callback_failed": "Die Anmeldung konnte nicht abgeschlossen werden.",
+    "unknown": "Unbekannter Fehler."
+  },
+  "user": {
+    "signedInAs": "Angemeldet als {{name}}"
+  }
+}

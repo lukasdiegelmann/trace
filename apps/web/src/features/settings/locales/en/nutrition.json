@@ -1,0 +1,225 @@
+{
+  "connection": {
+    "testing": "Testing…",
+    "connected": "Connected",
+    "failed": "Connection failed",
+    "configured": "Configured",
+    "missing": "Not configured"
+  },
+  "diary": {
+    "rows": "Food rows",
+    "cards": "Meal cards",
+    "units": "Nutrition units",
+    "sidebar": "Side column",
+    "sidebarHint": "The widgets beside the diary on wide screens; kept on this device.",
+    "quickAndActivity": "Quick calories and activity",
+    "toggles": {
+      "diaryShowBrands": "Show brands",
+      "diaryShowTimestamps": "Show the time of each entry",
+      "diaryShowThumbnails": "Show pictures",
+      "diaryShowAllNutrients": "Show all nutrients",
+      "diaryShowNutritionUnits": "Show units after values",
+      "diaryShowPortionSize": "Show portion sizes",
+      "diaryShowMacroSummary": "Macro summary on each meal",
+      "diaryPromptQuantity": "Ask for the quantity when adding",
+      "diaryShowNutritionBar": "Nutrition bar",
+      "diaryShowNotes": "Notes",
+      "diaryShowCompletion": "Mark days and meals as complete",
+      "showUnitMetadata": "Show what a food's units stand for",
+      "warnUnitMismatch": "Warn about units that don't convert",
+      "diaryRailShowSummary": "Summary",
+      "diaryRailShowWater": "Water",
+      "diaryRailShowBodyStats": "Body stats",
+      "diaryRailShowActivity": "Activity (with a wearable)",
+      "diaryRailShowNotes": "Notes in the side column",
+      "showQuickCalories": "Quick calories",
+      "diaryShowActivity": "Activity",
+      "calorieAdjustFromActivity": "Add activity to the calorie goal"
+    },
+    "defaultField": "Field to edit first",
+    "fields": {
+      "servings": "Number of servings",
+      "portion": "Serving size"
+    },
+    "quickDisplay": "Show quick calories",
+    "quick": {
+      "summed": "As one sum",
+      "separate": "Each on its own"
+    },
+    "policy": "Manual activity and wearable data",
+    "policies": {
+      "wearable_wins": {
+        "label": "Wearable wins",
+        "description": "On days with wearable data, only that counts. Manual entries always count on days without it."
+      },
+      "manual_wins": {
+        "label": "Manual wins",
+        "description": "On days with manual entries, only those count. Manual entries always count on days without wearable data."
+      },
+      "additive": {
+        "label": "Both",
+        "description": "Wearable data and manual entries add up. Manual entries always count on days without wearable data."
+      }
+    },
+    "fasting": "Fasting",
+    "fastingEnabled": "Track fasting",
+    "fastingDefault": "Default fast",
+    "fastingNotify": "Tell me when I reach the goal",
+    "fastingSchedule": "Start on a schedule",
+    "fastingStart": "Start time",
+    "fastingDays": "Days",
+    "fastingScheduleGoal": "Hours to fast",
+    "mealNames": "Meal names",
+    "mealNamesHint": "Diary entries remember a meal's position: reordering or removing meals relabels past entries.",
+    "mealName": "Meal {{number}}",
+    "newMeal": "New meal",
+    "addMeal": "Add meal"
+  },
+  "goals": {
+    "calories": "Calorie goal",
+    "mode": "Kind of goal",
+    "modes": {
+      "fixed": {
+        "label": "Fixed",
+        "description": "The target you set, every day."
+      },
+      "dynamic": {
+        "label": "Dynamic",
+        "description": "What your wearable says you burned, times your aim."
+      },
+      "adaptive": {
+        "label": "Adaptive",
+        "description": "Your energy use estimated from your weight trend and intake, times your aim."
+      }
+    },
+    "dynamicNeedsWearable": "A dynamic goal needs Fitbit, Google Health or Garmin.",
+    "adaptiveDocs": "How the adaptive goal works",
+    "factor": "Aim",
+    "factors": {
+      "lose": "Lose −20%",
+      "maintain": "Maintain",
+      "gain": "Gain +20%"
+    },
+    "editGoals": "Edit goals and templates",
+    "water": "Water",
+    "waterUnit": "Unit",
+    "waterInDiary": "Show in the diary",
+    "waterInStats": "Show in statistics",
+    "containers": "Bottles and glasses",
+    "noContainers": "No containers yet.",
+    "containerName": "Name",
+    "containerVolume": "Volume",
+    "containerUnit": "Volume unit",
+    "containerInvalid": "Enter a name and a volume above zero.",
+    "addContainer": "Add container"
+  },
+  "foods": {
+    "display": "Lists",
+    "toggles": {
+      "foodsShowThumbnails": "Show pictures",
+      "foodsShowCategories": "Show categories",
+      "foodsShowLabels": "Show category emojis",
+      "foodsShowNotes": "Show notes",
+      "foodsShowYesterdayMeals": "Offer yesterday's meals"
+    },
+    "sorting": "Sorting",
+    "sortingHint": "Favourites always come first.",
+    "sortOf": {
+      "foodsSort": "Foods",
+      "mealsSort": "Meals",
+      "recipesSort": "Recipes"
+    },
+    "sorts": {
+      "recent": "Recently used",
+      "most": "Most used",
+      "alpha": "Alphabetical"
+    },
+    "scanning": "Scanning and photos",
+    "beepNutrition": "Beep on a scanned barcode (nutrition)",
+    "beepCooking": "Beep on a scanned barcode (cooking)",
+    "cropPhotos": "Crop photos before saving",
+    "categories": "Food categories",
+    "noCategories": "No categories yet.",
+    "categoryName": "Category name",
+    "categoryEmoji": "Emoji",
+    "categoryEmojiHint": "Optional; use your system's emoji picker.",
+    "addCategory": "Add category",
+    "customUnits": "Custom units",
+    "customUnitsHint": "Custom units can't be converted into grams.",
+    "noUnits": "No custom units yet.",
+    "unitAbbr": "Abbreviation",
+    "unitFull": "Full name",
+    "addUnit": "Add unit",
+    "flashlight": "Turn on the flashlight while scanning"
+  },
+  "nutrients": {
+    "diary": "Nutrition diary",
+    "diaryHint": "Which nutrients show in the diary and foods, and in which order.",
+    "custom": "Custom nutrients",
+    "noCustom": "No custom nutrients yet.",
+    "name": "Nutrient name",
+    "unit": "Nutrient unit",
+    "addCustom": "Add nutrient",
+    "recipes": "Recipes",
+    "defaults": "Defaults",
+    "showAll": "Show all",
+    "categories": {
+      "energy": "Energy",
+      "macro": "Macros",
+      "mineral": "Minerals",
+      "vitamin": "Vitamins",
+      "other": "Other"
+    }
+  },
+  "sources": {
+    "description": "Where foods and pantry items are looked up; used by nutrition and cooking.",
+    "defaults": "Search first in",
+    "defaultNutrition": "Food search",
+    "defaultPantry": "Pantry search",
+    "all": "All sources",
+    "local": "My own library",
+    "offHint": "The open food database, searched by name and barcode.",
+    "offEnabled": "Use Open Food Facts",
+    "searchLanguage": "Search language",
+    "searchCountry": "Search country",
+    "uploadCountry": "Country for uploads",
+    "auto": "Automatic",
+    "importPortion": "Import values",
+    "per100g": "Per 100 g",
+    "perServing": "Per serving",
+    "offUsername": "Open Food Facts user name",
+    "offPassword": "Open Food Facts password",
+    "offAccountHint": "Only needed to upload products.",
+    "offSignup": "Create an Open Food Facts account",
+    "usdaEnabled": "Use USDA",
+    "usdaKey": "USDA API key",
+    "usdaSignup": "Get a free USDA key",
+    "mealieEnabled": "Use Mealie",
+    "mealieUrl": "Mealie address",
+    "mealieToken": "Mealie API token",
+    "mirror": {
+      "title": "Local Open Food Facts copy",
+      "states": {
+        "downloading": "Downloading",
+        "failedEmpty": "Download failed",
+        "failedStale": "Refresh failed, serving old data",
+        "stale": "Out of date",
+        "ready": "Ready",
+        "notReady": "Not downloaded yet"
+      },
+      "airGap": "Air gap",
+      "updated": "updated {{when}}",
+      "refresh": "Refresh now",
+      "auto": "Refresh automatically",
+      "intervals": {
+        "off": "Off",
+        "daily": "Daily",
+        "weekly": "Weekly",
+        "monthly": "Monthly"
+      },
+      "odbl": "Data under the Open Database License (ODbL 1.0)",
+      "shareAlike": "Open Food Facts data is under the ODbL: if you publish a database made from it, you have to share it under the same licence.",
+      "licenses": "Licences in NutriTrace"
+    }
+  }
+}

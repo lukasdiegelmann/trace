@@ -1,0 +1,35 @@
+{
+  "assistant": {
+    "description": "Ein Assistent für Ernährung, Kochen und Training. Dein Schlüssel wird in deinen Einstellungen aller drei Apps gespeichert.",
+    "envLocked": "Die Serverumgebung richtet den Assistenten ein; Anfragen laufen über NutriTrace.",
+    "enabled": "Assistent einschalten",
+    "model": "Modell",
+    "provider": "Anbieter",
+    "baseUrl": "Basis-URL",
+    "baseUrlHint": "Ollama, LM Studio, LocalAI und andere mit einem /v1/chat/completions-Endpunkt. Er muss dieser Seite den Aufruf erlauben (CORS).",
+    "modelName": "Modellname",
+    "reliability": "Kleine lokale Modelle nutzen Werkzeuge oft unzuverlässig.",
+    "customModel": "Anderes Modell …",
+    "apiKey": "API-Schlüssel",
+    "keyOptional": "Nur wenn der Endpunkt einen verlangt.",
+    "getKey": "{{provider}}-Schlüssel holen",
+    "verified": "Verbindung getestet",
+    "behaviour": "Verhalten",
+    "name": "Name des Assistenten",
+    "smartLog": "Smart Log",
+    "smartLogHint": "Halte den Assistenten-Knopf gedrückt und sag, was du gegessen, gekocht oder trainiert hast. Bei Ernährung und Training prüfst du es vor dem Speichern.",
+    "voiceLanguage": "Sprache der Spracheingabe",
+    "voiceAuto": "Wie der Browser",
+    "goalInsights": "Hinweise zu Zielen",
+    "goalInsightsHint": "Der Assistent weist darauf hin, wie du gegenüber deinen Zielen stehst.",
+    "activityEstimate": "Kalorien erfasster Aktivitäten schätzen",
+    "cookLocked": "Die Umgebung von CookTrace legt die KI für seine Importe und den Etiketten-Scan fest: {{setup}}",
+    "triggers": {
+      "title": "Schlüsselwörter",
+      "meal": "„my X meal“ nimmt eine gespeicherte Mahlzeit",
+      "recipe": "„my X recipe“ nimmt ein gespeichertes Rezept",
+      "yesterday": "„same as yesterday for lunch“ kopiert die Einträge von gestern",
+      "readme": "Mehr zu Smart Log"
+    }
+  }
+}

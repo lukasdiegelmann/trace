@@ -1,0 +1,126 @@
+{
+  "profile": {
+    "details": "Your profile",
+    "detailsHint": "Saved to all three apps.",
+    "avatar": {
+      "trigger": "Change picture",
+      "menu": "Picture",
+      "change": "Change",
+      "drop": "Drop to upload",
+      "upload": "Upload a picture",
+      "useUrl": "Use an address",
+      "remove": "Remove"
+    },
+    "fullName": "Full name",
+    "nickname": "Nickname",
+    "email": "Email",
+    "birthday": "Birthday",
+    "birthdayFuture": "The birthday is in the future.",
+    "gender": "Gender",
+    "genders": {
+      "unset": "Not set",
+      "male": "Male",
+      "female": "Female",
+      "non-binary": "Non-binary",
+      "other": "Prefer not to say"
+    },
+    "linked": "Linked sign-ins",
+    "provider": "Single sign-on",
+    "lastSignIn": "Last sign-in {{when}}",
+    "unlink": "Unlink",
+    "unlinkTitle": "Unlink {{name}}?",
+    "unlinkText": "You can't sign in to {{app}} through it any more.",
+    "link": "Link with {{name}}",
+    "account": "Account",
+    "signedOut": "Not signed in",
+    "danger": "Delete account",
+    "dangerHint": "Deletes your account and its data in one app. A new sign-in creates an empty account again.",
+    "deleteIn": "Delete my {{app}} account",
+    "delete": "Delete account",
+    "deleteTitle": "Delete your {{app}} account?",
+    "deleteText": "Your account and all its data in {{app}} are deleted. This can't be undone."
+  },
+  "body": {
+    "title": "Body data",
+    "hint": "Used for calorie goals and workout estimates.",
+    "heightCm": "Height (cm)",
+    "heightFt": "Height (ft)",
+    "heightIn": "Height (in)",
+    "weight": "Weight ({{unit}})",
+    "targetWeight": "Target weight ({{unit}})",
+    "activity": "Activity level",
+    "activities": {
+      "sedentary": "Mostly sitting",
+      "light": "Lightly active",
+      "moderate": "Moderately active",
+      "active": "Active",
+      "very_active": "Very active"
+    }
+  },
+  "wizard": {
+    "progress": "Step {{step}} of {{total}}",
+    "start": "Get started",
+    "later": "I'll do this later",
+    "skip": "Skip setup",
+    "skipTitle": "Skip the setup?",
+    "skipText": "What you've entered is kept. You find everything in the settings later.",
+    "back": "Back",
+    "finish": "Finish",
+    "units": "Units",
+    "unitsHint": "Sets weight, length, distance, temperature, water and energy in all apps. Change them one by one later in the settings.",
+    "diet": "How you eat",
+    "diets": {
+      "vegetarian": "Vegetarian",
+      "vegan": "Vegan",
+      "glutenFree": "Gluten-free",
+      "dairyFree": "Dairy-free"
+    },
+    "moreLater": "The assistant, push services and more are in the settings.",
+    "libraryDone": "The exercise library is filled.",
+    "updates": "Let the servers check for updates",
+    "tdee": "Estimated energy use per day",
+    "calorieGoal": "Daily calorie goal",
+    "waterGoal": "Daily water goal",
+    "noTargets": "Without birthday, height, weight and activity level no goals are calculated. You can set them yourself later.",
+    "steps": {
+      "welcome": {
+        "title": "Welcome to Trace",
+        "text": "Nutrition, cooking and training in one place. A few questions set it up."
+      },
+      "units": {
+        "title": "Units",
+        "text": "Which units do you use?"
+      },
+      "body": {
+        "title": "About you",
+        "text": "For your energy needs. Everything is optional."
+      },
+      "training": {
+        "title": "Training",
+        "text": "How often do you want to train?"
+      },
+      "library": {
+        "title": "Exercise library",
+        "text": "Fill the shared library with exercises."
+      },
+      "cooking": {
+        "title": "Cooking",
+        "text": "Defaults for recipes."
+      },
+      "services": {
+        "title": "Services and reminders",
+        "text": "Optional food sources and notifications."
+      },
+      "updates": {
+        "title": "Updates",
+        "text": "Update checks ask GitHub for new versions. They're off unless you turn them on."
+      },
+      "summary": {
+        "title": "All set",
+        "text": "Your starting goals."
+      }
+    },
+    "doneTitle": "All set!",
+    "doneText": "Taking you to your start page."
+  }
+}

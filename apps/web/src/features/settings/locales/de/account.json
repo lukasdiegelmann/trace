@@ -1,0 +1,126 @@
+{
+  "profile": {
+    "details": "Dein Profil",
+    "detailsHint": "Wird in allen drei Apps gespeichert.",
+    "avatar": {
+      "trigger": "Bild ändern",
+      "menu": "Bild",
+      "change": "Ändern",
+      "drop": "Zum Hochladen ablegen",
+      "upload": "Bild hochladen",
+      "useUrl": "Adresse verwenden",
+      "remove": "Entfernen"
+    },
+    "fullName": "Vollständiger Name",
+    "nickname": "Spitzname",
+    "email": "E-Mail",
+    "birthday": "Geburtstag",
+    "birthdayFuture": "Der Geburtstag liegt in der Zukunft.",
+    "gender": "Geschlecht",
+    "genders": {
+      "unset": "Nicht angegeben",
+      "male": "Männlich",
+      "female": "Weiblich",
+      "non-binary": "Nicht-binär",
+      "other": "Keine Angabe"
+    },
+    "linked": "Verknüpfte Anmeldungen",
+    "provider": "Single Sign-on",
+    "lastSignIn": "Letzte Anmeldung {{when}}",
+    "unlink": "Trennen",
+    "unlinkTitle": "{{name}} trennen?",
+    "unlinkText": "Du kannst dich darüber nicht mehr bei {{app}} anmelden.",
+    "link": "Mit {{name}} verknüpfen",
+    "account": "Konto",
+    "signedOut": "Nicht angemeldet",
+    "danger": "Konto löschen",
+    "dangerHint": "Löscht dein Konto und seine Daten in einer App. Eine neue Anmeldung legt wieder ein leeres Konto an.",
+    "deleteIn": "Mein {{app}}-Konto löschen",
+    "delete": "Konto löschen",
+    "deleteTitle": "Dein {{app}}-Konto löschen?",
+    "deleteText": "Dein Konto und alle seine Daten in {{app}} werden gelöscht. Das lässt sich nicht rückgängig machen."
+  },
+  "body": {
+    "title": "Körperdaten",
+    "hint": "Für Kalorienziele und Workout-Schätzungen.",
+    "heightCm": "Größe (cm)",
+    "heightFt": "Größe (ft)",
+    "heightIn": "Größe (in)",
+    "weight": "Gewicht ({{unit}})",
+    "targetWeight": "Zielgewicht ({{unit}})",
+    "activity": "Aktivitätsniveau",
+    "activities": {
+      "sedentary": "Überwiegend sitzend",
+      "light": "Leicht aktiv",
+      "moderate": "Mäßig aktiv",
+      "active": "Aktiv",
+      "very_active": "Sehr aktiv"
+    }
+  },
+  "wizard": {
+    "progress": "Schritt {{step}} von {{total}}",
+    "start": "Los geht's",
+    "later": "Das mache ich später",
+    "skip": "Einrichtung überspringen",
+    "skipTitle": "Einrichtung überspringen?",
+    "skipText": "Deine bisherigen Eingaben bleiben. Alles findest du später in den Einstellungen.",
+    "back": "Zurück",
+    "finish": "Fertig",
+    "units": "Einheiten",
+    "unitsHint": "Setzt Gewicht, Länge, Distanz, Temperatur, Wasser und Energie in allen Apps. Einzeln änderst du sie später in den Einstellungen.",
+    "diet": "Wie du isst",
+    "diets": {
+      "vegetarian": "Vegetarisch",
+      "vegan": "Vegan",
+      "glutenFree": "Glutenfrei",
+      "dairyFree": "Milchfrei"
+    },
+    "moreLater": "Der Assistent, Push-Dienste und mehr stehen in den Einstellungen.",
+    "libraryDone": "Die Übungsbibliothek ist gefüllt.",
+    "updates": "Die Server nach Updates suchen lassen",
+    "tdee": "Geschätzter Energieverbrauch pro Tag",
+    "calorieGoal": "Tägliches Kalorienziel",
+    "waterGoal": "Tägliches Wasserziel",
+    "noTargets": "Ohne Geburtstag, Größe, Gewicht und Aktivitätsniveau werden keine Ziele berechnet. Du kannst sie später selbst festlegen.",
+    "steps": {
+      "welcome": {
+        "title": "Willkommen bei Trace",
+        "text": "Ernährung, Kochen und Training an einem Ort. Ein paar Fragen richten alles ein."
+      },
+      "units": {
+        "title": "Einheiten",
+        "text": "Welche Einheiten verwendest du?"
+      },
+      "body": {
+        "title": "Über dich",
+        "text": "Für deinen Energiebedarf. Alles ist freiwillig."
+      },
+      "training": {
+        "title": "Training",
+        "text": "Wie oft willst du trainieren?"
+      },
+      "library": {
+        "title": "Übungsbibliothek",
+        "text": "Fülle die gemeinsame Bibliothek mit Übungen."
+      },
+      "cooking": {
+        "title": "Kochen",
+        "text": "Vorgaben für Rezepte."
+      },
+      "services": {
+        "title": "Dienste und Erinnerungen",
+        "text": "Zusätzliche Lebensmittelquellen und Benachrichtigungen, wenn du willst."
+      },
+      "updates": {
+        "title": "Updates",
+        "text": "Die Update-Prüfung fragt GitHub nach neuen Versionen. Sie ist aus, bis du sie einschaltest."
+      },
+      "summary": {
+        "title": "Alles bereit",
+        "text": "Deine Startziele."
+      }
+    },
+    "doneTitle": "Alles eingerichtet!",
+    "doneText": "Weiter zu deiner Startseite."
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "gymTools": {
+    "title": "Gym tools",
+    "tabs": "Tool",
+    "plates": "Plates",
+    "convert": "Convert",
+    "target": "Target weight ({{unit}})",
+    "targetPlaceholder": "e.g. {{example}}",
+    "bar": "Bar: {{bar}} {{unit}}",
+    "eachSide": "Each side:",
+    "plateCount": "{{count}} × {{plate}} {{unit}}",
+    "remainder": "{{remainder}} {{unit}} can't be loaded with the available plates",
+    "belowBar": "The weight is at or below the bar ({{bar}} {{unit}})",
+    "direction": "Direction",
+    "lbsToKg": "lbs → kg",
+    "kgToLbs": "kg → lbs",
+    "pounds": "Pounds",
+    "kilograms": "Kilograms",
+    "enterWeight": "Enter weight",
+    "result": "{{value}} {{unit}}"
+  }
+}

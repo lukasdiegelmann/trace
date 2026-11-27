@@ -1,0 +1,46 @@
+{
+  "backup": {
+    "description": "Jede App führt ihre eigenen Backups.",
+    "auto": "Automatische Backups",
+    "envLocked": "Durch die Serverumgebung festgelegt",
+    "schedule": "Zeitplan",
+    "schedules": {
+      "off": "Aus",
+      "daily": "Täglich",
+      "weekly": "Wöchentlich",
+      "monthly": "Monatlich"
+    },
+    "time": "Uhrzeit",
+    "retention": "Aufzubewahrende Backups",
+    "retentionHint_one": "Nur das neueste Backup bleibt.",
+    "retentionHint_other": "Die neuesten {{count}} Backups bleiben.",
+    "lastError": "Das letzte automatische Backup ist fehlgeschlagen: {{message}}",
+    "lastRun": "Letztes automatisches Backup {{when}}",
+    "nextRun": "Nächstes fällig {{when}}",
+    "files": "Vollständige Backups",
+    "filesHint": "Die ganze App: Datenbank und Dateien, für alle Nutzer.",
+    "create": "Jetzt ein Backup anlegen",
+    "created": "Backup angelegt.",
+    "none": "Noch keine Backups.",
+    "restore": "Wiederherstellen",
+    "restoreTitle": "Dieses Backup wiederherstellen?",
+    "restoreText": "Alles in dieser App, für alle Nutzer, wird durch {{name}} ersetzt.",
+    "restored": "Backup wiederhergestellt.",
+    "restoring": "Wird hochgeladen und wiederhergestellt …",
+    "upload": "Backup hochladen und wiederherstellen",
+    "deleteTitle": "Dieses Backup löschen?",
+    "jsonExport": "Deine Rezepte und Vorräte als JSON",
+    "jsonExportHint": "Deine eigenen Daten ohne Bilder. Zum Wiederherstellen dient ein vollständiges Backup.",
+    "danger": "Daten löschen",
+    "clearData": "Alle meine Daten löschen",
+    "clearWorkouts": "Meine Trainingsdaten löschen",
+    "clearDataText": {
+      "nt": "Deine Lebensmittel, Mahlzeiten, dein Tagebuch und weitere Ernährungsdaten werden gelöscht. Das lässt sich nicht rückgängig machen.",
+      "ct": "Deine Rezepte, dein Vorrat, die Einkaufsliste und das Kochtagebuch werden gelöscht. Das lässt sich nicht rückgängig machen.",
+      "lt": "Deine Workouts, Körperwerte samt Medien, der Assistentenverlauf und deine eigenen Pläne werden gelöscht. Das lässt sich nicht rückgängig machen."
+    },
+    "clearSettings": "Meine Einstellungen zurücksetzen",
+    "clearSettingsText": "Alle deine {{app}}-Einstellungen gehen auf ihre Standardwerte zurück.",
+    "clearSettingsLift": "Die Grundeinstellungen von {{app}} (Einheiten, Formate, Wochenziel, Darstellung) gehen auf ihre Standardwerte zurück."
+  }
+}

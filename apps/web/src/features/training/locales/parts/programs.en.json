@@ -1,0 +1,98 @@
+{
+  "programs": {
+    "title": "Programs",
+    "new": "New",
+    "create": "Create program",
+    "empty": "No programs yet. Create a training program to organize your workouts.",
+    "newTitle": "New program",
+    "name": "Name",
+    "namePlaceholder": "e.g. Cutting 2026",
+    "goal": "Goal",
+    "duration": "Duration (weeks)",
+    "durationHint": "Weeks in this training block. More than 1 enables per-week progression (different sets, reps, tempo and rest each week).",
+    "active": "Active",
+    "coach": "Coach: {{name}}",
+    "workouts_one": "{{count}} workout",
+    "workouts_other": "{{count}} workouts",
+    "week": "Week {{week}}",
+    "weekOf": "Week {{week}} of {{weeks}}",
+    "weeks_one": "{{count}} week",
+    "weeks_other": "{{count}} weeks",
+    "sessions_one": "{{count}} session",
+    "sessions_other": "{{count}} sessions",
+    "exercises_one": "{{count}} exercise",
+    "exercises_other": "{{count}} exercises",
+    "day": "Day {{day}}",
+    "actions": "Program actions",
+    "rename": "Rename",
+    "renameTitle": "Rename program",
+    "renamed": "Program renamed",
+    "duplicate": "Duplicate",
+    "duplicated": "Program duplicated",
+    "activate": "Set active",
+    "activated": "Program set active",
+    "deactivate": "Deactivate",
+    "deactivated": "Program deactivated",
+    "deleted": "Program deleted",
+    "deleteTitle": "Delete program?",
+    "deleteText": "Deletes the program and all of its workouts. This cannot be undone.",
+    "preview": {
+      "label": "Program preview",
+      "empty": "Choose a program to see its workouts here.",
+      "close": "Close preview",
+      "workouts": "Workouts",
+      "noWorkouts": "No workouts in this program yet.",
+      "full": "Full details"
+    }
+  },
+  "programDetail": {
+    "title": "Program",
+    "add": "Add",
+    "addWorkout": "Add workout",
+    "newWorkout": "New workout",
+    "workoutPlaceholder": "e.g. Upper body A, leg day, push",
+    "workoutAdded": "Workout added",
+    "workoutDeleted": "Workout deleted",
+    "deleteProgram": "Delete program",
+    "deactivateActive": "Active – tap to deactivate",
+    "deleteWorkout": "Delete {{name}}",
+    "deleteWorkoutTitle": "Delete workout?",
+    "deleteWorkoutText": "This removes the workout from this program.",
+    "moveUp": "Move {{name}} up",
+    "moveDown": "Move {{name}} down",
+    "noExercises": "This workout has no exercises yet.",
+    "exercise": "Exercise",
+    "editWorkout": "Edit workout",
+    "settings": {
+      "title": "Duration and progression",
+      "durationHint": "More than 1 enables a per-week progression in the workout editor.",
+      "advanceBy": "Advance the week by",
+      "pastEnd": "Past the final week",
+      "advance": {
+        "sessions": "Completed sessions",
+        "calendar": "Calendar (7 days)"
+      },
+      "onComplete": {
+        "hold": "Stay on the last week",
+        "repeat": "Start again"
+      },
+      "saved": "Program settings saved"
+    },
+    "assign": {
+      "title": "Assign to client",
+      "hint": "Choose a client to give “{{name}}” to.",
+      "noClients": "You don't have any clients yet. Invite one under Coaching.",
+      "current": "Current: {{name}}",
+      "noProgram": "No active program",
+      "done": "Assigned to {{name}}"
+    }
+  },
+  "goals": {
+    "cutting": "Cutting",
+    "bulking": "Bulking",
+    "maintenance": "Maintenance",
+    "strength": "Strength",
+    "endurance": "Endurance",
+    "general": "General fitness"
+  }
+}

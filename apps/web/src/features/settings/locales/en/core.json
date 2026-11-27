@@ -1,0 +1,229 @@
+{
+  "title": "Settings",
+  "loading": "Loading…",
+  "appSwitch": "App",
+  "actions": {
+    "back": "All settings",
+    "cancel": "Cancel",
+    "save": "Save",
+    "saved": "Saved",
+    "delete": "Delete",
+    "remove": "Remove",
+    "add": "Add",
+    "edit": "Edit",
+    "create": "Create",
+    "test": "Test",
+    "retry": "Try again",
+    "show": "Show",
+    "hide": "Hide",
+    "copy": "Copy",
+    "copied": "Copied",
+    "download": "Download",
+    "import": "Import",
+    "export": "Export",
+    "preview": "Preview",
+    "refresh": "Refresh",
+    "connect": "Connect",
+    "disconnect": "Disconnect",
+    "done": "Done",
+    "close": "Close",
+    "reset": "Reset",
+    "next": "Next",
+    "selectAll": "Select all",
+    "selectNone": "Select none",
+    "moveUp": "Move {{name}} up",
+    "moveDown": "Move {{name}} down",
+    "removeNamed": "Remove {{name}}"
+  },
+  "errors": {
+    "settings": "Settings couldn't be loaded or saved ({{backends}}): {{message}}"
+  },
+  "home": {
+    "searchLabel": "Search settings",
+    "searchPlaceholder": "e.g. units, backup, meals",
+    "noMatches": "No setting matches “{{query}}”.",
+    "clearSearch": "Clear search",
+    "profile": "Profile",
+    "admin": "Admin",
+    "cards": {
+      "dismiss": "Dismiss",
+      "goals": "You haven't set a calorie goal yet.",
+      "goalsAction": "Set goals",
+      "wellness": "Connect a wearable to see sleep, steps and recovery.",
+      "wellnessAction": "Wellness settings",
+      "program": "No training program is active.",
+      "programAction": "Choose a program",
+      "assistant": "Trace, the AI assistant, is off.",
+      "assistantAction": "Set it up",
+      "appearance": "Trace follows your device's light or dark look.",
+      "appearanceAction": "Choose a theme"
+    }
+  },
+  "groups": {
+    "you": "You",
+    "nutrition": "Nutrition",
+    "cooking": "Cooking",
+    "training": "Training",
+    "data": "Data and connections",
+    "server": "Server and users",
+    "system": "System"
+  },
+  "topics": {
+    "profile": {
+      "title": "Profile and account",
+      "description": "Name, picture, body data, linked sign-in, sign out",
+      "keywords": "avatar name birthday gender height weight account sign out delete"
+    },
+    "appearance": {
+      "title": "Appearance and language",
+      "description": "Theme, language, start page",
+      "keywords": "dark mode light theme language start page celebrations"
+    },
+    "regional": {
+      "title": "Units and formats",
+      "description": "Weight, energy, length, date and time",
+      "keywords": "kg lb kcal kj cm ft date time timezone metric imperial"
+    },
+    "notifications": {
+      "title": "Notifications",
+      "description": "Channels, reminders and alerts",
+      "keywords": "push gotify ntfy apprise reminders water meals weigh bedtime weekly summary workout coaching expiry"
+    },
+    "assistant": {
+      "title": "Trace AI assistant",
+      "description": "Provider, model, key, Smart Log",
+      "keywords": "ai claude openai gemini model api key voice smart log"
+    },
+    "diary": {
+      "title": "Diary and meals",
+      "description": "Diary display, meal names, activity, fasting",
+      "keywords": "meals breakfast fasting activity quick calories brands thumbnails notes"
+    },
+    "goals": {
+      "title": "Goals and water",
+      "description": "Calorie goal mode, water bottles",
+      "keywords": "calorie adaptive tdee dynamic water containers"
+    },
+    "foods": {
+      "title": "Food lists",
+      "description": "List display, sorting, categories, units",
+      "keywords": "categories units sort barcode favourites scan sound flashlight torch crop"
+    },
+    "nutrients": {
+      "title": "Nutrients",
+      "description": "Which nutrients show, in which order, custom ones",
+      "keywords": "protein fat carbs vitamins minerals custom"
+    },
+    "foodSources": {
+      "title": "Food sources",
+      "description": "Open Food Facts, USDA, Mealie",
+      "keywords": "off open food facts usda mealie barcode mirror"
+    },
+    "wellness": {
+      "title": "Wellness devices",
+      "description": "Fitbit, Garmin, Withings",
+      "keywords": "fitbit garmin withings wearable sleep steps sync"
+    },
+    "statistics": {
+      "title": "Nutrition statistics",
+      "description": "Chart options and categories",
+      "keywords": "charts trend average"
+    },
+    "bodyStats": {
+      "title": "Body stats",
+      "description": "Order and visibility",
+      "keywords": "weight waist body fat measurements"
+    },
+    "cooking": {
+      "title": "Cooking and shopping",
+      "description": "Servings, URL import, shopping list",
+      "keywords": "servings pantry import engine shopping aisle"
+    },
+    "kitchens": {
+      "title": "Kitchens",
+      "description": "Share recipes with your household",
+      "keywords": "household members share head chef"
+    },
+    "manage": {
+      "title": "Categories, tags and units",
+      "description": "Recipe and pantry categories, tags, gear, cookbooks",
+      "keywords": "manage categories tags gear cookbooks"
+    },
+    "training": {
+      "title": "Workouts",
+      "description": "Goals, logging, rest timer, measurements",
+      "keywords": "rest timer tone rpe warmups weekly goal cardio set videos charts"
+    },
+    "catalog": {
+      "title": "Exercise library",
+      "description": "Sources, own exercises, JSON catalogs",
+      "keywords": "exercises wger free-db exercisedb import catalog media"
+    },
+    "radio": {
+      "title": "Radio and music",
+      "description": "Self-hosted music and stations",
+      "keywords": "jellyfin plex emby subsonic navidrome stations crossfade"
+    },
+    "connections": {
+      "title": "Connections between the apps",
+      "description": "NutriTrace, CookTrace and LiftTrace data exchange",
+      "keywords": "federation token cooktrace nutritrace import recipes pantry calories"
+    },
+    "import": {
+      "title": "Import and export",
+      "description": "Backups as files, CSV, other apps",
+      "keywords": "csv json zip mealie paprika cronometer myfitnesspal strong hevy fitnotes"
+    },
+    "backup": {
+      "title": "Backups and data",
+      "description": "Server backups, restore, delete data",
+      "keywords": "backup restore schedule clear data"
+    },
+    "sharing": {
+      "title": "Sharing",
+      "description": "Share foods and meals with other users",
+      "keywords": "group visibility bulk share"
+    },
+    "users": {
+      "title": "Users",
+      "description": "Roles, trainers, sign-in lifetime",
+      "keywords": "admin roles trainer delete session"
+    },
+    "authentication": {
+      "title": "Sign-in providers",
+      "description": "OpenID Connect providers",
+      "keywords": "oidc sso keycloak provider"
+    },
+    "email": {
+      "title": "Email",
+      "description": "SMTP server for notifications",
+      "keywords": "smtp mail test"
+    },
+    "apiTokens": {
+      "title": "API tokens",
+      "description": "Access for scripts and MCP",
+      "keywords": "token scopes mcp api"
+    },
+    "webhooks": {
+      "title": "Webhooks",
+      "description": "Send events to other services",
+      "keywords": "webhook events secret"
+    },
+    "updates": {
+      "title": "Updates",
+      "description": "Backend versions and release notes",
+      "keywords": "version release notes channel"
+    },
+    "diagnostics": {
+      "title": "Diagnostics",
+      "description": "Logs and data for bug reports",
+      "keywords": "logs verbose calibration help improve"
+    },
+    "about": {
+      "title": "About and support",
+      "description": "Licences, sources, how to support",
+      "keywords": "license agpl support donate github version"
+    }
+  },
+  "adminOnly": "These settings need an admin account."
+}

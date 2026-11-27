@@ -1,0 +1,22 @@
+{
+  "gymTools": {
+    "title": "Gym-Werkzeuge",
+    "tabs": "Werkzeug",
+    "plates": "Scheiben",
+    "convert": "Umrechnen",
+    "target": "Zielgewicht ({{unit}})",
+    "targetPlaceholder": "z. B. {{example}}",
+    "bar": "Stange: {{bar}} {{unit}}",
+    "eachSide": "Je Seite:",
+    "plateCount": "{{count}} × {{plate}} {{unit}}",
+    "remainder": "{{remainder}} {{unit}} lassen sich mit den vorhandenen Scheiben nicht auflegen",
+    "belowBar": "Das Gewicht entspricht höchstens der Stange ({{bar}} {{unit}})",
+    "direction": "Richtung",
+    "lbsToKg": "lbs → kg",
+    "kgToLbs": "kg → lbs",
+    "pounds": "Pfund",
+    "kilograms": "Kilogramm",
+    "enterWeight": "Gewicht eingeben",
+    "result": "{{value}} {{unit}}"
+  }
+}

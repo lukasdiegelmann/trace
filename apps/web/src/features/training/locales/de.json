@@ -1,0 +1,72 @@
+{
+  "title": "Training",
+  "placeholder": "Hier entstehen Workouts, Übungen, Programme und Statistiken aus LiftTrace.",
+  "trainingNav": {
+    "label": "Trainingsbereiche",
+    "diary": "Tagebuch",
+    "exercises": "Übungen",
+    "programs": "Programme",
+    "statistics": "Statistik",
+    "progress": "Fortschritt",
+    "coach": "Coach",
+    "coaching": "Coaching",
+    "radio": "Radio",
+    "unread_one": "{{count}} ungelesen",
+    "unread_other": "{{count}} ungelesen"
+  },
+  "common": {
+    "loading": "Lädt …",
+    "loadFailed": "Konnte nicht geladen werden: {{message}}",
+    "retry": "Erneut versuchen",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "close": "Schließen",
+    "back": "Zurück",
+    "confirm": "Bestätigen",
+    "search": "Suchen",
+    "more": "Mehr",
+    "saved": "Gespeichert",
+    "deleted": "Gelöscht",
+    "error": "Etwas ist schiefgelaufen: {{message}}"
+  },
+  "assistant": {
+    "suggestions": {
+      "generate": "Erstelle das Training für heute",
+      "warmup": "Wie wärme ich mich für Kniebeugen auf?",
+      "overload": "Tipps zur progressiven Überlastung",
+      "plateau": "Hilf mir aus meinem Plateau beim Bankdrücken"
+    },
+    "usePlan": "Dieses Training übernehmen",
+    "smartLog": {
+      "title": "Smart Log",
+      "inputHint": "Beschreibe dein Training, zum Beispiel: Bankdrücken 3x5 @ 80, Kniebeuge 5x5 @ 120, Curls 3x12 @ 15",
+      "inputLabel": "Dein Training",
+      "inputPlaceholder": "Bankdrücken 3x5 mit 80, Kniebeuge 5x5 mit 120…",
+      "parse": "Training lesen",
+      "reading": "Dein Training wird gelesen…",
+      "reviewHint": "Prüfe Übungen und Sätze. Sie kommen ins Tagebuch am {{date}}.",
+      "back": "Text ändern",
+      "add": "Zum Training hinzufügen",
+      "unreadable": "Das war nicht verständlich. Formuliere es anders, zum Beispiel: Bankdrücken 3x5 mit 80, Kniebeuge 5x5 mit 120",
+      "noneFound": "Darin wurden keine Übungen gefunden. Versuche etwas wie: Bankdrücken 3x5 mit 80",
+      "notInLibrary": "Nicht in der Bibliothek",
+      "superset": "Supersatz {{group}}",
+      "match": "Zuordnung für {{name}}",
+      "asSaid": "„{{name}}“ behalten",
+      "weight": "{{name}}, Satz {{number}}: Gewicht",
+      "reps": "{{name}}, Satz {{number}}: Wiederholungen",
+      "duration": "{{name}}, Satz {{number}}: Zeit",
+      "repsUnit": "Wdh.",
+      "amrap": "AMRAP",
+      "bodyweight": "KG",
+      "rpe": "RPE {{value}}",
+      "removeSet": "{{name}}: Satz {{number}} entfernen",
+      "addSet": "Satz hinzufügen",
+      "added_one": "{{count}} Übung hinzugefügt",
+      "added_other": "{{count}} Übungen hinzugefügt",
+      "saveFailed": "Speichern fehlgeschlagen: {{message}}"
+    }
+  }
+}

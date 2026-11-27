@@ -1,0 +1,65 @@
+{
+  "diagnostics": {
+    "logs": "Diagnostic log",
+    "logsHint": "What this page logged since it was opened. It stays on your device until you share it.",
+    "verbose": "Keep a longer log",
+    "view": "View the log",
+    "share": "Share",
+    "clear": "Clear log",
+    "calibration": "Help improve the wellness scores",
+    "calibrationHint": "Your wearable data of the last 30 days without dates or names, to paste into a bug report. Nothing is sent by itself.",
+    "device": "Your wearable (optional)",
+    "generate": "Create the export",
+    "review_one": "{{count}} day. Check it before you share it.",
+    "review_other": "{{count}} days. Check them before you share them."
+  },
+  "updates": {
+    "description": "Versions of the three backends.",
+    "channel": "Release channel",
+    "channels": {
+      "stable": "Stable",
+      "dev": "Development"
+    },
+    "interval": "Check every",
+    "manual": "Only by hand",
+    "current": "Installed",
+    "available": "Version {{version}} is available",
+    "upToDate": "Up to date.",
+    "off": "Update checks are off.",
+    "envOff": "Update checks are turned off by the server's environment.",
+    "releaseNotes": "Release notes",
+    "how": "Trace builds its backends from forks: update by merging upstream into the fork and deploying Trace again.",
+    "checked": "Checked {{when}}",
+    "autoCheck": "Let {{app}} look for updates",
+    "checkNow": "Check now",
+    "offNotice": "Update checks are off: Trace won't tell you about new releases, security fixes included.",
+    "turnOn": "Turn on",
+    "adminChecks": "Admins check for server updates.",
+    "intervalHint": "How often Trace looks for a new version of itself while it is in the background."
+  },
+  "about": {
+    "description": "What Trace is made of.",
+    "what": "Nutrition, cooking and training in one app, on the servers of NutriTrace, CookTrace and LiftTrace.",
+    "license": "Trace is free software under the GNU Affero General Public License 3.0.",
+    "builtOn": "Built on TraceApps",
+    "builtOnHint": "The three servers and the logic of their apps come from TraceApps (AGPL-3.0).",
+    "source": "{{app}} source code",
+    "reportBug": "Report a bug in {{app}}",
+    "translate": "Translate {{app}}",
+    "docs": "TraceApps documentation",
+    "offData": "Food data from Open Food Facts (ODbL)",
+    "support": "Support the authors",
+    "supportHint": "If these apps are useful to you, you can support TraceApps.",
+    "disclaimers": "Please note",
+    "medical": "Not a medical device. Nutrition values, scores and estimates can be wrong and don't replace advice from a doctor or dietitian.",
+    "training": "Exercise carries a risk of injury. Check programs and weights against your own ability, and ask a professional if unsure.",
+    "ai": "The assistant is an AI. It can be wrong; check what it says and what it adds.",
+    "features": {
+      "areas": "Food diary, recipes, pantry and workouts in one app",
+      "selfHosted": "Self-hosted: your data stays on your server",
+      "pwa": "Installs as a web app on phone and computer",
+      "privacy": "No tracking, no ads, no third-party analytics"
+    },
+    "federation": "CookTrace reads foods from NutriTrace, and LiftTrace sends it your workouts, once connected."
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "importExport": {
+    "description": "Daten als Dateien hinein- und hinausbringen.",
+    "export": "Export",
+    "chooseFile": "Datei wählen",
+    "noFile": "Keine Datei gewählt",
+    "andMore_one": "und {{count}} weitere",
+    "andMore_other": "und {{count}} weitere",
+    "uploadErrors": {
+      "tooLarge": "Die Datei ist für den Server zu groß.",
+      "gateway": "Der Server hat zu lange gebraucht. Vielleicht arbeitet er noch; prüfe das vor einem neuen Versuch.",
+      "offline": "Die Verbindung ist beim Hochladen abgebrochen."
+    },
+    "exports": {
+      "json": "JSON-Backup",
+      "diaryCsv": "Tagebuch als CSV",
+      "fullCsv": "Alle Nährstoffe als CSV",
+      "activityCsv": "Aktivität als CSV"
+    },
+    "json": {
+      "exportHint": "Das JSON-Backup enthält Lebensmittel, Mahlzeiten, Rezepte, Tagebuch, Aktivität, Fastenzeiten und deine Ernährungseinstellungen, auch darin gespeicherte API-Schlüssel. Halte die Datei geheim. Bilder sind nicht enthalten.",
+      "pick": "JSON-Backup einspielen",
+      "restoreTitle": "Dieses Backup einspielen?",
+      "restoreText": "{{name}}: Lebensmittel, Mahlzeiten, Rezepte und Einträge werden hinzugefügt, Tagebuchtage aus der Datei ersetzen deine, und ihre Einstellungen werden übernommen.",
+      "restored": "Backup eingespielt."
+    },
+    "bulk": {
+      "open": "Viele Lebensmittel importieren",
+      "format": "Dateiformat",
+      "template": "Vorlage herunterladen",
+      "paste": "Oder JSON einfügen",
+      "preview": "{{ready}} bereit, {{duplicates}} mit bekanntem Barcode, {{errors}} Fehler",
+      "errors": "Fehler",
+      "duplicates": "Wegen des Barcodes übersprungen",
+      "row": "Zeile {{row}}",
+      "rowErrors": {
+        "invalidJson": "Kein gültiges JSON",
+        "notAList": "Erwartet wird eine Liste von Lebensmitteln oder { \"foods\": [...] }",
+        "notAnObject": "Kein Objekt",
+        "missingName": "Der Name fehlt",
+        "missingCalories": "Kalorien fehlen oder sind keine Zahl",
+        "csvTooShort": "Eine CSV braucht eine Kopfzeile und mindestens eine Zeile",
+        "csvHeader": "Die Kopfzeile muss „name“ und „calories“ enthalten"
+      },
+      "confirm_one": "{{count}} Lebensmittel importieren",
+      "confirm_other": "{{count}} Lebensmittel importieren",
+      "done_one": "{{count}} Lebensmittel importiert, {{skipped}} übersprungen",
+      "done_other": "{{count}} Lebensmittel importiert, {{skipped}} übersprungen",
+      "more": "und {{count}} weitere"
+    },
+    "apps": {
+      "title": "Aus einer anderen App",
+      "source": "Quelle",
+      "sources": {
+        "spreadsheet": "Tabelle (CSV)",
+        "cronometer": "Cronometer",
+        "loseit": "Lose It!",
+        "mfp": "MyFitnessPal"
+      },
+      "hints": {
+        "spreadsheet": "Vorlage ausfüllen und als CSV hochladen.",
+        "cronometer": "In Cronometer: Account, Export data, Servings.",
+        "loseit": "Exportiere deine Essensprotokolle aus Lose It! als CSV.",
+        "mfp": "Lade die CSV oder das ganze ZIP eines MyFitnessPal-Exports hoch."
+      },
+      "template": "Tabellenvorlage herunterladen",
+      "stats": "{{items}} Einträge an {{days}} Tagen ({{from}} bis {{to}}), {{existing}} Tage haben schon Einträge",
+      "unmapped": "Mahlzeiten ohne Zuordnung: {{labels}}",
+      "duplicates": "Tage, die schon Einträge haben",
+      "duplicate": {
+        "skip": "Überspringen",
+        "merge": "Zusammenführen",
+        "replace": "Ersetzen"
+      },
+      "done": "Tage importiert: {{imported}}, zusammengeführt: {{merged}}, ersetzt: {{replaced}}, übersprungen: {{skipped}}"
+    },
+    "recipes": {
+      "title": "Rezeptarchiv",
+      "description": "Eine .zip- oder .paprikarecipes-Datei aus Mealie, Tandoor, Paprika, CookTrace oder im schema.org-Format.",
+      "phases": {
+        "scanning": "Datei wird hochgeladen und gelesen …",
+        "importing": "Wird importiert …"
+      },
+      "found_one": "{{count}} Rezept gefunden, {{picked}} ausgewählt",
+      "found_other": "{{count}} Rezepte gefunden, {{picked}} ausgewählt",
+      "counts": "Zutaten: {{ingredients}}, Schritte: {{steps}}",
+      "options": {
+        "import_images": "Bilder importieren",
+        "addToPantry": "Zutaten in den Vorrat übernehmen",
+        "applyTags": "Tags behalten",
+        "importCategories": "Kategorien importieren",
+        "import_timeline": "Kochverlauf importieren ({{count}} Einträge)"
+      },
+      "duplicates": "Rezepte, die du schon hast",
+      "skipHistoryHint": "Übersprungene Rezepte bekommen auch keinen Kochverlauf.",
+      "dedup": {
+        "skip": "Überspringen",
+        "replace": "Ersetzen",
+        "force": "Erneut importieren"
+      },
+      "import_one": "{{count}} Rezept importieren",
+      "import_other": "{{count}} Rezepte importieren",
+      "done_one": "{{count}} Rezept importiert",
+      "done_other": "{{count}} Rezepte importiert",
+      "duplicate": "Schon vorhanden: {{name}}",
+      "open": "Öffnen"
+    },
+    "workouts": {
+      "title": "Workouts aus einer anderen App",
+      "source": "Quelle",
+      "sources": {
+        "strong": "Strong (.csv)",
+        "hevy": "Hevy (.csv)",
+        "fitnotes": "FitNotes (.csv)",
+        "jefit": "JEFIT (.csv)",
+        "garmin-fit": "Garmin (.fit)"
+      },
+      "instructions": {
+        "strong": "In Strong: Settings, Export Strong data. Lade die CSV hoch.",
+        "hevy": "In Hevy: Settings, Export & Import Data, Export Workouts. Lade die CSV hoch.",
+        "fitnotes": "In FitNotes: Settings, Spreadsheet Export, alle Workout-Daten. Lade die CSV hoch.",
+        "jefit": "Auf jefit.com: My account, Export data. Lade die CSV hoch.",
+        "garmin-fit": "In Garmin Connect: Aktivität öffnen, Original exportieren und entpacken. Lade die .fit-Datei hoch."
+      },
+      "stats": "{{file}}: Workouts: {{workouts}}, Sätze: {{sets}}, von {{from}} bis {{to}}; zugeordnete Übungen: {{matched}} von {{exercises}}",
+      "duplicates_one": "{{count}} Workout mit gleichem Datum und Namen gibt es schon.",
+      "duplicates_other": "{{count}} Workouts mit gleichem Datum und Namen gibt es schon.",
+      "unmatched": "Übungen ohne Zuordnung",
+      "askTitle": "Einige Workouts gibt es schon",
+      "askText_one": "{{count}} Workout hat dasselbe Datum und denselben Namen wie eines von dir.",
+      "askText_other": "{{count}} Workouts haben dasselbe Datum und denselben Namen wie welche von dir.",
+      "skip": "Duplikate überspringen",
+      "replace": "Vorhandene ersetzen",
+      "done": "{{imported}} importiert, {{skipped}} übersprungen, {{replaced}} ersetzt"
+    }
+  }
+}

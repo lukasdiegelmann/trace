@@ -1,0 +1,235 @@
+{
+  "cooking": {
+    "recipes": "Rezepte und Vorrat",
+    "defaultServings": "Standardportionen",
+    "autoPantry": "Zutaten aus Rezepten in den Vorrat übernehmen",
+    "mixShared": "Geteilte Rezepte unter meinen zeigen",
+    "urlImport": "Import von Webadressen",
+    "engine": "Import-Verfahren",
+    "engineHint": "Standard liest die Rezeptdaten, die eine Seite veröffentlicht; Erweitert schafft auch schwierige Seiten; Smart fragt deinen KI-Anbieter (braucht einen getesteten Assistenten).",
+    "engines": {
+      "standard": "Standard",
+      "enhanced": "Erweitert",
+      "smart": "Smart (KI)"
+    },
+    "smartCost": "Jeder Import fragt deinen KI-Anbieter und kann Geld kosten.",
+    "fallback": "Wenn Erweitert scheitert",
+    "shopping": "Einkaufsliste",
+    "groupBy": "Gruppieren nach",
+    "groups": {
+      "aisle": "Gang",
+      "recipe": "Rezept",
+      "flat": "Keine Gruppen"
+    },
+    "checked": "Abgehakte Artikel",
+    "checkedOptions": {
+      "bottom": "Nach unten schieben",
+      "hide": "Ausblenden"
+    }
+  },
+  "kitchens": {
+    "description": "Eine Küche teilt Rezepte mit allen, die darin sind.",
+    "yours": "Deine Küchen",
+    "empty": "Du bist noch in keiner Küche.",
+    "new": "Neue Küche",
+    "name": "Name der Küche",
+    "create": "Küche anlegen",
+    "roles": {
+      "owner": "Küchenchef",
+      "sous": "Souschef",
+      "member": "Koch"
+    },
+    "roleHelp": "Der Küchenchef verwaltet die Küche, Souschefs dürfen geteilte Rezepte bearbeiten, Köche sie lesen.",
+    "roleOf": "Rolle von {{name}}",
+    "autoShare": "Meine Rezepte automatisch teilen",
+    "autoShareCount_one": "{{count}} Rezept so geteilt",
+    "autoShareCount_other": "{{count}} Rezepte so geteilt",
+    "autoShareConfirm": "Alle deine Rezepte, auch neue, werden mit allen in dieser Küche geteilt.",
+    "autoShareAlone": "Bisher bist du allein. Alle deine Rezepte werden mit allen geteilt, die dazukommen.",
+    "autoShareAction": "Teilen",
+    "autoShareOn": "Deine Rezepte werden jetzt geteilt.",
+    "autoShareOff": "Das automatische Teilen ist aus. Bereits Geteiltes bleibt geteilt.",
+    "everyoneEdits": "Alle dürfen bearbeiten",
+    "nobodyEdits": "Niemand darf bearbeiten",
+    "makeOwnerTitle": "{{name}} zum Küchenchef machen?",
+    "makeOwnerText": "Du gibst die Küche ab. Nur der neue Küchenchef kann sie zurückgeben.",
+    "makeOwner": "Übergeben",
+    "invite": "Nutzer einladen",
+    "inviteHint": "Nutzer hier: {{names}}",
+    "inviteRole": "Rolle für den eingeladenen Nutzer",
+    "inviteAction": "Einladen",
+    "leave": "Küche verlassen",
+    "leaveTitle": "{{name}} verlassen?",
+    "leaveText": "In dieser Küche geteilte Rezepte stehen dir dann nicht mehr zur Verfügung.",
+    "removeTitle": "{{name}} entfernen?",
+    "removeText": "Der Zugriff auf die hier geteilten Rezepte entfällt.",
+    "delete": "Küche löschen",
+    "deleteTitle": "{{name}} löschen?",
+    "deleteText": "Alle Mitglieder verlieren den geteilten Zugriff. Die Rezepte bleiben bei ihren Besitzern."
+  },
+  "training": {
+    "goals": "Ziele und Workouts",
+    "weeklyGoal": "Wochenziel",
+    "workoutsPerWeek_one": "{{count}} Workout pro Woche",
+    "workoutsPerWeek_other": "{{count}} Workouts pro Woche",
+    "cardioGoal": "Cardio-Minuten pro Woche",
+    "cardioGoalHint": "0 blendet das Ziel aus.",
+    "logging": "Erfassung",
+    "toggles": {
+      "cardioEnabled": "Cardio erfassen",
+      "screenKeepAwake": "Bildschirm im Workout anlassen",
+      "caloriesBurnedEnabled": "Verbrannte Kalorien schätzen",
+      "autoFillLastWeights": "Gewichte vom letzten Mal eintragen",
+      "showCompletionSummary": "Zusammenfassung nach dem Workout",
+      "autoCollapseCompleted": "Fertige Übungen einklappen",
+      "autoNameWorkouts": "Workouts automatisch benennen",
+      "confirmExerciseRemoval": "Vor dem Entfernen einer Übung fragen",
+      "autoGenerateWarmups": "Aufwärmsätze automatisch anlegen",
+      "trackRpe": "Anstrengung erfassen (RPE)"
+    },
+    "reorder": "Übungen umsortieren per",
+    "reorderOptions": {
+      "both": "Ziehen und Tasten",
+      "drag": "Ziehen",
+      "buttons": "Tasten"
+    },
+    "restTimer": "Pausentimer",
+    "restEnabled": "Pausentimer zwischen Sätzen",
+    "restDuration": "Pause",
+    "restAutoStart": "Nach jedem Satz starten",
+    "restAlert": "Hinweis, wenn die Pause endet",
+    "restVibrate": "Vibrieren",
+    "restSound": "Ton abspielen",
+    "tone": "Ton",
+    "playTone": "Ton abspielen",
+    "tones": {
+      "classic": {
+        "name": "Klassisch",
+        "description": "880-Hz-Pieptöne, bei 0 ein höheres Zirpen"
+      },
+      "bells": {
+        "name": "Glocken",
+        "description": "Weiches Glockenspiel mit Dur-Terz am Ende"
+      },
+      "beeper": {
+        "name": "Piepser",
+        "description": "Kurze, scharfe Rechtecktöne"
+      },
+      "gym": {
+        "name": "Studio",
+        "description": "Tiefe Schläge, bei 0 ein ansteigendes Horn"
+      },
+      "minimal": {
+        "name": "Dezent",
+        "description": "Ein leiser Klick bei 0"
+      }
+    },
+    "measurements": "Körpermaße",
+    "measurement": {
+      "weight": "Gewicht",
+      "bodyFat": "Körperfett",
+      "neck": "Hals",
+      "chest": "Brust",
+      "waist": "Taille",
+      "hips": "Hüfte",
+      "biceps": "Bizeps",
+      "thighs": "Oberschenkel",
+      "calves": "Waden"
+    },
+    "videos": {
+      "title": "Satzvideos",
+      "usage_one": "{{count}} Video, {{size}}, das älteste vom {{oldest}}",
+      "usage_other": "{{count}} Videos, {{size}}, das älteste vom {{oldest}}",
+      "none": "Keine Satzvideos gespeichert.",
+      "olderThan_one": "Älter als {{count}} Monat löschen",
+      "olderThan_other": "Älter als {{count}} Monate löschen",
+      "cleanTitle": "Alte Satzvideos löschen?",
+      "cleanText": "Videos von vor dem {{date}} werden endgültig gelöscht."
+    }
+  },
+  "catalog": {
+    "sources": "Quellen der Bibliothek",
+    "adminOnly": "Nur ein Admin kann in die gemeinsame Bibliothek importieren oder sie leeren.",
+    "count_one": "{{count}} Übung",
+    "count_other": "{{count}} Übungen",
+    "show": "Übungen aus {{name}} anzeigen",
+    "rapidApiKey": "RapidAPI-Schlüssel",
+    "byokNote": "Dein eigener Schlüssel, nur für diesen Import verwendet und nicht gespeichert. Für die Bedingungen des Anbieters bist du verantwortlich.",
+    "needsKey": "{{name}} braucht einen API-Schlüssel.",
+    "reimport": "Neu importieren",
+    "imported_one": "{{name}}: {{count}} Übung importiert",
+    "imported_other": "{{name}}: {{count}} Übungen importiert",
+    "clear": "Leeren",
+    "clearTitle": "Importierte Übungen entfernen?",
+    "clearText_one": "{{count}} Übung aus {{name}} wird aus der Bibliothek entfernt.",
+    "clearText_other": "{{count}} Übungen aus {{name}} werden aus der Bibliothek entfernt.",
+    "offline": "Medien für offline",
+    "offlineHint": "Lädt Bilder und Videos der Bibliothek herunter, damit sie ohne Verbindung erscheinen. Bilder, die eigene JSON-Kataloge von anderen Seiten laden, bleiben nicht gespeichert.",
+    "precache": "Medien herunterladen",
+    "precached": "{{done}} von {{total}} Dateien",
+    "own": "Meine Übungen",
+    "ownHint": "Angelegt und bearbeitet werden Übungen im Trainingsbereich.",
+    "noOwn": "Du hast noch keine Übung angelegt.",
+    "createInTraining": "Übung anlegen",
+    "deleteTitle": "{{name}} löschen?",
+    "deleteText": "Die Übung wird aus deiner Bibliothek entfernt.",
+    "deleteAll": "Alle eigenen Übungen löschen",
+    "deleteAllText_one": "{{count}} Übung wird entfernt.",
+    "deleteAllText_other": "{{count}} Übungen werden entfernt.",
+    "json": {
+      "title": "Eigener JSON-Katalog",
+      "template": "Vorlage herunterladen",
+      "format": "Dateiformat",
+      "pick": ".json-Datei wählen",
+      "noFile": "Keine Datei gewählt",
+      "name": "Name des Katalogs",
+      "content": "Katalog als JSON",
+      "clear": "Eingabe leeren",
+      "result": "{{count}} Übungen in „{{name}}“ importiert ({{duplicates}} Duplikate, {{skipped}} übersprungen).",
+      "errors": {
+        "name": "Gib einen Namen für den Katalog ein.",
+        "invalid": "Das ist kein gültiges JSON.",
+        "notAList": "Das JSON muss eine Liste von Übungen sein oder { \"exercises\": [...] }.",
+        "empty": "Das JSON enthält keine Übungen."
+      },
+      "deleteTitle": "Katalog {{name}} löschen?",
+      "deleteText_one": "{{count}} Übung wird entfernt.",
+      "deleteText_other": "{{count}} Übungen werden entfernt."
+    },
+    "licenseNotes": {
+      "shareAlike": "Namensnennung, Weitergabe unter gleichen Bedingungen",
+      "free": "keine Einschränkungen",
+      "rapidApi": "braucht einen RapidAPI-Schlüssel",
+      "community": "privater Gebrauch, von der Community betrieben"
+    },
+    "ownCount_one": "{{count}} Übung",
+    "ownCount_other": "{{count}} Übungen",
+    "precacheDone_one": "{{count}} Mediendatei durchlaufen",
+    "precacheDone_other": "{{count}} Mediendateien durchlaufen"
+  },
+  "radio": {
+    "selfHosted": "Eigener Musikserver",
+    "enabled": "Eigene Musik",
+    "provider": "Servertyp",
+    "providers": {
+      "emby": "Emby",
+      "jellyfin": "Jellyfin",
+      "plex": "Plex",
+      "subsonic": "Subsonic / Navidrome"
+    },
+    "url": "Serveradresse",
+    "user": "Benutzername",
+    "plexToken": "Plex-Token",
+    "password": "Passwort",
+    "apiKey": "API-Schlüssel",
+    "crossfade": "Überblenden",
+    "off": "Aus",
+    "seconds_one": "{{count}} Sekunde",
+    "seconds_other": "{{count}} Sekunden",
+    "originalFormat": "Im Originalformat streamen",
+    "stations": "Streaming-Sender",
+    "stationsHint": "Sender werden im Radio-Bereich angelegt und sortiert.",
+    "stationsEnabled": "Internetradio",
+    "openRadio": "Radio öffnen"
+  }
+}

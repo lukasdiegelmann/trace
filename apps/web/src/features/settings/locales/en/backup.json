@@ -1,0 +1,46 @@
+{
+  "backup": {
+    "description": "Each app keeps its own backups.",
+    "auto": "Automatic backups",
+    "envLocked": "Set by the server's environment",
+    "schedule": "Schedule",
+    "schedules": {
+      "off": "Off",
+      "daily": "Daily",
+      "weekly": "Weekly",
+      "monthly": "Monthly"
+    },
+    "time": "Time",
+    "retention": "Backups to keep",
+    "retentionHint_one": "Only the newest backup is kept.",
+    "retentionHint_other": "The newest {{count}} backups are kept.",
+    "lastError": "Last automatic backup failed: {{message}}",
+    "lastRun": "Last automatic backup {{when}}",
+    "nextRun": "Next due {{when}}",
+    "files": "Full backups",
+    "filesHint": "The whole app: database and files, for every user.",
+    "create": "Create a backup now",
+    "created": "Backup created.",
+    "none": "No backups yet.",
+    "restore": "Restore",
+    "restoreTitle": "Restore this backup?",
+    "restoreText": "Everything in this app, for every user, is replaced by {{name}}.",
+    "restored": "Backup restored.",
+    "restoring": "Uploading and restoring…",
+    "upload": "Upload a backup and restore it",
+    "deleteTitle": "Delete this backup?",
+    "jsonExport": "Your recipes and pantry as JSON",
+    "jsonExportHint": "Your own data without pictures. To restore, use a full backup.",
+    "danger": "Delete data",
+    "clearData": "Delete all my data",
+    "clearWorkouts": "Delete my training data",
+    "clearDataText": {
+      "nt": "Your foods, meals, diary and other nutrition data are deleted. This can't be undone.",
+      "ct": "Your recipes, pantry, shopping list and cook diary are deleted. This can't be undone.",
+      "lt": "Your workouts, body stats and media, assistant history and your own programs are deleted. This can't be undone."
+    },
+    "clearSettings": "Reset my settings",
+    "clearSettingsText": "All your {{app}} settings go back to their defaults.",
+    "clearSettingsLift": "The basic {{app}} settings (units, formats, weekly goal, appearance) go back to their defaults."
+  }
+}

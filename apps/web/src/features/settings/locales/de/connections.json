@@ -1,0 +1,63 @@
+{
+  "connections": {
+    "description": "Die drei Apps tauschen Daten über ihre APIs mit persönlichen Zugriffstokens aus.",
+    "nutritionFromCooking": "CookTrace in der Ernährung",
+    "nutritionFromCookingHint": "CookTrace-Rezepte als Mahlzeiten und den Vorrat als Lebensmittel nutzen.",
+    "cooktraceEnabled": "CookTrace verwenden",
+    "ctUrl": "CookTrace-Adresse",
+    "ctToken": "CookTrace-Token",
+    "ntUrl": "NutriTrace-Adresse",
+    "ntToken": "NutriTrace-Token",
+    "ntUrlHint": "In Trace: {{url}}",
+    "scopes": {
+      "nt": "Ein CookTrace-API-Token (ct_pat_…) mit read:recipes, für den Vorrat auch read:pantry.",
+      "ct": "Ein NutriTrace-API-Token (nt_pat_…) mit read:foods.",
+      "lt": "Ein NutriTrace-API-Token (nt_pat_…) mit write:workouts."
+    },
+    "missingRecipeScope": "Das Token funktioniert, ihm fehlt aber die Berechtigung read:recipes.",
+    "connectedAs": "Verbunden als {{name}}",
+    "unverified": "NutriTrace hat das Token nicht angenommen.",
+    "saveAndTest": "Speichern und testen",
+    "importRecipes": "Alle Rezepte importieren",
+    "importRecipesText": "Jedes CookTrace-Rezept wird in deine NutriTrace-Rezepte übernommen. Ein erneuter Lauf überschreibt frühere Importe, auch in NutriTrace bearbeitete.",
+    "importPantry": "Vorrat importieren",
+    "importPantryText": "Vorratsartikel und Varianten werden zu Lebensmitteln. Oberbegriffe mit Varianten bleiben außen vor. Kann gefahrlos wiederholt werden.",
+    "progress": "{{done}} von {{total}}",
+    "result": "{{imported}} importiert, {{updated}} aktualisiert, {{skipped}} übersprungen",
+    "collided_one": "{{count}} war schon in der Sammlung (gleicher Barcode) und blieb unverändert.",
+    "collided_other": "{{count}} waren schon in der Sammlung (gleicher Barcode) und blieben unverändert.",
+    "firstError": "Erster Fehler: {{message}}",
+    "cookingFromNutrition": "NutriTrace beim Kochen",
+    "cookingFromNutritionHint": "NutriTrace-Lebensmittel aus CookTrace nachschlagen.",
+    "importFromNt": "Lebensmittel in den Vorrat importieren",
+    "connectFirst": "Verbinde oben zuerst NutriTrace.",
+    "searchNt": "NutriTrace-Lebensmittel suchen",
+    "search": "Suchen",
+    "noFoods": "Keine Lebensmittel gefunden.",
+    "selected_one": "{{count}} ausgewählt",
+    "selected_other": "{{count}} ausgewählt",
+    "variantMode": "Anlegen als",
+    "variants": {
+      "flat": "Einzelne Artikel",
+      "variant-of-existing": "Varianten eines Artikels",
+      "variant-of-new": "Varianten eines neuen Artikels"
+    },
+    "parent": "Artikel, dessen Varianten sie sind",
+    "generic": "Oberbegriff",
+    "genericName": "Name des neuen Oberbegriffs",
+    "inStock": "Als vorrätig markieren",
+    "importSelected": "Auswahl importieren",
+    "importedFoods_one": "{{count}} Lebensmittel importiert",
+    "importedFoods_other": "{{count}} Lebensmittel importiert",
+    "trainingToNutrition": "Workouts an die Ernährung",
+    "trainingToNutritionHint": "Beendete Workouts zählen in NutriTrace als Kalorienverbrauch.",
+    "needsCalories": "Schalte in den Workout-Einstellungen „Verbrannte Kalorien schätzen“ ein; ohne das gibt es nichts zu senden.",
+    "sendWorkouts": "Beendete Workouts an NutriTrace senden",
+    "wearableWins": "An Tagen mit Wearable-Daten bevorzugt NutriTrace das Wearable.",
+    "pantryRefused": {
+      "scope": "Dem CookTrace-Token fehlt die Berechtigung read:pantry. Lege in CookTrace eines mit read:pantry an und füge es hier ein.",
+      "oldServer": "Dieser CookTrace-Server ist zu alt, um seinen Vorrat freizugeben. Aktualisiere CookTrace und versuche es noch einmal.",
+      "token": "CookTrace hat das Token abgelehnt. Lege ein neues an und füge es hier ein."
+    }
+  }
+}

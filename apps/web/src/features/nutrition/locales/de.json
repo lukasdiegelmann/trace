@@ -1,0 +1,1675 @@
+{
+  "title": "Ernährung",
+  "nav": {
+    "label": "Bereiche der Ernährung",
+    "diary": "Tagebuch",
+    "foods": "Lebensmittel",
+    "goals": "Ziele",
+    "statistics": "Statistik",
+    "wellness": "Gesundheit"
+  },
+  "nutrients": {
+    "calories": "Kalorien",
+    "kilojoules": "Kilojoule",
+    "fat": "Fett",
+    "saturated-fat": "Gesättigte Fettsäuren",
+    "trans-fat": "Transfette",
+    "polyunsaturated-fat": "Mehrfach ungesättigte Fettsäuren",
+    "monounsaturated-fat": "Einfach ungesättigte Fettsäuren",
+    "cholesterol": "Cholesterin",
+    "sodium": "Natrium",
+    "salt": "Salz",
+    "carbohydrates": "Kohlenhydrate",
+    "fiber": "Ballaststoffe",
+    "sugars": "Zucker",
+    "added-sugars": "Zugesetzter Zucker",
+    "proteins": "Eiweiß",
+    "vitamin-d": "Vitamin D",
+    "calcium": "Calcium",
+    "iron": "Eisen",
+    "potassium": "Kalium",
+    "vitamin-a": "Vitamin A",
+    "vitamin-c": "Vitamin C",
+    "vitamin-e": "Vitamin E",
+    "vitamin-k": "Vitamin K",
+    "b1": "Vitamin B1",
+    "b2": "Vitamin B2",
+    "b3": "Vitamin B3",
+    "b6": "Vitamin B6",
+    "b9": "Folat (B9)",
+    "b12": "Vitamin B12",
+    "magnesium": "Magnesium",
+    "zinc": "Zink",
+    "phosphorus": "Phosphor",
+    "caffeine": "Koffein",
+    "alcohol": "Alkohol"
+  },
+  "macros": {
+    "protein": "Eiweiß",
+    "carbs": "Kohlenhydrate",
+    "fat": "Fett",
+    "proteinShort": "E",
+    "carbsShort": "K",
+    "fatShort": "F",
+    "split": "Makroverteilung"
+  },
+  "mealNames": {
+    "Breakfast": "Frühstück",
+    "Lunch": "Mittagessen",
+    "Dinner": "Abendessen",
+    "Snacks": "Snacks"
+  },
+  "bodyStats": {
+    "weight": "Gewicht",
+    "body_fat": "Körperfett",
+    "body_water": "Körperwasser",
+    "neck": "Hals",
+    "waist": "Taille",
+    "hips": "Hüfte",
+    "chest": "Brust",
+    "thighs": "Oberschenkel",
+    "biceps": "Bizeps",
+    "calves": "Waden"
+  },
+  "unitGroups": {
+    "custom": "Eigene",
+    "massMetric": "Masse – metrisch",
+    "massUs": "Masse – US",
+    "volumeMetric": "Volumen – metrisch",
+    "volumeUs": "Volumen – US",
+    "count": "Stück"
+  },
+  "common": {
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "close": "Schließen",
+    "delete": "Löschen",
+    "remove": "Entfernen",
+    "edit": "Bearbeiten",
+    "add": "Hinzufügen",
+    "retry": "Erneut versuchen",
+    "loading": "Lädt…",
+    "more": "Weitere Aktionen",
+    "today": "Heute",
+    "yesterday": "Gestern",
+    "tomorrow": "Morgen",
+    "loadError": "NutriTrace ist nicht erreichbar.",
+    "saveError": "Speichern fehlgeschlagen: {{message}}"
+  },
+  "unit": {
+    "label": "Einheit",
+    "search": "Einheiten suchen…",
+    "none": "Keine Einheit gefunden"
+  },
+  "diary": {
+    "title": "Tagebuch",
+    "previousDay": "Vorheriger Tag",
+    "nextDay": "Nächster Tag",
+    "chooseDate": "Datum wählen",
+    "hasNote": "Mit Notiz",
+    "dayDone": "Tag abgeschlossen",
+    "openWater": "Wasser",
+    "openSummary": "Nährwertübersicht",
+    "openBodyStats": "Körperwerte",
+    "selected_one": "{{count}} ausgewählt",
+    "selected_other": "{{count}} ausgewählt",
+    "exitSelect": "Auswahl beenden",
+    "deleteSelected": "Ausgewählte löschen",
+    "tapToAdd": "Tippen, um Lebensmittel hinzuzufügen",
+    "addFood": "Lebensmittel hinzufügen",
+    "addFoodTo": "Lebensmittel zu {{meal}} hinzufügen",
+    "quickCaloriesTo": "Schnelle Kalorien für {{meal}}",
+    "mealActions": "Aktionen für {{meal}}",
+    "itemActions": "Aktionen für {{name}}",
+    "completeMeal": "{{meal}} als fertig markieren",
+    "reopenMeal": "{{meal}} wieder öffnen",
+    "mealSplit": "{{protein}} % E · {{carbs}} % K · {{fat}} % F · {{energy}}",
+    "showMealTotals": "Summen für {{meal}}",
+    "showIngredients": "Zutaten anzeigen",
+    "hideIngredients": "Zutaten ausblenden",
+    "removeIngredient": "{{name}} entfernen",
+    "portionDetail": "({{quantity}} × {{portion}})",
+    "selectItem": "{{name}} auswählen",
+    "actions": {
+      "edit": "Bearbeiten",
+      "replace": "Ersetzen",
+      "move": "In Mahlzeit verschieben…",
+      "copy": "Kopieren…",
+      "select": "Mehrere auswählen",
+      "split": "Rezept aufteilen",
+      "delete": "Löschen",
+      "moveAll": "Einträge verschieben nach…",
+      "saveAsMeal": "Als Mahlzeit speichern…",
+      "clearAll": "Alle Einträge entfernen"
+    },
+    "quick": {
+      "defaultName": "Schnelle Kalorien",
+      "title": "Schnelle Kalorien: {{meal}}",
+      "help": "Erfasse nur die Energie, wenn du keine vollständigen Nährwerte hast. Es wird kein Lebensmittel angelegt.",
+      "name": "Name (optional)",
+      "energy": "Energie ({{unit}})",
+      "macro": "{{macro}} in g (optional)",
+      "invalid": "Gib einen positiven Wert in {{unit}} ein.",
+      "group_one": "Schnelle Kalorien × {{count}}",
+      "group_other": "Schnelle Kalorien × {{count}}",
+      "expand": "zum Aufklappen tippen",
+      "collapse": "zum Zuklappen tippen",
+      "entry": "(Schnelleintrag)"
+    },
+    "edit": {
+      "portion": "Portionsgröße",
+      "servings": "Anzahl Portionen",
+      "time": "Uhrzeit",
+      "total": "Gesamtmenge: {{amount}}"
+    },
+    "toast": {
+      "replaced": "Eintrag ersetzt",
+      "moved": "Nach {{meal}} verschoben",
+      "movedMany_one": "{{count}} Eintrag nach {{meal}} verschoben",
+      "movedMany_other": "{{count}} Einträge nach {{meal}} verschoben",
+      "sameMeal": "Schon in dieser Mahlzeit",
+      "copied": "Nach {{meal}} am {{date}} kopiert",
+      "copiedMany_one": "{{count}} Eintrag nach {{meal}} am {{date}} kopiert",
+      "copiedMany_other": "{{count}} Einträge nach {{meal}} am {{date}} kopiert",
+      "nothingToCopy": "Nichts zu kopieren",
+      "sameDay": "Eine Mahlzeit lässt sich nicht auf denselben Tag kopieren.",
+      "deleted": "{{name}} entfernt",
+      "deletedMany_one": "{{count}} Eintrag entfernt",
+      "deletedMany_other": "{{count}} Einträge entfernt",
+      "cleared_one": "{{count}} Eintrag aus {{meal}} entfernt",
+      "cleared_other": "{{count}} Einträge aus {{meal}} entfernt",
+      "splitDone": "Rezept in Zutaten aufgeteilt",
+      "splitFailed": "Aufteilen nicht möglich: keine Zutaten gefunden",
+      "savedMeal": "„{{name}}“ unter Mahlzeiten gespeichert",
+      "quickAdded": "Schnelle Kalorien hinzugefügt"
+    },
+    "confirm": {
+      "deleteTitle": "{{name}} entfernen?",
+      "deleteText": "Der Eintrag wird aus deinem Tagebuch entfernt.",
+      "deleteManyTitle_one": "{{count}} Eintrag löschen?",
+      "deleteManyTitle_other": "{{count}} Einträge löschen?",
+      "clearTitle": "{{meal}} komplett leeren?",
+      "clearText": "Alle Einträge dieser Mahlzeit am {{date}} werden entfernt. Das lässt sich nicht rückgängig machen."
+    },
+    "move": {
+      "title": "In Mahlzeit verschieben"
+    },
+    "copy": {
+      "title": "„{{name}}“ kopieren nach…",
+      "date": "Datum",
+      "meal": "Mahlzeit",
+      "confirm": "Kopieren"
+    },
+    "saveMeal": {
+      "title": "Als Mahlzeit speichern",
+      "name": "Name der Mahlzeit",
+      "count_one": "{{count}} Eintrag wird gespeichert",
+      "count_other": "{{count}} Einträge werden gespeichert"
+    },
+    "menu": {
+      "title_one": "{{meal}} · {{count}} Eintrag",
+      "title_other": "{{meal}} · {{count}} Einträge"
+    },
+    "totals": {
+      "title": "Summen: {{meal}}",
+      "items_one": "{{count}} Eintrag",
+      "items_other": "{{count}} Einträge"
+    },
+    "summary": {
+      "title": "Nährwertübersicht",
+      "percent": "%",
+      "grams": "g",
+      "legend": "Makros anzeigen als",
+      "contributors": "Größte Quellen für {{nutrient}}",
+      "more_one": "+{{count}} weiterer Eintrag ({{amount}})",
+      "more_other": "+{{count}} weitere Einträge ({{amount}})",
+      "showTop": "Nur die ersten 5",
+      "empty": "Noch nichts erfasst"
+    },
+    "water": {
+      "title": "Wasser",
+      "progress": "{{total}} von {{goal}} {{unit}}",
+      "percent": "{{percent}} %",
+      "reached": "Ziel erreicht 🎉",
+      "quickAdd": "Schnell hinzufügen",
+      "custom": "Eigene Menge",
+      "amount": "Menge ({{unit}})",
+      "log": "Heutige Einträge",
+      "empty": "Heute noch kein Wasser",
+      "edit": "{{amount}} bearbeiten",
+      "remove": "{{amount}} entfernen"
+    },
+    "body": {
+      "title": "Körperwerte",
+      "field": "{{name}} ({{unit}})",
+      "notLogged": "Gewicht nicht erfasst",
+      "log": "Erfassen",
+      "editWeight": "Gewicht bearbeiten",
+      "noMeasurements": "Heute keine Maße erfasst",
+      "logStats": "Werte erfassen",
+      "saved": "Körperwerte gespeichert"
+    },
+    "notes": {
+      "title": "Tagesnotizen",
+      "placeholder": "Wie war dein Tag? Schlaf, Energie, Hunger, Heißhunger…",
+      "saving": "Speichert…",
+      "characters_one": "{{count}} Zeichen",
+      "characters_other": "{{count}} Zeichen"
+    },
+    "completion": {
+      "progress": "{{done}} von {{total}}",
+      "complete": "Tag abschließen",
+      "completed": "Tag abgeschlossen",
+      "closedAt": "abgeschlossen um {{time}}",
+      "reopen": "Wieder öffnen",
+      "reopened": "Tag wieder geöffnet",
+      "confirmTitle": "Tag abschließen?",
+      "confirmText": "Diese Mahlzeiten sind leer und werden als fertig markiert: {{meals}}",
+      "autoClosed": "Alle Mahlzeiten fertig, Tag abgeschlossen",
+      "reminderTip": "Tipp: Mahlzeit-Erinnerungen in den Einstellungen helfen beim Abschließen."
+    },
+    "activity": {
+      "title": "Aktivität",
+      "wellnessHint": "Der Verbrauch deiner Uhr wird unter Gesundheit erfasst.",
+      "tapToAdd": "Tippen, um Aktivität hinzuzufügen",
+      "add": "Aktivität hinzufügen",
+      "minutes": "{{count}} min",
+      "estimated": "Geschätzt",
+      "notCounted": "Nicht angerechnet",
+      "deleted": "Aktivität gelöscht",
+      "actions": "Aktionen für {{name}}",
+      "addTitle": "Aktivität hinzufügen",
+      "editTitle": "Aktivität bearbeiten",
+      "name": "Name",
+      "browse": "Aktivitäten durchsuchen",
+      "met": "MET {{met}}",
+      "duration": "Dauer in min (optional)",
+      "distance": "Distanz (optional)",
+      "distancePlaceholder": "z. B. 10 {{unit}}",
+      "energy": "Energie ({{unit}})",
+      "formula": "MET {{met}} × {{weight}} kg × {{minutes}} min = {{energy}}",
+      "noWeight": "Kein Gewicht hinterlegt: Trag die Energie selbst ein.",
+      "template": "Als Vorlage speichern",
+      "addAction": "Zum Tagebuch hinzufügen",
+      "saveAction": "Änderungen speichern",
+      "nameRequired": "Gib einen Namen ein.",
+      "energyRequired": "Gib einen positiven Energiewert ein.",
+      "templates": "Vorlagen",
+      "past": "Frühere Einträge",
+      "compendium": "Kompendium",
+      "searchActivities": "Aktivitäten suchen…",
+      "back": "Alle Kategorien",
+      "noResults": "Keine Aktivität gefunden",
+      "categories": {
+        "Running": "Laufen",
+        "Bicycling": "Radfahren",
+        "Walking": "Gehen",
+        "Water": "Wassersport",
+        "Winter": "Wintersport",
+        "Sports": "Sport",
+        "Conditioning": "Fitness",
+        "Dancing": "Tanzen",
+        "Home": "Haushalt",
+        "Occupation": "Beruf"
+      }
+    },
+    "fasting": {
+      "title": "Fasten",
+      "start": "Fasten starten",
+      "last": "Letztes Fasten: {{hours}} h · beendet {{ago}}",
+      "custom": "Eigene",
+      "hours": "Ziel in Stunden",
+      "presetName": "Name der Vorlage",
+      "savePreset": "Vorlage speichern",
+      "presetActions": "Aktionen für {{name}}",
+      "removePreset": "Vorlage entfernen",
+      "removePresetTitle": "„{{name}}“ entfernen?",
+      "running": "Fasten · {{hours}} h {{minutes}} min",
+      "reached": "Ziel erreicht · {{hours}} h {{minutes}} min",
+      "started": "Begonnen {{time}}",
+      "goal": "Ziel {{hours}} h",
+      "target": "Zielzeit {{time}}",
+      "progress": "Fortschritt beim Fasten",
+      "end": "Fasten beenden",
+      "endTitle": "Fasten beenden?",
+      "endText": "Du fastest seit {{hours}} h {{minutes}} min.",
+      "editStart": "Beginn ändern",
+      "startDate": "Startdatum",
+      "startTime": "Startzeit",
+      "errors": {
+        "invalid": "Gib ein gültiges Datum mit Uhrzeit ein.",
+        "future": "Der Beginn darf nicht in der Zukunft liegen.",
+        "tooOld": "Der Beginn darf höchstens 7 Tage zurückliegen."
+      },
+      "startedToast": "Fasten gestartet · Ziel {{hours}} h",
+      "endedToast": "Fasten beendet",
+      "notifyTitle": "Fastenziel erreicht",
+      "notifyBody": "Du hast dein Fastenziel von {{hours}} h erreicht."
+    },
+    "bar": {
+      "consumed": "Gegessen",
+      "remaining": "Übrig",
+      "left": "{{energy}} übrig",
+      "eaten": "{{energy}} gegessen",
+      "breakdown": "Ziel {{goal}} + Aktivität {{activity}} = {{total}}",
+      "waterLeft": "{{amount}} übrig von {{goal}}",
+      "waterOf": "{{amount}} von {{goal}}",
+      "expand": "Summen anzeigen",
+      "collapse": "Summen ausblenden",
+      "calories": "Kalorienfortschritt",
+      "mode": "Anzeige der Summen",
+      "dynamic": "Dynamisches Ziel",
+      "adaptive": "Adaptives Ziel"
+    },
+    "rail": {
+      "title": "Übersicht",
+      "hide": "Übersicht ausblenden",
+      "show": "Übersicht anzeigen",
+      "pin": "Übersicht anheften",
+      "summary": "Tagesübersicht",
+      "impact": "Einfluss der Aktivität",
+      "mode": {
+        "dynamic": "⚡ Dynamisch",
+        "adaptive": "📈 Adaptiv"
+      },
+      "wearableBurn": "Verbrauch laut Uhr (gestern)",
+      "learnedTdee": "Ermittelter Gesamtumsatz (35 Tage)",
+      "baseGoal": "Basisziel",
+      "todaysActive": "Aktivität heute",
+      "adjustedGoal": "Angepasstes Ziel",
+      "calorieTrend": "Kalorienverlauf anzeigen"
+    },
+    "week": {
+      "label": "Woche",
+      "foods_one": "{{count}} Lebensmittel erfasst",
+      "foods_other": "{{count}} Lebensmittel erfasst",
+      "day": "{{date}}: {{energy}}",
+      "status": {
+        "over": "über dem Ziel",
+        "under": "unter dem Ziel",
+        "on": "im Ziel",
+        "none": "keine Einträge",
+        "future": "bevorstehend"
+      }
+    }
+  },
+  "foods": {
+    "tabs": {
+      "label": "Bibliothek",
+      "foods": "Lebensmittel",
+      "meals": "Mahlzeiten",
+      "recipes": "Rezepte"
+    },
+    "new": {
+      "foods": "Neues Lebensmittel",
+      "meals": "Neue Mahlzeit",
+      "recipes": "Neues Rezept"
+    },
+    "pickTitle": "Zu {{meal}} hinzufügen",
+    "backToDiary": "Zurück zum Tagebuch",
+    "selected_one": "{{count}} ausgewählt",
+    "selected_other": "{{count}} ausgewählt",
+    "addSelected_one": "{{count}} hinzufügen",
+    "addSelected_other": "{{count}} hinzufügen",
+    "clearSelection": "Auswahl aufheben",
+    "search": {
+      "label": "Suchen",
+      "placeholder": "Suchen…",
+      "clear": "Suche leeren",
+      "scan": "Barcode scannen"
+    },
+    "sources": {
+      "label": "Quelle",
+      "combine": "Quellen kombinieren",
+      "local": "Meine Bibliothek",
+      "all": "Alle",
+      "off": "Open Food Facts",
+      "usda": "USDA",
+      "mealie": "Mealie",
+      "cooktrace": "CookTrace",
+      "cooktracePantry": "CookTrace-Vorrat",
+      "shared": "Von anderen"
+    },
+    "categories": {
+      "label": "Kategorien",
+      "all": "Alle"
+    },
+    "sort": {
+      "label": "Sortieren nach",
+      "alpha": "Name",
+      "recent": "Zuletzt verwendet",
+      "most": "Am häufigsten"
+    },
+    "filters": {
+      "label": "Filter",
+      "none": "Keine Filter"
+    },
+    "tier": {
+      "offLabel": "OFF-Datenqualität",
+      "usdaLabel": "USDA-Datentyp",
+      "reset": "Zurücksetzen",
+      "filtered": "Gefiltert",
+      "high": "Hoch (≥ 70 % vollständig)",
+      "medium": "Mittel (40–70 %)",
+      "low": "Niedrig (< 40 %)",
+      "unknown": "Unbekannt",
+      "hidden_one": "{{count}} Ergebnis vom Filter ausgeblendet",
+      "hidden_other": "{{count}} Ergebnisse vom Filter ausgeblendet"
+    },
+    "empty": {
+      "library": "Noch nichts vorhanden",
+      "noMatch": "Keine Treffer",
+      "noMatchHint": "Versuche die Suche in Open Food Facts oder USDA",
+      "typeToSearch": "Zum Suchen tippen",
+      "searching": "Suche läuft…",
+      "noResults": "Keine Ergebnisse"
+    },
+    "results": {
+      "count": "{{shown}} von {{total}} angezeigt",
+      "countShort": "{{source}}: {{shown}}",
+      "countOf": "{{source}}: {{shown}} von {{total}}",
+      "loadMore": "Mehr laden",
+      "loadingMore": "Lädt weitere…",
+      "failed": "Suche in {{source}} fehlgeschlagen: {{message}}"
+    },
+    "row": {
+      "actions": "Aktionen für {{name}}",
+      "select": "{{name}} auswählen",
+      "favorite": "Favorit",
+      "by": "von {{owner}}",
+      "per": "pro 100 {{unit}}",
+      "servings_one": "{{count}} Portion",
+      "servings_other": "{{count}} Portionen",
+      "noValues": "Keine Werte angegeben",
+      "contents": "Inhalt von {{name}}",
+      "completeness": "{{percent}} % vollständig",
+      "origin": "Herkunft: {{country}}"
+    },
+    "actions": {
+      "edit": "Bearbeiten",
+      "clone": "Duplizieren",
+      "select": "Mehrere auswählen",
+      "delete": "Löschen",
+      "saveToCatalog": "In meinen Katalog speichern",
+      "saveToFoods": "Zu meinen Lebensmitteln speichern"
+    },
+    "manage": {
+      "start": "Auswählen",
+      "cancel": "Abbrechen",
+      "selectAll": "Alle auswählen",
+      "selectNone": "Nichts auswählen",
+      "delete": "Löschen",
+      "confirmTitle_one": "{{count}} Eintrag löschen?",
+      "confirmTitle_other": "{{count}} Einträge löschen?",
+      "confirmText": "Bereits erfasste Tagebucheinträge behalten ihre Werte.",
+      "deleted_one": "{{count}} Eintrag gelöscht",
+      "deleted_other": "{{count}} Einträge gelöscht",
+      "partly": "{{done}} von {{total}} gelöscht"
+    },
+    "deleteConfirm": {
+      "title": "„{{name}}“ löschen?"
+    },
+    "toast": {
+      "deleted": "Gelöscht",
+      "cloned": "Dupliziert",
+      "copyName": "Kopie von {{name}}",
+      "savedToCatalog": "In deinem Katalog gespeichert",
+      "savedToFoods": "Zu deinen Lebensmitteln gespeichert",
+      "added": "Zum Tagebuch hinzugefügt",
+      "addedTo": "Zu {{meal}} hinzugefügt",
+      "addedCount_one": "{{count}} Eintrag hinzugefügt",
+      "addedCount_other": "{{count}} Einträge hinzugefügt",
+      "mealEmpty": "Diese Mahlzeit enthält nichts zum Hinzufügen",
+      "mealPartly": "Nicht alle Einträge konnten hinzugefügt werden: {{names}}",
+      "mealStale": "Mit veralteten Zutaten hinzugefügt: {{names}}",
+      "offSkipped": "Ausgelassen, weil Open Food Facts keine brauchbaren Werte hat: {{names}}. Lege sie unter Lebensmittel mit den Werten der Packung an.",
+      "importFailed": "Import fehlgeschlagen: {{message}}",
+      "sharedFailed": "Geteilte Einträge konnten nicht geladen werden"
+    },
+    "quantity": {
+      "title": "Zum Tagebuch hinzufügen",
+      "multiTitle": "Portionen festlegen ({{count}} Einträge)",
+      "per": "Nährwerte pro 100 {{unit}}",
+      "altUnit": "1 {{abbr}} ({{grams}} g)",
+      "mismatch": "Diese Einheit passt nicht zur Nährwertbasis und es ist keine Dichte hinterlegt. Die Werte sind nur geschätzt.",
+      "confirm": "Hinzufügen",
+      "confirmCount_one": "{{count}} Eintrag hinzufügen",
+      "confirmCount_other": "{{count}} Einträge hinzufügen"
+    },
+    "yesterday": {
+      "title": "Mahlzeiten von gestern",
+      "saved": "Gespeicherte Mahlzeiten",
+      "count_one": "{{count}} Eintrag",
+      "count_other": "{{count}} Einträge",
+      "add": "{{meal}} von gestern hinzufügen",
+      "info": "{{meal}} von gestern anzeigen",
+      "addMeal": "Diese Mahlzeit hinzufügen"
+    },
+    "contents": {
+      "total": "Gesamt: {{energy}}",
+      "addMeal": "Diese Mahlzeit hinzufügen",
+      "addRecipe": "Dieses Rezept hinzufügen",
+      "empty": "Keine Zutaten"
+    },
+    "detail": {
+      "barcode": "Barcode {{code}}",
+      "addToDiary": "Zum Tagebuch hinzufügen",
+      "chooseMeal": "Mahlzeit",
+      "previewEmpty": "Wähle einen Eintrag für die Vorschau",
+      "closePreview": "Vorschau schließen",
+      "offNotice": {
+        "none": "Open Food Facts hat für dieses Produkt keine Nährwerte.",
+        "implausible": "Die Werte von Open Food Facts für dieses Produkt sind unplausibel.",
+        "preparedOnly": "Open Food Facts hat nur Werte für das zubereitete Produkt."
+      }
+    },
+    "scanner": {
+      "title": "Barcode scannen",
+      "engine": "Scanner",
+      "camera": "Kamera",
+      "hint": "Halte den Barcode in den Rahmen",
+      "starting": "Kamera startet…",
+      "noCamera": "Keine Kamera verfügbar. Gib den Code von Hand ein.",
+      "denied": "Der Kamerazugriff wurde verweigert. Erlaube ihn im Browser oder gib den Code ein.",
+      "failed": "Der Scanner konnte nicht starten: {{message}}",
+      "refresh": "Neu starten",
+      "torchOn": "Licht an",
+      "torchOff": "Licht aus",
+      "manual": "Barcode-Nummer",
+      "lookUp": "Nachschlagen",
+      "lookingUp": "Suche {{code}}…",
+      "notFound": "Kein Produkt für {{code}} gefunden",
+      "lookupFailed": "Suche fehlgeschlagen: {{message}}",
+      "videoLabel": "Kamerabild"
+    }
+  },
+  "facts": {
+    "title": "Nährwertangaben",
+    "servingSize": "Portionsgröße: {{serving}}",
+    "perServing": "pro Portion",
+    "amountPer": "Menge pro Portion",
+    "calories": "Kalorien",
+    "energy": "Energie",
+    "dv": "% TB",
+    "dvHint": "% Tagesbedarf (FDA-Referenz)",
+    "vitamins": "Vitamine & Mineralstoffe",
+    "includesAddedSugars": "davon zugesetzter Zucker",
+    "derived": "Aus Natrium bzw. Salz berechnet",
+    "empty": "Keine Nährwerte"
+  },
+  "editor": {
+    "back": "Zurück",
+    "save": "Speichern",
+    "saved": "Gespeichert",
+    "saveFailed": "Speichern fehlgeschlagen: {{message}}",
+    "loadFailed": "Eintrag konnte nicht geladen werden: {{message}}",
+    "nameRequired": "Gib einen Namen ein.",
+    "draft": {
+      "restored": "Deine nicht gespeicherten Änderungen wurden wiederhergestellt.",
+      "discard": "Verwerfen"
+    },
+    "shared": {
+      "title": "Geteilt von {{name}}",
+      "readOnly": "Dieser Eintrag gehört jemand anderem und ist schreibgeschützt.",
+      "copy": "In meinen Katalog speichern",
+      "unnamed": "Geteilter Eintrag"
+    },
+    "photo": {
+      "label": "Foto",
+      "camera": "Kamera",
+      "upload": "Hochladen",
+      "url": "Link",
+      "urlLabel": "Bildadresse",
+      "get": "Übernehmen",
+      "remove": "Foto entfernen",
+      "take": "Foto aufnehmen",
+      "capture": "Aufnehmen",
+      "cameraDenied": "Die Kamera ist nicht verfügbar oder der Zugriff wurde verweigert.",
+      "cropTitle": "Foto zuschneiden",
+      "cropHint": "Wähle den quadratischen Ausschnitt.",
+      "useCrop": "Zuschneiden und verwenden",
+      "size": "Größe",
+      "horizontal": "Horizontal",
+      "vertical": "Vertikal",
+      "invalid": "Diese Datei ist kein Bild."
+    },
+    "favorite": {
+      "add": "Zu Favoriten hinzufügen",
+      "remove": "Aus Favoriten entfernen"
+    },
+    "notes": "Notizen",
+    "categories": "Kategorie"
+  },
+  "foodEditor": {
+    "newTitle": "Neues Lebensmittel",
+    "editTitle": "Lebensmittel bearbeiten",
+    "name": "Name",
+    "brand": "Marke",
+    "portion": "Portionsgröße",
+    "link": {
+      "on": "Nährwerte skalieren mit der Portionsgröße",
+      "label": "Nährwerte mit Portion skalieren"
+    },
+    "metadata": {
+      "title": "Einheiten",
+      "basis": "Nährwertbasis",
+      "per100g": "Pro 100 g",
+      "per100ml": "Pro 100 ml",
+      "servingUnits": "Portionseinheiten",
+      "abbr": "Name, z. B. Scheibe",
+      "grams": "Gramm",
+      "addUnit": "Portionseinheit hinzufügen",
+      "removeUnit": "Portionseinheit entfernen",
+      "density": "Dichte in g/ml (optional)"
+    },
+    "barcode": "Barcode",
+    "scan": "Barcode scannen",
+    "barcodeSet": "Barcode übernommen",
+    "duplicate": "Du hast bereits ein Lebensmittel mit diesem Barcode: {{name}}",
+    "openExisting": "Öffnen",
+    "off": {
+      "refresh": "Aus Open Food Facts aktualisieren",
+      "share": "Bei Open Food Facts teilen",
+      "view": "Bei Open Food Facts ansehen",
+      "notFound": "Open Food Facts kennt diesen Barcode nicht.",
+      "updated_one": "{{count}} Wert aktualisiert",
+      "updated_other": "{{count}} Werte aktualisiert",
+      "upToDate": "Bereits aktuell",
+      "unitsDiffer": "Open Food Facts verwendet {{unit}}, das sich nicht auf deine Portion umrechnen lässt.",
+      "preparedOnly": "Open Food Facts hat nur Werte für das zubereitete Produkt ({{kcal}} kcal pro 100 {{unit}}).",
+      "usePrepared": "Diese Werte verwenden",
+      "preparedNote": "Werte gelten für das zubereitete Produkt (Open Food Facts).",
+      "implausible": "Die Werte von Open Food Facts sind unplausibel und wurden nicht übernommen.",
+      "none": "Open Food Facts hat keine Nährwerte.",
+      "failed": "Abfrage bei Open Food Facts fehlgeschlagen: {{message}}",
+      "uploading": "Wird hochgeladen…",
+      "submitted": "An Open Food Facts übermittelt. Es kann einige Minuten dauern, bis es erscheint.",
+      "needsAccount": "Hinterlege zuerst Benutzername und Passwort für Open Food Facts in den Einstellungen.",
+      "uploadFailed": "Hochladen fehlgeschlagen: {{message}}",
+      "uploadDisabled": "Das Hochladen ist auf diesem Server abgeschaltet."
+    },
+    "nutrition": "Nährwerte pro Portion",
+    "energyKj": "Energie (kJ)",
+    "field": "{{name}} ({{unit}})",
+    "showAll": "Alle Nährwerte anzeigen",
+    "showLess": "Weniger anzeigen",
+    "addedToDiary": "Gespeichert und zum Tagebuch hinzugefügt"
+  },
+  "mealEditor": {
+    "newMeal": "Neue Mahlzeit",
+    "newRecipe": "Neues Rezept",
+    "editMeal": "Mahlzeit bearbeiten",
+    "editRecipe": "Rezept bearbeiten",
+    "name": "Name",
+    "servings": {
+      "total": "Gesamtmenge",
+      "totalHint": "Wird aus den Zutaten berechnet",
+      "yields": "Portionen",
+      "yieldsHint": "Wie viele Portionen das Rezept ergibt",
+      "perServing": "Pro Portion: {{amount}} · {{energy}}"
+    },
+    "ingredients": {
+      "titleMeal": "Lebensmittel und Rezepte",
+      "titleRecipe": "Lebensmittel",
+      "total": "{{energy}} gesamt",
+      "count_one": "{{count}} Zutat",
+      "count_other": "{{count}} Zutaten",
+      "add": "Zutat hinzufügen",
+      "empty": "Noch keine Zutaten",
+      "edit": "Menge ändern",
+      "moveUp": "Nach oben",
+      "moveDown": "Nach unten",
+      "remove": "Entfernen",
+      "required": "Füge mindestens eine Zutat hinzu."
+    },
+    "picker": {
+      "title": "Zutat hinzufügen",
+      "addSelected_one": "{{count}} Zutat hinzufügen",
+      "addSelected_other": "{{count}} Zutaten hinzufügen",
+      "offNoValues": "Open Food Facts hat keine brauchbaren Werte für {{name}}. Lege es unter Lebensmittel mit den Werten der Packung an.",
+      "catalogFailed": "Konnte nicht in deinen Katalog gespeichert werden: {{message}}"
+    },
+    "totals": "Nährwerte gesamt",
+    "stale": "Einige Zutaten sind nicht mehr in deiner Bibliothek: {{names}}",
+    "source": {
+      "from": "Aus {{app}}",
+      "open": "Original öffnen",
+      "warnings": "Hinweise zum Import"
+    },
+    "cooktrace": {
+      "newer": "Dieses Rezept wurde in CookTrace geändert.",
+      "refresh": "Aktualisieren",
+      "refreshed": "Aus CookTrace aktualisiert. Speichern, um es zu behalten.",
+      "failed": "Aktualisieren fehlgeschlagen: {{message}}",
+      "deleted": "Dieses Rezept wurde in CookTrace gelöscht.",
+      "unlink": "Verknüpfung lösen",
+      "unlinkTitle": "Verknüpfung zu CookTrace lösen?",
+      "delete": "Auch hier löschen",
+      "deleteTitle": "Dieses Rezept löschen?",
+      "removed": "Rezept gelöscht"
+    }
+  },
+  "goals": {
+    "title": "Ziele",
+    "tabs": {
+      "label": "Ansichten der Ziele",
+      "yours": "Deine Ziele",
+      "all": "Alle Felder",
+      "templates": "Vorlagen"
+    },
+    "mode": {
+      "label": "Kalorienziel",
+      "fixed": "Fest",
+      "dynamic": "Dynamisch",
+      "adaptive": "Adaptiv",
+      "fixedText": "Verwendet das Kalorienziel aus deinen Zielen.",
+      "dynamicText": "Verwendet den gestrigen Verbrauch deiner Uhr mal Faktor. Ohne Daten gilt dein festes Ziel.",
+      "adaptiveText": "Ermittelt deinen Umsatz aus Gewicht und Tagebuch. Bis genug Daten vorliegen, gilt dein festes Ziel.",
+      "needsWearable": "Verbinde unter Gesundheit eine Uhr, um das dynamische Ziel zu nutzen.",
+      "toSettings": "Einstellungen öffnen",
+      "adaptiveDocs": "So funktioniert die adaptive Schätzung (Dokumentation)"
+    },
+    "factor": {
+      "label": "Zielfaktor",
+      "lose": "Abnehmen −20 %",
+      "maintain": "Halten",
+      "gain": "Zunehmen +20 %"
+    },
+    "adaptive": {
+      "title": "Adaptiver Gesamtumsatz",
+      "learned": "Ermittelt: {{energy}} pro Tag · Gewichtstrend {{trend}} {{unit}} pro Woche",
+      "building": "Daten werden aufgebaut: {{available}} von {{required}} Tagen mit Gewicht und Tagebuch",
+      "untilReady": "Bis dahin gilt dein festes Ziel von {{energy}}.",
+      "todayGoal": "Heutiges Ziel",
+      "confidence": "Genauigkeit",
+      "weightSource": "Gewichtsquelle",
+      "source": {
+        "wellness": "Waage",
+        "manual": "Tagebuch",
+        "mixed": "Gemischt"
+      },
+      "failed": "Die adaptive Schätzung konnte nicht geladen werden.",
+      "help": "So funktioniert's",
+      "helpIntro": "Trace vergleicht, was du isst, mit der Entwicklung deines Gewichts in den letzten 35 Tagen.",
+      "helpIntake": "Es summiert die Kalorien jedes erfassten Tages.",
+      "helpWeight": "Es nimmt dein Gewicht von der Waage oder aus dem Tagebuch und füllt Lücken dazwischen.",
+      "helpTrend": "Aus dem Gewichtstrend ergibt sich dein Tagesumsatz: Aufnahme minus Zu- oder Abnahme.",
+      "helpTips": "Für gute Ergebnisse: wiege dich oft, erfasse mindestens 21 Tage vollständig und wiege dich nach einer Pause neu.",
+      "helpCaveats": "Wassereinlagerungen, Krankheit oder fehlende Einträge können die Schätzung verschieben."
+    },
+    "sections": {
+      "macros": "Makronährstoffe",
+      "body": "Körperwerte",
+      "nutrients": "Nährstoffe",
+      "water": "Wasser",
+      "wellness": "Gesundheit"
+    },
+    "empty": {
+      "title": "Noch keine Ziele",
+      "hint": "Wähle oben eine Makro-Vorlage oder setze Ziele unter Alle Felder."
+    },
+    "presets": {
+      "label": "Makro-Vorlagen",
+      "balanced": "Ausgewogen 30/40/30",
+      "keto": "Keto 25/5/70",
+      "highProtein": "Proteinreich 40/30/30",
+      "custom": "Eigene",
+      "current": "Aktuell: {{preset}}",
+      "hint": "Das Verhältnis entspricht dieser Vorlage (±2 Punkte)",
+      "applied": "Makros gesetzt"
+    },
+    "row": {
+      "notSet": "Nicht gesetzt",
+      "noGoal": "Kein Ziel",
+      "min": "(Minimum)",
+      "asOf": "Stand {{date}}",
+      "waterGoal": "Tägliches Wasserziel",
+      "edit": "Ziel für {{name}} bearbeiten",
+      "dynamicMarker": "⚡",
+      "adaptiveMarker": "📈",
+      "trend": "Verlauf von {{name}} anzeigen",
+      "staleTip": "Nicht von heute: dein letzter Wert der vergangenen 30 Tage"
+    },
+    "all": {
+      "intro": "Setze ein Ziel für jeden Wert.",
+      "filter": "Felder filtern…"
+    },
+    "wellness": {
+      "steps": "Tägliche Schritte",
+      "active_minutes": "Aktive Minuten",
+      "floors": "Etagen",
+      "calories_out": "Verbrannte Kalorien",
+      "sleep_duration_min": "Schlafdauer",
+      "sleep_efficiency": "Schlafeffizienz",
+      "hrv_daily_rmssd": "HRV (RMSSD)",
+      "weight_kg": "Zielgewicht",
+      "body_fat_pct": "Ziel-Körperfett",
+      "muscle_mass_kg": "Ziel-Muskelmasse"
+    },
+    "units": {
+      "steps": "Schritte",
+      "floors": "Etagen"
+    },
+    "editor": {
+      "title": "{{name}} ({{unit}})",
+      "display": "Anzeige",
+      "showDiary": "Im Tagebuch anzeigen",
+      "showStats": "In Statistiken anzeigen",
+      "behavior": "Zielverhalten",
+      "sameEveryDay": "Jeden Tag dasselbe Ziel",
+      "oneTarget": "Ein Ziel für alle Tage",
+      "perWeekday": "Ein Ziel pro Wochentag",
+      "minimum": "Mindestziel",
+      "minTrue": "Diesen Wert willst du mindestens erreichen",
+      "minFalse": "Unter diesem Wert willst du bleiben",
+      "percent": "Als Prozent der Kalorien",
+      "percentHint": "Das Ziel folgt deinem Kalorienziel",
+      "autoAdjust": "An Aktivität anpassen",
+      "autoAdjustHint": "Wird für die Anpassung an Aktivität gespeichert",
+      "percentUnit": "% der Kalorien",
+      "value": "Ziel ({{unit}})",
+      "valueDay": "{{day}} ({{unit}})",
+      "remove": "Ziel entfernen",
+      "removeTitle": "Ziel für {{name}} entfernen?",
+      "save": "Ziel speichern",
+      "waterLabel": "Ziel ({{unit}})"
+    },
+    "preview": {
+      "title": "Vorschau",
+      "sum": "E {{protein}} g · K {{carbs}} g · F {{fat}} g = {{energy}}",
+      "notes": "Hinweise",
+      "tooLow": "Sehr niedriges Kalorienziel ({{energy}}). Die meisten Leitlinien empfehlen mindestens {{minimum}}.",
+      "tooHigh": "Sehr hohes Kalorienziel ({{energy}}). Prüfe, ob das so gewollt ist.",
+      "mismatch": "Die Makros ergeben {{macros}}, das Kalorienziel ist {{energy}}.",
+      "noMacros": "Setze Ziele für Eiweiß, Kohlenhydrate und Fett, um die Verteilung zu sehen."
+    },
+    "templates": {
+      "intro": "Speichere deine aktuellen Ziele und wechsle zwischen Sätzen.",
+      "save": "Aktuelle Ziele speichern",
+      "saveTitle": "Vorlage speichern",
+      "name": "Name der Vorlage",
+      "placeholder": "z. B. Diät, Aufbau, Erhalt",
+      "snapshot_one": "Speichert {{count}} Ziel im jetzigen Stand.",
+      "snapshot_other": "Speichert {{count}} Ziele im jetzigen Stand.",
+      "empty": "Noch keine Vorlagen",
+      "count_one": "{{count}} Ziel",
+      "count_other": "{{count}} Ziele",
+      "apply": "Anwenden",
+      "applyTitle": "Vorlage anwenden",
+      "applyText": "Deine Ziele durch „{{name}}“ ({{count}} Ziele) ersetzen?",
+      "delete": "Vorlage {{name}} löschen",
+      "saved": "Vorlage gespeichert",
+      "applied": "„{{name}}“ angewendet"
+    },
+    "reset": {
+      "action": "Alle Ziele zurücksetzen",
+      "title": "Alle Ziele entfernen?",
+      "text": "Alle Ziele werden entfernt. Wasserziel und Vorlagen bleiben. Das lässt sich nicht rückgängig machen.",
+      "done": "Ziele gelöscht"
+    },
+    "toast": {
+      "saved": "Ziel gespeichert",
+      "waterSaved": "Wasserziel gespeichert"
+    }
+  },
+  "insights": {
+    "common": {
+      "back": "Zurück",
+      "sectionSwitch": "Statistik oder Wellness",
+      "settings": "Einstellungen",
+      "moveUp": "{{name}} nach oben",
+      "moveDown": "{{name}} nach unten",
+      "loading": "Wird geladen…",
+      "loadFailed": "Laden fehlgeschlagen: {{message}}",
+      "retry": "Erneut versuchen",
+      "today": "Heute",
+      "yesterday": "Gestern",
+      "remove": "Entfernen",
+      "cancel": "Abbrechen",
+      "save": "Speichern"
+    },
+    "units": {
+      "steps": "Schritte",
+      "hr": "Std.",
+      "floors": "Stockwerke",
+      "yrs": "Jahre",
+      "brpm": "/min"
+    },
+    "metrics": {
+      "calories": "Kalorien",
+      "kilojoules": "Kilojoule",
+      "fat": "Fett",
+      "saturated-fat": "Gesättigte Fettsäuren",
+      "trans-fat": "Transfette",
+      "polyunsaturated-fat": "Mehrfach ungesättigte Fettsäuren",
+      "monounsaturated-fat": "Einfach ungesättigte Fettsäuren",
+      "cholesterol": "Cholesterin",
+      "sodium": "Natrium",
+      "salt": "Salz",
+      "carbohydrates": "Kohlenhydrate",
+      "fiber": "Ballaststoffe",
+      "sugars": "Zucker",
+      "added-sugars": "Zugesetzter Zucker",
+      "proteins": "Eiweiß",
+      "vitamin-d": "Vitamin D",
+      "calcium": "Calcium",
+      "iron": "Eisen",
+      "potassium": "Kalium",
+      "vitamin-a": "Vitamin A",
+      "vitamin-c": "Vitamin C",
+      "vitamin-e": "Vitamin E",
+      "vitamin-k": "Vitamin K",
+      "b1": "Vitamin B1",
+      "b2": "Vitamin B2",
+      "b3": "Vitamin B3",
+      "b6": "Vitamin B6",
+      "b9": "Folat (B9)",
+      "b12": "Vitamin B12",
+      "magnesium": "Magnesium",
+      "zinc": "Zink",
+      "phosphorus": "Phosphor",
+      "caffeine": "Koffein",
+      "alcohol": "Alkohol",
+      "weight": "Gewicht",
+      "neck": "Hals",
+      "waist": "Taille",
+      "hips": "Hüfte",
+      "chest": "Brust",
+      "thighs": "Oberschenkel",
+      "biceps": "Bizeps",
+      "calves": "Waden",
+      "body_fat": "Körperfett",
+      "body_water": "Körperwasser",
+      "water": "Wasser",
+      "wl_steps": "Schritte",
+      "wl_active": "Aktive Minuten",
+      "wl_sleep": "Schlaf",
+      "wl_rhr": "Ruhepuls",
+      "wl_hrv": "HRV",
+      "wl_spo2": "SpO2",
+      "wl_muscle": "Muskelmasse"
+    },
+    "statistics": {
+      "title": "Statistik",
+      "metricPicker": "Kennzahl",
+      "filterMetrics": "Kennzahlen filtern",
+      "groups": {
+        "nutrient": "Ernährung",
+        "body": "Körper",
+        "water": "Wasser",
+        "wellness": "Wellness"
+      },
+      "range": {
+        "label": "Zeitraum",
+        "from": "Von",
+        "to": "Bis",
+        "pickDate": "Datum wählen",
+        "options": {
+          "7": "1 W",
+          "14": "2 W",
+          "30": "1 M",
+          "90": "3 M",
+          "180": "6 M",
+          "365": "1 J",
+          "all": "Alle",
+          "custom": "Eigener"
+        },
+        "quick": {
+          "last7": "Letzte 7 Tage",
+          "last30": "Letzte 30 Tage",
+          "last90": "Letzte 90 Tage",
+          "thisMonth": "Dieser Monat",
+          "lastMonth": "Letzter Monat",
+          "yearToDate": "Seit Jahresbeginn"
+        }
+      },
+      "summary": {
+        "average": "Durchschnitt",
+        "vsGoal": "{{delta}} zum Ziel",
+        "min": "Minimum",
+        "max": "Maximum",
+        "logged": "Erfasst",
+        "days_one": "Tag",
+        "days_other": "Tage",
+        "completed": "Abgeschlossen",
+        "weeklyTrend": "Wochentrend",
+        "weeklyTrendHint": "letzte 7 zu vorherigen 7 erfassten Tagen"
+      },
+      "chart": {
+        "type": "Diagrammart",
+        "bar": "Balken",
+        "line": "Linie",
+        "exportCsv": "CSV exportieren",
+        "ariaLabel": "{{metric}} im Zeitverlauf",
+        "average": "Durchschnitt",
+        "goal": "Ziel",
+        "baseGoal": "Basisziel",
+        "trend": "Trend",
+        "emptyDays_one": "{{count}} Tag ohne Daten fehlt in der Linie.",
+        "emptyDays_other": "{{count}} Tage ohne Daten fehlen in der Linie."
+      },
+      "empty": {
+        "title": "Keine Daten in diesem Zeitraum.",
+        "food": "Trage Essen ins Tagebuch ein, um das Diagramm zu sehen.",
+        "wellness": "Verbinde ein Gerät und synchronisiere es unter Wellness.",
+        "other": "Erfasse Werte im Tagebuch, um das Diagramm zu sehen.",
+        "try": "Daten gibt es vielleicht unter:"
+      },
+      "history": {
+        "title": "Verlauf",
+        "openWellness": "{{date}} in Wellness öffnen",
+        "openDiary": "{{date}} im Tagebuch öffnen",
+        "completed": "Abgeschlossen"
+      }
+    },
+    "fasting": {
+      "title": "Fasten-Auswertung",
+      "average": "Mittlere Dauer",
+      "longest": "Längstes",
+      "currentStreak": "Aktuelle Serie",
+      "longestStreak": "Längste Serie",
+      "days_one": "{{count}} Tag",
+      "days_other": "{{count}} Tage",
+      "lastDays": "Fastenstunden der letzten 14 Tage",
+      "caption_one": "Letzte 14 Tage · {{count}} Fasten erfasst",
+      "caption_other": "Letzte 14 Tage · {{count}} Fasten erfasst",
+      "recent": "Letzte Fasten",
+      "goal": "Ziel {{hours}} h",
+      "remove": "Fasten vom {{date}} entfernen",
+      "removeTitle": "Dieses Fasten entfernen?",
+      "removeText": "Das Fasten ({{duration}}) vom {{date}} wird aus deinem Verlauf gelöscht. Das lässt sich nicht rückgängig machen.",
+      "removeFailed": "Entfernen fehlgeschlagen: {{message}}"
+    },
+    "wellness": {
+      "title": "Wellness",
+      "viewTrend": "Trend von {{metric}} anzeigen",
+      "metrics": {
+        "steps": "Schritte",
+        "distance_km": "Distanz",
+        "floors": "Stockwerke",
+        "active_minutes": "Aktive Minuten",
+        "calories_out": "Verbrauchte Kalorien",
+        "active_zone_minutes": "Aktivzonenminuten",
+        "moderate_intensity_min": "Mäßige Intensität",
+        "vigorous_intensity_min": "Hohe Intensität",
+        "sleep_duration_min": "Schlafdauer",
+        "sleep_deep_min": "Tiefschlaf",
+        "sleep_light_min": "Leichtschlaf",
+        "sleep_rem_min": "REM-Schlaf",
+        "sleep_wake_min": "Wach",
+        "sleep_efficiency": "Schlafeffizienz",
+        "sleep_score": "Schlafwert",
+        "sleep_time_to_fall_asleep_min": "Zeit bis zum festen Schlaf",
+        "sleep_sound_sleep_min": "Fester Schlaf",
+        "sleep_restlessness_min": "Unruhe",
+        "sleep_interruptions_min": "Unterbrechungen",
+        "sleep_full_awakenings": "Vollständiges Aufwachen",
+        "resting_hr": "Ruhepuls",
+        "avg_heart_rate": "Durchschnittspuls",
+        "spo2_avg": "SpO2",
+        "respiratory_rate": "Atemfrequenz",
+        "hrv_daily_rmssd": "HRV (RMSSD)",
+        "skin_temp_variation": "Hauttemperatur-Abweichung",
+        "vo2_max": "Cardio-Fitness",
+        "max_hr": "Maximalpuls",
+        "weight_kg": "Gewicht",
+        "body_fat_pct": "Körperfett",
+        "muscle_mass_kg": "Muskelmasse",
+        "bone_mass_kg": "Knochenmasse",
+        "body_water_pct": "Körperwasser",
+        "lean_mass_kg": "Fettfreie Masse",
+        "fat_mass_kg": "Fettmasse",
+        "visceral_fat": "Viszeralfett",
+        "visceral_fat_index": "Viszeralfett-Index",
+        "extracellular_water_kg": "Extrazelluläres Wasser",
+        "intracellular_water_kg": "Intrazelluläres Wasser",
+        "vascular_age": "Gefäßalter",
+        "metabolic_age": "Stoffwechselalter",
+        "basal_metabolic_rate": "Grundumsatz",
+        "nerve_health_score": "Nervengesundheit",
+        "eda_feet": "EDA (täglich)",
+        "pulse_wave_velocity": "Pulswellengeschwindigkeit",
+        "ecg_heart_rate": "EKG-Herzfrequenz",
+        "ecg_afib": "Vorhofflimmern",
+        "body_battery_high": "Body Battery (Höchstwert)",
+        "body_battery_low": "Body Battery (Tiefstwert)",
+        "stress_avg": "Mittlerer Stress",
+        "segmental_analysis": "Segmentanalyse",
+        "active_calories": "Aktivkalorien",
+        "blood_pressure_systolic": "Blutdruck (systolisch)",
+        "blood_pressure_diastolic": "Blutdruck (diastolisch)",
+        "body_temperature": "Körpertemperatur",
+        "sleep_awake_min": "Wachzeit",
+        "water_ml": "Trinkmenge"
+      },
+      "descriptions": {
+        "steps": "Alle Schritte des Tages.",
+        "distance_km": "Die am Tag zurückgelegte Strecke.",
+        "floors": "Stockwerke nach dem Höhengewinn, den dein Gerät misst.",
+        "active_minutes": "Zeit mit mindestens mäßiger Aktivität.",
+        "calories_out": "Gesamtverbrauch inklusive Grundumsatz.",
+        "active_zone_minutes": "Minuten in den Herzfrequenzzonen Fettverbrennung, Cardio und Spitze; Cardio und Spitze zählen doppelt.",
+        "moderate_intensity_min": "Zeit mit mäßiger Intensität (zügiges Gehen, leichtes Radfahren). Die WHO empfiehlt 150–300 Minuten pro Woche.",
+        "vigorous_intensity_min": "Zeit mit hoher Intensität (Laufen, harte Belastung). Zählt für Wochenziele doppelt.",
+        "sleep_duration_min": "Gesamte Schlafzeit der letzten Nacht. Erwachsene brauchen meist 7–9 Stunden.",
+        "sleep_deep_min": "Tiefschlaf, die erholsamste Phase. Wichtig für körperliche Erholung und Immunsystem.",
+        "sleep_light_min": "Der Übergang zwischen Wachsein und tieferen Phasen; der größte Teil eines Schlafzyklus.",
+        "sleep_rem_min": "REM-Schlaf stützt Gedächtnis, Lernen und Gefühlsregulation. Er nimmt in späteren Zyklen zu.",
+        "sleep_wake_min": "Wache oder unruhige Zeit in der Nacht. Kurzes Aufwachen ist normal.",
+        "sleep_efficiency": "Anteil der Zeit im Bett, in der du wirklich geschlafen hast. Über 85 % gilt als gut.",
+        "sleep_score": "Schlafqualität von 100: Dauer, Verteilung der Phasen, SpO2 und HRV.",
+        "sleep_time_to_fall_asleep_min": "Wie lange es nach dem Einschlafen bis zum Tiefschlaf gedauert hat. Weniger ist meist besser.",
+        "sleep_sound_sleep_min": "Längste ununterbrochene Schlafphase. Eine Näherung an Fitbits Wert, der auch Bewegungsdaten nutzt.",
+        "sleep_restlessness_min": "Kurze Unruhe in der Nacht: Wachphasen unter 5 Minuten. Eine Näherung an Fitbits Wert.",
+        "sleep_interruptions_min": "Wachphasen ab 5 Minuten, an die du dich vermutlich erinnerst.",
+        "sleep_full_awakenings": "Anzahl der Wachphasen ab 5 Minuten.",
+        "resting_hr": "Herzfrequenz in völliger Ruhe. Ein fallender Trend zeigt bessere Ausdauer.",
+        "avg_heart_rate": "Mittlere Herzfrequenz des Tages. Steigt mit Aktivität, Stress und Fieber.",
+        "spo2_avg": "Sauerstoffsättigung in der Nacht. Üblich sind 95–100 %; Werte unter 90 % können auf Schlafapnoe hinweisen.",
+        "respiratory_rate": "Atemzüge pro Minute im Schlaf, normal sind 12–20. Erhöhte Werte können Krankheit oder Stress anzeigen.",
+        "hrv_daily_rmssd": "Schwankung zwischen den Herzschlägen. Höhere Werte bedeuten bessere Erholung.",
+        "skin_temp_variation": "Nächtliche Hauttemperatur gegenüber deinem Ausgangswert. Erhöhte Werte können Krankheit oder Hormonschwankungen anzeigen.",
+        "vo2_max": "Geschätzte VO₂max, oft als Spanne. Ein wichtiger Wert für die langfristige Herzgesundheit.",
+        "max_hr": "Höchste am Tag gemessene Herzfrequenz.",
+        "weight_kg": "Aktuelles Körpergewicht von deiner Waage.",
+        "body_fat_pct": "Fettanteil am Körpergewicht. Gesunde Bereiche hängen von Alter und Geschlecht ab.",
+        "muscle_mass_kg": "Gesamte Skelettmuskelmasse.",
+        "bone_mass_kg": "Geschätzter Mineralgehalt der Knochen. Stabile Werte sind normal.",
+        "body_water_pct": "Wasseranteil am Gewicht, üblich sind 45–65 %.",
+        "lean_mass_kg": "Alles außer Fett: Muskeln, Knochen, Organe und Wasser.",
+        "fat_mass_kg": "Gesamtes Fettgewebe. Der Trend sagt mehr als ein Einzelwert.",
+        "visceral_fat": "Fett um die Organe. Höhere Werte erhöhen das Risiko für Stoffwechsel und Herz.",
+        "visceral_fat_index": "Bewertung des Viszeralfetts; unter 13 gilt meist als gesund.",
+        "extracellular_water_kg": "Wasser außerhalb der Zellen. Erhöhte Werte können auf Entzündung oder Wassereinlagerung hinweisen.",
+        "intracellular_water_kg": "Wasser in den Zellen; zeigt die Versorgung auf Zellebene.",
+        "vascular_age": "Geschätztes Alter deiner Arterien aus der Pulswellengeschwindigkeit.",
+        "metabolic_age": "Dein Stoffwechsel im Vergleich zu Altersnormen.",
+        "basal_metabolic_rate": "Energie, die dein Körper in 24 Stunden völliger Ruhe verbraucht.",
+        "nerve_health_score": "Monatswert deiner Withings-Waage aus täglichen EDA-Messungen. Über 50 ist normal.",
+        "eda_feet": "Tägliche elektrodermale Aktivität der Füße; Grundlage der Nervengesundheit.",
+        "pulse_wave_velocity": "Tempo der Pulswelle in den Arterien. Niedriger heißt elastischere Gefäße.",
+        "ecg_heart_rate": "Herzfrequenz aus dem EKG deiner Waage.",
+        "ecg_afib": "Prüfung des EKGs auf Vorhofflimmern. „Normal“ heißt: bei dieser Messung kein unregelmäßiger Rhythmus.",
+        "body_battery_high": "Höchste Body Battery des Tages (0–100). Lädt bei Ruhe und Schlaf.",
+        "body_battery_low": "Niedrigste Body Battery des Tages. Unter 20 braucht dein Körper wohl Erholung.",
+        "stress_avg": "Mittlerer Garmin-Stresswert (0–100). Niedriger ist ruhiger."
+      },
+      "nav": {
+        "previousDay": "Vorheriger Tag",
+        "nextDay": "Nächster Tag"
+      },
+      "tabs": {
+        "label": "Bereich",
+        "activity": "Aktivität",
+        "sleep": "Schlaf",
+        "heart": "Herz",
+        "body": "Körper"
+      },
+      "providers": {
+        "title": "Anbieter",
+        "syncing": "Synchronisiert…",
+        "connected": "Verbunden",
+        "sync": "{{provider}} synchronisieren",
+        "syncAccount": "{{provider}} synchronisieren ({{account}})",
+        "syncAll": "Alle synchronisieren",
+        "lastSync": "{{provider}}: zuletzt synchronisiert {{time}}",
+        "manage": "Anbieter verwalten"
+      },
+      "relative": {
+        "justNow": "gerade eben",
+        "seconds": "vor {{count}} s",
+        "minutes": "vor {{count}} Min.",
+        "hours": "vor {{count}} Std.",
+        "yesterday": "gestern",
+        "days": "vor {{count}} Tagen"
+      },
+      "sync": {
+        "done": "Synchronisiert",
+        "days_one": "{{count}} Tag synchronisiert",
+        "days_other": "{{count}} Tage synchronisiert",
+        "rateLimited_one": "{{count}} Tag synchronisiert (Abfragelimit, den Rest später erneut versuchen)",
+        "rateLimited_other": "{{count}} Tage synchronisiert (Abfragelimit, den Rest später erneut versuchen)",
+        "daysFrom_one": "{{count}} Tag von {{provider}} synchronisiert",
+        "daysFrom_other": "{{count}} Tage von {{provider}} synchronisiert",
+        "revoked": "{{provider}} ist getrennt. Verbinde es in den Wellness-Einstellungen neu.",
+        "failed": "{{provider}}-Synchronisierung fehlgeschlagen: {{message}}"
+      },
+      "oauth": {
+        "connected": "{{provider}} verbunden!",
+        "failed": "{{provider}}: {{message}}",
+        "unknownError": "Autorisierung fehlgeschlagen"
+      },
+      "connect": {
+        "fitbitTitle": "Fitbit verbinden",
+        "fitbitText": "Synchronisiere Aktivitäts-, Schlaf- und Herzdaten deiner Fitbit über die Google Health API.",
+        "fitbitAction": "Fitbit verbinden",
+        "withingsTitle": "Withings verbinden",
+        "withingsText": "Synchronisiere die Körperzusammensetzung deiner Withings-Waage: Gewicht, Körperfett, Muskel- und Knochenmasse und mehr, auch ins Tagebuch.",
+        "withingsAction": "Withings verbinden",
+        "chips": {
+          "activity": "Schritte und Aktivität",
+          "sleep": "Schlaf",
+          "heartHrv": "Puls und HRV",
+          "spo2": "SpO2",
+          "breathingRate": "Atemfrequenz",
+          "weight": "Gewicht",
+          "bodyFat": "Körperfett",
+          "muscleMass": "Muskelmasse",
+          "bodyWater": "Körperwasser",
+          "boneMass": "Knochenmasse",
+          "ecg": "EKG und Vorhofflimmern"
+        }
+      },
+      "empty": {
+        "today": "heute",
+        "noData": "Keine Daten für {{day}}.",
+        "syncHint": "Synchronisiere, um die neuesten Daten deines Geräts zu holen.",
+        "offline": "Du bist offline.",
+        "noDeviceTitle": "Kein Gerät eingerichtet",
+        "noDeviceText": "Trage in den Wellness-Einstellungen die API-Zugangsdaten deines Anbieters ein, um ihn zu verbinden.",
+        "noIntegrationsTitle": "Keine Verbindung aktiviert",
+        "noIntegrationsText": "Aktiviere Fitbit, Garmin oder Withings in den Wellness-Einstellungen, um Aktivitäts-, Schlaf-, Herz- und Körperdaten zu sehen."
+      },
+      "stages": {
+        "title": "Schlafphasen",
+        "deep": "Tief",
+        "rem": "REM",
+        "light": "Leicht",
+        "awake": "Wach",
+        "none": "Für diese Nacht gibt es keine Schlafphasen."
+      },
+      "debt": {
+        "title": "Schlafdefizit",
+        "nights_one": "Letzte {{count}} Nacht",
+        "nights_other": "Letzte {{count}} Nächte",
+        "value": "Fehlender Schlaf",
+        "onTrack": "Im Soll",
+        "meeting": "Du erreichst dein Schlafziel. Weiter so!",
+        "short_one": "Dir fehlen {{short}} zu deinem Schlafziel von {{goal}} in der letzten Nacht.",
+        "short_other": "Dir fehlen {{short}} zu deinem Schlafziel von {{goal}} in den letzten {{count}} Nächten.",
+        "adviceBad": "Geh diese Woche früh schlafen, um aufzuholen.",
+        "adviceWarn": "Ein fester Rhythmus schließt die Lücke bald.",
+        "rangeLabel": "Gezählte Nächte",
+        "range": "{{days}} T"
+      },
+      "chronotype": {
+        "building": "Profil wird aufgebaut…",
+        "collected": "{{nights}} von {{needed}} Nächten erfasst",
+        "buildingText": "Sobald Schlafzeiten aus {{needed}} Nächten vorliegen, erscheint hier dein Chronotyp.",
+        "midpoint_one": "Mittlere Schlafmitte: {{time}} · {{count}} Nacht",
+        "midpoint_other": "Mittlere Schlafmitte: {{time}} · {{count}} Nächte",
+        "types": {
+          "earlyBird": {
+            "label": "Frühaufsteher",
+            "text": "Du wachst von selbst früh auf und hast morgens am meisten Energie. Der Morgen ist deine beste Zeit."
+          },
+          "morning": {
+            "label": "Morgentyp",
+            "text": "In der ersten Tageshälfte leistest du am meisten und wachst meist erholt auf. Die meisten Tagesabläufe passen zu dir."
+          },
+          "intermediate": {
+            "label": "Mischtyp",
+            "text": "Deine innere Uhr passt zu üblichen Tagesabläufen; frühe Morgen und späte Abende gelingen dir beide."
+          },
+          "evening": {
+            "label": "Abendtyp",
+            "text": "Am Nachmittag und Abend wirst du richtig wach. Morgens fällt dir schwerer."
+          },
+          "nightOwl": {
+            "label": "Nachteule",
+            "text": "Deine innere Uhr geht nach. Abends bist du am wachsten, frühes Aufstehen fällt dir schwer."
+          }
+        }
+      },
+      "readiness": {
+        "title": "Tagesform",
+        "todays": "Tagesform heute",
+        "open": "Tagesform von heute öffnen",
+        "calibrating": "Kalibriert… {{days}} von {{needed}} Nächten mit HRV-Daten",
+        "calibratingText": "Es braucht {{needed}} Nächte, in denen dein Gerät die HRV im Schlaf gemessen hat. Enges Tragen hilft.",
+        "score": "Wert (1–100)",
+        "hrv": "HRV",
+        "restingHr": "Ruhepuls",
+        "sleep": "Schlaf",
+        "penalties": "Abzüge",
+        "baseline": "HRV-Basiswert {{hrv}} ms",
+        "baselineWithRhr": "HRV-Basiswert {{hrv}} ms · Ruhepuls-Basiswert {{rhr}} bpm",
+        "days_one": "{{count}} Tag",
+        "days_other": "{{count}} Tage",
+        "accuracy_one": "Beruht auf {{count}} Tag; mit mehr Daten wird es genauer.",
+        "accuracy_other": "Beruht auf {{count}} Tagen; mit mehr Daten wird es genauer.",
+        "bands": {
+          "optimal": "Optimal",
+          "good": "Gut",
+          "fair": "Mittel",
+          "low": "Niedrig",
+          "poor": "Schlecht"
+        },
+        "leads": {
+          "wellRecovered": "Du bist heute gut erholt.",
+          "solid": "Solide Erholung: Du kannst normal trainieren.",
+          "moderate": "Mäßige Erholung: Trainiere heute lockerer als sonst.",
+          "low": "Die Erholung ist niedrig. Mach heute einen Entlastungstag."
+        },
+        "drivers": {
+          "penalty": "Die gestrige Belastung drückt am stärksten (Abzug −{{penalty}}): Dein Körper arbeitet die Anstrengung noch ab.",
+          "hrvLow": "Deine HRV ({{today}} ms) liegt deutlich unter deinem Basiswert von {{baseline}} ms: Erholung geht vor. Trink, iss genug und schlaf heute früh.",
+          "hrvBelow": "Die HRV ({{today}} ms) liegt unter deinem Basiswert von {{baseline}} ms und ist hier das wichtigste Signal. Lockere Bewegung hilft mehr als eine harte Einheit.",
+          "rhrHigh": "Der Ruhepuls ist erhöht ({{today}} bei einem Basiswert von {{baseline}}): möglicherweise ein frühes Zeichen für Krankheit oder zu wenig Erholung.",
+          "rhrUp": "Der Ruhepuls ({{today}}) liegt über deinem Basiswert von {{baseline}}. Achte auf Krankheitszeichen und halte die Intensität im Rahmen.",
+          "sleepLow": "Der Schlaf der letzten Nacht ({{score}}) zieht den Wert herunter. Nach Mittag kein Koffein und früher ins Bett.",
+          "sleepWeak": "Der Schlaf ({{score}}) ist heute das schwächste Signal. Früher ins Bett zahlt sich morgen aus.",
+          "allStrong": "Alle Teile sind stark. Ein guter Tag für hartes Training oder eine Bestleistung.",
+          "allHealthy": "Alle Signale sind gut: Trainiere wie geplant.",
+          "cumulative": "Einzeln sehen die Teile gut aus, wohl angesammelte Müdigkeit der Woche. Eine leichtere Einheit ist trotzdem sinnvoll."
+        }
+      },
+      "resilience": {
+        "title": "Resilienz",
+        "score": "Wert: {{score}} von 100",
+        "today": "Heute",
+        "categories": {
+          "optimal": {
+            "label": "Optimal",
+            "text": "Dein Körper zeigt gute Erholung und Balance. Ein starker Tag für das, was dir wichtig ist."
+          },
+          "balanced": {
+            "label": "Ausgeglichen",
+            "text": "Dein Körper ist heute stabil. Ein guter Tag, um bei deiner Routine zu bleiben."
+          },
+          "low": {
+            "label": "Niedrig",
+            "text": "Dein Körper braucht etwas mehr Ruhe. Wenn du es ruhiger angehst, lädst du wieder auf."
+          }
+        },
+        "parts": {
+          "calmness": "Körperliche Ruhe",
+          "activity": "Aktivitätsbalance",
+          "sleep": "Schlafmuster"
+        }
+      },
+      "garminTitle": "Garmin",
+      "sleepQuality": "Schlafqualität",
+      "moments_one": "{{count}} Moment",
+      "moments_other": "{{count}} Momente",
+      "afib": {
+        "detected": "Erkannt",
+        "normal": "Normal"
+      },
+      "body": {
+        "scores": "Body-Scan-Werte",
+        "segmental": "Segmentanalyse",
+        "segmentalNote": "Muskel- und fettfreie Masse je Körperteil, aus einem Body Scan.",
+        "segment": "Körperteil",
+        "muscle": "Muskeln",
+        "lean": "Fettfrei",
+        "segments": {
+          "leftArm": "Linker Arm",
+          "rightArm": "Rechter Arm",
+          "torso": "Rumpf",
+          "leftLeg": "Linkes Bein",
+          "rightLeg": "Rechtes Bein"
+        },
+        "noData": "Keine Körperdaten für {{day}}.",
+        "syncHint": "Synchronisiere deine Waage oder deinen Tracker, um hier Körperwerte zu sehen."
+      },
+      "workouts": {
+        "title": "Workouts des Tages",
+        "sessions_one": "{{count}} Einheit",
+        "sessions_other": "{{count}} Einheiten",
+        "unnamed": "Workout",
+        "open": "{{name}} öffnen",
+        "hr": "Ø {{avg}} bpm",
+        "hrWithPeak": "Ø {{avg}} bpm · max. {{max}}",
+        "hasRoute": "GPS-Strecke vorhanden",
+        "loadingRoute": "Strecke wird geladen…",
+        "noRoute": "Zu diesem Workout gibt es keine GPS-Daten.",
+        "heartRate": "Herzfrequenz (bpm)",
+        "altitude": "Höhe (m)",
+        "zones": "Herzfrequenzzonen",
+        "zone": {
+          "easy": "unter 130",
+          "moderate": "130–150",
+          "hard": "150–170",
+          "peak": "über 170"
+        },
+        "stats": {
+          "duration": "Dauer",
+          "distance": "Distanz",
+          "energy": "Energie",
+          "steps": "Schritte",
+          "avgHr": "Ø Puls",
+          "peakHr": "Max. Puls"
+        }
+      },
+      "week": {
+        "title": "Diese Woche",
+        "hint": "Letzte 7 Tage",
+        "totalSteps": "Schritte gesamt",
+        "dailyAverage": "Tagesschnitt",
+        "daysOver10k": "Tage ≥ 10.000",
+        "activeMinutes": "Aktive Minuten",
+        "burned": "{{value}} kcal verbraucht"
+      }
+    },
+    "wellnessSettings": {
+      "title": "Wellness-Einstellungen",
+      "master": "Wellness",
+      "masterHint": "Schaltet die Verbindungen unten frei. Jeder Anbieter synchronisiert nach eigenem Zeitplan.",
+      "mirrorWeight": "Wellness-Gewicht in die Körperwerte übernehmen",
+      "mirrorWeightHint": "Schreibt Messungen der Waage auch in das Körpergewicht des Tages, damit Ziele und Tagebuch sie zeigen. Eigene Einträge werden nie überschrieben. Withings macht das immer.",
+      "enable": "{{provider}} aktivieren",
+      "fitbitTitle": "Fitbit (Google Health)",
+      "fitbitHint": "Fitbit-Daten kommen über die Google Health API; die alte Fitbit Web API wird abgeschaltet.",
+      "relink": "Dieses Konto nutzt noch die alte Fitbit Web API. Verbinde es über Google Cloud neu, damit nichts ausfällt; dein Verlauf bleibt erhalten.",
+      "viaGoogle": "Über Google Health verbunden",
+      "googleUser": "Google-Nutzer: {{id}}",
+      "workouts": "Workout-Verlauf",
+      "workoutsHint": "Zeigt Workouts mit GPS-Daten im Tab Aktivität.",
+      "garminTitle": "Garmin (experimentell)",
+      "garminHint": "Braucht einen freigeschalteten Zugang zur Garmin Health API.",
+      "withingsTitle": "Withings",
+      "withingsHint": "Körperzusammensetzung von der Waage: Gewicht, Fett, Muskeln, Knochen und mehr.",
+      "accountLinked": "{{provider}}-Konto verbunden",
+      "withingsUser": "Nutzer {{id}}",
+      "healthConnectHint": "Health Connect synchronisiert nur über die Android-App; hier siehst du, was sie geschickt hat, und kannst es abschalten.",
+      "liftTraceOverlap": "LiftTrace bei überlappenden Workouts bevorzugen",
+      "liftTraceOverlapHint": "Melden Wearable und LiftTrace Kalorien für dasselbe Workout, wird es nur einmal gezählt.",
+      "resetMetrics": "Alle Werte wieder anzeigen",
+      "syncRange": "Synchronisierungszeitraum",
+      "syncRangeHint": "Wie weit eine manuelle Synchronisierung vom angezeigten Tag zurückreicht.",
+      "ranges": {
+        "1": "1 Tag",
+        "7": "1 Woche",
+        "30": "1 Monat",
+        "90": "3 Monate",
+        "180": "6 Monate",
+        "365": "1 Jahr"
+      },
+      "customDays": "Tage (1–{{max}})",
+      "rangeWarning": {
+        "fitbit": "⚠ Lange Zeiträume können mehrere Minuten dauern und an Fitbits Abfragelimit stoßen.",
+        "garmin": "⚠ Garmin liefert nur etwa 6 Monate verlässlich zurück.",
+        "withings": "⚠ Lange Zeiträume können mehrere Minuten dauern und an Withings' Abfragelimit stoßen."
+      },
+      "syncMode": "Synchronisierungsart",
+      "modes": {
+        "auto": "Automatisch",
+        "manual": "Manuell",
+        "scheduled": "Geplant"
+      },
+      "interval": "Intervall",
+      "intervals": {
+        "30": "30 Min.",
+        "60": "1 Std.",
+        "120": "2 Std.",
+        "180": "3 Std.",
+        "360": "6 Std.",
+        "720": "12 Std.",
+        "1440": "täglich"
+      },
+      "syncAt": "Synchronisieren um",
+      "activeWindowHint": "Synchronisiert nur in diesem Fenster; leer heißt ganztags.",
+      "windowStart": "Von",
+      "windowEnd": "Bis",
+      "visibleMetrics": "Angezeigte Werte",
+      "credentials": "API-Zugangsdaten",
+      "setupLink": "Entwicklerportal",
+      "setup": {
+        "google-health": "Lege in der Google-Cloud-Konsole einen OAuth-Client mit aktivierter Google Health API an und trage dort die Redirect-URI unten ein.",
+        "withings": "Lege eine Withings-Entwickler-App an (privat oder Public Cloud), trage Client-ID und Secret ein und füge die Redirect-URI unten hinzu.",
+        "garmin": "OAuth-1.0a-Zugangsdaten deiner freigeschalteten Garmin-Health-API-App. Die Redirect-URI muss genau passen."
+      },
+      "client": {
+        "id": "Client-ID",
+        "secret": "Client-Secret"
+      },
+      "consumer": {
+        "id": "Consumer Key",
+        "secret": "Consumer Secret"
+      },
+      "showSecret": "Secret anzeigen",
+      "hideSecret": "Secret verbergen",
+      "redirectUri": "Redirect-URI",
+      "useSuggested": "Vorgeschlagene URI verwenden",
+      "copyUri": "URI kopieren",
+      "redirectHint": "Vorschlag: {{uri}}",
+      "copied": "Kopiert",
+      "copyFailed": "Kopieren fehlgeschlagen",
+      "credentialsSaved": "{{provider}}-Zugangsdaten gespeichert",
+      "saveFailed": "Speichern fehlgeschlagen: {{message}}",
+      "linked": "Verbunden",
+      "lastSynced": "zuletzt synchronisiert {{time}}",
+      "syncNow": "Heute synchronisieren",
+      "disconnect": "Trennen",
+      "disconnected": "{{provider}} getrennt",
+      "syncedMetrics_one": "{{count}} Wert für {{date}} synchronisiert",
+      "syncedMetrics_other": "{{count}} Werte für {{date}} synchronisiert",
+      "syncedToday": "{{provider}} für {{date}} synchronisiert",
+      "notConnected": "Nicht verbunden",
+      "authorizeHint": "Erlaube Trace beim Anbieter den Zugriff, um zu synchronisieren.",
+      "connect": "Verbinden",
+      "editCredentials": "Zugangsdaten ändern"
+    },
+    "statisticsSettings": {
+      "title": "Statistik-Einstellungen",
+      "chart": "Diagrammoptionen",
+      "chartHint": "Diagrammart und Hilfslinien der Statistik-Seite.",
+      "chartType": "Diagrammart",
+      "toggles": {
+        "yZero": {
+          "label": "Y-Achse bei null beginnen",
+          "hint": "Körper- und Vitalwerte richten sich immer nach den Daten. Das gilt für Nährwerte und gezählte Werte."
+        },
+        "average": {
+          "label": "Durchschnittslinie anzeigen"
+        },
+        "goal": {
+          "label": "Ziellinie anzeigen"
+        },
+        "trend": {
+          "label": "Trendlinie anzeigen"
+        },
+        "includeToday": {
+          "label": "Heute einbeziehen",
+          "hint": "Summen wie Kalorien, Wasser oder Schritte sind bis Tagesende unvollständig, darum fehlt heute standardmäßig."
+        },
+        "emptyDays": {
+          "label": "Leere Tage anzeigen",
+          "hint": "Hält Tage ohne Daten sichtbar: als leere Balken oder als Hinweis unter dem Liniendiagramm."
+        }
+      },
+      "categories": "Kennzahlen",
+      "categoriesHint": "Ordne die Kennzahlen der Statistik-Seite und blende aus, was du nie ansiehst."
+    },
+    "bodyStatsSettings": {
+      "title": "Körperwerte",
+      "hint": "Ordne deine Körperwerte und blende aus, was du nicht erfasst."
+    }
+  },
+  "assistant": {
+    "suggestions": {
+      "today": "Wie läuft mein Tag heute?",
+      "nextMeal": "Was soll ich als Nächstes essen?",
+      "recovery": "Wie waren mein Schlaf und meine Erholung?",
+      "goals": "Bin ich mit meinen Zielen auf Kurs?"
+    },
+    "card": {
+      "serving": "Portion",
+      "date": "Datum",
+      "per": "Pro",
+      "notes": "Notizen",
+      "meal": "Mahlzeit",
+      "logTo": "Eintragen in",
+      "dontLog": "Nicht eintragen",
+      "addToDiary": "Ins Tagebuch",
+      "saveToFoods": "In Lebensmittel speichern",
+      "saveAndLog": "Speichern & eintragen",
+      "pickMeal": "Wähle zuerst eine Mahlzeit.",
+      "logged": "{{energy}} in {{meal}} eingetragen",
+      "saved": "{{name}} in deinen Lebensmitteln gespeichert",
+      "savedAndLogged": "{{name}} gespeichert und in {{meal}} eingetragen"
+    },
+    "smartLog": {
+      "title": "Smart Log",
+      "said": "Was hast du gegessen?",
+      "placeholder": "Zum Frühstück hatte ich 2 Eier und Toast",
+      "parse": "Neu auswerten",
+      "parsing": "Eingabe wird ausgewertet…",
+      "nothingFound": "Kein Essen oder Getränk erkannt. Formuliere es anders.",
+      "invalidReply": "Die KI hat nicht im erwarteten Format geantwortet. Formuliere es anders.",
+      "found_one": "{{count}} Eintrag",
+      "found_other": "{{count}} Einträge",
+      "foundWithMeal_one": "{{count}} Eintrag · Mahlzeit: {{meal}}",
+      "foundWithMeal_other": "{{count}} Einträge · Mahlzeit: {{meal}}",
+      "include": "{{name}} übernehmen",
+      "match": "Treffer",
+      "amount": "Menge ({{unit}})",
+      "noData": "Nicht gefunden. Formuliere es anders oder trage es von Hand ein.",
+      "offNoValues": "Open Food Facts hat keine Werte im Verkaufszustand für dieses Produkt, daher wird es nicht eingetragen. Wähle einen anderen Treffer.",
+      "toWater": "Kommt ins Wasserprotokoll",
+      "expands_one": "{{count}} Eintrag",
+      "expands_other": "{{count}} Einträge",
+      "yesterdayName": "{{meal}} von gestern",
+      "add_one": "{{count}} Eintrag hinzufügen",
+      "add_other": "{{count}} Einträge hinzufügen",
+      "saved_one": "{{count}} Eintrag eingetragen",
+      "saved_other": "{{count}} Einträge eingetragen",
+      "badge": {
+        "food": "Eigenes Lebensmittel",
+        "off": "Open Food Facts",
+        "meal": "Mahlzeit",
+        "recipe": "Rezept",
+        "yesterday": "Gestern",
+        "water": "Wasser",
+        "notFound": "Nicht gefunden"
+      }
+    },
+    "scanLabel": {
+      "scan": "Etikett scannen",
+      "scanning": "Wird gelesen…",
+      "camera": "Etikett fotografieren",
+      "done": "Nährwerte vom Etikett übernommen",
+      "unreadable": "Das Etikett konnte nicht gelesen werden. Versuche ein deutlicheres Foto.",
+      "failed": "Scan fehlgeschlagen: {{message}}"
+    },
+    "celebrations": {
+      "goalTitle": "Ziel erreicht!",
+      "goalText": "Ziel erreicht ({{label}}): {{value}} (Ziel: {{target}})",
+      "caloriesTitle": "Kalorienziel erreicht",
+      "caloriesText": "Du bist bei {{value}} kcal. Dein Tagesziel sind {{target}} kcal.",
+      "stepsTitle": "Schrittziel erreicht!",
+      "stepsText": "Du bist {{steps}} Schritte gegangen. Dein Ziel waren {{goal}}!",
+      "middayTitle": "Dein Schrittziel",
+      "middayText": "Du bist bei {{steps}} Schritten, noch {{remaining}} bis zum Ziel!",
+      "labels": {
+        "water_ml": "Wasser",
+        "sleep_duration_min": "Schlaf",
+        "steps": "Schritte",
+        "active_minutes": "aktive Minuten",
+        "distance_km": "Distanz",
+        "calories_out": "verbrannte Kalorien"
+      }
+    }
+  }
+}

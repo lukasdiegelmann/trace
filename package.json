@@ -1,0 +1,16 @@
+{
+  "name": "trace",
+  "private": true,
+  "license": "AGPL-3.0-only",
+  "packageManager": "pnpm@10.11.0",
+  "engines": {
+    "node": "^22.22.2 || ^24.15.0 || >=26.0.0"
+  },
+  "scripts": {
+    "lint": "pnpm --filter web lint",
+    "typecheck": "pnpm --filter web typecheck",
+    "test": "pnpm --filter web test",
+    "build": "pnpm --filter web build",
+    "check": "pnpm lint && pnpm typecheck && pnpm test && pnpm build"
+  }
+}

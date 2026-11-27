@@ -1,0 +1,29 @@
+{
+  "picker": {
+    "title": "Übung hinzufügen",
+    "searchPlaceholder": "Übungen suchen …",
+    "searchLabel": "Übungen suchen",
+    "categoryFilter": "Nach Kategorie filtern",
+    "equipmentFilter": "Nach Ausrüstung filtern",
+    "all": "Alle",
+    "allEquipment": "Alle Geräte",
+    "equipmentCount": "{{name}} ({{count}})",
+    "loading": "Übungen werden geladen …",
+    "loadError": "Übungen konnten nicht geladen werden.",
+    "retry": "Erneut versuchen",
+    "noMatches": "Keine passenden Übungen.",
+    "noMatchesFor": "Keine Übungen zu „{{search}}“ gefunden.",
+    "create": "„{{name}}“ erstellen",
+    "createHint": "Nicht dabei? Als eigene Übung anlegen.",
+    "uncategorized": "Ohne Kategorie",
+    "addExercise": "{{name}} hinzufügen",
+    "added": "✓ Hinzugefügt",
+    "alreadyAdded": "In dieser Sitzung bereits hinzugefügt",
+    "viewDetails": "Details zu {{name}} ansehen",
+    "closePreview": "Vorschau schließen",
+    "preview": "Übungsvorschau",
+    "addToWorkout": "Zum Training hinzufügen",
+    "previewEmptyTitle": "Vorschau für jede Übung",
+    "previewEmptyText": "Tippe bei einer Übung auf das Info-Symbol, um Details, Verlauf und Rekorde hier zu sehen, ohne die Auswahl zu schließen."
+  }
+}

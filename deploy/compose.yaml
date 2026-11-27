@@ -1,0 +1,100 @@
+# Trace. Lives at <root>/src/deploy/compose.yaml on the server (the repo is
+# rsynced to <root>/src by deploy/push.sh); state and secrets stay outside the
+# synced tree in <root>/{data,secrets}, hence the ../../ paths. Run through
+# deploy.sh.
+#
+# Everything binds 127.0.0.1; a reverse proxy serves it on one origin:
+#   /nt/*  -> nt   127.0.0.1:3101
+#   /lt/*  -> lt   127.0.0.1:3102
+#   /ct/*  -> ct   127.0.0.1:3103
+#   /*     -> web  127.0.0.1:3110
+#
+# The backends are built from the submodules, unchanged. BASE_URL mounts each
+# one under its prefix: API at /<p>/api/*, uploads at /<p>/uploads/*, and the
+# bundled original UI at /<p>/ (kept as a fallback).
+name: trace
+
+x-backend: &backend
+  restart: unless-stopped
+
+services:
+  nt:
+    <<: *backend
+    build: ../backends/nutritrace
+    image: trace-nt:local
+    env_file: ../../secrets/nt.env   # JWT_SECRET, OIDC_CLIENT_SECRET
+    environment: &nt_env
+      TZ: Europe/Berlin
+      BASE_URL: /nt
+      PUBLIC_URL: https://trace.lukasdiegelmann.net/nt
+      DB_PATH: /data/db/nutritrace.db
+      UPLOADS_PATH: /data/uploads
+      LOG_LEVEL: info
+      # The clients nt/ct/lt are set up at the OIDC provider; each one's
+      # secret is OIDC_CLIENT_SECRET in the env_file.
+      OIDC_ISSUER: https://auth.lukasdiegelmann.net/realms/diegelhome
+      OIDC_CLIENT_ID: nt
+      OIDC_DISPLAY_NAME: Keycloak
+      OIDC_SCOPE: openid profile email groups
+      OIDC_REDIRECT_URIS: https://trace.lukasdiegelmann.net/nt/api/auth/oidc/callback
+      OIDC_TOKEN_AUTH_METHOD: client_secret_post
+      OIDC_AUTO_REGISTER: "1"
+      OIDC_AUTO_LINK: "1"
+      OIDC_ADMIN_GROUP_CLAIM: groups
+      OIDC_ADMIN_GROUP_VALUE: trace-admins
+      # SSO only: sign-in goes through the OIDC provider. "1" brings the
+      # password login back as a fallback.
+      OIDC_ENABLE_EMAIL_PASSWORD_LOGIN: "0"
+    volumes:
+      - ../../data/nt/db:/data/db
+      - ../../data/nt/uploads:/data/uploads
+    ports:
+      - "127.0.0.1:3101:3001"
+
+  lt:
+    <<: *backend
+    build: ../backends/lifttrace
+    image: trace-lt:local
+    env_file: ../../secrets/lt.env
+    environment:
+      <<: *nt_env
+      BASE_URL: /lt
+      PUBLIC_URL: https://trace.lukasdiegelmann.net/lt
+      DB_PATH: /data/db/lifttrace.db
+      OIDC_CLIENT_ID: lt
+      OIDC_REDIRECT_URIS: https://trace.lukasdiegelmann.net/lt/api/auth/oidc/callback
+    volumes:
+      - ../../data/lt/db:/data/db
+      - ../../data/lt/uploads:/data/uploads
+    ports:
+      - "127.0.0.1:3102:3002"
+
+  ct:
+    <<: *backend
+    build: ../backends/cooktrace
+    image: trace-ct:local
+    env_file: ../../secrets/ct.env
+    environment:
+      <<: *nt_env
+      BASE_URL: /ct
+      PUBLIC_URL: https://trace.lukasdiegelmann.net/ct
+      DB_PATH: /data/db/cooktrace.db
+      OIDC_CLIENT_ID: ct
+      OIDC_REDIRECT_URIS: https://trace.lukasdiegelmann.net/ct/api/auth/oidc/callback
+    volumes:
+      - ../../data/ct/db:/data/db
+      - ../../data/ct/uploads:/data/uploads
+    ports:
+      - "127.0.0.1:3103:3003"
+
+  # The frontend: apps/web's build output, built locally by push.sh
+  # (monolithium comes from a private registry, so the server builds nothing
+  # of it). web-nginx.conf does the SPA fallback.
+  web:
+    image: nginx:1.30.8-alpine-slim
+    restart: unless-stopped
+    volumes:
+      - ../apps/web/dist:/usr/share/nginx/html:ro
+      - ./web-nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    ports:
+      - "127.0.0.1:3110:80"

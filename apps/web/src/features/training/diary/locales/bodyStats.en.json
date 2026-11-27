@@ -1,0 +1,44 @@
+{
+  "bodyStats": {
+    "title": "Body Stats",
+    "close": "Close",
+    "fieldLabel": "{{label}} ({{unit}})",
+    "valuePlaceholder": "—",
+    "stats": {
+      "weight": "Weight",
+      "bodyFat": "Body Fat",
+      "neck": "Neck",
+      "chest": "Chest",
+      "waist": "Waist",
+      "hips": "Hips",
+      "biceps": "Biceps",
+      "thighs": "Thighs",
+      "calves": "Calves"
+    },
+    "noneEnabled": "No measurements enabled. Go to Settings → Workout to choose which stats to track.",
+    "save": "Save",
+    "saving": "Saving…",
+    "saved": "Body stats saved",
+    "saveFailed": "Save failed",
+    "photo": {
+      "add": "Add Photo",
+      "adding": "Adding…",
+      "hint": "Progress photo for this day",
+      "viewTimeline": "View Timeline",
+      "added": "Photo added",
+      "addFailed": "Could not add photo"
+    },
+    "widget": {
+      "openSheet": "Open Body Stats sheet",
+      "weightNotLogged": "Weight not logged",
+      "log": "Log",
+      "editWeight": "Edit today's weight",
+      "weightInput": "Weight ({{unit}})",
+      "save": "Save",
+      "savingShort": "…",
+      "cancel": "Cancel",
+      "noMeasurements": "No measurements logged today",
+      "logStats": "Log Stats"
+    }
+  }
+}

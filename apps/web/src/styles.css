@@ -1,0 +1,42 @@
+@import "tailwindcss";
+@import "@monocircuit/monolithium/tailwind";
+@import "@monocircuit/monolithium/tailwind-variants";
+/* The tokens, light and dark (`.dark` on <html>), and their utilities */
+@import "@monocircuit/monolithium/tokens.css";
+@import "@monocircuit/monolithium/tailwind-theme";
+/* monolithium's component sources for Tailwind to scan */
+@import "@monocircuit/monolithium/tailwind-sources";
+/* The faces (Source Sans 3, Fira Code, JetBrains Mono) as @font-face */
+@import "@monocircuit/monolithium/fonts.css";
+
+/* Dark mode follows the `dark` class, set by src/theme (system or manual) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-level-0);
+  color: var(--color-fg);
+}
+
+/* On a phone the navigation pill floats at the bottom: a banner placed there
+   stands above it (monolithium's BANNER_BOTTOM_INSET_VARIABLE) */
+@media (width < 48rem) {
+  :root:has([data-monolithium="floating-navigator"]) {
+    --monolithium-banner-bottom-inset: 4rem;
+  }
+}
+
+/* On paper the page runs over as many sheets as it needs (a recipe) */
+@media print {
+  html,
+  body,
+  #root {
+    height: auto;
+  }
+}

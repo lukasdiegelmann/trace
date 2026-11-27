@@ -1,0 +1,54 @@
+{
+  "cardio": {
+    "title": "Cardio",
+    "totalToday": "{{minutes}} Min. heute",
+    "addAria": "Cardio-Einheit hinzufügen",
+    "templatesAria": "Angeheftete Schnell-Vorlagen",
+    "templateTitle": "Jetzt eintragen: {{activity}} · {{minutes}} Min.",
+    "templateMinutes": "{{minutes}} Min.",
+    "activityLabel": "Aktivität",
+    "activityPlaceholder": "Aktivität (z. B. Rad, Laufen, Rudern)",
+    "durationLabel": "Minuten",
+    "durationPlaceholder": "Min.",
+    "distanceLabel": "Distanz",
+    "distancePlaceholder": "Distanz ({{unit}}, optional)",
+    "hrLabel": "Herzfrequenz",
+    "hrPlaceholder": "bpm",
+    "notesLabel": "Notizen",
+    "notesPlaceholder": "Notizen (optional)",
+    "cancel": "Abbrechen",
+    "logSubmit": "Eintragen",
+    "save": "Speichern",
+    "saving": "Speichert…",
+    "editTitle": "Einheit bearbeiten",
+    "pinTemplate": "Als Schnell-Vorlage anheften",
+    "unpinTemplate": "Schnell-Vorlage lösen",
+    "deleteAria": "Cardio-Einheit löschen",
+    "empty": "Für diesen Tag ist kein Cardio eingetragen.",
+    "meta": {
+      "duration": "{{minutes}} Min.",
+      "distance": "{{distance}} {{unit}}",
+      "hr": "{{bpm}} bpm"
+    },
+    "confirmDelete": {
+      "title": "Cardio-Einheit löschen?",
+      "message": "{{activity}} · {{duration}} Min.",
+      "confirm": "Löschen",
+      "cancel": "Abbrechen"
+    },
+    "toast": {
+      "logged": "Cardio eingetragen",
+      "logFailed": "Eintragen fehlgeschlagen",
+      "pinned": "Als Schnell-Vorlage angeheftet",
+      "unpinned": "Gelöst",
+      "updateFailed": "Aktualisieren fehlgeschlagen",
+      "activityRequired": "Aktivität erforderlich",
+      "durationInvalid": "Die Dauer muss eine positive Zahl an Minuten sein",
+      "distanceInvalid": "Die Distanz muss eine Zahl sein",
+      "hrInvalid": "Die Herzfrequenz muss eine Zahl sein",
+      "updated": "Cardio aktualisiert",
+      "saveFailed": "Speichern fehlgeschlagen",
+      "deleteFailed": "Löschen fehlgeschlagen"
+    }
+  }
+}

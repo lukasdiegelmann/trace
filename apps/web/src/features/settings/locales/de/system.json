@@ -1,0 +1,65 @@
+{
+  "diagnostics": {
+    "logs": "Diagnoseprotokoll",
+    "logsHint": "Was diese Seite seit dem Öffnen protokolliert hat. Es bleibt auf deinem Gerät, bis du es teilst.",
+    "verbose": "Längeres Protokoll führen",
+    "view": "Protokoll ansehen",
+    "share": "Teilen",
+    "clear": "Protokoll leeren",
+    "calibration": "Hilf, die Wellness-Werte zu verbessern",
+    "calibrationHint": "Deine Wearable-Daten der letzten 30 Tage ohne Datum und Namen, zum Einfügen in einen Fehlerbericht. Von selbst wird nichts gesendet.",
+    "device": "Dein Wearable (optional)",
+    "generate": "Export erstellen",
+    "review_one": "{{count}} Tag. Prüfe ihn, bevor du ihn teilst.",
+    "review_other": "{{count}} Tage. Prüfe sie, bevor du sie teilst."
+  },
+  "updates": {
+    "description": "Versionen der drei Backends.",
+    "channel": "Release-Kanal",
+    "channels": {
+      "stable": "Stabil",
+      "dev": "Entwicklung"
+    },
+    "interval": "Prüfen alle",
+    "manual": "Nur von Hand",
+    "current": "Installiert",
+    "available": "Version {{version}} ist verfügbar",
+    "upToDate": "Aktuell.",
+    "off": "Die Update-Prüfung ist aus.",
+    "envOff": "Die Serverumgebung hat die Update-Prüfung ausgeschaltet.",
+    "releaseNotes": "Versionshinweise",
+    "how": "Trace baut seine Backends aus Forks: Aktualisiert wird, indem Upstream in den Fork gemergt und Trace neu ausgerollt wird.",
+    "checked": "Geprüft {{when}}",
+    "autoCheck": "{{app}} nach Updates suchen lassen",
+    "checkNow": "Jetzt prüfen",
+    "offNotice": "Die Update-Prüfung ist aus: Trace meldet keine neuen Versionen, auch keine mit Sicherheitsfixes.",
+    "turnOn": "Einschalten",
+    "adminChecks": "Nach Server-Updates sehen Admins.",
+    "intervalHint": "Wie oft Trace im Hintergrund nach einer neuen Version von sich selbst sieht."
+  },
+  "about": {
+    "description": "Woraus Trace besteht.",
+    "what": "Ernährung, Kochen und Training in einer App, auf den Servern von NutriTrace, CookTrace und LiftTrace.",
+    "license": "Trace ist freie Software unter der GNU Affero General Public License 3.0.",
+    "builtOn": "Auf Basis von TraceApps",
+    "builtOnHint": "Die drei Server und die Logik ihrer Apps stammen von TraceApps (AGPL-3.0).",
+    "source": "Quellcode von {{app}}",
+    "reportBug": "Fehler in {{app}} melden",
+    "translate": "{{app}} übersetzen",
+    "docs": "Dokumentation von TraceApps",
+    "offData": "Lebensmitteldaten von Open Food Facts (ODbL)",
+    "support": "Die Autoren unterstützen",
+    "supportHint": "Wenn dir diese Apps nützen, kannst du TraceApps unterstützen.",
+    "disclaimers": "Bitte beachten",
+    "medical": "Kein Medizinprodukt. Nährwerte, Bewertungen und Schätzungen können falsch sein und ersetzen keinen Rat von Ärzten oder Ernährungsfachleuten.",
+    "training": "Beim Training kann man sich verletzen. Prüfe Pläne und Gewichte an deinem Können und frag im Zweifel Fachleute.",
+    "ai": "Der Assistent ist eine KI. Er kann sich irren; prüfe, was er sagt und einträgt.",
+    "features": {
+      "areas": "Ernährungstagebuch, Rezepte, Vorrat und Training in einer App",
+      "selfHosted": "Selbst betrieben: Deine Daten bleiben auf deinem Server",
+      "pwa": "Als Web-App auf Handy und Rechner installierbar",
+      "privacy": "Kein Tracking, keine Werbung, keine Analyse durch Dritte"
+    },
+    "federation": "Verbunden liest CookTrace Lebensmittel aus NutriTrace, und LiftTrace schickt ihm deine Trainings."
+  }
+}

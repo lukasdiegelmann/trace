@@ -1,0 +1,35 @@
+{
+  "assistant": {
+    "description": "One assistant for nutrition, cooking and training. Your key is saved in your settings of all three apps.",
+    "envLocked": "The server's environment configures the assistant; requests go through NutriTrace.",
+    "enabled": "Turn on the assistant",
+    "model": "Model",
+    "provider": "Provider",
+    "baseUrl": "Base URL",
+    "baseUrlHint": "Ollama, LM Studio, LocalAI and others with a /v1/chat/completions endpoint. It must allow this site to call it (CORS).",
+    "modelName": "Model name",
+    "reliability": "Small local models often use tools unreliably.",
+    "customModel": "Other model…",
+    "apiKey": "API key",
+    "keyOptional": "Only if the endpoint asks for one.",
+    "getKey": "Get a {{provider}} key",
+    "verified": "Connection tested",
+    "behaviour": "Behaviour",
+    "name": "Assistant's name",
+    "smartLog": "Smart Log",
+    "smartLogHint": "Hold the assistant button and say what you ate, cooked or trained. In nutrition and training you check it before it is saved.",
+    "voiceLanguage": "Voice input language",
+    "voiceAuto": "Like the browser",
+    "goalInsights": "Goal insights",
+    "goalInsightsHint": "The assistant points out how you're doing against your goals.",
+    "activityEstimate": "Estimate calories of logged activities",
+    "cookLocked": "CookTrace's environment fixes the AI for its imports and label scan: {{setup}}",
+    "triggers": {
+      "title": "Trigger words",
+      "meal": "\"my X meal\" takes a saved meal",
+      "recipe": "\"my X recipe\" takes a saved recipe",
+      "yesterday": "\"same as yesterday for lunch\" copies yesterday's items",
+      "readme": "More about Smart Log"
+    }
+  }
+}

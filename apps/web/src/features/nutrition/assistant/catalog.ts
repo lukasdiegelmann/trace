@@ -1,0 +1,367 @@
+/**
+ * The tool catalogue of nutritrace/src/lib/aiChat.js, word for word. One
+ * rename: `get_workouts` is `get_wearable_workouts`, since LiftTrace has a
+ * `get_workouts` of its own.
+ */
+
+import type { ToolSpec } from "@/features/shared/ai";
+
+import { NUTRIMENTS } from "../lib/nutrition";
+
+/**
+ * Every nutrient listed explicitly: small models read `properties` as an
+ * allow-list. No `additionalProperties`: Gemini rejects the field.
+ */
+const NUTRITION_SCHEMA = {
+  type: "object",
+  description:
+    "Estimated nutrition values keyed by NutriTrace nutriment ID. All numeric. " +
+    "`calories` is required. ESTIMATE EVERY KEY YOU CAN — fiber, sugars, sodium, " +
+    "saturated fat, cholesterol, vitamins, minerals — anything the food contains " +
+    "in non-trivial amounts. Omit a key only when the value would genuinely be ~0 " +
+    "or you have no basis to estimate it. Don't restrict yourself to the four " +
+    "headline macros; the user wants the full nutrition profile.",
+  properties: Object.fromEntries(
+    NUTRIMENTS.map((nutrient) => [nutrient.id, { type: "number" }]),
+  ),
+  required: ["calories"],
+};
+
+export const TOOL_SPECS: readonly ToolSpec[] = [
+  {
+    name: "get_wellness_data",
+    description:
+      "Get wellness/fitness metrics for a date range. Returns daily data including steps, calories burned, distance, active minutes, sleep (duration, stages, score, efficiency), heart rate (resting HR, HRV, SpO2), respiratory rate, readiness score, stress score, skin temp, VO2 max, and more. Sources: Fitbit, Garmin, Health Connect.",
+    parameters: {
+      type: "object",
+      properties: {
+        from: { type: "string", description: "Start date (YYYY-MM-DD)" },
+        to: { type: "string", description: "End date (YYYY-MM-DD)" },
+      },
+      required: ["from", "to"],
+    },
+  },
+  {
+    name: "get_body_composition",
+    description:
+      "Get body composition data from Withings scale for a date range. Returns weight, body fat %, muscle mass, bone mass, body water %, lean mass, fat mass, visceral fat, vascular age, metabolic age, BMR, nerve health, ECG, and segmental analysis.",
+    parameters: {
+      type: "object",
+      properties: {
+        from: { type: "string", description: "Start date (YYYY-MM-DD)" },
+        to: { type: "string", description: "End date (YYYY-MM-DD)" },
+      },
+      required: ["from", "to"],
+    },
+  },
+  {
+    name: "get_diary",
+    description:
+      'Get the food diary for ONE specific date only. Returns meals + food items (portions, quantities, brand, per-item notes), nutrition breakdown (calories, protein, carbs, fat), body stats (with explicit `weight_unit` / `length_unit` so you don\'t guess), water intake (ml), any free-text "day notes" the user wrote (sleep, energy, cravings, context), and any manually-logged activities for that day (name, kcal burned, duration, distance, source). DO NOT use this tool for streak questions, "how many days have I been logging", "when did I start tracking", consecutive-day counts, or any multi-day aggregate — for those use get_logging_streak (streak) or get_diary_averages (averages over a window). This tool is for a single calendar date only.',
+    parameters: {
+      type: "object",
+      properties: {
+        date: { type: "string", description: "Date (YYYY-MM-DD)" },
+      },
+      required: ["date"],
+    },
+  },
+  {
+    name: "get_meals",
+    description:
+      "Get the user's saved Meals and Recipes from their library. Returns each one with its items (portions, quantities, per-item notes), totals (calories, macros), and any meal-level notes. Useful when the user refers to a saved meal by name (\"my usual breakfast\") or wants ideas based on meals they've logged before.",
+    parameters: {
+      type: "object",
+      properties: {
+        query: {
+          type: "string",
+          description:
+            "Optional case-insensitive name filter. Omit to return all (capped at 50).",
+        },
+      },
+    },
+  },
+  {
+    name: "get_wearable_workouts",
+    description:
+      "Get recorded workouts/exercises for a date range. Returns activity name, duration, distance, calories, average/max heart rate, steps, and whether GPS route data is available.",
+    parameters: {
+      type: "object",
+      properties: {
+        from: { type: "string", description: "Start date (YYYY-MM-DD)" },
+        to: { type: "string", description: "End date (YYYY-MM-DD)" },
+      },
+      required: ["from", "to"],
+    },
+  },
+  {
+    name: "get_goals",
+    description:
+      "Get the user's nutrition and wellness goals. Returns calorie, macro, and other nutrient targets.",
+    parameters: { type: "object", properties: {} },
+  },
+  {
+    name: "add_activity_entry",
+    description:
+      'Log an exercise/activity entry to the user\'s Diary Activity section. Use this when the user describes a workout or physical activity ("I hiked 10 miles", "did 45 min of yoga"). Each entry offsets the day\'s calorie goal per the user\'s policy. If the user provides a calorie number, pass it as kcal and use source="user_stated". If you estimated kcal from body profile + duration/MET, use source="ai_estimated" and tell the user the estimate so they can correct it. Do NOT call this tool if the activityAutoEstimate setting is off and the user did not supply a calorie number — ask them for one instead. When the activity clearly maps to a standard MET value (running at a known pace, cycling at a known speed, swimming laps, etc.), also pass the met value so the entry participates in the compendium-based auto-calc going forward. Set is_template=true only when the user explicitly asks to save a reusable template (e.g. "save this as my evening bike commute").',
+    parameters: {
+      type: "object",
+      properties: {
+        date: {
+          type: "string",
+          description:
+            "Date the activity happened (YYYY-MM-DD). Defaults to today if omitted.",
+        },
+        name: {
+          type: "string",
+          description:
+            'Short label for the activity, e.g. "Morning hike", "Yoga", "Bike commute".',
+        },
+        kcal: {
+          type: "number",
+          description: "Calories burned (positive integer).",
+        },
+        duration_min: {
+          type: "number",
+          description: "Optional duration in minutes.",
+        },
+        distance: {
+          type: "string",
+          description: 'Optional free-text distance, e.g. "10 mi" or "5 km".',
+        },
+        source: {
+          type: "string",
+          description:
+            'Provenance: "user_stated" if the user gave a number, "ai_estimated" if you computed it, "compendium" if you matched a canonical MET-scored activity.',
+        },
+        met: {
+          type: "number",
+          description:
+            "Optional 2024 Adult Compendium MET value for the activity. Pass it when the activity clearly maps to a canonical entry (e.g. running 8 km/h = 8.3, cycling 20 km/h = 8.0, yoga hatha = 2.5). Enables deterministic per-day recomputation on weight change. Omit for ambiguous or freeform activities.",
+        },
+        is_template: {
+          type: "boolean",
+          description:
+            'Optional. Set true only when the user explicitly asks to save the activity as a reusable template (e.g. "add this as my evening bike commute template"). Default false.',
+        },
+      },
+      required: ["name", "kcal"],
+    },
+  },
+  {
+    name: "get_diary_averages",
+    description:
+      "Get the user's average daily nutrition intake over the last N days, plus logging consistency. Returns average calories, protein, carbs, fat, water, and other nutrients. Also returns how many days were logged vs total days (consistency %), and weight change over the period if available. Use this to compare actual intake against goals and offer evidence-based goal adjustment suggestions. Also use it to verify a logging streak: if days_logged equals period_days, the user has logged every day in that window; expand the period to find where the streak breaks.",
+    parameters: {
+      type: "object",
+      properties: {
+        days: {
+          type: "number",
+          description:
+            "Number of days to average over. Common: 7, 14, 28, 42 for typical averages; 90, 180, 365, 730, 3650 for streak verification or long-history users (e.g. someone who imported years of MyFitnessPal data). Capped at 3650 (10 years).",
+        },
+      },
+      required: ["days"],
+    },
+  },
+  {
+    name: "get_logging_streak",
+    description:
+      'Get the user\'s current diary-logging streak — the count of consecutive days they have recorded ANY content in the diary (food items, water, body stats, or day notes), walking backward from today (or yesterday if today is not yet logged so an ongoing day isn\'t penalized). Matches what users mean by "I\'ve been tracking for X days in a row" — engagement with the diary, not strictly food entries. Use this for any "how long is my streak", "do I have a streak", "when did my streak start" question. This is the correct tool for streak questions; do NOT abuse get_diary_averages with a huge days argument to infer the streak — the streak walk terminates naturally at the first gap regardless of how long the user has been logging, so this tool is cheaper and authoritative. Returns { streak_days, streak_start, streak_end, today_logged }. streak_days=0 when the most recent logging was 2+ days ago.',
+    parameters: { type: "object", properties: {} },
+  },
+  {
+    name: "get_fasting_history",
+    description:
+      "Get the user's intermittent-fasting history if they have the tracker enabled. Returns the last N completed fasts (start_at, end_at, duration_hours, goal_hours, met_goal), plus summary stats: average duration, longest fast, current daily streak, longest streak, and total count. Use this when the user asks about their fasting performance, streaks, recent fasts, or how their schedule is going. Returns an empty list if fasting is disabled or no fasts are logged.",
+    parameters: {
+      type: "object",
+      properties: {
+        days: {
+          type: "number",
+          description:
+            "How many days of history to return (default 30, max 365).",
+        },
+      },
+    },
+  },
+  {
+    name: "get_adaptive_tdee",
+    description:
+      "Get the user's learned/adaptive TDEE (Total Daily Energy Expenditure) if they have enough history. Adaptive TDEE is computed from 35 days of weight trend × calorie intake using linear regression. Returns { ready, tdee, trendKgPerWeek, confidence, weightSource, daysAvailable, daysRequired }. When ready is false, the user doesn't yet have enough logged days (returns daysAvailable / daysRequired so you can tell them how close they are). Use this when the user asks about their actual calorie burn, learned/adjusted TDEE, weight trend, or whether their fixed goal is still right for them.",
+    parameters: { type: "object", properties: {} },
+  },
+  {
+    name: "log_food",
+    description:
+      'Log a REAL FOOD entry to the user\'s diary with full nutrition (protein, carbs, fat, fiber, sodium, vitamins, etc. — NOT just calories). USE THIS — not log_quick_calories — whenever the user NAMES a food they want to log. Typical phrasings: "add an apple to lunch", "log a banana to today\'s snacks", "add 200g of chicken to dinner", "I had Greek yogurt for breakfast", "two slices of bread for lunch".\n\nSEARCH ORDER: (1) the user\'s local food catalog first (their saved/scanned foods); (2) Open Food Facts if nothing local matches. If the user has the local OFF mirror enabled, OFF goes through that. USDA is NOT searched here (use a separate barcode/manual flow for USDA).\n\nRETURN SHAPES — branch on these:\n- {ok: true, meal_name, food_name, kcal, source, ...} — logged. Use meal_name (the actual name, not just an index) when you confirm to the user; do NOT assume the meal name from the index you passed.\n- {candidates: [...]} — multiple plausible matches. Show the names back to the user and ask which one. Then call again with the chosen name as the food field.\n- {no_match: true, suggestion} — nothing found. Tell the user to add the food via the Foods tab (barcode scan or manual entry) and then try again.\n- {no_nutrition: true, food_name, as_prepared_only, message}: Open Food Facts has the product but no "as sold" values, so nothing was logged. Relay the message; do not log it another way (such as quick calories) to force it in.\n- {error: "..."} — something else went wrong. Relay verbatim.\n\nDO NOT CALL THIS TOOL when the user wants a food SAVED rather than LOGGED ("create a food called X", "add it to my foods", "save it but don\'t log it", "don\'t add it to my diary"). This tool always writes a diary entry. Use propose_food instead: its card has a Save to Foods button that creates the food and touches nothing else.',
+    parameters: {
+      type: "object",
+      properties: {
+        food: {
+          type: "string",
+          description:
+            'The food name as the user said it. Plain natural language: "apple", "Greek yogurt", "Honey Nut Cheerios", "chicken breast", "olive oil". Brand can be included if mentioned ("Chobani Greek yogurt").',
+        },
+        meal: {
+          type: "number",
+          description:
+            "Meal index per the YOUR MEALS list in the system prompt. NEVER hardcode 0=breakfast/1=lunch/etc — that's only correct for the default meal layout. Match the user's named meal to its position in YOUR MEALS and pass that index. If the user did not name a meal and it isn't clearly implied, ASK them which meal.",
+        },
+        portion: {
+          type: "number",
+          description:
+            'OPTIONAL portion amount. If omitted, the food\'s stored serving size is used (100g for fresh OFF lookups). Pass when the user specifies an amount: 200 for "200g of chicken", 150 for "150ml of milk", 1 for "1 cup of cereal".',
+        },
+        unit: {
+          type: "string",
+          description:
+            "OPTIONAL portion unit (g, ml, oz, cup, tbsp, slice, piece). Defaults to the food's stored unit. Only pass if the user specified a unit DIFFERENT from grams.",
+        },
+        quantity: {
+          type: "number",
+          description:
+            'OPTIONAL number of servings, defaults to 1. Use for "two apples" (quantity=2) or "half a banana" (quantity=0.5). Most asks use the default; portion+unit handles grams/ml directly.',
+        },
+        date: {
+          type: "string",
+          description: "Optional YYYY-MM-DD; defaults to today.",
+        },
+      },
+      required: ["food", "meal"],
+    },
+  },
+  {
+    name: "log_quick_calories",
+    description:
+      'Log a Fitbit/MFP-style "Quick Calories" entry to the user\'s diary — a row with ONLY a calorie number (and optionally protein/carbs/fat), no food, no portion. Use this STRICTLY when the user gives a kcal number WITHOUT naming a food: "log 200 calories for lunch", "add 1200 kJ to dinner", "punch in 350 quick calories", "log 240 kcal with 20g protein for snack". If the user names a food ("add an apple", "log Greek yogurt", "two slices of bread") use log_food INSTEAD — that path stores full nutrition and creates a reusable food row. If the user gives kJ, convert to kcal yourself (1 kcal = 4.184 kJ). Returns { error } if the user has disabled Quick Calories in Settings → Diary.',
+    parameters: {
+      type: "object",
+      properties: {
+        meal: {
+          type: "number",
+          description:
+            "Meal index per YOUR MEALS in the system prompt. NEVER hardcode 0=breakfast etc — that's only correct for the default meal layout.",
+        },
+        kcal: {
+          type: "number",
+          description:
+            "Calories as a positive integer in kcal. If the user said kJ, convert: kcal = kj / 4.184.",
+        },
+        name: {
+          type: "string",
+          description:
+            'Optional short label (max 60 chars). Defaults to "Quick Calories" when omitted.',
+        },
+        protein_g: {
+          type: "number",
+          description:
+            "OPTIONAL protein in grams. Only pass if the user explicitly mentioned a protein number; do not estimate from calories.",
+        },
+        carbs_g: {
+          type: "number",
+          description:
+            "OPTIONAL carbohydrates in grams. Only pass if the user explicitly mentioned a carbs number; do not estimate.",
+        },
+        fat_g: {
+          type: "number",
+          description:
+            "OPTIONAL fat in grams. Only pass if the user explicitly mentioned a fat number; do not estimate.",
+        },
+        date: {
+          type: "string",
+          description: "Optional YYYY-MM-DD; defaults to today.",
+        },
+      },
+      required: ["kcal"],
+    },
+  },
+  {
+    name: "propose_quick_calories",
+    description:
+      'Propose a Quick Calories entry for the user to REVIEW before anything is written to the diary. This tool DOES NOT WRITE to the diary, DOES NOT CREATE a food, and DOES NOT LOG anything — it ONLY displays an estimate card with Discard / Add to Diary buttons for the user to confirm. Treat the tool returning `ok: true` as "the card was shown to the user", NOT as "the food was logged". After calling this tool you MUST NOT say things like "I\'ve added X" or "Logged X to your diary" — the user has not yet confirmed. Instead say something like "Here\'s my estimate — tap Add to Diary to log it." Use this tool whenever the user attaches a meal photo and wants a quick kcal-style log (no permanent food row needed), or when they explicitly say "log this quick", "add this as quick calories", "quick add this". For photos where the user wants a reusable food (not a kcal-only entry), use propose_food instead.',
+    parameters: {
+      type: "object",
+      properties: {
+        name: {
+          type: "string",
+          description:
+            'Short descriptive name for what you see (e.g. "Grilled chicken sandwich + fries", "Bowl of oatmeal with berries"). Max 60 chars.',
+        },
+        meal: {
+          type: "number",
+          description:
+            "Meal index the entry will be filed under: 0=breakfast, 1=lunch, 2=dinner, 3=snacks. Defaults to 3 if you cannot tell from context. The user can change this on the card before committing.",
+        },
+        date: {
+          type: "string",
+          description: "Optional YYYY-MM-DD; defaults to today.",
+        },
+        serving_grams: {
+          type: "number",
+          description:
+            "STRONGLY RECOMMENDED for photo estimates. Estimated weight of the food in the photo, in grams. Lets the user sanity-check the basis of the nutrition estimate (\"if you think this is 350 g, but it's actually 500 g, scale the calories up\"). Provide this whenever the food has a sensible weight; omit only for things that don't weigh meaningfully on their own (e.g. a glass of water).",
+        },
+        serving_size: {
+          type: "string",
+          description:
+            'Optional plain-language serving description ("1 plate", "medium bowl", "1 slice"). Use ALONGSIDE serving_grams to add useful context, or INSTEAD of it for items where grams aren\'t meaningful.',
+        },
+        nutrition: NUTRITION_SCHEMA,
+      },
+      required: ["name", "nutrition"],
+    },
+  },
+  {
+    name: "propose_food",
+    description:
+      'Propose a reusable FOOD entry for the user to REVIEW before anything is created. This tool DOES NOT WRITE to the Foods library, DOES NOT WRITE to the diary — it ONLY displays a review card so the user can decide to (a) Save to Foods only, (b) Save & Add to Diary, or (c) Discard. Treat the tool returning `ok: true` as "the card was shown", NOT as "the food was saved" or "added to diary". After calling this tool you MUST NOT say things like "I\'ve added X to your Foods" or "Added X to your diary" — the user has not yet confirmed. Say something like "Here\'s my estimate — pick Save to Foods if you just want to keep it for later, or Save & Add to Diary to also add it to today." Use this when the user wants a REUSABLE food (not a one-off kcal entry): "add this to my foods", "save this as a food", "remember this for later", "create a food entry for this". ALSO USE THIS as the manual-estimate bypass for log_food: when the user explicitly asks you to estimate a named food without searching the database ("don\'t search, just estimate a currywurst", "you estimate it and log it"), pass your best-guess nutrition here so the user reviews the numbers on the card and picks Save & Add to Diary. Nutrition values are per the portion you specify (default 100 g if you cannot tell).\n\nThis is the ONLY tool that can create a food, and it works with or without a photo. When the user asks for a food to be created and says not to log it, this is the tool, and the answer is to point them at the card\'s Save to Foods button.',
+    parameters: {
+      type: "object",
+      properties: {
+        name: {
+          type: "string",
+          description:
+            'Short food name (e.g. "Chicken Pot Pie", "Grilled Salmon Bowl"). Max 60 chars.',
+        },
+        brand: {
+          type: "string",
+          description: "Optional brand name if it looks like packaged food.",
+        },
+        portion: {
+          type: "number",
+          description:
+            "STRONGLY RECOMMENDED: estimated weight in grams of the photographed portion (e.g. 250 for a typical chicken pot pie slice). The nutrition values you pass are PER this portion. Falls back to 100 (per 100 g/ml) only if you have no basis to estimate.",
+        },
+        unit: {
+          type: "string",
+          description:
+            'Portion unit, defaults to "g". Common: g, ml, piece, slice, cup, oz. Prefer "g" for solid foods so the user can correct it numerically.',
+        },
+        nutrition: NUTRITION_SCHEMA,
+        notes: {
+          type: "string",
+          description:
+            'OPTIONAL human-friendly serving descriptor saved to the food\'s Notes field (e.g. "14 chips", "1/4 cup uncooked", "1 medium slice", "approx 1 cup cooked"). Lets the user see what the per-portion weight actually corresponds to in everyday terms. Shown in the diary when "Show item notes" is enabled in Settings. Skip when the portion + unit already says everything that needs saying.',
+        },
+      },
+      required: ["name", "nutrition"],
+    },
+  },
+  {
+    name: "get_activity_log",
+    description:
+      "Get the user's manually-logged activity entries from the Diary's Activity section (separate from wearable-synced workouts — use get_wearable_workouts for those). Each entry has name, kcal burned, duration_min, distance, source, date. Use this when the user asks about manual workouts they logged, exercise they typed in, or activities not synced from a wearable.",
+    parameters: {
+      type: "object",
+      properties: {
+        from: {
+          type: "string",
+          description: "Start date YYYY-MM-DD (inclusive).",
+        },
+        to: { type: "string", description: "End date YYYY-MM-DD (inclusive)." },
+      },
+      required: ["from", "to"],
+    },
+  },
+];

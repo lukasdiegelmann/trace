@@ -1,0 +1,31 @@
+{
+  "signIn": {
+    "title": "Sign in to Trace",
+    "text": "One sign-in with your passkey opens nutrition, cooking and training.",
+    "action": "Sign in",
+    "expired": "Your session has ended. Please sign in again.",
+    "partial": "Still to sign in: {{backends}}"
+  },
+  "callback": {
+    "working": "Signing in…",
+    "failed": "Sign-in at {{backend}} failed: {{message}}",
+    "retry": "Try again",
+    "home": "Back to the start"
+  },
+  "signOut": {
+    "action": "Sign out",
+    "working": "Signing out…",
+    "incomplete": "Sign-out didn't finish at {{backends}}: you are still signed in there.",
+    "retry": "Try again"
+  },
+  "errors": {
+    "noProvider": "No sign-in provider is set up.",
+    "providersUnavailable": "The sign-in provider can't be reached.",
+    "missingResult": "The sign-in came back without a result.",
+    "callback_failed": "The sign-in couldn't be completed.",
+    "unknown": "Unknown error."
+  },
+  "user": {
+    "signedInAs": "Signed in as {{name}}"
+  }
+}

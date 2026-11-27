@@ -1,0 +1,54 @@
+{
+  "cardio": {
+    "title": "Cardio",
+    "totalToday": "{{minutes}} min today",
+    "addAria": "Add cardio session",
+    "templatesAria": "Pinned quick-log templates",
+    "templateTitle": "Log now: {{activity}} · {{minutes}} min",
+    "templateMinutes": "{{minutes}}m",
+    "activityLabel": "Activity",
+    "activityPlaceholder": "Activity (e.g. Bike, Run, Row)",
+    "durationLabel": "Minutes",
+    "durationPlaceholder": "min",
+    "distanceLabel": "Distance",
+    "distancePlaceholder": "Distance ({{unit}}, optional)",
+    "hrLabel": "Heart rate",
+    "hrPlaceholder": "bpm",
+    "notesLabel": "Notes",
+    "notesPlaceholder": "Notes (optional)",
+    "cancel": "Cancel",
+    "logSubmit": "Log",
+    "save": "Save",
+    "saving": "Saving…",
+    "editTitle": "Edit session",
+    "pinTemplate": "Pin as quick-log template",
+    "unpinTemplate": "Unpin quick-log template",
+    "deleteAria": "Delete cardio session",
+    "empty": "No cardio logged for this day.",
+    "meta": {
+      "duration": "{{minutes}} min",
+      "distance": "{{distance}} {{unit}}",
+      "hr": "{{bpm}} bpm"
+    },
+    "confirmDelete": {
+      "title": "Delete cardio session?",
+      "message": "{{activity}} · {{duration}} min",
+      "confirm": "Delete",
+      "cancel": "Cancel"
+    },
+    "toast": {
+      "logged": "Cardio logged",
+      "logFailed": "Log failed",
+      "pinned": "Pinned as quick-log",
+      "unpinned": "Unpinned",
+      "updateFailed": "Update failed",
+      "activityRequired": "Activity required",
+      "durationInvalid": "Duration must be a positive number of minutes",
+      "distanceInvalid": "Distance must be a number",
+      "hrInvalid": "Heart rate must be a number",
+      "updated": "Cardio updated",
+      "saveFailed": "Save failed",
+      "deleteFailed": "Delete failed"
+    }
+  }
+}

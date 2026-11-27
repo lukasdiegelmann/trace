@@ -1,0 +1,140 @@
+{
+  "workoutEditor": {
+    "back": "Back to the program",
+    "loading": "Loading template…",
+    "loadError": "The template could not be loaded.",
+    "namePlaceholder": "Workout name",
+    "save": "Save",
+    "readOnly": "Read only",
+    "readOnlyHint": "This workout belongs to someone else's program. Only its maker can change it.",
+    "emptyHint": "Add exercises to this workout template",
+    "addExercise": "Add Exercise",
+    "unsaved": {
+      "title": "Discard changes?",
+      "description": "This workout has changes that are not saved.",
+      "discard": "Discard",
+      "keep": "Keep editing"
+    },
+    "toast": {
+      "removedFromSuperset": "Removed from superset",
+      "addedToSuperset": "Added to superset",
+      "supersetCreated": "Superset created",
+      "supersetDissolved": "Superset dissolved",
+      "supersetsMerged": "Supersets merged",
+      "replacedWith": "Replaced with {{name}}",
+      "saved": "Workout saved"
+    },
+    "week": {
+      "label": "Plan week",
+      "tab": "Week {{number}}",
+      "copy": "Copy Week {{from}} into Week {{to}}",
+      "matches": "Week {{to}} already matches Week {{from}}",
+      "copyExercise": "Copy this exercise's Week {{from}} into Week {{to}}",
+      "copyExerciseShort": "→ {{to}}"
+    },
+    "superset": {
+      "title": "Superset",
+      "count_one": "{{count}} exercise",
+      "count_other": "{{count}} exercises",
+      "options": "Superset options",
+      "addExercise": "Add exercise to superset",
+      "merge": "Merge into another superset",
+      "dissolve": "Dissolve superset",
+      "joinTitle": "Add to Superset",
+      "joinHint": "Choose which superset to join:",
+      "createTitle": "Create Superset",
+      "createHint": "Select exercises to group with {{name}}:",
+      "createNone": "There is no other exercise outside a superset.",
+      "createConfirm_one": "Create superset ({{count}} exercise)",
+      "createConfirm_other": "Create superset ({{count}} exercises)",
+      "mergeTitle": "Merge Into Superset",
+      "mergeHint": "All exercises from both supersets will be combined:",
+      "memberSeparator": " + "
+    },
+    "exercise": {
+      "options": "Options for {{name}}",
+      "details": "View details of {{name}}",
+      "moveUp": "Move {{name}} up",
+      "moveDown": "Move {{name}} down",
+      "loadType": "Load type of {{name}}",
+      "setsBadge": "{{count}}×"
+    },
+    "actions": {
+      "moveUp": "Move up",
+      "moveDown": "Move down",
+      "replace": "Replace exercise",
+      "leaveSuperset": "Remove from superset",
+      "joinSuperset": "Add to existing superset",
+      "newSuperset": "Start new superset…",
+      "delete": "Delete exercise"
+    },
+    "fields": {
+      "sets": "Sets",
+      "reps": "Reps",
+      "repsPlaceholder": "e.g. 8-12",
+      "duration": "Time",
+      "durationPlaceholder": "0:00",
+      "weight": "Weight",
+      "weightPlaceholderKg": "e.g. 60",
+      "weightPlaceholderLb": "e.g. 135",
+      "tempo": "Tempo",
+      "tempoPlaceholder": "e.g. 3.1.1",
+      "rest": "Rest (s)",
+      "restPlaceholder": "e.g. 90",
+      "notes": "Notes",
+      "notesPlaceholder": "Notes…",
+      "perSet": "Different weight or reps per set…",
+      "useUniform": "Use uniform targets",
+      "addSet": "Add set"
+    },
+    "spec": {
+      "number": "Set {{set}}",
+      "warmupBadge": "W",
+      "warmupSet": "Warmup set {{set}}",
+      "roundNumber": "Round number of set {{set}}",
+      "roundHint": "Reassign the round for asymmetric supersets",
+      "round": "Round {{number}}",
+      "auto": "Auto",
+      "weight": "Weight of set {{set}}",
+      "weightPlaceholder": "Weight",
+      "reps": "Reps of set {{set}}",
+      "repsPlaceholder": "Reps",
+      "repsLeft": "Left reps of set {{set}}",
+      "repsRight": "Right reps of set {{set}}",
+      "left": "L",
+      "right": "R",
+      "duration": "Time of set {{set}}",
+      "split": "Split L/R reps of set {{set}}",
+      "merge": "Merge L/R reps of set {{set}}",
+      "rpe": "RPE",
+      "rpeValue": "@{{value}}",
+      "rpeLabel": "Target RPE of set {{set}}",
+      "rpeClear": "Clear",
+      "warmupOn": "Mark set {{set}} as warmup",
+      "warmupOff": "Unmark set {{set}} as warmup",
+      "remove": "Remove set {{set}}"
+    },
+    "loadMenu": {
+      "title": "Load type and tracking",
+      "load": {
+        "bilateral": "Bilateral",
+        "paired": "Per side",
+        "unilateral": "Alternating"
+      },
+      "loadHint": {
+        "bilateral": "single load: barbell, machine, both arms move one thing",
+        "paired": "both arms work together with separate equal loads: dumbbells, paired cables",
+        "unilateral": "one side at a time: single-arm cable row, single-arm DB row"
+      },
+      "setType": {
+        "reps": "Reps",
+        "time": "Time"
+      },
+      "setTypeHint": {
+        "reps": "weight and reps: bench press, squat, curls",
+        "time": "a duration you hold or carry: plank, wall sit, dead hang"
+      },
+      "remember": "Remember for this exercise"
+    }
+  }
+}
