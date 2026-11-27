@@ -26,9 +26,13 @@ render(svg, 180, "apple-touch-icon-180x180.png");
 
 // Maskable: full-bleed background, the mark inside the 80% safe zone.
 const maskable = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect width="512" height="512" fill="#171717"/>
+  <rect width="512" height="512" fill="#000"/>
   <g transform="translate(76.8 76.8) scale(0.7)">
-    <path d="M136 152h240v56h-92v200h-56V208h-92z" fill="#ffd100"/>
+    <g fill="none" stroke="#fff" stroke-width="72" stroke-linejoin="miter" stroke-miterlimit="10">
+      <path d="M96 200 256 104 416 200"/>
+      <path d="M256 125.6V420"/>
+    </g>
+    <circle cx="256" cy="300" r="96" fill="#fff"/>
   </g>
 </svg>`;
 render(maskable, 512, "maskable-512x512.png");

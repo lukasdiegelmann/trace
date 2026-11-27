@@ -109,7 +109,7 @@ function finish() {
     const messages = config.getMessages();
     void showNotification(messages.completeTitle, {
       body: messages.completeBody(state?.exerciseName ?? ""),
-      icon: "/icons/icon-192.png",
+      icon: "/icons/pwa-192x192.png",
       tag: "rest-timer",
       renotify: true,
       silent: !prefs.hasTone,
